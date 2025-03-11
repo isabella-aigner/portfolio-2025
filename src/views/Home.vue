@@ -1,66 +1,95 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import ContactSection from '../components/ContactSection.vue'
-import PageHeader from '../components/PageHeader.vue'
-import ContentContainer from '../components/ContentContainer.vue'
+import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+import ContactSection from "../components/ContactSection.vue";
+import PageHeader from "../components/PageHeader.vue";
+import ContentContainer from "../components/ContentContainer.vue";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 const skills = ref([
-  { 
-    name: t('home.skillsList.frontend'), 
-    icon: 'pi pi-desktop',
-    background: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.frontend"),
+    icon: "pi pi-desktop",
+    background:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'Vue.js', 'React', 'TypeScript', 'JavaScript',
-      'HTML5', 'CSS3/SCSS', 'Responsive Design',
-      'REST APIs', 'Web Components'
-    ]
+      "Vue.js",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3/SCSS",
+      "Responsive Design",
+      "REST APIs",
+      "Web Components",
+    ],
   },
-  { 
-    name: t('home.skillsList.uiux'), 
-    icon: 'pi pi-palette',
-    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.uiux"),
+    icon: "pi pi-palette",
+    background:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'User Interface Design', 'User Experience Design',
-      'Wireframing', 'Prototyping', 'Adobe XD',
-      'Figma', 'Design Systems'
-    ]
+      "User Interface Design",
+      "User Experience Design",
+      "Wireframing",
+      "Prototyping",
+      "Adobe XD",
+      "Figma",
+      "Design Systems",
+    ],
   },
-  { 
-    name: t('home.skillsList.responsive'), 
-    icon: 'pi pi-mobile',
-    background: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.responsive"),
+    icon: "pi pi-mobile",
+    background:
+      "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'Mobile-First Design', 'Cross-Browser Compatibility',
-      'Progressive Web Apps', 'Performance Optimization',
-      'Accessibility (WCAG)'
-    ]
+      "Mobile-First Design",
+      "Cross-Browser Compatibility",
+      "Progressive Web Apps",
+      "Performance Optimization",
+      "Accessibility (WCAG)",
+    ],
   },
-  { 
-    name: t('home.skillsList.design'), 
-    icon: 'pi pi-image',
-    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.design"),
+    icon: "pi pi-image",
+    background:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'Adobe Creative Suite', 'Brand Design',
-      'Typography', 'Color Theory', 'Layout Design',
-      'Visual Design Principles'
-    ]
-  }
-])
+      "Adobe Creative Suite",
+      "Brand Design",
+      "Typography",
+      "Color Theory",
+      "Layout Design",
+      "Visual Design Principles",
+    ],
+  },
+]);
 
 const tools = ref([
-  'Git', 'VS Code', 'Docker', 'Jira',
-  'npm/yarn', 'Webpack', 'Vite', 'Jest',
-  'Cypress', 'GitHub Actions'
-])
+  "Git",
+  "VS Code",
+  "Docker",
+  "Jira",
+  "npm/yarn",
+  "Webpack",
+  "Vite",
+  "Jest",
+  "Cypress",
+  "GitHub Actions",
+]);
 
 const softSkills = ref([
-  'Team Leadership', 'Project Management',
-  'Agile/Scrum', 'Problem Solving',
-  'Communication', 'Time Management'
-])
+  "Team Leadership",
+  "Project Management",
+  "Agile/Scrum",
+  "Problem Solving",
+  "Communication",
+  "Time Management",
+]);
 </script>
 
 <template>
@@ -73,13 +102,16 @@ const softSkills = ref([
 
     <ContentContainer>
       <section class="skills section">
-        <h2 class="text-center">{{ t('home.skills') }}</h2>
-        
+        <h2 class="text-center">{{ t("home.skills") }}</h2>
+
         <!-- Main Skills -->
         <div class="grid grid-cols-2">
           <Card v-for="skill in skills" :key="skill.name" class="skill-card">
             <template #header>
-              <div class="skill-header" :style="{ backgroundImage: `url(${skill.background})` }">
+              <div
+                class="skill-header"
+                :style="{ backgroundImage: `url(${skill.background})` }"
+              >
                 <div class="skill-overlay">
                   <i :class="skill.icon"></i>
                 </div>
@@ -90,7 +122,11 @@ const softSkills = ref([
             </template>
             <template #content>
               <div class="skill-items">
-                <span v-for="item in skill.items" :key="item" class="skill-item">
+                <span
+                  v-for="item in skill.items"
+                  :key="item"
+                  class="skill-item"
+                >
                   {{ item }}
                 </span>
               </div>
@@ -125,7 +161,11 @@ const softSkills = ref([
             </template>
             <template #content>
               <div class="skill-items">
-                <span v-for="skill in softSkills" :key="skill" class="skill-item soft-skill">
+                <span
+                  v-for="skill in softSkills"
+                  :key="skill"
+                  class="skill-item soft-skill"
+                >
                   {{ skill }}
                 </span>
               </div>
@@ -160,7 +200,7 @@ const softSkills = ref([
 .skill-card {
   text-align: center;
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
   }
@@ -249,7 +289,7 @@ const softSkills = ref([
     align-items: center;
     gap: 0.5rem;
     color: var(--primary-color);
-    
+
     i {
       font-size: 1.25rem;
     }

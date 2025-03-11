@@ -1,29 +1,31 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import ContactSection from '../components/ContactSection.vue'
-import FullWidthHeader from '../components/FullWidthHeader.vue'
-import ContentContainer from '../components/ContentContainer.vue'
+import { useI18n } from "vue-i18n";
+import ContactSection from "../components/ContactSection.vue";
+import FullWidthHeader from "../components/FullWidthHeader.vue";
+import ContentContainer from "../components/ContentContainer.vue";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 const downloadCV = () => {
   // Replace this URL with the actual URL to your CV
-  const cvUrl = '/cv-isabella-aigner.pdf'
-  window.open(cvUrl, '_blank')
-}
+  const cvUrl = "/cv-isabella-aigner.pdf";
+  window.open(cvUrl, "_blank");
+};
 </script>
 
 <template>
   <div class="career">
-    <FullWidthHeader image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000">
-      <h1>{{ t('career.title') }}</h1>
+    <FullWidthHeader
+      image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
+    >
+      <h1>{{ t("career.title") }}</h1>
       <p>Building the future through code and design - one project at a time</p>
     </FullWidthHeader>
-    
+
     <ContentContainer>
       <Card class="intro-card">
         <template #content>
-          <p>{{ t('career.intro') }}</p>
+          <p>{{ t("career.intro") }}</p>
           <div class="location">
             <i class="pi pi-map-marker"></i>
             <span>Salzburg, Austria</span>
@@ -32,9 +34,13 @@ const downloadCV = () => {
       </Card>
 
       <section class="timeline-section">
-        <h2>{{ t('career.education.title') }}</h2>
+        <h2>{{ t("career.education.title") }}</h2>
         <div class="timeline">
-          <div v-for="(item, index) in t('career.education.items')" :key="index" class="timeline-item">
+          <div
+            v-for="(item, index) in t('career.education.items')"
+            :key="index"
+            class="timeline-item"
+          >
             <div class="timeline-icon">
               <i class="pi pi-book"></i>
             </div>
@@ -55,9 +61,13 @@ const downloadCV = () => {
       </section>
 
       <section class="timeline-section">
-        <h2>{{ t('career.experience.title') }}</h2>
+        <h2>{{ t("career.experience.title") }}</h2>
         <div class="timeline">
-          <div v-for="(item, index) in t('career.experience.items')" :key="index" class="timeline-item">
+          <div
+            v-for="(item, index) in t('career.experience.items')"
+            :key="index"
+            class="timeline-item"
+          >
             <div class="timeline-icon">
               <i class="pi pi-briefcase"></i>
             </div>
@@ -81,10 +91,13 @@ const downloadCV = () => {
         <Card>
           <template #content>
             <div class="cv-content">
-              <p>Download my complete curriculum vitae for more details about my experience and skills.</p>
-              <Button 
-                icon="pi pi-download" 
-                label="Download CV" 
+              <p>
+                Download my complete curriculum vitae for more details about my
+                experience and skills.
+              </p>
+              <Button
+                icon="pi pi-download"
+                label="Download CV"
                 class="p-button-outlined download-cv"
                 @click="downloadCV"
               />
@@ -156,7 +169,7 @@ const downloadCV = () => {
 
   &:not(:last-child) {
     .timeline-icon::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 4rem;
       left: 1.5rem;
@@ -243,7 +256,7 @@ const downloadCV = () => {
 
     .download-cv {
       min-width: 150px;
-      
+
       &:hover {
         transform: translateY(-2px);
       }

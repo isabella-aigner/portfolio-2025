@@ -11,10 +11,10 @@
 
 <script setup lang="ts">
 defineProps<{
-  title: string
-  claim: string
-  image: string
-}>()
+  title: string;
+  claim: string;
+  image: string;
+}>();
 </script>
 
 <style scoped lang="scss">

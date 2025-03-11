@@ -1,0 +1,40 @@
+main {
+  min-height: calc(100vh - 60px);
+  padding-top: 60px; // Add padding to account for fixed header
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  margin-top: 4rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+  main {
+    padding-top: 56px; // Adjust for smaller mobile header
+  }
+}
+
+.diamond-w-label .p-button-label:before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}

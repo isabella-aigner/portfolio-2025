@@ -1,46 +1,55 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
 
-const { t } = useI18n()
-const route = useRoute()
+const { t } = useI18n();
+const route = useRoute();
 
 // This would typically come from an API or store
 const project = ref({
-  id: 'plantbase',
-  title: 'PlantBase',
-  subtitle: 'Plant Care Management System',
-  description: 'A comprehensive web application for plant enthusiasts to track and manage their indoor plants.',
-  image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200',
-  tags: ['Vue.js', 'TypeScript', 'Node.js', 'PostgreSQL'],
-  year: '2023',
-  role: 'Full Stack Developer',
-  client: 'Personal Project',
+  id: "plantbase",
+  title: "PlantBase",
+  subtitle: "Plant Care Management System",
+  description:
+    "A comprehensive web application for plant enthusiasts to track and manage their indoor plants.",
+  image:
+    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+  tags: ["Vue.js", "TypeScript", "Node.js", "PostgreSQL"],
+  year: "2023",
+  role: "Full Stack Developer",
+  client: "Personal Project",
   details: [
     {
-      title: 'Project Overview',
-      content: 'PlantBase is a modern web application designed to help plant enthusiasts manage their indoor plants. The application provides detailed care instructions, watering schedules, and growth tracking capabilities.'
+      title: "Project Overview",
+      content:
+        "PlantBase is a modern web application designed to help plant enthusiasts manage their indoor plants. The application provides detailed care instructions, watering schedules, and growth tracking capabilities.",
     },
     {
-      title: 'Technical Implementation',
-      content: 'Built with Vue.js and TypeScript for the frontend, utilizing Composition API and type-safe development practices. The backend is powered by Node.js with a PostgreSQL database, ensuring robust data management and scalability.'
+      title: "Technical Implementation",
+      content:
+        "Built with Vue.js and TypeScript for the frontend, utilizing Composition API and type-safe development practices. The backend is powered by Node.js with a PostgreSQL database, ensuring robust data management and scalability.",
     },
     {
-      title: 'Key Features',
-      content: 'Plant care scheduling, growth tracking, care history logging, plant identification, and customizable care instructions.'
-    }
+      title: "Key Features",
+      content:
+        "Plant care scheduling, growth tracking, care history logging, plant identification, and customizable care instructions.",
+    },
   ],
   gallery: [
-    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800'
+    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
   ],
   links: [
-    { title: 'Live Demo', url: 'https://example.com', icon: 'pi pi-external-link' },
-    { title: 'GitHub', url: 'https://github.com', icon: 'pi pi-github' }
-  ]
-})
+    {
+      title: "Live Demo",
+      url: "https://example.com",
+      icon: "pi pi-external-link",
+    },
+    { title: "GitHub", url: "https://github.com", icon: "pi pi-github" },
+  ],
+});
 </script>
 
 <template>
@@ -85,7 +94,11 @@ const project = ref({
 
       <!-- Project Details -->
       <section class="project-details">
-        <div v-for="detail in project.details" :key="detail.title" class="detail-section">
+        <div
+          v-for="detail in project.details"
+          :key="detail.title"
+          class="detail-section"
+        >
           <Card>
             <template #title>
               <h2>{{ detail.title }}</h2>
@@ -101,9 +114,16 @@ const project = ref({
       <section class="project-gallery">
         <h2>Gallery</h2>
         <div class="gallery-grid">
-          <Card v-for="(image, index) in project.gallery" :key="index" class="gallery-item">
+          <Card
+            v-for="(image, index) in project.gallery"
+            :key="index"
+            class="gallery-item"
+          >
             <template #header>
-              <div class="gallery-image" :style="{ backgroundImage: `url(${image})` }"></div>
+              <div
+                class="gallery-image"
+                :style="{ backgroundImage: `url(${image})` }"
+              ></div>
             </template>
           </Card>
         </div>
@@ -112,8 +132,8 @@ const project = ref({
       <!-- Project Links -->
       <section class="project-links">
         <div class="buttons">
-          <Button 
-            v-for="link in project.links" 
+          <Button
+            v-for="link in project.links"
             :key="link.title"
             :label="link.title"
             :icon="link.icon"
@@ -146,7 +166,11 @@ const project = ref({
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +185,7 @@ const project = ref({
   h1 {
     font-size: 3rem;
     margin: 0 0 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .subtitle {
@@ -271,7 +295,7 @@ const project = ref({
 }
 
 .tag {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
