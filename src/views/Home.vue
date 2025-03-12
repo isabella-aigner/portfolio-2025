@@ -15,14 +15,30 @@ const skills = ref([
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
       "Vue.js",
-      "React",
+      "Vite",
+      "Webpack",
+      "Vitest",
+      "Pimcore",
       "TypeScript",
       "JavaScript",
       "HTML5",
       "CSS3/SCSS",
-      "Responsive Design",
+      "node.js",
+      "TailwindCSS",
+      "Bootstrap",
+      "Primevue",
+      "Twig",
+      "Stylelab",
+      "Symphony",
+      "PHP",
+      "Playwright",
       "REST APIs",
       "Web Components",
+      "Pinia",
+      "ESLint & Prettier",
+      "Jira",
+      "Git",
+      "Docker",
     ],
   },
   {
@@ -38,19 +54,10 @@ const skills = ref([
       "Adobe XD",
       "Figma",
       "Design Systems",
-    ],
-  },
-  {
-    name: t("home.skillsList.responsive"),
-    icon: "pi pi-mobile",
-    background:
-      "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&q=80&w=800&h=600",
-    items: [
-      "Mobile-First Design",
-      "Cross-Browser Compatibility",
-      "Progressive Web Apps",
-      "Performance Optimization",
-      "Accessibility (WCAG)",
+      "Material UI",
+      "Usability Testing",
+      "Personas & User Journeys",
+      "Responsive Design",
     ],
   },
   {
@@ -61,10 +68,41 @@ const skills = ref([
     items: [
       "Adobe Creative Suite",
       "Brand Design",
-      "Typography",
       "Color Theory",
       "Layout Design",
       "Visual Design Principles",
+      "Logo-Design",
+      "Brand Guidlines",
+      "Printdesign",
+      "Webdesign",
+      "Typografie & Bildsprache",
+      "Corporate Identity",
+      "Corporate Design",
+      "Konzeptentwicklung",
+      "Produktentwicklung",
+    ],
+  },
+  {
+    name: "Leidenschaften & Creative Skills",
+    icon: "pi pi-star",
+    background:
+      "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&q=80&w=800&h=600",
+    items: [
+      "3D Sculpting",
+      "Musikkomposition",
+      "Illustration",
+      "DYI Crafts",
+      "Kreatives Schreiben",
+      "Musizieren",
+      "Fotografie",
+      "Bildbearbeitung",
+      "Vektorgrafik-Design",
+      "Generative Art",
+      "Kalligrafie",
+      "Schmuckdesign",
+      "Game Design",
+      "Painting",
+      "Storrytelling & Worldbuilding",
     ],
   },
 ]);
@@ -83,12 +121,25 @@ const tools = ref([
 ]);
 
 const softSkills = ref([
-  "Team Leadership",
-  "Project Management",
   "Agile/Scrum",
-  "Problem Solving",
-  "Communication",
-  "Time Management",
+  "Konfliktlösungsfähigkeit",
+  "Kommunikationsfähigkeit",
+  "Soziale Sensibilität",
+  "Sehr gute Teamfähigkeit",
+  "Kritisches Denken",
+  "Adaptabilität",
+  "Strukturiertes & Selbstständiges Arbeiten",
+  "Empathie & aktives Zuhören",
+  "Selbstmanagement",
+  "Zielrientierung & Ergebnisfokus",
+  "Kreatives Denken",
+  "Design Thinking",
+  "Lernbereitschaft & Neugierde",
+  "Detailorientierung & Präzision",
+  "Logisches & analytisches Denken",
+  "Kritik- & Reflexionsfähigkeit",
+  "Konsturktives Feedback geben & annehmen",
+  "Disziplin & Verlässlichkeit",
 ]);
 </script>
 
@@ -122,11 +173,7 @@ const softSkills = ref([
             </template>
             <template #content>
               <div class="skill-items">
-                <span
-                  v-for="item in skill.items"
-                  :key="item"
-                  class="skill-item"
-                >
+                <span v-for="item in skill.items" :key="item" class="skill-item">
                   {{ item }}
                 </span>
               </div>
@@ -139,33 +186,13 @@ const softSkills = ref([
           <Card>
             <template #title>
               <div class="section-title">
-                <i class="pi pi-cog"></i>
-                <span>Tools & Technologies</span>
-              </div>
-            </template>
-            <template #content>
-              <div class="skill-items">
-                <span v-for="tool in tools" :key="tool" class="skill-item tool">
-                  {{ tool }}
-                </span>
-              </div>
-            </template>
-          </Card>
-
-          <Card>
-            <template #title>
-              <div class="section-title">
                 <i class="pi pi-users"></i>
                 <span>Soft Skills</span>
               </div>
             </template>
             <template #content>
               <div class="skill-items">
-                <span
-                  v-for="skill in softSkills"
-                  :key="skill"
-                  class="skill-item soft-skill"
-                >
+                <span v-for="skill in softSkills" :key="skill" class="skill-item tool">
                   {{ skill }}
                 </span>
               </div>
