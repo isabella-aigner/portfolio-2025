@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "home": "Start",
+    "projects": "Projekte",
+    "personalProjects": "Freie Projekte",
+    "contact": "Kontakt",
+    "career": "Werdegang"
+  },
+  "home": {
+    "greeting": "Hi, ich bin Isabella Aigner",
+    "subtitle": "Frontend-Entwicklerin & UI/UX-Designerin",
+    "viewWork": "Projekte ansehen",
+    "skills": "Meine Fähigkeiten",
+    "skillsList": {
+      "frontend": "Frontend-Entwicklung",
+      "uiux": "UI/UX-Design",
+      "responsive": "Responsive Design",
+      "design": "Grafikdesign & -identity",
+      "creativeSkills": "Leidenschaften & Creative Skills"
+    },
+    "skillElements": {
+      "colorTheory": "Farbtheorie",
+      "layoutDesign": "Layoutdesign",
+      "logoDesign": "Logodesign",
+      "visualDesignPrinciples": "Visual Design Prinzipien",
+      "typographyAndImagery": "Typografie & Bidsprache",
+      "conceptDevelopment": "Konzeptentwicklung",
+      "productDevelopment": "Produktentwicklung",
+      "musicComposition": "Musikkomposition",
+      "creativeWriting": "Kreatives Schreiben",
+      "makingMusic": "Musizieren",
+      "photography": "Fotografie",
+      "imageEditing": "Bildbearbeitung",
+      "vectorGraficDesign": "Vektorgrafik-Design",
+      "calligraphy": "Kalligrafie",
+      "jewelryDesign": "Schuckdesign"
+    },
+    "softSkills": {
+      "conflictResolutionSkills": "Konfliktlösungfähigkeit",
+      "communicationSkills": "Kommunikationsfähigkeit",
+      "socialSensitivity": "Soziale Sensibilität",
+      "strongTeamworkSkills": "Sehr gute Teamfähigkeit",
+      "criticalThinking": "Kritisches Denken",
+      "adaptibility": "Adaptibilität",
+      "structuredAndIndependentWork": "Strukturiertes und selbstständiges Arbeiten",
+      "empathyAndActiveListening": "Empathie & aktives Zuhören",
+      "selfManagement": "Selbstmanagement",
+      "goalOrientationAndResultFocus": "Zielorientierung & Ergebnisfokus",
+      "creativeThinking": "Kreatives Denken",
+      "designThinking": "Design Thinking",
+      "willingnessToLearn": "Lernbereitschaft",
+      "curiosity": "Neugierde",
+      "attentionToDetailAndPrecision": "Detailorientierung & Präzision",
+      "logicalAndAnalyticalThinking": "Logisches & analytisches Denken",
+      "receptivenessToCriticism": "Kritikfähigkeit",
+      "discipleAndReliability": "Disziplin & Verlässlichkeit"
+    }
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "viewProject": "Projekt ansehen"
+  },
+  "personalProjects": {
+    "title": "Freie Projekte",
+    "viewProject": "Projekt ansehen",
+    "hobbies": {
+      "title": "Meine Hobbys & Interessen",
+      "description": "Neben Programmierung und Design beschäftige ich mich mit verschiedenen Aktivitäten, die mich kreativ und energiegeladen halten.",
+      "items": [
+        {
+          "title": "Fotografie",
+          "icon": "pi pi-camera",
+          "description": "Momente einfangen und visuelle Geschichten durch digitale Fotografie erzählen."
+        },
+        {
+          "title": "Digitale Kunst",
+          "icon": "pi pi-palette",
+          "description": "Erstellen digitaler Illustrationen und Erkunden verschiedener künstlerischer Stile."
+        },
+        {
+          "title": "Lesen",
+          "icon": "pi pi-book",
+          "description": "Erkunden von Tech-Literatur, Design-Büchern und Science-Fiction."
+        },
+        {
+          "title": "Wandern",
+          "icon": "pi pi-map",
+          "description": "Naturpfade erkunden und Outdoor-Aktivitäten genießen."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "message": "Ich freue mich immer über neue Projekte und Möglichkeiten."
+  },
+  "career": {
+    "title": "Werdegang",
+    "intro": "Mein Werdegang wurde durch kontinuierliches Lernen und vielfältige Erfahrungen in der Softwareentwicklung und im Design geprägt.",
+    "education": {
+      "title": "Ausbildung",
+      "items": [
+        {
+          "period": "Sept. 2018 - Jan. 2022",
+          "title": "FH Hagenberg",
+          "subtitle": "Medientechnik und Design (BAKK)",
+          "description": "Abschluss: Bachelor of Science. Kompetenzen: Webentwicklung & Design, Film, Audio, 3D, Online-Marketing, 2D Motion Graphics"
+        },
+        {
+          "period": "Sept. 2017 - Juli 2018",
+          "title": "Illuskills Wien",
+          "subtitle": "Lehrgang für Medienillustration",
+          "description": "Berufsbegleitende Ausbildung im Bereich Medienillustration"
+        },
+        {
+          "period": "Sept. 2017 - Dez. 2017",
+          "title": "bit Schulungscenter, Linz",
+          "subtitle": "ECDL Weiterbildung",
+          "description": "ECDL Web Editing (HTML5, CSS3, Responsive), ECDL Powerpoint Advance"
+        },
+        {
+          "period": "Okt. 2010 - Juni 2014",
+          "title": "Werbe-Design-Akademie (WDA), Wifi Salzburg",
+          "subtitle": "Kommunikationsdesign",
+          "description": "Abschluss: Diplom im Bereich Kommunikationsdesign"
+        },
+        {
+          "period": "Nov. 2011 - Feb. 2012",
+          "title": "BFI Salzburg",
+          "subtitle": "FiT - Frauen in Handwerk und Technik",
+          "description": "Weiterbildung und Neuorientierung"
+        },
+        {
+          "period": "Okt. 2008 - Dez. 2010",
+          "title": "FH Salzburg Urstein",
+          "subtitle": "MultiMediaArt (MMA)",
+          "description": "Spezialisierung: Audio/Audiotechnik (kein Abschluss)"
+        },
+        {
+          "period": "Nov. 2007 - Juni 2008",
+          "title": "Orff-Institut, Salzburg",
+          "subtitle": "Elementare Musik- und Tanzpädagogik",
+          "description": "Außerordentliche Hörerin (Überbrückung)"
+        },
+        {
+          "period": "Sept. 2004 - Juni 2007",
+          "title": "Bundesrealstufengymnasium, Salzburg",
+          "subtitle": "Musischer Zweig",
+          "description": "Abschluss: Matura"
+        },
+        {
+          "period": "Sept. 1995 - Juni 2004",
+          "title": "Volks- und Hauptschule Faistenau",
+          "subtitle": "Grundschulausbildung",
+          "description": "Grundlegende Schulausbildung"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Berufserfahrung",
+      "items": [
+        {
+          "period": "Feb. 2021 - Aug. 2021",
+          "title": "Frontend Developer Praktikum",
+          "company": "Elements New Media Solutions",
+          "description": "Praktikum im Bereich Web-Development mit Fokus auf Frontend. Arbeit an Kundenprojekten und Sammlung praktischer Erfahrung in modernen Webtechnologien."
+        },
+        {
+          "period": "Jan. 2018 - März 2018",
+          "title": "Web Developer & Designer Praktikum",
+          "company": "Atikon EDV & Marketing GmbH, Linz",
+          "description": "Praktikum im Bereich Web-Development & -design"
+        },
+        {
+          "period": "Feb. 2015 - April 2015",
+          "title": "Grafikdesign Praktikum",
+          "company": "Wiberg GmbH, Salzburg",
+          "description": "Praktikum in der internen Grafikabteilung, Grafik & Design"
+        },
+        {
+          "period": "Juli 2014 - Sept. 2013",
+          "title": "Grafikdesign Praktikum",
+          "company": "Maya Inspiranto Werbeagentur, Salzburg",
+          "description": "Berufspraktikum im Bereich Grafik & Design"
+        },
+        {
+          "period": "Jän. 2012 - März 2012",
+          "title": "Grafikdesign Praktika",
+          "company": "Herkules-Artworks & Maya Inspiranto",
+          "description": "Schnupperpraktika bei Herkules-Artworks Werbeagentur Linz und Maya Inspiranto Werbeagentur Salzburg"
+        }
+      ]
+    }
+  }
+}

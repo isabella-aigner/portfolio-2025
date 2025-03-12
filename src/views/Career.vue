@@ -1,44 +1,49 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import ContactSection from "../components/ContactSection.vue";
-import FullWidthHeader from "../components/FullWidthHeader.vue";
-import ContentContainer from "../components/ContentContainer.vue";
+import { useI18n } from 'vue-i18n'
+import ContactSection from '../components/ContactSection.vue'
+import FullWidthHeader from '../components/FullWidthHeader.vue'
+import ContentContainer from '../components/ContentContainer.vue'
+import ScrollReveal from '../components/ScrollReveal.vue'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const downloadCV = () => {
   // Replace this URL with the actual URL to your CV
-  const cvUrl = "/cv-isabella-aigner.pdf";
-  window.open(cvUrl, "_blank");
-};
+  const cvUrl = '/cv-isabella-aigner.pdf'
+  window.open(cvUrl, '_blank')
+}
 </script>
 
 <template>
   <div class="career">
-    <FullWidthHeader
-      image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
-    >
-      <h1>{{ t("career.title") }}</h1>
+    <FullWidthHeader image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000">
+      <h1>{{ t('career.title') }}</h1>
       <p>Building the future through code and design - one project at a time</p>
     </FullWidthHeader>
-
+    
     <ContentContainer>
-      <Card class="intro-card">
-        <template #content>
-          <p>{{ t("career.intro") }}</p>
-          <div class="location">
-            <i class="pi pi-map-marker"></i>
-            <span>Salzburg, Austria</span>
-          </div>
-        </template>
-      </Card>
+      <ScrollReveal>
+        <Card class="intro-card">
+          <template #content>
+            <p>{{ t('career.intro') }}</p>
+            <div class="location">
+              <i class="pi pi-map-marker"></i>
+              <span>Salzburg, Austria</span>
+            </div>
+          </template>
+        </Card>
+      </ScrollReveal>
 
       <section class="timeline-section">
-        <h2>{{ t("career.education.title") }}</h2>
+        <ScrollReveal>
+          <h2>{{ t('career.education.title') }}</h2>
+        </ScrollReveal>
         <div class="timeline">
-          <div
-            v-for="(item, index) in t('career.education.items')"
+          <ScrollReveal 
+            v-for="(item, index) in t('career.education.items')" 
             :key="index"
+            :delay="index * 100"
+            direction="left"
             class="timeline-item"
           >
             <div class="timeline-icon">
@@ -56,16 +61,20 @@ const downloadCV = () => {
                 <p>{{ item.description }}</p>
               </template>
             </Card>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <section class="timeline-section">
-        <h2>{{ t("career.experience.title") }}</h2>
+        <ScrollReveal>
+          <h2>{{ t('career.experience.title') }}</h2>
+        </ScrollReveal>
         <div class="timeline">
-          <div
-            v-for="(item, index) in t('career.experience.items')"
+          <ScrollReveal 
+            v-for="(item, index) in t('career.experience.items')" 
             :key="index"
+            :delay="index * 100"
+            direction="right"
             class="timeline-item"
           >
             <div class="timeline-icon">
@@ -83,30 +92,31 @@ const downloadCV = () => {
                 <p>{{ item.description }}</p>
               </template>
             </Card>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      <div class="cv-section">
-        <Card>
-          <template #content>
-            <div class="cv-content">
-              <p>
-                Download my complete curriculum vitae for more details about my
-                experience and skills.
-              </p>
-              <Button
-                icon="pi pi-download"
-                label="Download CV"
-                class="p-button-outlined download-cv"
-                @click="downloadCV"
-              />
-            </div>
-          </template>
-        </Card>
-      </div>
+      <ScrollReveal>
+        <div class="cv-section">
+          <Card>
+            <template #content>
+              <div class="cv-content">
+                <p>Download my complete curriculum vitae for more details about my experience and skills.</p>
+                <Button 
+                  icon="pi pi-download" 
+                  label="Download CV" 
+                  class="p-button-outlined download-cv"
+                  @click="downloadCV"
+                />
+              </div>
+            </template>
+          </Card>
+        </div>
+      </ScrollReveal>
 
-      <ContactSection />
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
     </ContentContainer>
   </div>
 </template>
@@ -118,29 +128,29 @@ const downloadCV = () => {
     margin-bottom: 2rem;
     color: var(--primary-color);
   }
+}
 
-  .intro-card {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    text-align: center;
+.intro-card {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 
-    .location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: var(--secondary-color);
-      font-size: 1.1rem;
+  .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
 
-      i {
-        color: var(--primary-color);
-      }
+    i {
+      color: var(--primary-color);
     }
   }
 }
@@ -151,6 +161,7 @@ const downloadCV = () => {
   h2 {
     color: var(--primary-color);
     margin-bottom: 2rem;
+    text-align: center;
   }
 }
 
@@ -169,7 +180,7 @@ const downloadCV = () => {
 
   &:not(:last-child) {
     .timeline-icon::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 4rem;
       left: 1.5rem;
@@ -256,7 +267,7 @@ const downloadCV = () => {
 
     .download-cv {
       min-width: 150px;
-
+      
       &:hover {
         transform: translateY(-2px);
       }

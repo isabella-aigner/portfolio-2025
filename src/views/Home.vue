@@ -1,146 +1,95 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { useI18n } from "vue-i18n";
-import ContactSection from "../components/ContactSection.vue";
-import PageHeader from "../components/PageHeader.vue";
-import ContentContainer from "../components/ContentContainer.vue";
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import ContactSection from '../components/ContactSection.vue'
+import PageHeader from '../components/PageHeader.vue'
+import ContentContainer from '../components/ContentContainer.vue'
+import ScrollReveal from '../components/ScrollReveal.vue'
 
-const { t } = useI18n();
+const { t } = useI18n()
+const router = useRouter()
+
+const navigateToProjects = (skillCode: string) => {
+  if (skillCode === 'creative') {
+    router.push('/personal-projects')
+  } else {
+    router.push({ 
+      path: '/projects',
+      query: { filter: skillCode }
+    })
+  }
+}
 
 const skills = ref([
-  {
-    name: t("home.skillsList.frontend"),
-    icon: "pi pi-desktop",
-    background:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600",
+  { 
+    name: t('home.skillsList.frontend'), 
+    icon: 'pi pi-desktop',
+    code: 'frontend',
+    background: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600',
     items: [
-      "Vue.js",
-      "Vite",
-      "Webpack",
-      "Vitest",
-      "Pimcore",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3/SCSS",
-      "node.js",
-      "TailwindCSS",
-      "Bootstrap",
-      "Primevue",
-      "Twig",
-      "Stylelab",
-      "Symphony",
-      "PHP",
-      "Playwright",
-      "REST APIs",
-      "Web Components",
-      "Pinia",
-      "ESLint & Prettier",
-      "Jira",
-      "Git",
-      "Docker",
-    ],
+      'Vue.js', 'Vite', 'Webpack', 'Vitest', 'Pimcore',
+      'TypeScript', 'JavaScript', 'HTML5', 'CSS3/SCSS',
+      'node.js', 'TailwindCSS', 'Bootstrap', 'Primevue',
+      'Twig', 'Stylelab', 'Symphony', 'PHP', 'Playwright',
+      'REST APIs', 'Web Components', 'Pinia',
+      'ESLint & Prettier', 'Jira', 'Git', 'Docker', 'Agile/Scrum'
+    ]
   },
-  {
-    name: t("home.skillsList.uiux"),
-    icon: "pi pi-palette",
-    background:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
+  { 
+    name: t('home.skillsList.uiux'), 
+    icon: 'pi pi-palette',
+    code: 'uiux',
+    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
     items: [
-      "User Interface Design",
-      "User Experience Design",
-      "Wireframing",
-      "Prototyping",
-      "Adobe XD",
-      "Figma",
-      "Design Systems",
-      "Material UI",
-      "Usability Testing",
-      "Personas & User Journeys",
-      "Responsive Design",
-    ],
+      'User Interface Design', 'User Experience Design',
+      'Wireframing', 'Prototyping', 'Adobe XD',
+      'Figma', 'Design Systems', 'Material UI',
+      'Usability Testing', 'Personass', 'User Journeys',
+      'Responsive Design', 'bolt.new'
+    ]
   },
-  {
-    name: t("home.skillsList.design"),
-    icon: "pi pi-image",
-    background:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
+  { 
+    name: t('home.skillsList.design'), 
+    icon: 'pi pi-image',
+    code: 'design',
+    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
     items: [
-      "Adobe Creative Suite",
-      "Brand Design",
-      "Color Theory",
-      "Layout Design",
-      "Visual Design Principles",
-      "Logo-Design",
-      "Brand Guidlines",
-      "Printdesign",
-      "Webdesign",
-      "Typografie & Bildsprache",
-      "Corporate Identity",
-      "Corporate Design",
-      "Konzeptentwicklung",
-      "Produktentwicklung",
-    ],
+      'Adobe Creative Suite', 'Brand Design',
+      t('home.skillElements.colorTheory'), t('home.skillElements.layoutDesign'),
+      t('home.skillElements.visualDesignPrinciples'), t('home.skillElements.logoDesign'),
+      'Brand Guidlines', 'Printdesign', 'Webdesign',
+      t('home.skillElements.typographyAndImagery'), 'Corporate Identity',
+      'Corporate Design', t('home.skillElements.conceptDevelopment'),
+      t('home.skillElements.productDevelopment')
+    ]
   },
-  {
-    name: "Leidenschaften & Creative Skills",
-    icon: "pi pi-star",
-    background:
-      "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&q=80&w=800&h=600",
+  { 
+    name: t('home.skillsList.creativeSkills'), 
+    icon: 'pi pi-heart',
+    code: 'creative',
+    background: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800&h=600',
     items: [
-      "3D Sculpting",
-      "Musikkomposition",
-      "Illustration",
-      "DYI Crafts",
-      "Kreatives Schreiben",
-      "Musizieren",
-      "Fotografie",
-      "Bildbearbeitung",
-      "Vektorgrafik-Design",
-      "Generative Art",
-      "Kalligrafie",
-      "Schmuckdesign",
-      "Game Design",
-      "Painting",
-      "Storrytelling & Worldbuilding",
-    ],
-  },
-]);
-
-const tools = ref([
-  "Git",
-  "VS Code",
-  "Docker",
-  "Jira",
-  "npm/yarn",
-  "Webpack",
-  "Vite",
-  "Jest",
-  "Cypress",
-  "GitHub Actions",
-]);
+      '3D Sculpting', t('home.skillElements.musicComposition'), 'Illustration',
+      'DYI Crafts', t('home.skillElements.creativeWriting'), t('home.skillElements.makingMusic'),
+      t('home.skillElements.photography'), t('home.skillElements.imageEditing'), t('home.skillElements.vectorGraficDesign'),
+      'Generative Art', t('home.skillElements.calligraphy'), t('home.skillElements.jewelryDesign'),
+      'Game Design', 'Painting', 'Storrytelling & Worldbuilding'
+    ]
+  }
+])
 
 const softSkills = ref([
-  "Agile/Scrum",
-  "Konfliktlösungsfähigkeit",
-  "Kommunikationsfähigkeit",
-  "Soziale Sensibilität",
-  "Sehr gute Teamfähigkeit",
-  "Kritisches Denken",
-  "Adaptabilität",
-  "Strukturiertes & Selbstständiges Arbeiten",
-  "Empathie & aktives Zuhören",
-  "Selbstmanagement",
-  "Zielrientierung & Ergebnisfokus",
-  "Kreatives Denken",
-  "Design Thinking",
-  "Lernbereitschaft & Neugierde",
-  "Detailorientierung & Präzision",
-  "Logisches & analytisches Denken",
-  "Kritik- & Reflexionsfähigkeit",
-  "Konsturktives Feedback geben & annehmen",
-  "Disziplin & Verlässlichkeit",
-]);
+  t('home.softSkills.conflictResolutionSkills'), t('home.softSkills.communicationSkills'), 
+  t('home.softSkills.socialSensitivity'), t('home.softSkills.conflictResolutionSkills'),
+  t('home.softSkills.criticalThinking'), t('home.softSkills.adaptibility'),
+  t('home.softSkills.structuredAndIndependentWork'), t('home.softSkills.empathyAndActiveListening'),
+  t('home.softSkills.selfManagement'), t('home.softSkills.goalOrientationAndResultFocus'),
+  t('home.softSkills.creativeThinking'), t('home.softSkills.designThinking'),
+  t('home.softSkills.willingnessToLearn'), t('home.softSkills.curiosity'),
+  t('home.softSkills.attentionToDetailAndPrecision'), t('home.softSkills.logicalAndAnalyticalThinking'),
+  t('home.softSkills.receptivenessToCriticism'), t('home.softSkills.discipleAndReliability')
+])
 </script>
 
 <template>
@@ -153,83 +102,99 @@ const softSkills = ref([
 
     <ContentContainer>
       <section class="skills section">
-        <h2 class="text-center">{{ t("home.skills") }}</h2>
-
+        <ScrollReveal>
+          <h2 class="text-center font-bold m-6 text-xl">{{ t('home.skills') }}</h2>
+        </ScrollReveal>
+        
         <!-- Main Skills -->
         <div class="grid grid-cols-2">
-          <Card v-for="skill in skills" :key="skill.name" class="skill-card">
-            <template #header>
-              <div
-                class="skill-header"
-                :style="{ backgroundImage: `url(${skill.background})` }"
-              >
-                <div class="skill-overlay">
-                  <i :class="skill.icon"></i>
+          <ScrollReveal 
+            v-for="(skill, index) in skills" 
+            :key="skill.name"
+            :delay="index * 100"
+            direction="up"
+          >
+            <Card class="skill-card" @click="navigateToProjects(skill.code)">
+              <template #header>
+                <div class="skill-header" :style="{ backgroundImage: `url(${skill.background})` }">
+                  <div class="skill-overlay">
+                    <i :class="skill.icon"></i>
+                  </div>
                 </div>
-              </div>
-            </template>
-            <template #title>
-              {{ skill.name }}
-            </template>
-            <template #content>
-              <div class="skill-items">
-                <span v-for="item in skill.items" :key="item" class="skill-item">
-                  {{ item }}
-                </span>
-              </div>
-            </template>
-          </Card>
+              </template>
+              <template #title>
+                {{ skill.name }}
+              </template>
+              <template #content>
+                <div class="skill-items">
+                  <span v-for="item in skill.items" :key="item" class="skill-item">
+                    {{ item }}
+                  </span>
+                </div>
+              </template>
+            </Card>
+          </ScrollReveal>
         </div>
 
         <!-- Additional Skills -->
         <div class="additional-skills">
-          <Card>
-            <template #title>
-              <div class="section-title">
-                <i class="pi pi-users"></i>
-                <span>Soft Skills</span>
-              </div>
-            </template>
-            <template #content>
-              <div class="skill-items">
-                <span v-for="skill in softSkills" :key="skill" class="skill-item tool">
-                  {{ skill }}
-                </span>
-              </div>
-            </template>
-          </Card>
+          <ScrollReveal direction="right" :delay="200">
+            <Card>
+              <template #title>
+                <div class="section-title">
+                  <i class="pi pi-users"></i>
+                  <span>Soft Skills</span>
+                </div>
+              </template>
+              <template #content>
+                <div class="skill-items">
+                  <span v-for="skill in softSkills" :key="skill" class="skill-item tool">
+                    {{ skill }}
+                  </span>
+                </div>
+              </template>
+            </Card>
+          </ScrollReveal>
         </div>
       </section>
 
-      <ContactSection />
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
     </ContentContainer>
   </div>
 </template>
 
 <style scoped lang="scss">
-.hero {
-  text-align: center;
-  padding: 4rem 0;
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-  }
-}
-
 .skill-card {
+  cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease;
-
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
   &:hover {
     transform: translateY(-5px);
+  }
+
+  :deep(.p-card) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :deep(.p-card-body) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :deep(.p-card-content) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   :deep(.p-card-header) {
@@ -316,7 +281,7 @@ const softSkills = ref([
     align-items: center;
     gap: 0.5rem;
     color: var(--primary-color);
-
+    
     i {
       font-size: 1.25rem;
     }

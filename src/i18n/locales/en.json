@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "personalProjects": "Personal Projects",
+    "contact": "Contact",
+    "career": "Career"
+  },
+  "home": {
+    "greeting": "Hi, I'm Isabella Aigner",
+    "subtitle": "Frontend Developer & UI/UX Designer",
+    "viewWork": "View My Work",
+    "skills": "My Skills",
+    "skillsList": {
+      "frontend": "Frontend Development",
+      "uiux": "UI/UX Design",
+      "responsive": "Responsive Design",
+      "design": "Graphic Design"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewProject": "View Project"
+  },
+  "personalProjects": {
+    "title": "Personal Projects",
+    "viewProject": "View Project",
+    "hobbies": {
+      "title": "My Hobbies & Interests",
+      "description": "Beyond coding and design, I am passionate about various activities that keep me creative and energized.",
+      "items": [
+        {
+          "title": "Photography",
+          "icon": "pi pi-camera",
+          "description": "Capturing moments and exploring visual storytelling through digital photography."
+        },
+        {
+          "title": "Digital Art",
+          "icon": "pi pi-palette",
+          "description": "Creating digital illustrations and exploring different artistic styles."
+        },
+        {
+          "title": "Reading",
+          "icon": "pi pi-book",
+          "description": "Exploring tech literature, design books, and science fiction."
+        },
+        {
+          "title": "Hiking",
+          "icon": "pi pi-map",
+          "description": "Exploring nature trails and enjoying outdoor activities."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "message": "I'm always interested in hearing about new projects and opportunities."
+  },
+  "career": {
+    "title": "Career Path",
+    "intro": "My career path has been shaped by continuous learning and diverse experiences in software development and design.",
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "period": "Sept. 2018 - Jan. 2022",
+          "title": "FH Hagenberg",
+          "subtitle": "Media Technology and Design (BAKK)",
+          "description": "Degree: Bachelor of Science. Competencies: Web Development & Design, Film, Audio, 3D, Online Marketing, 2D Motion Graphics"
+        },
+        {
+          "period": "Sept. 2017 - July 2018",
+          "title": "Illuskills Vienna",
+          "subtitle": "Media Illustration Course",
+          "description": "Part-time training in media illustration"
+        },
+        {
+          "period": "Sept. 2017 - Dec. 2017",
+          "title": "bit Training Center, Linz",
+          "subtitle": "ECDL Training",
+          "description": "ECDL Web Editing (HTML5, CSS3, Responsive), ECDL PowerPoint Advanced"
+        },
+        {
+          "period": "Oct. 2010 - June 2014",
+          "title": "Advertising Design Academy (WDA), Wifi Salzburg",
+          "subtitle": "Communication Design",
+          "description": "Diploma in Communication Design"
+        },
+        {
+          "period": "Nov. 2011 - Feb. 2012",
+          "title": "BFI Salzburg",
+          "subtitle": "FiT - Women in Crafts and Technology",
+          "description": "Further education and reorientation"
+        },
+        {
+          "period": "Oct. 2008 - Dec. 2010",
+          "title": "FH Salzburg Urstein",
+          "subtitle": "MultiMediaArt (MMA)",
+          "description": "Specialization: Audio/Audio Technology (no degree)"
+        },
+        {
+          "period": "Nov. 2007 - June 2008",
+          "title": "Orff Institute, Salzburg",
+          "subtitle": "Elementary Music and Dance Education",
+          "description": "Extraordinary student (bridging period)"
+        },
+        {
+          "period": "Sept. 2004 - June 2007",
+          "title": "Federal Secondary School, Salzburg",
+          "subtitle": "Music Branch",
+          "description": "Graduation: Matura"
+        },
+        {
+          "period": "Sept. 1995 - June 2004",
+          "title": "Primary and Secondary School Faistenau",
+          "subtitle": "Basic Education",
+          "description": "Fundamental school education"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Work Experience",
+      "items": [
+        {
+          "period": "Feb. 2021 - Aug. 2021",
+          "title": "Frontend Developer Intern",
+          "company": "Elements New Media Solutions",
+          "description": "Internship in web development focusing on frontend technologies. Worked on client projects and gained practical experience in modern web development practices."
+        },
+        {
+          "period": "Jan. 2018 - March 2018",
+          "title": "Web Developer & Designer Intern",
+          "company": "Atikon EDV & Marketing GmbH, Linz",
+          "description": "Internship in web development and design"
+        },
+        {
+          "period": "Feb. 2015 - April 2015",
+          "title": "Graphic Design Intern",
+          "company": "Wiberg GmbH, Salzburg",
+          "description": "Internship in internal graphics department, graphics & design"
+        },
+        {
+          "period": "July 2014 - Sept. 2013",
+          "title": "Graphic Design Intern",
+          "company": "Maya Inspiranto Advertising Agency, Salzburg",
+          "description": "Professional internship in graphics & design"
+        },
+        {
+          "period": "Jan. 2012 - March 2012",
+          "title": "Graphic Design Internships",
+          "company": "Herkules-Artworks & Maya Inspiranto",
+          "description": "Trial internships at Herkules-Artworks Advertising Agency Linz and Maya Inspiranto Advertising Agency Salzburg"
+        }
+      ]
+    }
+  }
+}
