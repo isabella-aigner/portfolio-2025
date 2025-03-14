@@ -6,7 +6,7 @@ import Card from 'primevue/card';
 import SelectButton from 'primevue/selectbutton';
 import Dialog from 'primevue/dialog';
 import { i18n } from './i18n';
-import './styles/main.scss';
+import './style.css';
 import App from './App.vue';
 
 import Home from './views/Home.vue';

@@ -1,99 +1,157 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
-import ContactSection from '../components/ContactSection.vue'
-import PageHeader from '../components/PageHeader.vue'
-import ContentContainer from '../components/ContentContainer.vue'
-import ScrollReveal from '../components/ScrollReveal.vue'
+import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+import ContactSection from "../components/ContactSection.vue";
+import PageHeader from "../components/PageHeader.vue";
+import ContentContainer from "../components/ContentContainer.vue";
+import ScrollReveal from "../components/ScrollReveal.vue";
 
-const { t } = useI18n()
-const router = useRouter()
+const { t } = useI18n();
+const router = useRouter();
 
 const navigateToProjects = (skillCode: string) => {
-  if (skillCode === 'creative') {
-    router.push('/personal-projects')
+  if (skillCode === "creative") {
+    router.push("/personal-projects");
   } else {
-    router.push({ 
-      path: '/projects',
-      query: { filter: skillCode }
-    })
+    router.push({
+      path: "/projects",
+      query: { filter: skillCode },
+    });
   }
-}
+};
 
 const skills = ref([
-  { 
-    name: t('home.skillsList.frontend'), 
-    icon: 'pi pi-desktop',
-    code: 'frontend',
-    background: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.frontend"),
+    icon: "pi pi-desktop",
+    code: "frontend",
+    background:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'Vue.js', 'Vite', 'Webpack', 'Vitest', 'Pimcore',
-      'TypeScript', 'JavaScript', 'HTML5', 'CSS3/SCSS',
-      'node.js', 'TailwindCSS', 'Bootstrap', 'Primevue',
-      'Twig', 'Stylelab', 'Symphony', 'PHP', 'Playwright',
-      'REST APIs', 'Web Components', 'Pinia',
-      'ESLint & Prettier', 'Jira', 'Git', 'Docker', 'Agile/Scrum'
-    ]
+      "Vue.js",
+      "Vite",
+      "Webpack",
+      "Vitest",
+      "Pimcore",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3/SCSS",
+      "node.js",
+      "TailwindCSS",
+      "Bootstrap",
+      "Primevue",
+      "Twig",
+      "Stylelab",
+      "Symphony",
+      "PHP",
+      "Playwright",
+      "REST APIs",
+      "Web Components",
+      "Pinia",
+      "ESLint & Prettier",
+      "Jira",
+      "Git",
+      "Docker",
+      "Agile/Scrum",
+    ],
   },
-  { 
-    name: t('home.skillsList.uiux'), 
-    icon: 'pi pi-palette',
-    code: 'uiux',
-    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.uiux"),
+    icon: "pi pi-palette",
+    code: "uiux",
+    background:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'User Interface Design', 'User Experience Design',
-      'Wireframing', 'Prototyping', 'Adobe XD',
-      'Figma', 'Design Systems', 'Material UI',
-      'Usability Testing', 'Personass', 'User Journeys',
-      'Responsive Design', 'bolt.new'
-    ]
+      "User Interface Design",
+      "User Experience Design",
+      "Wireframing",
+      "Prototyping",
+      "Adobe XD",
+      "Figma",
+      "Design Systems",
+      "Material UI",
+      "Usability Testing",
+      "Personass",
+      "User Journeys",
+      "Responsive Design",
+      "bolt.new",
+    ],
   },
-  { 
-    name: t('home.skillsList.design'), 
-    icon: 'pi pi-image',
-    code: 'design',
-    background: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.design"),
+    icon: "pi pi-image",
+    code: "design",
+    background:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      'Adobe Creative Suite', 'Brand Design',
-      t('home.skillElements.colorTheory'), t('home.skillElements.layoutDesign'),
-      t('home.skillElements.visualDesignPrinciples'), t('home.skillElements.logoDesign'),
-      'Brand Guidlines', 'Printdesign', 'Webdesign',
-      t('home.skillElements.typographyAndImagery'), 'Corporate Identity',
-      'Corporate Design', t('home.skillElements.conceptDevelopment'),
-      t('home.skillElements.productDevelopment')
-    ]
+      "Adobe Creative Suite",
+      "Brand Design",
+      t("home.skillElements.colorTheory"),
+      t("home.skillElements.layoutDesign"),
+      t("home.skillElements.visualDesignPrinciples"),
+      t("home.skillElements.logoDesign"),
+      "Brand Guidlines",
+      "Printdesign",
+      "Webdesign",
+      t("home.skillElements.typographyAndImagery"),
+      "Corporate Identity",
+      "Corporate Design",
+      t("home.skillElements.conceptDevelopment"),
+      t("home.skillElements.productDevelopment"),
+    ],
   },
-  { 
-    name: t('home.skillsList.creativeSkills'), 
-    icon: 'pi pi-heart',
-    code: 'creative',
-    background: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800&h=600',
+  {
+    name: t("home.skillsList.creativeSkills"),
+    icon: "pi pi-heart",
+    code: "creative",
+    background:
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800&h=600",
     items: [
-      '3D Sculpting', t('home.skillElements.musicComposition'), 'Illustration',
-      'DYI Crafts', t('home.skillElements.creativeWriting'), t('home.skillElements.makingMusic'),
-      t('home.skillElements.photography'), t('home.skillElements.imageEditing'), t('home.skillElements.vectorGraficDesign'),
-      'Generative Art', t('home.skillElements.calligraphy'), t('home.skillElements.jewelryDesign'),
-      'Game Design', 'Painting', 'Storrytelling & Worldbuilding'
-    ]
-  }
-])
+      "3D Sculpting",
+      t("home.skillElements.musicComposition"),
+      "Illustration",
+      "DYI Crafts",
+      t("home.skillElements.creativeWriting"),
+      t("home.skillElements.makingMusic"),
+      t("home.skillElements.photography"),
+      t("home.skillElements.imageEditing"),
+      t("home.skillElements.vectorGraficDesign"),
+      "Generative Art",
+      t("home.skillElements.calligraphy"),
+      t("home.skillElements.jewelryDesign"),
+      "Game Design",
+      "Painting",
+      "Storrytelling & Worldbuilding",
+    ],
+  },
+]);
 
 const softSkills = ref([
-  t('home.softSkills.conflictResolutionSkills'), t('home.softSkills.communicationSkills'), 
-  t('home.softSkills.socialSensitivity'), t('home.softSkills.conflictResolutionSkills'),
-  t('home.softSkills.criticalThinking'), t('home.softSkills.adaptibility'),
-  t('home.softSkills.structuredAndIndependentWork'), t('home.softSkills.empathyAndActiveListening'),
-  t('home.softSkills.selfManagement'), t('home.softSkills.goalOrientationAndResultFocus'),
-  t('home.softSkills.creativeThinking'), t('home.softSkills.designThinking'),
-  t('home.softSkills.willingnessToLearn'), t('home.softSkills.curiosity'),
-  t('home.softSkills.attentionToDetailAndPrecision'), t('home.softSkills.logicalAndAnalyticalThinking'),
-  t('home.softSkills.receptivenessToCriticism'), t('home.softSkills.discipleAndReliability')
-])
+  t("home.softSkills.conflictResolutionSkills"),
+  t("home.softSkills.communicationSkills"),
+  t("home.softSkills.socialSensitivity"),
+  t("home.softSkills.conflictResolutionSkills"),
+  t("home.softSkills.criticalThinking"),
+  t("home.softSkills.adaptibility"),
+  t("home.softSkills.structuredAndIndependentWork"),
+  t("home.softSkills.empathyAndActiveListening"),
+  t("home.softSkills.selfManagement"),
+  t("home.softSkills.goalOrientationAndResultFocus"),
+  t("home.softSkills.creativeThinking"),
+  t("home.softSkills.designThinking"),
+  t("home.softSkills.willingnessToLearn"),
+  t("home.softSkills.curiosity"),
+  t("home.softSkills.attentionToDetailAndPrecision"),
+  t("home.softSkills.logicalAndAnalyticalThinking"),
+  t("home.softSkills.receptivenessToCriticism"),
+  t("home.softSkills.discipleAndReliability"),
+]);
 </script>
 
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <PageHeader
       title="Isabella Aigner"
       claim="Frontend Developer & UI/UX Designer crafting beautiful digital experiences"
@@ -103,20 +161,23 @@ const softSkills = ref([
     <ContentContainer>
       <section class="skills section">
         <ScrollReveal>
-          <h2 class="text-center font-bold m-6 text-xl">{{ t('home.skills') }}</h2>
+          <h2 class="text-center font-bold m-6 text-xl">{{ t("home.skills") }}</h2>
         </ScrollReveal>
-        
+
         <!-- Main Skills -->
         <div class="grid grid-cols-2">
-          <ScrollReveal 
-            v-for="(skill, index) in skills" 
+          <ScrollReveal
+            v-for="(skill, index) in skills"
             :key="skill.name"
             :delay="index * 100"
             direction="up"
           >
             <Card class="skill-card" @click="navigateToProjects(skill.code)">
               <template #header>
-                <div class="skill-header" :style="{ backgroundImage: `url(${skill.background})` }">
+                <div
+                  class="skill-header"
+                  :style="{ backgroundImage: `url(${skill.background})` }"
+                >
                   <div class="skill-overlay">
                     <i :class="skill.icon"></i>
                   </div>
@@ -166,128 +227,6 @@ const softSkills = ref([
 </template>
 
 <style scoped lang="scss">
-.skill-card {
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  :deep(.p-card) {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  :deep(.p-card-body) {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  :deep(.p-card-content) {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  :deep(.p-card-header) {
-    padding: 0;
-  }
-
-  :deep(.p-card-title) {
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    margin: 1rem 0;
-  }
-}
-
-.skill-header {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.skill-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(74, 111, 165, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-
-  i {
-    font-size: 2.5rem;
-    color: white;
-  }
-}
-
-.skill-card:hover {
-  .skill-overlay {
-    background: rgba(74, 111, 165, 0.95);
-  }
-}
-
-.skill-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.skill-item {
-  background: white;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-  &.tool {
-    background: var(--primary-color);
-    color: white;
-  }
-
-  &.soft-skill {
-    background: white;
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-  }
-}
-
-.additional-skills {
-  margin-top: 3rem;
-  display: grid;
-  gap: 2rem;
-
-  .section-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    
-    i {
-      font-size: 1.25rem;
-    }
-  }
-}
-
 @media (max-width: 768px) {
   .hero {
     h1 {
