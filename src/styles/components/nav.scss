@@ -1,0 +1,194 @@
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+}
+
+// Desktop Navigation
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .nav-links {
+        display: flex;
+        gap: 0.7rem;
+
+        .p-button {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-weight: normal;
+
+            &.active {
+                color: var(--primary-color);
+                opacity: 1;
+                font-weight: bold;
+                pointer-events: none;
+            }
+
+            &:not(.active):hover {
+                color: var(--primary-color);
+                opacity: 1;
+            }
+        }
+    }
+
+    .language-switch.p-selectbutton {
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+
+        .p-button {
+            padding: 0.3rem 0.4rem;
+            font-size: 0.75rem;
+            min-width: 2rem;
+            color: var(--text-color);
+            opacity: 0.7;
+
+            &.p-highlight {
+                background: var(--primary-color);
+                border-color: var(--primary-color);
+                color: white;
+                opacity: 1;
+            }
+
+            &:not(.p-highlight):hover {
+                color: var(--primary-color);
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+// Mobile Menu Button
+.mobile-menu-button {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    padding: 0.5rem;
+
+    &:hover {
+        background: rgba(74, 111, 165, 0.1);
+    }
+}
+
+// Mobile Navigation
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+
+    .mobile-nav-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .mobile-nav-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.75rem 1rem;
+        color: var(--text-color);
+        opacity: 0.7;
+
+        &.active {
+            background: var(--primary-color);
+            color: white;
+            opacity: 1;
+        }
+
+        &:not(.active):hover {
+            color: var(--primary-color);
+            opacity: 1;
+        }
+    }
+
+    .mobile-language-switch {
+        align-self: center;
+        margin-top: 0.5rem;
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
+
+        &.p-selectbutton {
+            .p-button {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.875rem;
+                min-width: 2.5rem;
+                color: var(--text-color);
+                opacity: 0.7;
+
+
+                &.p-highlight {
+                    background: var(--primary-color);
+                    border-color: var(--primary-color);
+                    color: white;
+                    opacity: 1;
+                }
+
+                &:not(.p-highlight):hover {
+                    color: var(--primary-color);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Slide down animation for mobile menu
+.mobile-nav .slide-down-enter-active,
+.mobile-nav .slide-down-leave-active {
+    transition: all 0.3s ease-out;
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-nav .slide-down-enter-from,
+.mobile-nav .slide-down-leave-to {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+}

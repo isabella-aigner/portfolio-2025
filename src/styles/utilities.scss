@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './components/scroll-reveal.scss';
-@import './components/home.scss';
-@import './components/career.scss';
-
 @import 'primevue/resources/themes/lara-light-blue/theme.css';
 @import 'primeicons/primeicons.css';
 
@@ -29,6 +25,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+main {
+  min-height: calc(100vh - 60px);
+  padding-top: 60px; // Add padding to account for fixed header
+}
+
 
 .container {
   @apply max-w-7xl mx-auto px-8;
@@ -138,6 +140,16 @@ body {
 .grid {
   display: grid;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 56px; // Adjust for smaller mobile header
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,29 @@
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+        }
+    }
+}
