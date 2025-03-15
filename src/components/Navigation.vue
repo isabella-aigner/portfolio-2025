@@ -81,7 +81,7 @@ const handleNavigation = (path: string) => {
         <div class="mobile-nav-content">
           <div class="mobile-nav-links">
             <Button
-              v-for="item in menuItems"
+              v-for="item in navItems"
               :key="item.path"
               :label="item.label"
               :class="{ active: $route.path === item.path }"
