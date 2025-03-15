@@ -65,7 +65,7 @@ const downloadCV = () => {
         </ScrollReveal>
         <div class="timeline">
           <ScrollReveal
-            v-for="n in 13"
+            v-for="n in 15"
             :key="n"
             :delay="n * 50"
             direction="right"
