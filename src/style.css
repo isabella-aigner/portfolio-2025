@@ -10,7 +10,7 @@
 @import './styles/components/career.scss';
 
 @import './styles/components/skillCard.scss';
-@import './styles/components/filterTags.scss';
 @import './styles/components/projects.scss';
 @import './styles/components/projectDetails.scss';
+@import './styles/components/filterButton.scss';
 @import './styles/components/careerTimeline.scss';

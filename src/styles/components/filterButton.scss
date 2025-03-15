@@ -1,0 +1,30 @@
+
+.filter-group {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    &.active {
+        background: var(--primary-color);
+        color: white;
+
+        &:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+    }
+}
