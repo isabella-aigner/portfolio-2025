@@ -145,8 +145,8 @@ const getSkillName = (skillCode: string) => {
       <ScrollReveal>
         <FilterGroup
           :filters="filterItems"
-          :selectedFilter="selectedFilter"
-          @toggledFilter="selectedFilter = $event"
+          :selected-filter="selectedFilter"
+          @toggled-filter="selectedFilter = $event"
         />
       </ScrollReveal>
 

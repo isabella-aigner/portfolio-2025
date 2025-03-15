@@ -6,7 +6,7 @@ import FilterButton from "./FilterButton.vue";
 
 defineProps<{
   filters: FilterItem[];
-  selectedFilter: FilterItem | null;
+  selectedFilter: string | null;
 }>();
 
 const emit = defineEmits<{
