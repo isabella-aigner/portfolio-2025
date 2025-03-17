@@ -126,10 +126,17 @@ const filteredProjects = computed(() => {
 });
 
 const toggleProject = (project: ProjectItem) => {
-  console.log("toggleProject", project);
-  console.log("sleected", selectedProject.value);
-
   selectedProject.value = selectedProject.value?.id === project.id ? null : project;
+
+  let scrollToElementId = selectedProject.value ? selectedProject.value.id : project.id;
+
+  const scrollItem = selectedProject.value
+    ? document
+        .getElementById(`${scrollToElementId}-content`)
+        .scrollIntoView({ behavior: "smooth" })
+    : document
+        .getElementById(`${scrollToElementId}-header`)
+        .scrollIntoView({ behavior: "smooth" });
 };
 
 const getSkillName = (skillCode: string) => {
@@ -157,7 +164,12 @@ const getSkillName = (skillCode: string) => {
         />
       </ScrollReveal>
 
-      <TransitionGroup name="projects-grid" tag="div" class="projects-grid">
+      <TransitionGroup
+        name="projects-grid"
+        tag="div"
+        class="grid"
+        :class="[selectedProject ? 'grid-cols-1' : 'grid-cols-2']"
+      >
         <ScrollReveal
           v-for="(project, index) in filteredProjects"
           :key="project.id"

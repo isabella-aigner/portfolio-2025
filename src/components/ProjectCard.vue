@@ -34,7 +34,11 @@ const getFilterName = (filterCode: string) =>
   >
     <!-- Project Header -->
     <template #header>
-      <div class="project-header" :style="{ backgroundImage: `url(${project.image})` }">
+      <div
+        :id="`${project.id}-header`"
+        class="project-header"
+        :style="{ backgroundImage: `url(${project.image})` }"
+      >
         <div class="project-overlay">
           <h3>{{ project.title }}</h3>
           <p class="subtitle">{{ project.subtitle }}</p>
@@ -44,7 +48,7 @@ const getFilterName = (filterCode: string) =>
 
     <!-- Project Content -->
     <template #content>
-      <div class="project-content">
+      <div :id="`${project.id}-content`" class="project-content">
         <!-- Basic Info -->
         <div class="basic-info">
           <p>{{ project.description }}</p>
