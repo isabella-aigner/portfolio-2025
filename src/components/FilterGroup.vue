@@ -10,14 +10,16 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (event: "toggledFilter", code: string): void;
+  (event: "toggledFilter", code: string | null): void;
 }>();
 
 const selectedFilter = ref<string | null>(null);
 
-const toggleFilter = (skillCode: string) => {
-  selectedFilter.value = selectedFilter.value === skillCode ? null : skillCode;
-  if (selectedFilter.value) emit("toggledFilter", selectedFilter.value);
+const toggleFilter = (filter: string) => {
+  selectedFilter.value === filter
+    ? (selectedFilter.value = null)
+    : (selectedFilter.value = filter);
+  emit("toggledFilter", selectedFilter.value);
 };
 </script>
 

@@ -9,13 +9,14 @@ import ContactSection from "../components/ContactSection.vue";
 import FullWidthHeader from "../components/FullWidthHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
-import FilterButton from "../components/FilterButton.vue";
 import FilterGroup from "../components/FilterGroup.vue";
+import ProjectCard from "../components/ProjectCard.vue";
+import { ProjectItem } from "../models/ProjectItem";
 
 const { t } = useI18n();
 const route = useRoute();
 
-const selectedProject = ref(null);
+const selectedProject = ref<ProjectItem | null>(null);
 const selectedFilter = ref<string | null>(null);
 
 // Set initial filter from route query
@@ -44,40 +45,43 @@ const filterItems = ref<FilterItem[]>([
   },
 ]);
 
-const projects = ref([
+const projects = ref<ProjectItem[]>([
   {
     id: "plantbase",
-    title: "PlantBase",
-    subtitle: "Plant Care Management System",
-    description:
-      "A comprehensive web application for plant enthusiasts to track and manage their indoor plants.",
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Vue.js", "TypeScript", "Node.js", "PostgreSQL"],
-    skills: ["frontend", "uiux", "responsive"],
-    year: "2023",
-    role: "Full Stack Developer",
-    client: "Personal Project",
+    title: t("projects.projectList.plantbase.title"),
+    subtitle: t("projects.projectList.plantbase.subtitle"),
+    description: t("projects.projectList.plantbase.description"),
+    image: "./src/assets/img/projects/web/plantbase/plantbase_mockup.jpg",
+    tags: [
+      "UI/UX Design",
+      "Adobe XD",
+      "Vue.js",
+      "TypeScript",
+      "Twig",
+      "Symphony",
+      "PHP",
+      "MySQL",
+    ],
+    filterTags: ["uiux", "frontend"],
+    year: "2020",
+    role: t("projects.projectList.plantbase.role"),
+    client: t("projects.clients.studyProject"),
     details: [
       {
-        title: "Project Overview",
-        content:
-          "PlantBase is a modern web application designed to help plant enthusiasts manage their indoor plants. The application provides detailed care instructions, watering schedules, and growth tracking capabilities.",
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.plantbase.overviewDesc"),
       },
       {
-        title: "Technical Implementation",
-        content:
-          "Built with Vue.js and TypeScript for the frontend, utilizing Composition API and type-safe development practices. The backend is powered by Node.js with a PostgreSQL database, ensuring robust data management and scalability.",
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.plantbase.techincalDesc"),
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+      "./src/assets/img/projects/web/plantbase/plantbase_mockup.jpg",
+      "./src/assets/img/projects/web/plantbase/unterseiten01.jpg",
+      "./src/assets/img/projects/web/plantbase/unterseiten02.jpg",
     ],
-    links: [
-      { title: "Live Demo", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "GitHub", url: "https://github.com", icon: "pi pi-github" },
-    ],
+    galleryGrid: "full",
   },
   {
     id: "portfolio",
@@ -87,7 +91,7 @@ const projects = ref([
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800&h=600",
     tags: ["Vue", "TypeScript", "PrimeVue"],
-    skills: ["frontend", "design", "responsive"],
+    filterTags: ["frontend", "design", "responsive"],
     year: "2023",
     role: "Frontend Developer",
     client: "Personal Project",
@@ -117,11 +121,14 @@ const projects = ref([
 const filteredProjects = computed(() => {
   if (!selectedFilter.value) return projects.value;
   return projects.value.filter((project) =>
-    project.skills.includes(selectedFilter.value!)
+    project.filterTags.includes(selectedFilter.value!)
   );
 });
 
-const toggleProject = (project) => {
+const toggleProject = (project: ProjectItem) => {
+  console.log("toggleProject", project);
+  console.log("sleected", selectedProject.value);
+
   selectedProject.value = selectedProject.value?.id === project.id ? null : project;
 };
 
@@ -157,128 +164,13 @@ const getSkillName = (skillCode: string) => {
           :delay="index * 200"
           direction="up"
         >
-          <Card
-            class="project-card"
-            :class="{ expanded: selectedProject?.id === project.id }"
-          >
-            <!-- Project Header -->
-            <template #header>
-              <div
-                class="project-header"
-                :style="{ backgroundImage: `url(${project.image})` }"
-                @click="toggleProject(project)"
-              >
-                <div class="project-overlay">
-                  <h3>{{ project.title }}</h3>
-                  <p class="subtitle">{{ project.subtitle }}</p>
-                </div>
-              </div>
-            </template>
-
-            <!-- Project Content -->
-            <template #content>
-              <div class="project-content">
-                <!-- Basic Info -->
-                <div class="basic-info">
-                  <p>{{ project.description }}</p>
-                  <div class="skills">
-                    <TransitionGroup name="tag">
-                      <span
-                        v-for="skill in project.skills"
-                        :key="skill"
-                        class="skill-tag"
-                        :class="{ active: selectedFilter === skill }"
-                        @click="toggleFilter(skill)"
-                      >
-                        <i :class="filterItems.find((s) => s.code === skill)?.icon"></i>
-                        {{ getSkillName(skill) }}
-                      </span>
-                    </TransitionGroup>
-                  </div>
-                  <div class="tags">
-                    <span v-for="tag in project.tags" :key="tag" class="tag">
-                      {{ tag }}
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Expanded Content -->
-                <Transition name="expand">
-                  <div v-if="selectedProject?.id === project.id" class="expanded-content">
-                    <!-- Project Info -->
-                    <div class="info-grid">
-                      <Transition name="fade-slide-up" appear>
-                        <div class="info-item">
-                          <h4>Year</h4>
-                          <p>{{ project.year }}</p>
-                        </div>
-                      </Transition>
-                      <Transition name="fade-slide-up" appear>
-                        <div class="info-item" style="transition-delay: 100ms">
-                          <h4>Role</h4>
-                          <p>{{ project.role }}</p>
-                        </div>
-                      </Transition>
-                      <Transition name="fade-slide-up" appear>
-                        <div class="info-item" style="transition-delay: 200ms">
-                          <h4>Client</h4>
-                          <p>{{ project.client }}</p>
-                        </div>
-                      </Transition>
-                    </div>
-
-                    <!-- Project Details -->
-                    <div class="details">
-                      <TransitionGroup name="fade-slide-up">
-                        <div
-                          v-for="(detail, index) in project.details"
-                          :key="detail.title"
-                          class="detail-section"
-                          :style="{ transitionDelay: `${index * 100}ms` }"
-                        >
-                          <h4>{{ detail.title }}</h4>
-                          <p>{{ detail.content }}</p>
-                        </div>
-                      </TransitionGroup>
-                    </div>
-
-                    <!-- Gallery -->
-                    <div class="gallery">
-                      <h4>Gallery</h4>
-                      <div class="gallery-grid">
-                        <TransitionGroup name="gallery">
-                          <div
-                            v-for="(image, index) in project.gallery"
-                            :key="index"
-                            class="gallery-image"
-                            :style="{
-                              backgroundImage: `url(${image})`,
-                              transitionDelay: `${index * 100}ms`,
-                            }"
-                          ></div>
-                        </TransitionGroup>
-                      </div>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="project-links">
-                      <TransitionGroup name="fade-slide-up">
-                        <Button
-                          v-for="(link, index) in project.links"
-                          :key="link.title"
-                          :label="link.title"
-                          :icon="link.icon"
-                          class="p-button-outlined"
-                          :style="{ transitionDelay: `${index * 100}ms` }"
-                          @click="window.open(link.url, '_blank')"
-                        />
-                      </TransitionGroup>
-                    </div>
-                  </div>
-                </Transition>
-              </div>
-            </template>
-          </Card>
+          <ProjectCard
+            :project="project"
+            :is-selected="selectedProject?.id === project.id"
+            :selected-filter="selectedFilter"
+            :filter-items="filterItems"
+            @toggled-project="toggleProject(project)"
+          />
         </ScrollReveal>
       </TransitionGroup>
 
