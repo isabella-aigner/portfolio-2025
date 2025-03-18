@@ -29,23 +29,193 @@ onMounted(() => {
 
 const filterItems = ref<FilterItem[]>([
   {
+    name: t("home.skillsList.uiux"),
+    icon: "pi pi-palette",
+    code: "uiux",
+  },
+  {
     name: t("home.skillsList.frontend"),
     icon: "pi pi-desktop",
     code: "frontend",
   },
   {
-    name: t("home.skillsList.uiux"),
-    icon: "pi pi-palette",
-    code: "uiux",
+    name: t("home.skillsList.backend"),
+    icon: "pi pi-database",
+    code: "backend",
+  },
+  {
+    name: t("home.skillsList.mobile"),
+    icon: "pi pi-mobile",
+    code: "mobile",
   },
   {
     name: t("home.skillsList.design"),
     icon: "pi pi-image",
     code: "design",
   },
+  {
+    name: t("home.skillsList.product"),
+    icon: "pi pi-box",
+    code: "product",
+  },
 ]);
 
 const projects = ref<ProjectItem[]>([
+  {
+    id: "redlinkGPT",
+    title: t("projects.projectList.redlinkGPT.title"),
+    subtitle: t("projects.projectList.redlinkGPT.subtitle"),
+    description: t("projects.projectList.redlinkGPT.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
+    filterTags: ["uiux", "frontend", "product"],
+    year: "2025   ",
+    role: `${t("projects.roles.brandDesign")}, ${t("projects.roles.uiuxDesigner")}, ${t(
+      "projects.roles.productDevelopment"
+    )}`,
+    client: t("projects.clients.companyWork"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.redlinkGPT.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.redlinkGPT.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    links: [
+      {
+        title: "Website",
+        url: "https://redlink.ai/",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
+    ],
+    galleryGrid: "full",
+  },
+  {
+    id: "moreStudyManager",
+    title: t("projects.projectList.moreStudyManager.title"),
+    subtitle: t("projects.projectList.moreStudyManager.subtitle"),
+    description: t("projects.projectList.moreStudyManager.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: [
+      "UI/UX Design",
+      "Adobe XD",
+      "Prototyping",
+      "Vue.js",
+      "Vite",
+      "Vitest",
+      "Tailwind CSS",
+      "Primevue",
+      "Kotlin",
+      "Swift",
+    ],
+    filterTags: ["uiux", "design", "frontend", "mobile"],
+    year: "2023",
+    role: `${t("projects.roles.brandDesign")}, ${t("projects.roles.uiuxDesigner")}, ${t(
+      "projects.roles.frontendDeveloper"
+    )}, ${t("projects.roles.mobileDeveloper")}`,
+    client: t("projects.clients.companyWork"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.moreStudyManager.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.moreStudyManager.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    links: [
+      {
+        title: "LGB Website",
+        url: "https://dhp.lbg.ac.at/more/",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
+      {
+        title: "Github",
+        url: "https://github.com/MORE-Platform",
+        icon: "pi pi-github",
+        type: "external",
+      },
+    ],
+    galleryGrid: "full",
+  },
+  {
+    id: "redlinkWebsite",
+    title: t("projects.projectList.redlinkWebsite.title"),
+    subtitle: t("projects.projectList.redlinkWebsite.subtitle"),
+    description: t("projects.projectList.redlinkWebsite.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: ["nuxt", "nuxt.js", "nuxt content", "CSS", "HTML"],
+    filterTags: ["uiux", "frontend", "backend"],
+    year: "2022",
+    role: `${t("projects.roles.uiuxDesigner")}, ${t(
+      "projects.roles.fullStackDeveloper"
+    )}`,
+    client: t("projects.clients.companyWork"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.redlinkWebsite.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.redlinkWebsite.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    links: [
+      {
+        title: "Website",
+        url: "https://redlink.at/",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
+    ],
+    galleryGrid: "full",
+  },
+  {
+    id: "dachsteinTicketshop",
+    title: t("projects.projectList.dachsteinTicketshop.title"),
+    subtitle: t("projects.projectList.dachsteinTicketshop.subtitle"),
+    description: t("projects.projectList.dachsteinTicketshop.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: ["Pimcore", "VanillaJS", "CSS", "HTML", "PHP"],
+    filterTags: ["frontend"],
+    year: "2020",
+    role: t("projects.roles.frontendDeveloper"),
+    client: t("projects.clients.internshipProject"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.dachsteinTicketshop.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.dachsteinTicketshop.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    galleryGrid: "full",
+  },
   {
     id: "plantbase",
     title: t("projects.projectList.plantbase.title"),
@@ -55,6 +225,7 @@ const projects = ref<ProjectItem[]>([
     tags: [
       "UI/UX Design",
       "Adobe XD",
+      "Prototyping",
       "Vue.js",
       "TypeScript",
       "Twig",
@@ -62,9 +233,9 @@ const projects = ref<ProjectItem[]>([
       "PHP",
       "MySQL",
     ],
-    filterTags: ["uiux", "frontend"],
+    filterTags: ["uiux", "frontend", "backend"],
     year: "2020",
-    role: t("projects.projectList.plantbase.role"),
+    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.developer")}`,
     client: t("projects.clients.studyProject"),
     details: [
       {
@@ -84,37 +255,58 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full",
   },
   {
-    id: "portfolio",
-    title: "Portfolio Website",
-    subtitle: "Personal Portfolio",
-    description: "A modern portfolio website built with Vue.js and TypeScript.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Vue", "TypeScript", "PrimeVue"],
-    filterTags: ["frontend", "design", "responsive"],
-    year: "2023",
-    role: "Frontend Developer",
-    client: "Personal Project",
+    id: "gameShop",
+    title: t("projects.projectList.gameShop.title"),
+    subtitle: t("projects.projectList.gameShop.subtitle"),
+    description: t("projects.projectList.gameShop.description"),
+    image: "./src/assets/img/projects/web/gameShop/mockup_small1.jpg",
+    tags: ["UI/UX Design", "Adobe XD", "Prototyping"],
+    filterTags: ["uiux"],
+    year: "2019",
+    role: `${t("projects.roles.uiuxDesigner")}`,
+    client: t("projects.clients.studyProject"),
     details: [
       {
-        title: "Project Overview",
-        content:
-          "A modern and responsive portfolio website showcasing my work and experience.",
-      },
-      {
-        title: "Technical Implementation",
-        content:
-          "Developed using Vue.js 3 with TypeScript and PrimeVue components. Features include dark mode, internationalization, and responsive design.",
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.gameShop.overviewDesc"),
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
+      "./src/assets/img/projects/web/gameShop/mockup.jpg",
+      "./src/assets/img/projects/web/gameShop/mockup_all.jpg",
+    ],
+    galleryGrid: "full",
+  },
+  {
+    id: "steuerkanzleiKaufmann",
+    title: t("projects.projectList.steuerkanzleiKaufmann.title"),
+    subtitle: t("projects.projectList.steuerkanzleiKaufmann.subtitle"),
+    description: t("projects.projectList.steuerkanzleiKaufmann.description"),
+    image: "./src/assets/img/projects/web/steuerkanzleiKaufmann/mockup.jpg",
+    tags: ["UI/UX Design", "Adobe XD"],
+    filterTags: ["uiux"],
+    year: "2018",
+    role: t("projects.roles.uiuxDesigner"),
+    client: t("projects.clients.internshipProject"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.steuerkanzleiKaufmann.overviewDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/steuerkanzleiKaufmann/mockup.jpg",
+      "./src/assets/img/projects/web/steuerkanzleiKaufmann/unterseiten.jpg",
     ],
     links: [
-      { title: "Live Demo", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "GitHub", url: "https://github.com", icon: "pi pi-github" },
+      {
+        title: "Website",
+        url: "https://www.kaufmann-steuerkanzlei.de/",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
     ],
+    galleryGrid: "full",
   },
 ]);
 
@@ -130,13 +322,15 @@ const toggleProject = (project: ProjectItem) => {
 
   let scrollToElementId = selectedProject.value ? selectedProject.value.id : project.id;
 
-  const scrollItem = selectedProject.value
-    ? document
-        .getElementById(`${scrollToElementId}-content`)
-        .scrollIntoView({ behavior: "smooth" })
-    : document
-        .getElementById(`${scrollToElementId}-header`)
-        .scrollIntoView({ behavior: "smooth" });
+  if (selectedProject.value) {
+    document
+      .getElementById(`${scrollToElementId}-content`)
+      ?.scrollIntoView({ behavior: "smooth" });
+  } else {
+    document
+      .getElementById(`${scrollToElementId}-header`)
+      ?.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 const getSkillName = (skillCode: string) => {

@@ -25,7 +25,8 @@ export interface ProjectDetail {
 export interface ProjectLink {
     title: string,
     url: string,
-    icon: string
+    icon: string,
+    type: string
 }
 
 export interface AudioDetail {

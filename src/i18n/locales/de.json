@@ -13,10 +13,13 @@
     "skills": "Meine Fähigkeiten",
     "skillsList": {
       "frontend": "Frontend-Entwicklung",
+      "backend": "Backend-Entwicklung",
+      "mobile": "App-Entwicklung",
       "uiux": "UI/UX-Design",
       "responsive": "Responsive Design",
-      "design": "Grafikdesign & -identity",
-      "creativeSkills": "Leidenschaften & Creative Skills"
+      "design": "Grafik- & Branddesign",
+      "creativeSkills": "Leidenschaften & Creative Skills",
+      "product": "Produktentwicklung"
     },
     "skillElements": {
       "colorTheory": "Farbtheorie",
@@ -61,24 +64,76 @@
     "viewProject": "Projekt ansehen",
     "year": "Jahr",
     "role": "Rolle",
-    "client": "Client",
+    "client": "Typ",
     "gallery": "Gallerie",
+    "closeCard": "Einklappen",
     "detailTitle": {
       "projectOverview": "Projektübersicht",
       "technicalImplementation": "Technische Umsetzung"
     },
     "clients": {
       "personalProject": "Freies Projekt",
-      "studyProject": "Studienprojekt"
+      "studyProject": "Studienprojekt",
+      "internshipProject": "Praktikumsprojekt",
+      "companyWork": "Unternehmensprojekt"
+    },
+    "roles": {
+      "uiuxDesigner": "UI/UX Designerin",
+      "frontendDeveloper": "Frontend-Entwicklerin",
+      "fullStackDeveloper": "Fullstack-Entwicklerin",
+      "developer": "Developerin",
+      "mobileDeveloper": "App-Entwicklerin",
+      "graficDesign": "Grafik- & Branddesign",
+      "brandDesign": "Markendesign",
+      "productDevelopment": "Produktentwicklung"
     },
     "projectList": {
+      "redlinkGPT": {
+        "title": "RedlinkGPT – KI-gestützte Dokumentenanalyse",
+        "subtitle": "Intelligente Verarbeitung von Dokumenten und Teams-Integration",
+        "description": "RedlinkGPT ist eine leistungsstarke KI-Plattform, die Unternehmen dabei unterstützt, große Mengen an Dokumenten effizient zu durchsuchen, zu analysieren und zu verstehen. Die Lösung integriert sich nahtlos in bestehende Arbeitsabläufe, einschließlich Microsoft Teams, und ermöglicht eine schnelle, kontextbezogene Suche mit KI-Unterstützung.",
+        "overviewDesc": "Entwicklung von RedlinkGPT, eines neuen Produktkonzeptes, welches die Bereitstellung einer KI-gestützten Toolbaox zur Optimierung und Suche von firmeninternen Informationen und Dokumenten. In diesem Zuge wurde die Website aufgesetzt und ein UI/UX-Design für den RedlinGPT Client entwickelt.",
+        "technicalDesc": "RedlinkGPT ermöglicht Unternehmen eine effiziente Nutzung großer Datenmengen durch KI-gestützte Dokumentenanalyse und intelligente Suchfunktionen. Mit einer nativen Integration in Microsoft Teams bietet es eine nahtlose Nutzererfahrung. Die Plattform basiert auf modernen LLMs (Large Language Models) und nutzt fortschrittliche Suchalgorithmen, um relevante Informationen schnell und präzise zu extrahieren. Durch API-Integrationen können Unternehmen die Lösung flexibel in ihre bestehenden Systeme einbinden."
+      },
+      "moreStudyManager": {
+        "title": "MORE - Multimodal Research Environment",
+        "subtitle": "Digitale Plattform zur interdisziplinären Forschung und Datenerhebung",
+        "description": "Die MORE Plattform unterstützt die Forschung durch die Bereitstellung einer digitalen Infrastruktur, die für die Erhebung und Analyse multimodaler Daten ausgelegt ist. Sie fördert die interdisziplinäre Zusammenarbeit und ist in verschiedenen wissenschaftlichen Projekten im Bereich der digitalen Gesundheit und nachhaltiger Forschung tätig.",
+        "overviewDesc": "Die MORE Plattform dient der Sammlung, Verarbeitung und Analyse von multimodalen Daten und fördert so die interdisziplinäre Forschung in Bereichen wie Gesundheit und digitale Technologien.",
+        "technicalDesc": "Die Plattform nutzt moderne Technologien zur Datenverarbeitung, maschinellen Lernens und Big Data, um die Forschungsarbeit zu optimieren und die Datenqualität zu gewährleisten."
+      },
+      "redlinkWebsite": {
+        "title": "Redlink GmbH",
+        "subtitle": "Redesign der Redlink Website",
+        "description": "Im Rahmen des Redesigns für Redlink GmbH wurde auch die Website neu designed und modernisiert.",
+        "overviewDesc": "Das Ziel des Projekts war die Entwicklung eines modernen Auftritts für Redlink GmbH. Die Website wurde neu gestaltet, um die Markenidentität zu stärken und die Benutzerfreundlichkeit zu verbessern und die Firma nach außen besser präsentieren zu können.",
+        "technicalDesc": "Um eine einfache Wartung zu ermöglichen wurde die Website mit nuxt.sj und nuxt content aufgesetzt."
+      },
+      "dachsteinTicketshop": {
+        "title": "Dachstein Ticketshop",
+        "subtitle": "Online-Ticketshop für das Dachstein Skigeiet",
+        "description": "Der Dachstein Ticketshop ermöglicht Besuchern, ihre Tickets für den Dachstein Gletscher bequem online zu buchen. Die Plattform bietet eine benutzerfreundliche Oberfläche, verschiedene Ticketoptionen und eine sichere Zahlungsabwicklung.",
+        "overviewDesc": "Das Ziel des Projekts war die Entwicklung eines modernen Online-Ticketshops für den Dachstein Gletscher. Die Plattform bietet eine intuitive Benutzerführung, um den Ticketkauf so einfach wie möglich zu gestalten.",
+        "technicalDesc": "Der Ticketshop wurde in der Umgebung der Firma Elements aufbereitet. Pimcore, PHP, Vue.js"
+      },
       "plantbase": {
         "title": "PlantBase",
         "subtitle": "Plant Care Management System",
         "description": "A comprehensive web application for plant enthusiasts to track and manage their indoor plants.",
-        "role": "UI/UX Designerin, Dveloperin",
         "overviewDesc": "PlantBase is a modern web application designed to help plant enthusiasts manage their indoor plants. The application provides detailed care instructions, watering schedules, and growth tracking capabilities.",
         "techincalDesc": "Design Created with Adobe XD. Built with Vue.js, Twig and TypeScript for the frontend, utilizing Composition API and type-safe development practices. The backend is build with Symphony and PHP."
+      },
+      "gameShop": {
+        "title": "Game Shop",
+        "subtitle": "Ein modernes E-Commerce-Design für Game E-Shop",
+        "description": "Das Game Shop UI/UX-Projekt konzentriert sich auf ein ansprechendes, benutzerfreundliches Design für einen digitalen Spiele-Store. Durch eine intuitive Navigation, ansprechende visuelle Gestaltung und eine optimierte User Experience bietet der Store ein reibungsloses Einkaufserlebnis für Gamer.",
+        "overviewDesc": "Das Game Shop Projekt zielte darauf ab, eine moderne E-Commerce-Plattform für digitale Spiele zu gestalten. Der Fokus lag auf einer klaren Informationsstruktur, einfacher Navigation und einer ästhetisch ansprechenden Gestaltung, die sich an die Gaming-Community richtet."
+      },
+      "steuerkanzleiKaufmann": {
+        "title": "Steuerkanzlei Kaufmann",
+        "subtitle": "Moderne Website Redesign",
+        "description": "Für die Steuerkanzlei Kaufmann wurde eine moderne und professionelle Website entwickelt. Das Ziel war es, eine klare und benutzerfreundliche Plattform zu schaffen, die Mandanten über Dienstleistungen informiert und eine einfache Kontaktaufnahme ermöglicht.",
+        "overviewDesc": "Die Website für die Steuerkanzlei Kaufmann wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer klaren Benutzerführung."
       }
     }
   },

@@ -24,20 +24,24 @@ const emit = defineEmits<{
 
 const getFilterName = (filterCode: string) =>
   props.filterItems.find((s) => s.code === filterCode)?.name || filterCode;
+
+const handleActionBtnClick = (type: string, url: string) => {
+  console.log("handleActionBtnClick", type, url);
+  if (type === "external") {
+    window.open(url, "_blank");
+  }
+};
 </script>
 
 <template>
-  <Card
-    class="project-card"
-    :class="{ expanded: isSelected }"
-    @click="emit('toggledProject', project.id)"
-  >
+  <Card class="project-card" :class="{ expanded: isSelected }">
     <!-- Project Header -->
     <template #header>
       <div
         :id="`${project.id}-header`"
         class="project-header"
         :style="{ backgroundImage: `url(${project.image})` }"
+        @click="emit('toggledProject', project.id)"
       >
         <div class="project-overlay">
           <h3>{{ project.title }}</h3>
@@ -151,9 +155,9 @@ const getFilterName = (filterCode: string) =>
                   :key="link.title"
                   :label="link.title"
                   :icon="link.icon"
-                  class="p-button-outlined"
+                  class="p-button-outlined btn btn-outlined"
                   :style="{ transitionDelay: `${index * 100}ms` }"
-                  @click="window.open(link.url, '_blank')"
+                  @click="handleActionBtnClick(link.type, link.url)"
                 />
               </TransitionGroup>
             </div>
