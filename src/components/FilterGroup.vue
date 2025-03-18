@@ -26,13 +26,26 @@ const toggleFilter = (filter: string) => {
 <template>
   <div class="filter-group">
     <TransitionGroup name="tag">
-      <FilterButton
-        v-for="filter in filters"
-        :key="filter.code"
-        :filter="filter"
-        :is-selected="selectedFilter === filter.code"
-        @toggle-filter="toggleFilter(filter.code)"
-      />
+      <div class="flex gap-2">
+        <template v-for="(filter, index) in filters.slice(0, 4)" :key="filter.code">
+          <FilterButton
+            :filter="filter"
+            :is-selected="selectedFilter === filter.code"
+            :class="{ 'last-of-line': index === 3 }"
+            @toggle-filter="toggleFilter(filter.code)"
+          />
+        </template>
+      </div>
+      <div class="flex gap-2">
+        <template v-for="(filter, index) in filters.slice(4, 8)" :key="filter.code">
+          <FilterButton
+            :filter="filter"
+            :is-selected="selectedFilter === filter.code"
+            :class="{ 'last-of-line': index === 3 }"
+            @toggle-filter="toggleFilter(filter.code)"
+          />
+        </template>
+      </div>
     </TransitionGroup>
   </div>
 </template>

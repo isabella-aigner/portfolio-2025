@@ -54,6 +54,11 @@ const filterItems = ref<FilterItem[]>([
     code: "design",
   },
   {
+    name: t("home.skillsList.print"),
+    icon: "pi pi-book",
+    code: "print",
+  },
+  {
     name: t("home.skillsList.product"),
     icon: "pi pi-box",
     code: "product",
