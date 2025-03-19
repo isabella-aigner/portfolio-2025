@@ -70,7 +70,10 @@
     "closeCard": "Einklappen",
     "detailTitle": {
       "projectOverview": "Projektübersicht",
-      "technicalImplementation": "Technische Umsetzung"
+      "technicalImplementation": "Technische Umsetzung",
+      "philosophy": "Philosophie",
+      "usp": "USP",
+      "targetGroup": "Zielgruppe"
     },
     "clients": {
       "personalProject": "Freies Projekt",
@@ -84,9 +87,16 @@
       "fullStackDeveloper": "Fullstack-Entwicklerin",
       "developer": "Developerin",
       "mobileDeveloper": "App-Entwicklerin",
-      "graficDesign": "Grafik- & Branddesign",
-      "brandDesign": "Markendesign",
+      "graficDesign": "Grafikdesignerin",
       "productDevelopment": "Produktentwicklung"
+    },
+    "tags": {
+      "graficDesign": "Grafikdesign",
+      "brandDesign": "Corporate Design",
+      "printProduction": "Print Produktion",
+      "illustration": "Illustration",
+      "campaignDesign": "Kampagnenentwicklung",
+      "packagingDesgin": "Verpackungsdesign"
     },
     "projectList": {
       "redlinkGPT": {
@@ -135,6 +145,57 @@
         "subtitle": "Moderne Website Redesign",
         "description": "Für die Steuerkanzlei Kaufmann wurde eine moderne und professionelle Website entwickelt. Das Ziel war es, eine klare und benutzerfreundliche Plattform zu schaffen, die Mandanten über Dienstleistungen informiert und eine einfache Kontaktaufnahme ermöglicht.",
         "overviewDesc": "Die Website für die Steuerkanzlei Kaufmann wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer klaren Benutzerführung."
+      },
+      "invent": {
+        "title": "INVENT Urlaubsboxen",
+        "subtitle": "Urlaubsboxen für Firmen und Einzelpersonen",
+        "description": "In der internen Grafik für INVENT wurden Urlaubsboxen für Firmen und einzelnpersonen erstellt, unterstützt durch individualisierte Werbeangebote und E-Commerce.",
+        "overviewDesc": "Die Website für die Steuerkanzlei Kaufmann wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer klaren Benutzerführung."
+      },
+      "roco": {
+        "title": "Roco & Fleischmann Modelleisenbahnen",
+        "subtitle": "Gestaltung hochwertiger Printmedien für Modellbahn-Enthusiasten",
+        "description": "Für Roco, einen führenden Hersteller von Modellbahnen, wurden verschiedene Printmedien gestaltet. Dazu gehörten Produktkataloge, Flyer, Anzeigen und Verpackungsdesigns, die das hochwertige Sortiment von Roco visuell ansprechend präsentieren. Besonderes Augenmerk lag auf einer detailgetreuen Darstellung der Modelle sowie einem einheitlichen, markenkonformen Design."
+      },
+      "wiberg": {
+        "title": "Wiberg GmbH",
+        "subtitle": "Hochwertige Printmedien für Gewürz- und Genussprodukte",
+        "description": "Für Wiberg, einen renommierten Hersteller von Gewürzen und Feinkostprodukten, wurden ansprechende Printmedien gestaltet. Dazu gehörten Produktbroschüren, Kataloge, Verpackungsdesigns und Werbematerialien, die die Qualität und Vielfalt der Wiberg-Produkte visuell unterstreichen."
+      },
+      "inspiranto": {
+        "title": "Inspiranto GmbH",
+        "subtitle": "Werbeagentur für Strategie, Kreation, Kampagnen, Werbeservices",
+        "description": "Visuelle Gestaltung für hochwertige Werbematerialien und Illustrationen"
+      },
+      "tube": {
+        "title": "Tube Nightclub",
+        "subtitle": "Konzeptdesign für ein Künstler Nightclub & Networking Treffpunkt",
+        "description": "Entwicklung eines Corporate Designs & Corproate Identity Konzeptes für einen Nightclub in der Künstler und Kreativ-Zone. Von Kampagnenentwicklung bis hin zur Event-Location.",
+        "philosophyDesc": "Tube ist ein Club in Wien, welcher Raum für kreative Köpfe und Kommunikation bietet. Dort wird nicht zwischen Persönlichkeiten und gesellschaftlichen Schichten unterschieden, da jeder willkommen ist, der sich wohl fühlt.",
+        "uspDesc": "Tube entführt seine Besucher in eine andere Welt und koppelt hierfür digitale Techniken mit analoger Bühnenkunst und Raumaufbereitung. Es wird Raum für außergewöhnliche Performance, einzigartige digitale Welten und überwältigende Erlebnisse in allen von Tube angebotenen Bereichen geschaffen, welche durch speziell engagiertes und professionelles Personal entwickelt und geleitet wird.",
+        "targetGroupDesc": "Sie beinhaltet alle kreative Köpfe und Menschen, die sich gerne kreativ betätigen und/oder auf ihre Art und Weise kreativ leben. Dadurch nehmen weder gesellschaftliche, soziale oder kulturelle Unterschiede, noch das Alter einen Einfluss auf die Zielgruppe."
+      },
+      "hajimaru": {
+        "title": "Hajimaru",
+        "subtitle": "Manga Café",
+        "description": "Konzeptdesign für ein Manga-Café in Wien.",
+        "overviewDesc": "Die Manga-Anime-Community in Österreich und Deutschland wächst järhlich immer weiter. Diese Community, die das Manga-Anima-Thema oft schon als Lebensstil praktiziert, organisiert von Zeit zu Zeit zwar eigene Treffen, doch fehlt es ihnen oft an Orten und Räumen, an denen sie sich ungezwungen unter diesem Motto treffen und austauschen bzw. zusammen diskutieren können. So bietet das Manga-Themencafé Hajimaru den perfekten Treffpunkt für diese Community, welches den Gesichtspunkt der Geschichten in den Mittelpunkt stellt. Hier können Besucher, Geschichten genießen” (lesen), “Geschichten beobachten” (Themendekorationen und -ausstellungen innerhalb des Cafés, themebenzogene Verhaltensmuster der Mitarbeiter) und “Geschichten erleben” (Events, Workshops, Diskussionen, Vorträge, etc.)."
+      },
+      "untersbergbahn": {
+        "title": "Untersbergbahn",
+        "subtitle": "Redesign der Salzburger Untersbergbahn",
+        "description": "Im Rahmen der WDA wurde bei einer Ausschreibung für die Salzburger Untersbahn teilgenommen und ein neues Corporate Design Konzept entwickelt."       
+      },
+      "heratBeat": {
+        "title": "Café Heart.Beat",
+        "subtitle": "Konzeptdesign für ein Bio-Café",
+        "description": "Entwicklung eines Corporate Designs & Corproate Identity Konzeptes für das Café Heart.Beat"
+      },
+      "cruiseMissilesRoyality": {
+        "title": "Cruise Missiles Royality",
+        "subtitle": "Promo CD",
+        "description": "Entwiclkung eines Promo-CD Designs anhand des Musikcharakters der Band.",
+        "overviewDesc": "Die Farben und Formen des Booklets versinnbildlichen eine vergängliche aber starke Persönlichkeit, die im Musikcharakter verankert ist. Die Form der Promo-CD bildet metaphorisch den klaren und durchdringlichen Charakter der Musik ab. Hier soll jedoch die Verpackung schon vorab einen eindringlichen Eindruck interlassen, ohne dass die Musik bekannt sein muss. Die Form der Pyramide (Prismas), lässt sich zu einen Stern aufklappen, der einerseits das Potential der Band etwas besonderes zu werden (“Stern am Musikhimmel”) zeigt, andererseits aber auch durch seine Form auf eine unbewusste Übermittlung der Gefühlen hindeutet, die durch die Musik stattfindet. Die Holzhülle deutet darüber hinaus auf die zukünftige Bühne hin, auf welcher der emotionale Austausch von Stimmungen durch Musik und der physische Kontakt mit der Fangemeinde stattfinden wird."
       }
     }
   },

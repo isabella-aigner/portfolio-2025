@@ -103,7 +103,7 @@ const handleActionBtnClick = (type: string, url: string) => {
             </div>
 
             <!-- Project Details -->
-            <div class="details">
+            <div v-if="project.details" class="details">
               <TransitionGroup name="fade-slide-up">
                 <div
                   v-for="(detail, index) in project.details"

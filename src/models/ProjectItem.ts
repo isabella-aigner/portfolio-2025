@@ -9,7 +9,7 @@ export interface ProjectItem {
     year: string,
     role: string,
     client: string,
-    details: ProjectDetail[],
+    details?: ProjectDetail[],
     gallery?: string[],
     galleryGrid?: string,
     audio?: AudioDetail[],
