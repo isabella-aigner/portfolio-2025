@@ -39,7 +39,7 @@ const handleActionBtnClick = (type: string, url: string) => {
     <template #header>
       <div
         :id="`${project.id}-header`"
-        class="project-header"
+        class="project-header cursor-pointer"
         :style="{ backgroundImage: `url(${project.image})` }"
         @click="emit('toggledProject', project.id)"
       >
@@ -52,9 +52,9 @@ const handleActionBtnClick = (type: string, url: string) => {
 
     <!-- Project Content -->
     <template #content>
-      <div :id="`${project.id}-content`" class="project-content">
+      <div :id="`${project.id}-content`" class="project-content cursor-pointer">
         <!-- Basic Info -->
-        <div class="basic-info">
+        <div class="basic-info" @click="emit('toggledProject', project.id)">
           <p>{{ project.description }}</p>
           <div class="skills">
             <TransitionGroup name="tag">
@@ -81,7 +81,10 @@ const handleActionBtnClick = (type: string, url: string) => {
         <Transition name="expand">
           <div v-if="isSelected" class="expanded-content">
             <!-- Project Info -->
-            <div class="info-grid">
+            <div
+              class="info-grid cursor-pointer"
+              @click="emit('toggledProject', project.id)"
+            >
               <Transition name="fade-slide-up" appear>
                 <div class="info-item">
                   <h4>{{ t("projects.year") }}</h4>
@@ -103,7 +106,11 @@ const handleActionBtnClick = (type: string, url: string) => {
             </div>
 
             <!-- Project Details -->
-            <div v-if="project.details" class="details">
+            <div
+              v-if="project.details"
+              class="details cursor-pointer"
+              @click="emit('toggledProject', project.id)"
+            >
               <TransitionGroup name="fade-slide-up">
                 <div
                   v-for="(detail, index) in project.details"
@@ -118,7 +125,10 @@ const handleActionBtnClick = (type: string, url: string) => {
             </div>
 
             <!-- Gallery -->
-            <div class="gallery">
+            <div
+              class="gallery cursor-pointer"
+              @click="emit('toggledProject', project.id)"
+            >
               <h4>{{ t("projects.gallery") }}</h4>
               <div class="gallery-grid" :class="project.galleryGrid">
                 <TransitionGroup name="gallery">
@@ -148,14 +158,14 @@ const handleActionBtnClick = (type: string, url: string) => {
             </div>
 
             <!-- Links -->
-            <div v-if="project.links" class="project-links">
+            <div v-if="project.links" class="project-links cursor-none">
               <TransitionGroup name="fade-slide-up">
                 <Button
                   v-for="(link, index) in project.links"
                   :key="link.title"
                   :label="link.title"
                   :icon="link.icon"
-                  class="p-button-outlined btn btn-outlined"
+                  class="p-button-outlined btn btn-outlined cursor-pointer"
                   :style="{ transitionDelay: `${index * 100}ms` }"
                   @click="handleActionBtnClick(link.type, link.url)"
                 />
