@@ -33,6 +33,11 @@
     .p-card-content {
         padding-top: 1.5rem;
     }
+
+    .project-subhl {
+        color: var(--primary-color);
+        margin: 0 0 0.5rem;
+    }
 }
 
 .project-header {
@@ -227,6 +232,30 @@
 
             &:hover {
                 transform: scale(1.02);
+            }
+        }
+    }
+
+    .audio-section {
+        margin: 2rem 0;
+    
+        .audio-player {
+            background: var(--surface-ground);
+            padding: 0.5rem 2rem;
+            border-radius: 8px;
+            align-items: center;
+            justify-content:stretch;
+            display: flex;
+            gap: 2rem;
+    
+            .audio-title {
+                font-weight: 500;
+                width: fit-content;
+                white-space: nowrap;
+            }
+    
+            audio {
+                width: 100%;
             }
         }
     }

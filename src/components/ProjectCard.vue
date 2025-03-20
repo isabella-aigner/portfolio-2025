@@ -45,7 +45,7 @@ const handleActionBtnClick = (type: string, url: string) => {
       >
         <div class="project-overlay">
           <h3>{{ project.title }}</h3>
-          <p class="subtitle">{{ project.subtitle }}</p>
+          <p v-if="project.subtitle" class="subtitle">{{ project.subtitle }}</p>
         </div>
       </div>
     </template>
@@ -87,19 +87,19 @@ const handleActionBtnClick = (type: string, url: string) => {
             >
               <Transition name="fade-slide-up" appear>
                 <div class="info-item">
-                  <h4>{{ t("projects.year") }}</h4>
+                  <h4 class="project-subhl">{{ t("projects.year") }}</h4>
                   <p>{{ project.year }}</p>
                 </div>
               </Transition>
               <Transition name="fade-slide-up" appear>
                 <div class="info-item" style="transition-delay: 100ms">
-                  <h4>{{ t("projects.role") }}</h4>
+                  <h4 class="project-subhl">{{ t("projects.role") }}</h4>
                   <p>{{ project.role }}</p>
                 </div>
               </Transition>
               <Transition name="fade-slide-up" appear>
                 <div class="info-item" style="transition-delay: 200ms">
-                  <h4>{{ t("projects.client") }}</h4>
+                  <h4 class="project-subhl">{{ t("projects.client") }}</h4>
                   <p>{{ project.client }}</p>
                 </div>
               </Transition>
@@ -118,10 +118,40 @@ const handleActionBtnClick = (type: string, url: string) => {
                   class="detail-section"
                   :style="{ transitionDelay: `${index * 100}ms` }"
                 >
-                  <h4>{{ detail.title }}</h4>
+                  <h4 class="project-subhl">{{ detail.title }}</h4>
                   <p>{{ detail.content }}</p>
                 </div>
               </TransitionGroup>
+            </div>
+
+            <!-- Audio Player -->
+            <div v-if="!!project.audio" class="audio-section">
+              <h4 class="project-subhl">Audio Preview</h4>
+              <div
+                v-for="(audio, index) in project.audio"
+                class="audio-player"
+                :key="index"
+              >
+                <p class="audio-title">{{ audio.title }}</p>
+
+                <audio controls :src="audio.link" :type="audio.type">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+
+            <!-- Video Player -->
+            <div v-if="!!project.video" class="video-section">
+              <h4 class="project-subhl">Video Preview</h4>
+              <div
+                v-for="(video, index) in project.video"
+                :key="index"
+                class="video-player"
+              >
+                <video controls :src="video.src" :poster="video.poster">
+                  Your browser does not support the video element.
+                </video>
+              </div>
             </div>
 
             <!-- Gallery -->
@@ -129,7 +159,7 @@ const handleActionBtnClick = (type: string, url: string) => {
               class="gallery cursor-pointer"
               @click="emit('toggledProject', project.id)"
             >
-              <h4>{{ t("projects.gallery") }}</h4>
+              <h4 class="project-subhl">{{ t("projects.gallery") }}</h4>
               <div class="gallery-grid" :class="project.galleryGrid">
                 <TransitionGroup name="gallery">
                   <template v-if="project.gallery">

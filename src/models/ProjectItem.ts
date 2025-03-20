@@ -1,7 +1,7 @@
 export interface ProjectItem { 
     id: string,
     title: string,
-    subtitle: string,
+    subtitle?: string,
     description: string,
     image: string,
     tags: string[],
@@ -30,11 +30,14 @@ export interface ProjectLink {
 }
 
 export interface AudioDetail {
-    src: string,
-    title: string
+    title: string,
+    link: string,
+    type: string
 }
 
 export interface VideoDetail {
-    src: string,
-    pointer: string
+    poster: string,
+    title: string,
+    link: string,
+    description?: string
 }

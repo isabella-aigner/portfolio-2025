@@ -21,7 +21,11 @@
       "creativeSkills": "Leidenschaften & Creative Skills",
       "product": "Produktentwicklung",
       "print": "Printproduktion",
-      "packaging": "Verpackungsdesign"
+      "packaging": "Verpackungsdesign",
+      "photography": "Fotografie",
+      "audio": "Audio",
+      "illustration": "Illustration",
+      "creativeWriting": "Kreatives schreiben"
     },
     "skillElements": {
       "colorTheory": "Farbtheorie",
@@ -74,7 +78,8 @@
       "technicalImplementation": "Technische Umsetzung",
       "philosophy": "Philosophie",
       "usp": "USP",
-      "targetGroup": "Zielgruppe"
+      "targetGroup": "Zielgruppe",
+      "concept": "Konzept"
     },
     "clients": {
       "personalProject": "Freies Projekt",
@@ -97,7 +102,8 @@
       "printProduction": "Print Produktion",
       "illustration": "Illustration",
       "campaignDesign": "Kampagnenentwicklung",
-      "packagingDesgin": "Verpackungsdesign"
+      "packagingDesgin": "Verpackungsdesign",
+      "recording": "Aufnahme"
     },
     "projectList": {
       "redlinkGPT": {
@@ -198,7 +204,18 @@
         "description": "Entwiclkung eines Promo-CD Designs anhand des Musikcharakters der Band.",
         "overviewDesc": "Die Farben und Formen des Booklets versinnbildlichen eine vergängliche aber starke Persönlichkeit, die im Musikcharakter verankert ist. Die Form der Promo-CD bildet metaphorisch den klaren und durchdringlichen Charakter der Musik ab. Hier soll jedoch die Verpackung schon vorab einen eindringlichen Eindruck interlassen, ohne dass die Musik bekannt sein muss. Die Form der Pyramide (Prismas), lässt sich zu einen Stern aufklappen, der einerseits das Potential der Band etwas besonderes zu werden (“Stern am Musikhimmel”) zeigt, andererseits aber auch durch seine Form auf eine unbewusste Übermittlung der Gefühlen hindeutet, die durch die Musik stattfindet. Die Holzhülle deutet darüber hinaus auf die zukünftige Bühne hin, auf welcher der emotionale Austausch von Stimmungen durch Musik und der physische Kontakt mit der Fangemeinde stattfinden wird."
       }
-    }
+    },
+    "freeProjectList": {
+      "subitorato": {
+        "title": "Subitorato",
+        "description": "\"subitorato\" thematisiert ein extrem des Umstandes, dass jeder Mensch seinen Alltag anders wahrnimmt und treibt dies in ein Extrem. Charakteristisch für die Musik ist, dass sie mit Klangsphären und Dissonanzen spielt, vor allem im Bereich der Stimmen.",
+        "concept": "Dem musikalischen Konzept von \"subitorato\" liegt die Verstrickung des Menschen in seine eigene persönliche Wirklichkeit zugrunde. Egal wo der Mensch lebt und seine Arbeit verrichtet teilt er seine Wirklichkeit nach seinen persönlichen Vorstellungen und Erfahrungen ein, die durch seine Umwelt beeinflusst werden. Die Komposition thematisiert somit ein Extrem dieses Umstandes. Der Mensch verstrickt sich in die Fäden seiner persönlichen Wirklichkeit, die sich von der Realität zu unterscheiden beginnt. Tag für Tag erlebt er den selben Alltag und lebt nach dem selben gewohnten Schema, jedoch bemerkt er anfangs nicht, dass er eigentlich nichts mehr zu seinem Leben beiträgt und sein Alltag maschinenartig verläuft. Als er merkt, dass er sich nur mehr selbst beobachtet und sich eigentlich nach Freiheit und Individualität sehnt, erfasst ihn ein Gefühl der Ungewissheit welches schiere Panik auslöst."
+      },
+      "meerdesLebens": {
+        "title": "Das Meer des Lebens",
+        "story": "Es war ein schöner Sonntag Nachmittag, als ich mich dazu entschloss, wieder einmal zu meinem Lieblingsplatz am Meer zu fahren. Vorfreude machte sich während der langen Autofahrt in mir breit.||Endlich! Ich saß auf einem Felsen hoch über der Bucht und ließ meinen Blick über die Wellen gleiten, als ich etwas bemerkte. Im tiefen Azurblau der Bucht entdeckte ich etwas, das dort nicht hingehörte. Neugierig und vorsichtig näherte ich mich dem Rand des Felsens und schaute hinunter in die Bucht, aber ich konnte nur etwas im Sonnenlicht blitzen sehen. Meine Neugierde wuchs und so beschloss ich einen Weg hinunter in die Bucht zu suchen. Es dauerte eine Weile, bis die Klippen sich zum Meer hin öffneten und ich mich einfach über den Rand ins Wasser gleiten lassen konnte. Nun watete ich den ganzen Weg zurück, den ich zuvor oberhalb des Meeres gewandert war. Als ich endlich an der Stelle angekommen war, die meine Neugierde geweckt hatte, fand ich dort eine Flasche, die im Meer trieb. Sie war es wohl gewesen, die das Licht gebrochen hatte. Ich hob die Flasche auf und bemerkte, dass ein Korken diese verschloss. Der Inhalt wurde von der dunkle Farbe der Flasche verborgen. Voller Ungeduld ging ich zu dem kleinen Sandstrand in der Bucht. Als ich einen bequemen Platz gefunden hatte, setzte ich mich und öffnete die Flasche. Ich hielt sie mit dem Hals nach unten und sogleich fiel eine kleine Murmel heraus. Sie hatte eine ähnliche Farbe wie das Meer, nur wirkte diese unwirklich klar. Ich hielt nun die Murmel in das Licht der untergebehenden Sonne, welches sich durch die Murmel in verschiedene, wunderschöne Farben brach.||Mein Blick verschwamm und ich konnte nur noch vage Umrisse erkennen. Die Müdigkeit, die mich übermannte, ließ mich sanft auf dem weichen Sandstrand einschlafen. Während mein Körper so friedlich in der Buchtverweilte, entfernte sich meine Seele.||In der Umgebung, in der ich mich befand, war es stockfinster.||Ich konnte spüren, dass sich etwas an mir verändert hatte! Irgendetwas war anders! Als die azurblaue Murmel ein schönes Licht in die Dunkelheit brachte und in mir eine unerklärliche Vielfalt von Gefühlen aufflammte, war mir sofort klar, was sich verändert hatte! Ich besaß das Bewusstsein und den Körper eines Kindes! So unfassbar diese Erkenntnis für einen erwachsenen Menschen auch sein mochte, war ich ganz und gar von der Schönheit der runden Kugel gefangen. So folgte ich dieser, die sich rollend von mir wegbewegte. Als ich sie endlich erreicht hatte, hob ich sie auf und betrachtete sie genauer. Plötzlich bemerkte ich, dass ich mich inmitten einer sich bewegenden Menschenmasse befand. Es war aber nicht die Masse, die meine Aufmerksamkeit auf sich zog, sondern der Regen, der leicht und beruhigend auf die straße herunterprasselte. Augenblicklich veränderte sich mein Körper wieder zu dem einer Frau, aber mein Gesit blieb weiterhin der eines Kindes. Ich betrachtete und fühlte noch immer voller Faszination den kühlen, herrlichen Regen. Plötzlich, als mich jemand aus der Menge anrempelte, rutschte die Murmel aus meiner Hand. Ich versuchte sie noch unter allen Umständen zu fassen, aber sie verschwand in einem Abflusskanal.||Mit dem Verlust der Murmel wich alle Faszination des Kindes von mir, die diese in mir bewahrt hatte. Mein Blick wurde nach und nach ungenauer und ich merkte, wie sich mein Körper der Masse anpasste und sich von ihr mitreißen ließ. Ziellos ging ich in dunklen Straßen und Gassen einer mir fremden Stadt umher und ließ mich von der Menschenmasse treiben. Ich hatte keine Ahnung, was ich eigentlich tat. Ich war zu einem Teil der Masse geworden. Ohne Willen fügte ich mich in mein Schicksal. Die vielen verschiedenen Eindrucke hinterließen nichts, ich wanderte einfach nur durch die Gassen, getrieben von einer Kraft, die ich nicht erfassen konnte.||Erschrocken saß ich auf der kleinen Sandbank der Bucht. Die Sonne war schon lange untergegangen und der Mond schien hell. Erleichtert blickte ich auf das Meer hinaus. – Es war nur ein Traum gewesen!||Ich ließ den blick zuerst zu der azurblauen Murmel gleiten und dann zu der Flasche, aus der sie gefallen war. Ich war erstaunt, als ich noch einen kleinen Zettel entdeckte. Er musste wohl mit der Murmel aus der Flasche gefallen sein. Ich hob ihn auf und las die dort in schön geschwungener Schrift stehenden Worte: ‹Versuche dein Leben so zu leben, dass du dir nichts vorzuwerfen brauchst! Auch wenn es schwierig ist, versuche deine Träume zu verwirklichen, um dein Glück zu finden. Ehrlich gesagt maß ich dieser Notiz zuerst keine große Bedeutung zu und da es schon spät war, hob ich die gefundenen Dinge auf und machte mich auf den Heimweg.||Als ich mich ins Bett elgte, schlichen sich die Ereignisse des Tages in meinen Kopf, doch ich verdrängte sie, um schlafen zu können. Am nächsten Tag ging ich wieder meinem gewohnten Tagesablauf nach. Ich stand früh am Morgen auf, um rechtzeitig zur Arbeit zu kommen. Die Geschehnisse des vorherigen Tages waren vergessen. Ich folgte einzig und allein dem Drang, meinen tag zu aller Zufriedenheit hinter mich zu bringen.||Ganz ohne es zu merken, war ich über viele Jahre zu einem Treibgut vom ‹Meer des Lebens› geworden."
+      }
+    } 
   },
   "career": {
     "title": "Werdegang",
