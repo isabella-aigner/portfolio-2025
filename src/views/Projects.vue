@@ -109,6 +109,43 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full",
   },
   {
+    id: "redlinkGPTPrint",
+    title: t("projects.projectList.redlinkGPTPrint.title"),
+    subtitle: t("projects.projectList.redlinkGPTPrint.subtitle"),
+    description: t("projects.projectList.redlinkGPTPrint.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
+    filterTags: ["design", "product"],
+    year: "2025   ",
+    role: `${t("projects.roles.design")}, ${t("projects.roles.brandDesign")}, ${t(
+      "projects.roles.productDevelopment"
+    )}`,
+    client: t("projects.clients.companyWork"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.redlinkGPTPrint.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.redlinkGPTPrint.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    links: [
+      {
+        title: "Website",
+        url: "https://redlink.ai/",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
+    ],
+    galleryGrid: "full",
+  },
+  {
     id: "moreStudyManager",
     title: t("projects.projectList.moreStudyManager.title"),
     subtitle: t("projects.projectList.moreStudyManager.subtitle"),
@@ -157,6 +194,43 @@ const projects = ref<ProjectItem[]>([
         title: "Github",
         url: "https://github.com/MORE-Platform",
         icon: "pi pi-github",
+        type: "external",
+      },
+    ],
+    galleryGrid: "full",
+  },
+  {
+    id: "redlinkPrint",
+    title: t("projects.projectList.rdlinkPrint.title"),
+    subtitle: t("projects.projectList.rdlinkPrint.subtitle"),
+    description: t("projects.projectList.rdlinkPrint.description"),
+    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
+    filterTags: ["design", "product"],
+    year: "2025   ",
+    role: `${t("projects.roles.design")}, ${t("projects.roles.brandDesign")}, ${t(
+      "projects.roles.productDevelopment"
+    )}`,
+    client: t("projects.clients.companyWork"),
+    details: [
+      {
+        title: t("projects.detailTitle.projectOverview"),
+        content: t("projects.projectList.rdlinkPrint.overviewDesc"),
+      },
+      {
+        title: t("projects.detailTitle.technicalImplementation"),
+        content: t("projects.projectList.rdlinkPrint.technicalDesc"),
+      },
+    ],
+    gallery: [
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+    ],
+    links: [
+      {
+        title: "Website",
+        url: "https://redlink.ai/",
+        icon: "pi pi-external-link",
         type: "external",
       },
     ],
