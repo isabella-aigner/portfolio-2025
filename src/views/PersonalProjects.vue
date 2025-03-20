@@ -5,7 +5,7 @@ import { useRoute } from "vue-router";
 import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
 
-import ContactSection from "../components/ContactSection.vue";
+import ContactSection from "../components/ContactCard.vue";
 import FullWidthHeader from "../components/FullWidthHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";

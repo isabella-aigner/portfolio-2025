@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
-import ContactSection from "../components/ContactSection.vue";
+import ContactSection from "../components/ContactCard.vue";
 import PageHeader from "../components/PageHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";

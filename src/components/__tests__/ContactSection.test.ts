@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import ContactSection from '../ContactSection.vue'
+import ContactSection from '../ContactCard.vue'
 import { createI18n } from 'vue-i18n'
 
 // Create i18n instance for testing
