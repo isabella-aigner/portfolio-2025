@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
+import { ProjectItem } from "../models/ProjectItem";
 
 import ContactSection from "../components/ContactCard.vue";
 import FullWidthHeader from "../components/FullWidthHeader.vue";
@@ -11,7 +12,7 @@ import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
 import FilterGroup from "../components/FilterGroup.vue";
 import ProjectCard from "../components/ProjectCard.vue";
-import { ProjectItem } from "../models/ProjectItem";
+import GalleryModal from "../components/GalleryModal.vue";
 
 const { t } = useI18n();
 const route = useRoute();
@@ -24,6 +25,7 @@ onMounted(() => {
   const filterFromQuery = route.query.filter as string;
   if (filterFromQuery) {
     selectedFilter.value = filterFromQuery;
+    console.log('onmounted: selectedFilter: ', selectedFilter.value)
   }
 });
 
@@ -76,10 +78,10 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.redlinkGPT.title"),
     subtitle: t("projects.projectList.redlinkGPT.subtitle"),
     description: t("projects.projectList.redlinkGPT.description"),
-    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    image: "./src/assets/img/projects/web/redlinkGPT/mock.jpg",
     tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
     filterTags: ["uiux", "frontend", "product"],
-    year: "2025   ",
+    year: "2025",
     role: `${t("projects.roles.brandDesign")}, ${t("projects.roles.uiuxDesigner")}, ${t(
       "projects.roles.productDevelopment"
     )}`,
@@ -90,14 +92,17 @@ const projects = ref<ProjectItem[]>([
         content: t("projects.projectList.redlinkGPT.overviewDesc"),
       },
       {
-        title: t("projects.detailTitle.technicalImplementation"),
-        content: t("projects.projectList.redlinkGPT.technicalDesc"),
+        title: t("projects.detailTitle.usp"),
+        content: t("projects.projectList.redlinkGPT.appDesc"),
       },
     ],
     gallery: [
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+      "./src/assets/img/projects/web/redlinkGPT/unterseiten.jpg",
+      "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-chat-assistant.jpg",
+      "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-support-ticket.jpg",
+      "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-reisekosten-terminbuchung.jpg",
     ],
+    fullScreenGallery: true,
     links: [
       {
         title: "Website",
@@ -793,6 +798,8 @@ const getSkillName = (skillCode: string) => {
   const skill = filterItems.value.find((s) => s.code === skillCode);
   return skill ? skill.name : skillCode;
 };
+
+const isModalVisible = ref<boolean>(false)
 </script>
 
 <template>
@@ -832,6 +839,7 @@ const getSkillName = (skillCode: string) => {
             :selected-filter="selectedFilter"
             :filter-items="filterItems"
             @toggled-project="toggleProject(project)"
+            @open-gallery-modal="() => { console.log('open gallery modal emit was called: '); isModalVisible = true }"
           />
         </ScrollReveal>
       </TransitionGroup>
@@ -841,4 +849,12 @@ const getSkillName = (skillCode: string) => {
       </ScrollReveal>
     </ContentContainer>
   </div>
-</template>
+
+   <GalleryModal 
+    v-if="selectedProject" 
+    :is-visible="isModalVisible" 
+    :selected-project="selectedProject" 
+    @close-gallery-modal="isModalVisible = false" />
+
+
+ </template>

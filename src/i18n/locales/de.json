@@ -107,11 +107,11 @@
     },
     "projectList": {
       "redlinkGPT": {
-        "title": "RedlinkGPT – KI-gestützte Dokumentenanalyse",
-        "subtitle": "Intelligente Verarbeitung von Dokumenten und Teams-Integration",
-        "description": "RedlinkGPT ist eine leistungsstarke KI-Plattform, die Unternehmen dabei unterstützt, große Mengen an Dokumenten effizient zu durchsuchen, zu analysieren und zu verstehen. Die Lösung integriert sich nahtlos in bestehende Arbeitsabläufe, einschließlich Microsoft Teams, und ermöglicht eine schnelle, kontextbezogene Suche mit KI-Unterstützung.",
+        "title": "RedlinkGPT",
+        "subtitle": "Intelligente KI-Toolbox für die Verwendung von Firmeninternen Daten",
+        "description": "RedlinkGPT ist eine leistungsstarke KI-Toolbox, die Unternehmen dabei unterstützt, große Mengen an Dokumenten effizient zu durchsuchen, zu analysieren und zu verstehen. Die Lösung integriert sich nahtlos in bestehende Arbeitsabläufe, einschließlich Microsoft Teams, und ermöglicht eine schnelle, kontextbezogene Suche mit KI-Unterstützung.",
         "overviewDesc": "Entwicklung von RedlinkGPT, eines neuen Produktkonzeptes, welches die Bereitstellung einer KI-gestützten Toolbaox zur Optimierung und Suche von firmeninternen Informationen und Dokumenten. In diesem Zuge wurde die Website aufgesetzt und ein UI/UX-Design für den RedlinGPT Client entwickelt.",
-        "technicalDesc": "RedlinkGPT ermöglicht Unternehmen eine effiziente Nutzung großer Datenmengen durch KI-gestützte Dokumentenanalyse und intelligente Suchfunktionen. Mit einer nativen Integration in Microsoft Teams bietet es eine nahtlose Nutzererfahrung. Die Plattform basiert auf modernen LLMs (Large Language Models) und nutzt fortschrittliche Suchalgorithmen, um relevante Informationen schnell und präzise zu extrahieren. Durch API-Integrationen können Unternehmen die Lösung flexibel in ihre bestehenden Systeme einbinden."
+        "appDesc": "RedlinkGPT ermöglicht Unternehmen eine effiziente Nutzung großer Datenmengen durch KI-gestützte Dokumentenanalyse und intelligente Suchfunktionen. Mit einer nativen Integration in Microsoft Teams bietet es eine nahtlose Nutzererfahrung. Die Plattform basiert auf modernen LLMs (Large Language Models) und nutzt fortschrittliche Suchalgorithmen, um relevante Informationen schnell und präzise zu extrahieren. Durch API-Integrationen können Unternehmen die Lösung flexibel in ihre bestehenden Systeme einbinden."
       },
       "moreStudyManager": {
         "title": "MORE - Multimodal Research Environment",

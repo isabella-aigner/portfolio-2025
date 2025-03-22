@@ -20,6 +20,7 @@ const props = withDefaults(
 const emit = defineEmits<{
   (event: "toggledProject", projectId: string): void;
   (event: "toggledFilter", code: string): void;
+  (event: "openGalleryModal"): void;
 }>();
 
 const getFilterName = (filterCode: string) =>
@@ -148,7 +149,7 @@ const handleActionBtnClick = (type: string, url: string) => {
                 :key="index"
                 class="video-player"
               >
-                <video controls :src="video.src" :poster="video.poster">
+                <video controls :src="video.link" :poster="video.poster">
                   Your browser does not support the video element.
                 </video>
               </div>
@@ -160,7 +161,7 @@ const handleActionBtnClick = (type: string, url: string) => {
               @click="emit('toggledProject', project.id)"
             >
               <h4 class="project-subhl">{{ t("projects.gallery") }}</h4>
-              <div class="gallery-grid" :class="project.galleryGrid">
+                <div class="gallery-grid" :class="project.galleryGrid">
                 <TransitionGroup name="gallery">
                   <template v-if="project.gallery">
                     <div v-for="(image, index) in project.gallery" :key="index">
@@ -198,6 +199,13 @@ const handleActionBtnClick = (type: string, url: string) => {
                   class="p-button-outlined btn btn-outlined cursor-pointer"
                   :style="{ transitionDelay: `${index * 100}ms` }"
                   @click="handleActionBtnClick(link.type, link.url)"
+                />
+                <Button
+                  key="btn"
+                  label="Open Gallery"
+                  class="p-button-outlined btn btn-outlined cursor-pointer"
+                  :style="{ transitionDelay: `${project.links.length * 100}ms` }"
+                  @click="emit('openGalleryModal')"
                 />
               </TransitionGroup>
             </div>

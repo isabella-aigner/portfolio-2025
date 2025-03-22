@@ -11,6 +11,7 @@ export interface ProjectItem {
     client: string,
     details?: ProjectDetail[],
     gallery?: string[],
+    fullScreenGallery?: boolean,
     galleryGrid?: string,
     audio?: AudioDetail[],
     video?: VideoDetail[],
