@@ -82,8 +82,8 @@ const projects = ref<ProjectItem[]>([
     tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
     filterTags: ["uiux", "frontend", "product"],
     year: "2025",
-    role: `${t("projects.roles.brandDesign")}, ${t("projects.roles.uiuxDesigner")}, ${t(
-      "projects.roles.productDevelopment"
+    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}, ${t("projects.roles.brandDev")}, ${t(
+      "projects.roles.productDev"
     )}`,
     client: t("projects.clients.companyWork"),
     details: [
@@ -116,29 +116,18 @@ const projects = ref<ProjectItem[]>([
   {
     id: "redlinkGPTPrint",
     title: t("projects.projectList.redlinkGPTPrint.title"),
-    subtitle: t("projects.projectList.redlinkGPTPrint.subtitle"),
     description: t("projects.projectList.redlinkGPTPrint.description"),
-    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
-    filterTags: ["design", "product"],
-    year: "2025   ",
-    role: `${t("projects.roles.design")}, ${t("projects.roles.brandDesign")}, ${t(
-      "projects.roles.productDevelopment"
+    image: "./src/assets/img/projects/grafic/redlinkGPT/redlinkGPT-Flyer.jpg",
+    tags: ["Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator"],
+    filterTags: ["design", "print", "product"],
+    year: "2025",
+    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t(
+      "projects.roles.productDev"
     )}`,
     client: t("projects.clients.companyWork"),
-    details: [
-      {
-        title: t("projects.detailTitle.projectOverview"),
-        content: t("projects.projectList.redlinkGPTPrint.overviewDesc"),
-      },
-      {
-        title: t("projects.detailTitle.technicalImplementation"),
-        content: t("projects.projectList.redlinkGPTPrint.technicalDesc"),
-      },
-    ],
     gallery: [
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+      "./src/assets/img/projects/grafic/redlinkGPT/redlinkGPT-Flyer.jpg",
+      "./src/assets/img/projects/grafic/redlinkGPT/redlinkgpt-6seiter.jpg",
     ],
     links: [
       {
@@ -155,9 +144,8 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.moreStudyManager.title"),
     subtitle: t("projects.projectList.moreStudyManager.subtitle"),
     description: t("projects.projectList.moreStudyManager.description"),
-    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
+    image: "./src/assets/img/projects/web/more/more-visual-prev.png",
     tags: [
-      "UI/UX Design",
       "Adobe XD",
       "Prototyping",
       "Vue.js",
@@ -168,11 +156,11 @@ const projects = ref<ProjectItem[]>([
       "Kotlin",
       "Swift",
     ],
-    filterTags: ["uiux", "design", "frontend", "mobile"],
+    filterTags: ["uiux", "design", "frontend", "mobile", "product"],
     year: "2023",
-    role: `${t("projects.roles.brandDesign")}, ${t("projects.roles.uiuxDesigner")}, ${t(
-      "projects.roles.frontendDeveloper"
-    )}, ${t("projects.roles.mobileDeveloper")}`,
+    role: `${t("projects.roles.brandDev")}, ${t("projects.roles.uiuxDesigner")}, ${t(
+      "projects.roles.frontendDev"
+    )}, ${t("projects.roles.mobileDev")}`,
     client: t("projects.clients.companyWork"),
     details: [
       {
@@ -185,10 +173,17 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+      "./src/assets/img/projects/web/more/more-banner-2.jpg",
+      "./src/assets/img/projects/web/more/more-visual-prev-2.png",
+      "./src/assets/img/projects/web/more/more-mobiles.jpg",
     ],
     links: [
+      {
+        title: "Website",
+        url: "https://more-platform.at/index.html",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
       {
         title: "LGB Website",
         url: "https://dhp.lbg.ac.at/more/",
@@ -205,36 +200,31 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full",
   },
   {
-    id: "redlinkPrint",
-    title: t("projects.projectList.rdlinkPrint.title"),
-    subtitle: t("projects.projectList.rdlinkPrint.subtitle"),
-    description: t("projects.projectList.rdlinkPrint.description"),
-    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
-    filterTags: ["design", "product"],
-    year: "2025   ",
-    role: `${t("projects.roles.design")}, ${t("projects.roles.brandDesign")}, ${t(
-      "projects.roles.productDevelopment"
+    id: "redlinkat",
+    title: t("projects.projectList.redlinkat.title"),
+    subtitle: t("projects.projectList.redlinkat.subtitle"),
+    description: t("projects.projectList.redlinkat.description"),
+    image: "./src/assets/img/projects/web/redlinkat/redlinkat.jpg",
+    tags: [t('projects.tags.redesign'), "Adobe XD", "Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator", "nuxt.js", "nuxt content", "VanillaJS", "CSS", "HTML"],
+    filterTags: ["uiux", "frontend", "backend", "design", "print"],
+    year: "2022-2025",
+    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t("projects.roles.uiuxDesigner")}, ${t(
+      "projects.roles.developer"
     )}`,
     client: t("projects.clients.companyWork"),
-    details: [
-      {
-        title: t("projects.detailTitle.projectOverview"),
-        content: t("projects.projectList.rdlinkPrint.overviewDesc"),
-      },
-      {
-        title: t("projects.detailTitle.technicalImplementation"),
-        content: t("projects.projectList.rdlinkPrint.technicalDesc"),
-      },
-    ],
     gallery: [
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+      "./src/assets/img/projects/web/redlinkat/redlinkat2.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/redlink-geschaeftsdrucksorten-give-aways.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/redlink-flyer.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/rollup-zweier.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/redlink-weihnachtseinladung.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/Redlink-10-jahresfeier-Einladung.jpg",
+      "./src/assets/img/projects/grafic/redlinkat/hackathon-2.jpg"
     ],
     links: [
       {
         title: "Website",
-        url: "https://redlink.ai/",
+        url: "https://redlink.at/",
         icon: "pi pi-external-link",
         type: "external",
       },
@@ -242,36 +232,40 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full",
   },
   {
-    id: "redlinkWebsite",
-    title: t("projects.projectList.redlinkWebsite.title"),
-    subtitle: t("projects.projectList.redlinkWebsite.subtitle"),
-    description: t("projects.projectList.redlinkWebsite.description"),
-    image: "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-    tags: ["nuxt", "nuxt.js", "nuxt content", "CSS", "HTML"],
-    filterTags: ["uiux", "frontend", "backend"],
-    year: "2022",
-    role: `${t("projects.roles.uiuxDesigner")}, ${t(
-      "projects.roles.fullStackDeveloper"
-    )}`,
+    id: "redlinkWhiteppaer",
+    title: t("projects.projectList.redlinkatWhitepaper.title"),
+    subtitle: t("projects.projectList.redlinkatWhitepaper.subtitle"),
+    description: t("projects.projectList.redlinkatWhitepaper.description"),
+    image: "./src/assets/img/projects/grafic/redlinkatWhitepaper/redlink-llm-whitepaper-front.jpg",
+    tags: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
+    filterTags: ["design", "print", "product"],
+    year: "2022-2024",
+    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.developer")}`,
     client: t("projects.clients.companyWork"),
     details: [
       {
-        title: t("projects.detailTitle.projectOverview"),
-        content: t("projects.projectList.redlinkWebsite.overviewDesc"),
+        title: t("projects.projectList.redlinkatWhitepaper.goodSearchUXTitle"),
+        content: t("projects.projectList.redlinkatWhitepaper.goodSearchUX"),
       },
       {
-        title: t("projects.detailTitle.technicalImplementation"),
-        content: t("projects.projectList.redlinkWebsite.technicalDesc"),
+        title: t("projects.projectList.redlinkatWhitepaper.llmTitle"),
+        content: t("projects.projectList.redlinkatWhitepaper.llm"),
       },
     ],
     gallery: [
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop_dreier.jpg",
-      "./src/assets/img/projects/web/dachsteinTicketshop/ticketshop-more.jpg",
+      "./src/assets/img/projects/grafic/redlinkatWhitepaper/good-search-ux-2.jpg",
+      "./src/assets/img/projects/grafic/redlinkatWhitepaper/redlink-llm.jpg",
     ],
     links: [
       {
-        title: "Website",
-        url: "https://redlink.at/",
+        title: t("projects.projectList.redlinkatWhitepaper.goodSearchUXTitle"),
+        url: "https://redlink.at/solutions/search",
+        icon: "pi pi-external-link",
+        type: "external",
+      },
+      {
+        title: t("projects.projectList.redlinkatWhitepaper.llmTitleShort"),
+        url: "https://redlink.at/solutions/llm",
         icon: "pi pi-external-link",
         type: "external",
       },

@@ -2,7 +2,7 @@ export interface ProjectItem {
     id: string,
     title: string,
     subtitle?: string,
-    description: string,
+    description?: string,
     image: string,
     tags: string[],
     filterTags: string[],

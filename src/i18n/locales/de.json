@@ -89,12 +89,14 @@
     },
     "roles": {
       "uiuxDesigner": "UI/UX Designerin",
-      "frontendDeveloper": "Frontend-Entwicklerin",
-      "fullStackDeveloper": "Fullstack-Entwicklerin",
+      "frontendDev": "Frontend-Entwicklerin",
+      "backendDev": "Backend-Entwicklerin",
+      "fullstackDev": "Fullstack-Entwicklerin",
       "developer": "Developerin",
-      "mobileDeveloper": "App-Entwicklerin",
+      "mobileDev": "App-Entwicklerin",
       "graficDesign": "Grafikdesignerin",
-      "productDevelopment": "Produktentwicklung"
+      "productDev": "Produktentwicklung",
+      "brandDev": "Markenentwicklung"
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -103,7 +105,8 @@
       "illustration": "Illustration",
       "campaignDesign": "Kampagnenentwicklung",
       "packagingDesgin": "Verpackungsdesign",
-      "recording": "Aufnahme"
+      "recording": "Aufnahme",
+      "redesign": "Redesign"
     },
     "projectList": {
       "redlinkGPT": {
@@ -113,19 +116,31 @@
         "overviewDesc": "Entwicklung von RedlinkGPT, eines neuen Produktkonzeptes, welches die Bereitstellung einer KI-gestützten Toolbaox zur Optimierung und Suche von firmeninternen Informationen und Dokumenten. In diesem Zuge wurde die Website aufgesetzt und ein UI/UX-Design für den RedlinGPT Client entwickelt.",
         "appDesc": "RedlinkGPT ermöglicht Unternehmen eine effiziente Nutzung großer Datenmengen durch KI-gestützte Dokumentenanalyse und intelligente Suchfunktionen. Mit einer nativen Integration in Microsoft Teams bietet es eine nahtlose Nutzererfahrung. Die Plattform basiert auf modernen LLMs (Large Language Models) und nutzt fortschrittliche Suchalgorithmen, um relevante Informationen schnell und präzise zu extrahieren. Durch API-Integrationen können Unternehmen die Lösung flexibel in ihre bestehenden Systeme einbinden."
       },
+      "redlinkGPTPrint": {
+        "title": "RedlinkGPT Printprodukte",
+        "description": "Erstellung von Info Print-Produkte für das RedlinkGPT Produkt."
+      },
       "moreStudyManager": {
-        "title": "MORE - Multimodal Research Environment",
-        "subtitle": "Digitale Plattform zur interdisziplinären Forschung und Datenerhebung",
+        "title": "MORE",
+        "subtitle": "Multimodal Research Environment",
         "description": "Die MORE Plattform unterstützt die Forschung durch die Bereitstellung einer digitalen Infrastruktur, die für die Erhebung und Analyse multimodaler Daten ausgelegt ist. Sie fördert die interdisziplinäre Zusammenarbeit und ist in verschiedenen wissenschaftlichen Projekten im Bereich der digitalen Gesundheit und nachhaltiger Forschung tätig.",
         "overviewDesc": "Die MORE Plattform dient der Sammlung, Verarbeitung und Analyse von multimodalen Daten und fördert so die interdisziplinäre Forschung in Bereichen wie Gesundheit und digitale Technologien.",
-        "technicalDesc": "Die Plattform nutzt moderne Technologien zur Datenverarbeitung, maschinellen Lernens und Big Data, um die Forschungsarbeit zu optimieren und die Datenqualität zu gewährleisten."
+        "technicalDesc": "Die Plattform wurde als Web-App und Mobile-App entwickelt. Die Web-App ermöglicht Studienleiter eine Studie durchzuführen und Daten auszulesen, wobei die Mobile App für die Studienteilnehmer entwickelt wurde"
       },
-      "redlinkWebsite": {
+      "redlinkat": {
         "title": "Redlink GmbH",
-        "subtitle": "Redesign der Redlink Website",
-        "description": "Im Rahmen des Redesigns für Redlink GmbH wurde auch die Website neu designed und modernisiert.",
-        "overviewDesc": "Das Ziel des Projekts war die Entwicklung eines modernen Auftritts für Redlink GmbH. Die Website wurde neu gestaltet, um die Markenidentität zu stärken und die Benutzerfreundlichkeit zu verbessern und die Firma nach außen besser präsentieren zu können.",
-        "technicalDesc": "Um eine einfache Wartung zu ermöglichen wurde die Website mit nuxt.sj und nuxt content aufgesetzt."
+        "subtitle": "Redesign des Firmenauftritts",
+        "description": "Im Rahmen des Redesigns für Redlink GmbH wurden Website, Geschäftsdrucksorten und unterschiedliche Druckwerke und Merchandise entwickelt und der Auftritt modernisiert."
+        },
+      "redlinkatWhitepaper": {
+        "title": "Redlink Whitepaper",
+        "subtitle": "Whitepaper zu Search UX und LLM",
+        "description": "Produktion zweier Whitepaper zu den Firmen-Dachthemen: \"Good Search UX\", \"Find Things Smarter: Über den Einsatz von Large Language Models im Enterprise Content Retrieval\"",
+        "goodSearchUXTitle": "Good Search User Experience",
+        "goodSearchUX": "Im digitalen Zeitalter ertrinken wir in einer Lawine von Informationen und Daten. Hier kommen Suchanwendungen ins Spiel: Aus dem Unternehmensumfeld kommt häufig der Wunsch nach etwas Einfachem „wie Google“, aber mit eigenen Daten – nur einem Suchfeld. Das klingt einfach, aber es gibt viele Herausforderungen und Nuancen zu berücksichtigen. In den meisten realen Situationen benötigen Menschen mehr als nur ein Suchfeld, sie benötigen mehrere Möglichkeiten, um mit der Suche zu interagieren. Unser Whitepaper Good Search User Experience ist eine Zusammenfassung der Lektionen, die wir im letzten Jahrzehnt gelernt haben.",
+        "llmTitle": "Find Things Smarter: Über den Einsatz von Large Language Models im Enterprise Content Retrieval",
+        "llmTitleShort": "LLMs für Enterprise Content Retrieval",
+        "llm": "Large Language Modelle (LLM) spielen bei der Erschließung von Informationswelten von Unternehmen intern als auch für ihre Kunden eine große Rolle. Unser Whitepaper Finding Things Smarter: Über den Einsatz von Language Models im Enterprise Content Retrieval zeigt, wie moderne Technologien wie Retrieval Augmented Generation (RAG) in Unternehmen gewinnbringend eingesetzt werden kann, um relevante kontextbezogene Antworten generieren zu können. Das Thema wurde im Projekt LLMs für Unternehmen gemeinsam mit dem IDA Lab erarbeitet."
       },
       "dachsteinTicketshop": {
         "title": "Dachstein Ticketshop",

@@ -56,7 +56,7 @@ const handleActionBtnClick = (type: string, url: string) => {
       <div :id="`${project.id}-content`" class="project-content cursor-pointer">
         <!-- Basic Info -->
         <div class="basic-info" @click="emit('toggledProject', project.id)">
-          <p>{{ project.description }}</p>
+          <p v-if="project.description">{{ project.description }}</p>
           <div class="skills">
             <TransitionGroup name="tag">
               <span
@@ -201,6 +201,7 @@ const handleActionBtnClick = (type: string, url: string) => {
                   @click="handleActionBtnClick(link.type, link.url)"
                 />
                 <Button
+                  v-if="project.fullScreenGallery"
                   key="btn"
                   label="Open Gallery"
                   class="p-button-outlined btn btn-outlined cursor-pointer"
