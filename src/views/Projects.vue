@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
 import { ProjectItem } from "../models/ProjectItem";
@@ -15,6 +15,7 @@ import ProjectCard from "../components/ProjectCard.vue";
 import GalleryModal from "../components/GalleryModal.vue";
 
 const { t } = useI18n();
+const router = useRouter();
 const route = useRoute();
 
 const selectedProject = ref<ProjectItem | null>(null);
@@ -28,6 +29,16 @@ onMounted(() => {
     console.log("onmounted: selectedFilter: ", selectedFilter.value);
   }
 });
+
+const toggleFilter = (filterId: string) => {
+  if (filterId) router.replace({ query: { ...route.query, filter: filterId } });
+  else {
+    const query = { ...route.query };
+    delete query.filter;
+    router.replace({ query });
+  }
+  selectedFilter.value = filterId;
+};
 
 const filterItems = ref<FilterItem[]>([
   {
@@ -797,7 +808,7 @@ const isModalVisible = ref<boolean>(false);
         <FilterGroup
           :filters="filterItems"
           :selected-filter="selectedFilter"
-          @toggled-filter="selectedFilter = $event"
+          @toggled-filter="toggleFilter($event)"
         />
       </ScrollReveal>
 

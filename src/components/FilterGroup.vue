@@ -1,19 +1,23 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed } from "vue";
 import { FilterItem } from "../models/FilterItem";
+import { useRoute } from "vue-router";
 
 import FilterButton from "./FilterButton.vue";
 
+const route = useRoute();
+
 defineProps<{
   filters: FilterItem[];
-  selectedFilter: string | null;
 }>();
 
 const emit = defineEmits<{
   (event: "toggledFilter", code: string | null): void;
 }>();
 
-const selectedFilter = ref<string | null>(null);
+const routeFilterValue = computed(() => route.query?.filter);
+
+const selectedFilter = ref<string | null>((routeFilterValue.value as string) || null);
 
 const toggleFilter = (filter: string) => {
   selectedFilter.value === filter
