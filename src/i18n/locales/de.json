@@ -106,7 +106,9 @@
       "campaignDesign": "Kampagnenentwicklung",
       "packagingDesgin": "Verpackungsdesign",
       "recording": "Aufnahme",
-      "redesign": "Redesign"
+      "redesign": "Redesign",
+      "merch": "Give Aways",
+      "promo": "Promo Design"
     },
     "projectList": {
       "redlinkGPT": {
@@ -152,9 +154,9 @@
       "plantbase": {
         "title": "PlantBase",
         "subtitle": "Plant Care Management System",
-        "description": "A comprehensive web application for plant enthusiasts to track and manage their indoor plants.",
-        "overviewDesc": "PlantBase is a modern web application designed to help plant enthusiasts manage their indoor plants. The application provides detailed care instructions, watering schedules, and growth tracking capabilities.",
-        "techincalDesc": "Design Created with Adobe XD. Built with Vue.js, Twig and TypeScript for the frontend, utilizing Composition API and type-safe development practices. The backend is build with Symphony and PHP."
+        "description": "Eine umfassende Webanwendung für Pflanzenliebhaber zur Verwaltung und Pflege ihrer Zimmerpflanzen.",
+        "overviewDesc": "PlantBase ist eine moderne Webanwendung, die Pflanzenliebhaber dabei unterstützt, ihre Zimmerpflanzen zu verwalten. Die Anwendung bietet detaillierte Pflegehinweise, Bewässerungspläne und Funktionen zur Wachstumskontrolle.",
+        "techincalDesc": "Design erstellt mit Adobe XD. Frontend entwickelt mit Vue.js, Twig und TypeScript unter Verwendung der Composition API und einer typsicheren Entwicklungsweise. Das Backend basiert auf Symfony und PHP."
       },
       "gameShop": {
         "title": "Game Shop",

@@ -25,7 +25,7 @@ onMounted(() => {
   const filterFromQuery = route.query.filter as string;
   if (filterFromQuery) {
     selectedFilter.value = filterFromQuery;
-    console.log('onmounted: selectedFilter: ', selectedFilter.value)
+    console.log("onmounted: selectedFilter: ", selectedFilter.value);
   }
 });
 
@@ -79,11 +79,22 @@ const projects = ref<ProjectItem[]>([
     subtitle: t("projects.projectList.redlinkGPT.subtitle"),
     description: t("projects.projectList.redlinkGPT.description"),
     image: "./src/assets/img/projects/web/redlinkGPT/mock.jpg",
-    tags: ["Figma", "Prototyping", "HTML", "CSS", "VanillaJs"],
-    filterTags: ["uiux", "frontend", "product"],
+    tags: [
+      "Figma",
+      "Prototyping",
+      "HTML",
+      "CSS",
+      "VanillaJs",
+      "Adobe InDesign",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],
+    filterTags: ["uiux", "frontend", "design", "print", "product"],
     year: "2025",
-    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}, ${t("projects.roles.brandDev")}, ${t(
-      "projects.roles.productDev"
+    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}, ${t(
+      "projects.roles.brandDev"
+    )}, ${t("projects.roles.productDev")}, ${t("projects.roles.graficDesign")}, ${t(
+      "projects.roles.brandDev"
     )}`,
     client: t("projects.clients.companyWork"),
     details: [
@@ -101,31 +112,6 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-chat-assistant.jpg",
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-support-ticket.jpg",
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-reisekosten-terminbuchung.jpg",
-    ],
-    fullScreenGallery: true,
-    links: [
-      {
-        title: "Website",
-        url: "https://redlink.ai/",
-        icon: "pi pi-external-link",
-        type: "external",
-      },
-    ],
-    galleryGrid: "full",
-  },
-  {
-    id: "redlinkGPTPrint",
-    title: t("projects.projectList.redlinkGPTPrint.title"),
-    description: t("projects.projectList.redlinkGPTPrint.description"),
-    image: "./src/assets/img/projects/grafic/redlinkGPT/redlinkGPT-Flyer.jpg",
-    tags: ["Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator"],
-    filterTags: ["design", "print", "product"],
-    year: "2025",
-    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t(
-      "projects.roles.productDev"
-    )}`,
-    client: t("projects.clients.companyWork"),
-    gallery: [
       "./src/assets/img/projects/grafic/redlinkGPT/redlinkGPT-Flyer.jpg",
       "./src/assets/img/projects/grafic/redlinkGPT/redlinkgpt-6seiter.jpg",
     ],
@@ -205,12 +191,26 @@ const projects = ref<ProjectItem[]>([
     subtitle: t("projects.projectList.redlinkat.subtitle"),
     description: t("projects.projectList.redlinkat.description"),
     image: "./src/assets/img/projects/web/redlinkat/redlinkat.jpg",
-    tags: [t('projects.tags.redesign'), "Adobe XD", "Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator", "nuxt.js", "nuxt content", "VanillaJS", "CSS", "HTML"],
+    tags: [
+      t("projects.tags.redesign"),
+      "Corporate Design",
+      "Corborate Deisgn Guidlines",
+      t("projects.tags.merch"),
+      "Adobe XD",
+      "Adobe InDesign",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "nuxt.js",
+      "nuxt content",
+      "VanillaJS",
+      "CSS",
+      "HTML",
+    ],
     filterTags: ["uiux", "frontend", "backend", "design", "print"],
     year: "2022-2025",
-    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t("projects.roles.uiuxDesigner")}, ${t(
-      "projects.roles.developer"
-    )}`,
+    role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t(
+      "projects.roles.uiuxDesigner"
+    )}, ${t("projects.roles.developer")}`,
     client: t("projects.clients.companyWork"),
     gallery: [
       "./src/assets/img/projects/web/redlinkat/redlinkat2.jpg",
@@ -219,7 +219,7 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/grafic/redlinkat/rollup-zweier.jpg",
       "./src/assets/img/projects/grafic/redlinkat/redlink-weihnachtseinladung.jpg",
       "./src/assets/img/projects/grafic/redlinkat/Redlink-10-jahresfeier-Einladung.jpg",
-      "./src/assets/img/projects/grafic/redlinkat/hackathon-2.jpg"
+      "./src/assets/img/projects/grafic/redlinkat/hackathon-2.jpg",
     ],
     links: [
       {
@@ -236,7 +236,8 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.redlinkatWhitepaper.title"),
     subtitle: t("projects.projectList.redlinkatWhitepaper.subtitle"),
     description: t("projects.projectList.redlinkatWhitepaper.description"),
-    image: "./src/assets/img/projects/grafic/redlinkatWhitepaper/redlink-llm-whitepaper-front.jpg",
+    image:
+      "./src/assets/img/projects/grafic/redlinkatWhitepaper/redlink-llm-whitepaper-front.jpg",
     tags: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
     filterTags: ["design", "print", "product"],
     year: "2022-2024",
@@ -281,7 +282,7 @@ const projects = ref<ProjectItem[]>([
     tags: ["Pimcore", "VanillaJS", "CSS", "HTML", "PHP"],
     filterTags: ["frontend"],
     year: "2020",
-    role: t("projects.roles.frontendDeveloper"),
+    role: t("projects.roles.frontendDev"),
     client: t("projects.clients.internshipProject"),
     details: [
       {
@@ -306,7 +307,6 @@ const projects = ref<ProjectItem[]>([
     description: t("projects.projectList.plantbase.description"),
     image: "./src/assets/img/projects/web/plantbase/plantbase_mockup.jpg",
     tags: [
-      "UI/UX Design",
       "Adobe XD",
       "Prototyping",
       "Vue.js",
@@ -318,7 +318,7 @@ const projects = ref<ProjectItem[]>([
     ],
     filterTags: ["uiux", "frontend", "backend"],
     year: "2020",
-    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.developer")}`,
+    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.fullstackDev")}`,
     client: t("projects.clients.studyProject"),
     details: [
       {
@@ -343,7 +343,7 @@ const projects = ref<ProjectItem[]>([
     subtitle: t("projects.projectList.gameShop.subtitle"),
     description: t("projects.projectList.gameShop.description"),
     image: "./src/assets/img/projects/web/gameShop/mockup_small1.jpg",
-    tags: ["UI/UX Design", "Adobe XD", "Prototyping"],
+    tags: ["Adobe XD", "Prototyping"],
     filterTags: ["uiux"],
     year: "2019",
     role: `${t("projects.roles.uiuxDesigner")}`,
@@ -366,10 +366,10 @@ const projects = ref<ProjectItem[]>([
     subtitle: t("projects.projectList.steuerkanzleiKaufmann.subtitle"),
     description: t("projects.projectList.steuerkanzleiKaufmann.description"),
     image: "./src/assets/img/projects/web/steuerkanzleiKaufmann/mockup.jpg",
-    tags: ["UI/UX Design", "Adobe XD"],
-    filterTags: ["uiux"],
+    tags: ["Adobe XD", "Prototyping", "HTML", "CSS", "VanillaJs"],
+    filterTags: ["uiux", "frontend"],
     year: "2018",
-    role: t("projects.roles.uiuxDesigner"),
+    role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}`,
     client: t("projects.clients.internshipProject"),
     details: [
       {
@@ -411,7 +411,7 @@ const projects = ref<ProjectItem[]>([
     details: [
       {
         title: t("projects.detailTitle.projectOverview"),
-        content: t("projects.projectList.ivnent.overviewDesc"),
+        content: t("projects.projectList.invent.overviewDesc"),
       },
     ],
     gallery: [
@@ -468,7 +468,6 @@ const projects = ref<ProjectItem[]>([
     image: "./src/assets/img/projects/grafic/wiberg/cocktailheft_small.jpg",
     tags: [
       t("projects.tags.graficDesign"),
-      t("projects.tags.brandDesign"),
       "Adobe InDesign",
       "Adobe InCopy",
       "Adobe Illustrator",
@@ -479,7 +478,8 @@ const projects = ref<ProjectItem[]>([
     client: t("projects.clients.internshipProject"),
     gallery: [
       "./src/assets/img/projects/grafic/wiberg/sortimentskatalog.jpg",
-      "./src/assets/img/projects/grafic/wiberg/yes-vegan.jpg",
+      "./src/assets/img/projects/grafic/wiberg/yes-vegan_small1.jpg",
+      "./src/assets/img/projects/grafic/wiberg/yes-vegan_small2.jpg",
       "./src/assets/img/projects/grafic/wiberg/seminareinladung.jpg",
       "./src/assets/img/projects/grafic/wiberg/inserate.jpg",
       "./src/assets/img/projects/grafic/wiberg/gutschein.jpg",
@@ -502,7 +502,6 @@ const projects = ref<ProjectItem[]>([
     image: "./src/assets/img/projects/grafic/inspiranto/schmiede-heft.jpg",
     tags: [
       t("projects.tags.graficDesign"),
-      t("projects.tags.brandDesign"),
       t("projects.tags.illustration"),
       "Adobe InDesign",
       "Adobe Illustrator",
@@ -513,10 +512,10 @@ const projects = ref<ProjectItem[]>([
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.internshipProject"),
     gallery: [
-      "./src/assets/img/projects/grafic/inspiranto/schmiede-heft.jpg",
+      "./src/assets/img/projects/grafic/inspiranto/schmiede-heft_small.jpg",
       "./src/assets/img/projects/grafic/inspiranto/schmiede-plakat.jpg",
       "./src/assets/img/projects/grafic/inspiranto/xjagd_illus.jpg",
-      "./src/assets/img/projects/grafic/inspiranto/sjagd_slider.jpg",
+      "./src/assets/img/projects/grafic/inspiranto/xjagd_slider.jpg",
     ],
     links: [
       {
@@ -538,18 +537,18 @@ const projects = ref<ProjectItem[]>([
       t("projects.tags.brandDesign"),
       t("projects.tags.illustration"),
       t("projects.tags.campaignDesign"),
-      t("projects.tags.packagingDesign"),
+      t("projects.tags.packagingDesgin"),
       "Adobe InDesign",
       "Adobe Illustrator",
       "Adobe Photoshop",
     ],
-    filterTags: ["design", "print"],
+    filterTags: ["design", "print", "packaging", "product"],
     year: "2015",
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.studyProject"),
     details: [
       {
-        title: t("projects.detailTitle.overviewDesc"),
+        title: t("projects.detailTitle.projectOverview"),
         content: t("projects.projectList.hajimaru.overviewDesc"),
       },
     ],
@@ -565,7 +564,7 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/grafic/hajimaru/beschilderungen.jpg",
       "./src/assets/img/projects/grafic/hajimaru/plakate.jpg",
       "./src/assets/img/projects/grafic/hajimaru/plakate2.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/inserate.jpg",
+      "./src/assets/img/projects/grafic/hajimaru/inserat.jpg",
     ],
     links: [
       {
@@ -587,14 +586,15 @@ const projects = ref<ProjectItem[]>([
       t("projects.tags.brandDesign"),
       t("projects.tags.illustration"),
       t("projects.tags.campaignDesign"),
+      t("projects.tags.merch"),
       "Adobe InDesign",
       "Adobe Illustrator",
       "Adobe Photoshop",
     ],
-    filterTags: ["design", "print"],
+    filterTags: ["design", "print", "product"],
     year: "2015",
     role: t("projects.roles.graficDesign"),
-    client: t("projects.clients.internshipProject"),
+    client: t("projects.clients.studyProject"),
     details: [
       {
         title: t("projects.detailTitle.philosophy"),
@@ -620,11 +620,11 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/grafic/tube/taschen.jpg",
       "./src/assets/img/projects/grafic/tube/busstop.jpg",
       "./src/assets/img/projects/grafic/tube/plakate.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-eintrittskarten.jpg",
+      "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-eintrittskarte.jpg",
       "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-flyer.jpg",
       "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-busstop.jpg",
       "./src/assets/img/projects/grafic/tube/veranstaltungen/schiller-busstop.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/schillder-eintrittskarten.jpg",
+      "./src/assets/img/projects/grafic/tube/veranstaltungen/schillder-eintrittskarte.jpg",
       "./src/assets/img/projects/grafic/tube/veranstaltungen/schiller-flyer.jpg",
     ],
     links: [
@@ -641,16 +641,17 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.untersbergbahn.title"),
     subtitle: t("projects.projectList.untersbergbahn.subtitle"),
     description: t("projects.projectList.untersbergbahn.description"),
-    image: "./src/assets/img/projects/grafic/untersbergbahn/gondel-blau.jpg",
+    image: "./src/assets/img/projects/grafic/untersbergbahn/innen-01.jpg",
     tags: [
       t("projects.tags.graficDesign"),
       t("projects.tags.brandDesign"),
       t("projects.tags.illustration"),
+      t("projects.tags.campaignDesign"),
       "Adobe InDesign",
       "Adobe Illustrator",
       "Adobe Photoshop",
     ],
-    filterTags: ["design", "print"],
+    filterTags: ["design", "print", "product"],
     year: "2015",
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.studyProject"),
@@ -669,7 +670,7 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/untersbergbahn/visitnekarte-blau.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/visitenkarte-blau.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/visitenkarte-gruen.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/briefpapier.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/broschuere.jpg",
@@ -679,22 +680,14 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/grafic/untersbergbahn/innen-01.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/innen-03.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/flyer.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/postkarten.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/gondel-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/bogenplakat-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/bogenplakat-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/bogenplakat-both.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/busstation.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/busdesign-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/veranstaltungen/busdesign-blau.jpg",
-    ],
-    links: [
-      {
-        title: "Website",
-        url: "https://www.inspiranto.com/",
-        icon: "pi pi-external-link",
-        type: "external",
-      },
+      "./src/assets/img/projects/grafic/untersbergbahn/postkarten.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/gondel-blau.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-blau.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-gruen.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-both.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/busstation.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/busdesign-gruen.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/busdesign-blau.jpg",
     ],
   },
   {
@@ -702,7 +695,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.heratBeat.title"),
     subtitle: t("projects.projectList.heratBeat.subtitle"),
     description: t("projects.projectList.heratBeat.description"),
-    image: "./src/assets/img/projects/grafic/heratBeat/business-cards.jpg",
+    image: "./src/assets/img/projects/grafic/heartbeat/business-cards.jpg",
     tags: [
       t("projects.tags.graficDesign"),
       t("projects.tags.brandDesign"),
@@ -711,26 +704,18 @@ const projects = ref<ProjectItem[]>([
       "Adobe Illustrator",
       "Adobe Photoshop",
     ],
-    filterTags: ["design", "print"],
+    filterTags: ["design", "print", "product"],
     year: "2015",
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.internshipProject"),
     gallery: [
-      "./src/assets/img/projects/grafic/heratBeat/business-cards.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/business-cards2.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/briefpapier.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/speisekarte-2.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/speisekarte.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/aussenansicht.jpg",
-      "./src/assets/img/projects/grafic/heratBeat/innenansicht.jpg",
-    ],
-    links: [
-      {
-        title: "Website",
-        url: "https://www.inspiranto.com/",
-        icon: "pi pi-external-link",
-        type: "external",
-      },
+      "./src/assets/img/projects/grafic/heartbeat/business-cards.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/business-cards-2.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/briefpapier.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/speisekarte-2.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/speisekarte.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/aussenansicht.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/innenansicht.jpg",
     ],
   },
   {
@@ -738,18 +723,19 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.projectList.cruiseMissilesRoyality.title"),
     subtitle: t("projects.projectList.cruiseMissilesRoyality.subtitle"),
     description: t("projects.projectList.cruiseMissilesRoyality.description"),
-    image: "./src/assets/img/projects/grafic/cruiseMissilesRoyalityt/offen2.jpg",
+    image: "./src/assets/img/projects/grafic/cruiseMissilesRoyality/offen2.jpg",
     tags: [
       t("projects.tags.graficDesign"),
-      t("projects.tags.packagingDesign"),
+      t("projects.tags.packagingDesgin"),
+      t("projects.tags.promo"),
       "Adobe InDesign",
       "Adobe Illustrator",
       "Adobe Photoshop",
     ],
-    filterTags: ["design", "print"],
+    filterTags: ["design", "print", "product"],
     year: "2015",
     role: t("projects.roles.graficDesign"),
-    client: t("projects.clients.internshipProject"),
+    client: t("projects.clients.studyProject"),
     details: [
       {
         title: t("projects.detailTitle.philosophy"),
@@ -793,7 +779,7 @@ const getSkillName = (skillCode: string) => {
   return skill ? skill.name : skillCode;
 };
 
-const isModalVisible = ref<boolean>(false)
+const isModalVisible = ref<boolean>(false);
 </script>
 
 <template>
@@ -833,7 +819,12 @@ const isModalVisible = ref<boolean>(false)
             :selected-filter="selectedFilter"
             :filter-items="filterItems"
             @toggled-project="toggleProject(project)"
-            @open-gallery-modal="() => { console.log('open gallery modal emit was called: '); isModalVisible = true }"
+            @open-gallery-modal="
+              () => {
+                console.log('open gallery modal emit was called: ');
+                isModalVisible = true;
+              }
+            "
           />
         </ScrollReveal>
       </TransitionGroup>
@@ -844,11 +835,10 @@ const isModalVisible = ref<boolean>(false)
     </ContentContainer>
   </div>
 
-   <GalleryModal 
-    v-if="selectedProject" 
-    :is-visible="isModalVisible" 
-    :selected-project="selectedProject" 
-    @close-gallery-modal="isModalVisible = false" />
-
-
- </template>
+  <GalleryModal
+    v-if="selectedProject"
+    :is-visible="isModalVisible"
+    :selected-project="selectedProject"
+    @close-gallery-modal="isModalVisible = false"
+  />
+</template>
