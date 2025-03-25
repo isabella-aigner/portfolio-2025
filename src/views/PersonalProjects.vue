@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
 
@@ -15,6 +15,7 @@ import { ProjectItem } from "../models/ProjectItem";
 
 const { t } = useI18n();
 const route = useRoute();
+const router = useRouter();
 
 const selectedProject = ref<ProjectItem | null>(null);
 const selectedFilter = ref<string | null>(null);
@@ -56,28 +57,11 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.soundDesignSnippets.title"),
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
     image:
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800&h=600",
+      "./src/assets/audio/audioSnippets/theDealer-preview.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
-    year: "???",
-    role: "Audio Developer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Project Overview",
-        content:
-          "Soundscape is an interactive audio experience that allows users to create and manipulate ambient soundscapes in real-time.",
-      },
-      {
-        title: "Technical Implementation",
-        content:
-          "Built using the Web Audio API for sound processing and synthesis, with a Vue.js frontend for the interactive interface.",
-      },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&q=80&w=800",
-    ],
+    role: t("projects.roles.audioDev"),
+    client: t('projects.clients.personalProject'),
     audio: [
       {
         title: "100% und mehr Abspann",
@@ -100,7 +84,7 @@ const projects = ref<ProjectItem[]>([
         title: "The Dealer Sounddesign Konzept",
         link: "./src/assets/audio/audioSnippets/theDealer.mp4",
         poster:
-          "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800&h=600",
+          "./src/assets/audio/audioSnippets/theDealer-preview.jpg",
       },
     ],
   },
@@ -113,18 +97,12 @@ const projects = ref<ProjectItem[]>([
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     year: "2011",
-    role: "Audio Developer",
-    client: "Personal Project",
+    role: t('projects.roles.audioDev'),
+    client: t('projects.clients.studyProject'),
     details: [
       {
-        title: "Project Overview",
-        content:
-          "Soundscape is an interactive audio experience that allows users to create and manipulate ambient soundscapes in real-time.",
-      },
-      {
-        title: "Technical Implementation",
-        content:
-          "Built using the Web Audio API for sound processing and synthesis, with a Vue.js frontend for the interactive interface.",
+        title: t('projects.detailDtail.concept'),
+        content: t('projects.freeProjectList.subitorato.conceptDesc')      
       },
     ],
     gallery: [
@@ -133,7 +111,7 @@ const projects = ref<ProjectItem[]>([
     ],
     audio: [
       {
-        title: "Demo Track",
+        title: t('projects.detailTitle.demoTrack'),
         link: "./src/assets/audio/subitorato/subitorato.mp3",
         type: "audio/mpeg",
       },
@@ -210,6 +188,114 @@ const projects = ref<ProjectItem[]>([
       { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
     ],
   },
+  {
+    id: "3d",
+    title: "3D Playground",
+    subtitle: "Visual Stories Through Lens",
+    description:
+      "A curated collection of photographs capturing moments, landscapes, and stories.",
+    image:
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
+    tags: ["Photography", "Visual Arts", "Digital Editing"],
+    skills: ["design"],
+    year: "2023",
+    role: "Photographer",
+    client: "Personal Project",
+    details: [
+      {
+        title: "Project Overview",
+        content:
+          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
+      },
+      {
+        title: "Technical Details",
+        content:
+          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
+      },
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
+    ],
+    links: [
+      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
+      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
+    ],
+  },
+  {
+    id: "illu",
+    title: "Illustration",
+    subtitle: "Visual Stories Through Lens",
+    description:
+      "A curated collection of photographs capturing moments, landscapes, and stories.",
+    image:
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
+    tags: ["Photography", "Visual Arts", "Digital Editing"],
+    skills: ["design"],
+    year: "2023",
+    role: "Photographer",
+    client: "Personal Project",
+    details: [
+      {
+        title: "Project Overview",
+        content:
+          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
+      },
+      {
+        title: "Technical Details",
+        content:
+          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
+      },
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
+    ],
+    links: [
+      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
+      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
+    ],
+  },
+  {
+    id: "iris",
+    title: "Iris",
+    subtitle: "Visual Stories Through Lens",
+    description:
+      "A curated collection of photographs capturing moments, landscapes, and stories.",
+    image:
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
+    tags: ["Photography", "Visual Arts", "Digital Editing"],
+    skills: ["design"],
+    year: "2023",
+    role: "Photographer",
+    client: "Personal Project",
+    details: [
+      {
+        title: "Project Overview",
+        content:
+          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
+      },
+      {
+        title: "Technical Details",
+        content:
+          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
+      },
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
+    ],
+    links: [
+      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
+      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
+    ],
+  },
 ]);
 
 const filteredProjects = computed(() => {
@@ -235,6 +321,16 @@ const toggleProject = (project: ProjectItem) => {
   }
 };
 
+const toggleFilter = (filterId: string | null) => {
+  if (filterId) router.replace({ query: { ...route.query, filter: filterId } });
+  else {
+    const query = { ...route.query };
+    delete query.filter;
+    router.replace({ query });
+  }
+  selectedFilter.value = filterId;
+};
+
 const getSkillName = (skillCode: string) => {
   const skill = filterItems.value.find((s) => s.code === skillCode);
   return skill ? skill.name : skillCode;
@@ -256,7 +352,7 @@ const getSkillName = (skillCode: string) => {
         <FilterGroup
           :filters="filterItems"
           :selected-filter="selectedFilter"
-          @toggled-filter="selectedFilter = $event"
+          @toggled-filter="toggleFilter($event)"
         />
       </ScrollReveal>
 

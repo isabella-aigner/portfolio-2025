@@ -30,7 +30,7 @@ onMounted(() => {
   }
 });
 
-const toggleFilter = (filterId: string) => {
+const toggleFilter = (filterId: string | null) => {
   if (filterId) router.replace({ query: { ...route.query, filter: filterId } });
   else {
     const query = { ...route.query };
@@ -761,7 +761,7 @@ const isModalVisible = ref<boolean>(false);
         <ScrollReveal
           v-for="(project, index) in filteredProjects"
           :key="project.id"
-          :delay="index * 200"
+          :delay="index * 100"
           direction="up"
         >
           <ProjectCard

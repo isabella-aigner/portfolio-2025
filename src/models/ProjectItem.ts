@@ -6,7 +6,7 @@ export interface ProjectItem {
     image: string,
     tags: string[],
     filterTags: string[],
-    year: string,
+    year?: string,
     role: string,
     client: string,
     details?: ProjectDetail[],

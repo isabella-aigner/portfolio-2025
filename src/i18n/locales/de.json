@@ -79,7 +79,8 @@
       "philosophy": "Philosophie",
       "usp": "USP",
       "targetGroup": "Zielgruppe",
-      "concept": "Konzept"
+      "concept": "Konzept",
+      "demoTrack": "Demo Track"
     },
     "clients": {
       "personalProject": "Freies Projekt",
@@ -96,7 +97,8 @@
       "mobileDev": "App-Entwicklerin",
       "graficDesign": "Grafikdesignerin",
       "productDev": "Produktentwicklung",
-      "brandDev": "Markenentwicklung"
+      "brandDev": "Markenentwicklung",
+      "audioDev": "Audio Developer"
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -223,10 +225,14 @@
       }
     },
     "freeProjectList": {
+      "soundDesignSnippets": {
+        "title": "Sound Design Snippets",
+        "description": "Sounddesign ist die kreative Gestaltung und Bearbeitung von Klängen für Film, Musik, Games oder andere Medien. Durch die gezielte Kombination von Geräuschen, Effekten und Atmosphären entsteht eine einzigartige Klangwelt, die Emotionen verstärkt und Erlebnisse intensiviert."
+      },
       "subitorato": {
         "title": "Subitorato",
         "description": "\"subitorato\" thematisiert ein extrem des Umstandes, dass jeder Mensch seinen Alltag anders wahrnimmt und treibt dies in ein Extrem. Charakteristisch für die Musik ist, dass sie mit Klangsphären und Dissonanzen spielt, vor allem im Bereich der Stimmen.",
-        "concept": "Dem musikalischen Konzept von \"subitorato\" liegt die Verstrickung des Menschen in seine eigene persönliche Wirklichkeit zugrunde. Egal wo der Mensch lebt und seine Arbeit verrichtet teilt er seine Wirklichkeit nach seinen persönlichen Vorstellungen und Erfahrungen ein, die durch seine Umwelt beeinflusst werden. Die Komposition thematisiert somit ein Extrem dieses Umstandes. Der Mensch verstrickt sich in die Fäden seiner persönlichen Wirklichkeit, die sich von der Realität zu unterscheiden beginnt. Tag für Tag erlebt er den selben Alltag und lebt nach dem selben gewohnten Schema, jedoch bemerkt er anfangs nicht, dass er eigentlich nichts mehr zu seinem Leben beiträgt und sein Alltag maschinenartig verläuft. Als er merkt, dass er sich nur mehr selbst beobachtet und sich eigentlich nach Freiheit und Individualität sehnt, erfasst ihn ein Gefühl der Ungewissheit welches schiere Panik auslöst."
+        "conceptDesc": "Dem musikalischen Konzept von \"subitorato\" liegt die Verstrickung des Menschen in seine eigene persönliche Wirklichkeit zugrunde. Egal wo der Mensch lebt und seine Arbeit verrichtet teilt er seine Wirklichkeit nach seinen persönlichen Vorstellungen und Erfahrungen ein, die durch seine Umwelt beeinflusst werden. Die Komposition thematisiert somit ein Extrem dieses Umstandes. Der Mensch verstrickt sich in die Fäden seiner persönlichen Wirklichkeit, die sich von der Realität zu unterscheiden beginnt. Tag für Tag erlebt er den selben Alltag und lebt nach dem selben gewohnten Schema, jedoch bemerkt er anfangs nicht, dass er eigentlich nichts mehr zu seinem Leben beiträgt und sein Alltag maschinenartig verläuft. Als er merkt, dass er sich nur mehr selbst beobachtet und sich eigentlich nach Freiheit und Individualität sehnt, erfasst ihn ein Gefühl der Ungewissheit welches schiere Panik auslöst."
       },
       "meerdesLebens": {
         "title": "Das Meer des Lebens",

@@ -86,7 +86,7 @@ const handleActionBtnClick = (type: string, url: string) => {
               class="info-grid cursor-pointer"
               @click="emit('toggledProject', project.id)"
             >
-              <Transition name="fade-slide-up" appear>
+              <Transition v-if="project.year" name="fade-slide-up" appear>
                 <div class="info-item">
                   <h4 class="project-subhl">{{ t("projects.year") }}</h4>
                   <p>{{ project.year }}</p>
@@ -130,14 +130,16 @@ const handleActionBtnClick = (type: string, url: string) => {
               <h4 class="project-subhl">Audio Preview</h4>
               <div
                 v-for="(audio, index) in project.audio"
-                class="audio-player"
+                class="audio-player grid grid-cols-6 gap-2 items-center justify-stretch mb-2"
                 :key="index"
               >
-                <p class="audio-title">{{ audio.title }}</p>
 
-                <audio controls :src="audio.link" :type="audio.type">
-                  Your browser does not support the audio element.
-                </audio>
+                  <p class="audio-title col-span-2">{{ audio.title }}</p>
+
+                  <audio controls :src="audio.link" :type="audio.type" class="col-span-4">
+                    Your browser does not support the audio element.
+                  </audio>
+
               </div>
             </div>
 
