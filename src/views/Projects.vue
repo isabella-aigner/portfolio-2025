@@ -123,8 +123,7 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-chat-assistant.jpg",
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-support-ticket.jpg",
       "./src/assets/img/projects/web/redlinkGPT/redlinkgpt-reisekosten-terminbuchung.jpg",
-      "./src/assets/img/projects/grafic/redlinkGPT/redlinkGPT-Flyer.jpg",
-      "./src/assets/img/projects/grafic/redlinkGPT/redlinkgpt-6seiter.jpg",
+      "./src/assets/img/projects/grafic/redlinkGPT/redlinkGpt-zweier.jpg"
     ],
     links: [
       {
@@ -171,6 +170,7 @@ const projects = ref<ProjectItem[]>([
     ],
     gallery: [
       "./src/assets/img/projects/web/more/more-banner-2.jpg",
+      "./src/assets/img/projects/web/more/more-mockup.jpg",
       "./src/assets/img/projects/web/more/more-visual-prev-2.png",
       "./src/assets/img/projects/web/more/more-mobiles.jpg",
     ],
@@ -426,14 +426,11 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/invent/geschaeftsdrucksorten.jpg",
-      "./src/assets/img/projects/grafic/invent/folder.jpg",
-      "./src/assets/img/projects/grafic/invent/booklet-kundenwerbung.jpg",
-      "./src/assets/img/projects/grafic/invent/web2.jpg",
-      "./src/assets/img/projects/grafic/invent/banderolen_small.jpg",
-      "./src/assets/img/projects/grafic/invent/einkaufsfolder_small.jpg",
-      "./src/assets/img/projects/grafic/invent/gutscheinheft.jpg",
+      "./src/assets/img/projects/grafic/invent/geschaeftsdrucksorten-2.jpg",
+      "./src/assets/img/projects/grafic/invent/folder-mock.jpg",
+      "./src/assets/img/projects/grafic/invent/magazin-web.jpg",
     ],
+    galleryGrid: "full",
   },
   {
     id: "roco",
@@ -453,15 +450,11 @@ const projects = ref<ProjectItem[]>([
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.companyWork"),
     gallery: [
-      "./src/assets/img/projects/grafic/roco/kataloge.jpg",
-      "./src/assets/img/projects/grafic/roco/roco-kataloge.jpg",
-      "./src/assets/img/projects/grafic/roco/minitank-katalge.jpg",
-      "./src/assets/img/projects/grafic/roco/roco-next-generation.jpg",
-      "./src/assets/img/projects/grafic/roco/roco-verpackung.jpg",
-      "./src/assets/img/projects/grafic/roco/web_fb.jpg",
-      "./src/assets/img/projects/grafic/roco/anzeigen.jpg",
-      "./src/assets/img/projects/grafic/roco/mini_messetand.jpg",
+      "./src/assets/img/projects/grafic/roco/roco-kataloge-mock.jpg",
+      "./src/assets/img/projects/grafic/roco/roco-verpackungen.jpg",
+      "./src/assets/img/projects/grafic/roco/inserat-messestand.jpg",
     ],
+    galleryGrid: "full",
     links: [
       {
         title: "Website",
@@ -488,14 +481,10 @@ const projects = ref<ProjectItem[]>([
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.internshipProject"),
     gallery: [
-      "./src/assets/img/projects/grafic/wiberg/sortimentskatalog.jpg",
-      "./src/assets/img/projects/grafic/wiberg/yes-vegan_small1.jpg",
-      "./src/assets/img/projects/grafic/wiberg/yes-vegan_small2.jpg",
-      "./src/assets/img/projects/grafic/wiberg/seminareinladung.jpg",
-      "./src/assets/img/projects/grafic/wiberg/inserate.jpg",
-      "./src/assets/img/projects/grafic/wiberg/gutschein.jpg",
-      "./src/assets/img/projects/grafic/wiberg/cocktailheft.jpg",
+      "./src/assets/img/projects/grafic/wiberg/kataloge-mock.jpg",
+      "./src/assets/img/projects/grafic/wiberg/cocktailheft_inserat_huettengaudi.jpg",
     ],
+    galleryGrid: "full",
     links: [
       {
         title: "Website",
@@ -523,11 +512,10 @@ const projects = ref<ProjectItem[]>([
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.internshipProject"),
     gallery: [
-      "./src/assets/img/projects/grafic/inspiranto/schmiede-heft_small.jpg",
-      "./src/assets/img/projects/grafic/inspiranto/schmiede-plakat.jpg",
-      "./src/assets/img/projects/grafic/inspiranto/xjagd_illus.jpg",
+      "./src/assets/img/projects/grafic/inspiranto/schmiede-mock.jpg",
       "./src/assets/img/projects/grafic/inspiranto/xjagd_slider.jpg",
     ],
+    galleryGrid: "full",
     links: [
       {
         title: "Website",
@@ -564,34 +552,19 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/hajimaru/cafe1.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/cafe4.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/cafe3.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/visitenkarten.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/geschaeftsdrucksorten.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/veranstaltung.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/speisekarte.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/verpackungen.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/beschilderungen.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/plakate.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/plakate2.jpg",
-      "./src/assets/img/projects/grafic/hajimaru/inserat.jpg",
+      "./src/assets/img/projects/grafic/hajimaru/cafe-drawings.jpg",
+      "./src/assets/img/projects/grafic/hajimaru/geschaeftsdrucksorten-eventfolder.jpg",
+      "./src/assets/img/projects/grafic/hajimaru/speisekarte-verpackung.jpg",
+      "./src/assets/img/projects/grafic/hajimaru/aufhang-pakate-inserat.jpg",
     ],
-    links: [
-      {
-        title: "Website",
-        url: "https://www.inspiranto.com/",
-        icon: "pi pi-external-link",
-        type: "external",
-      },
-    ],
+    galleryGrid: "full",
   },
   {
     id: "tube",
     title: t("projects.projectList.tube.title"),
     subtitle: t("projects.projectList.tube.subtitle"),
     description: t("projects.projectList.tube.description"),
-    image: "./src/assets/img/projects/grafic/tube/busstop.jpg",
+    image: "./src/assets/img/projects/grafic/tube/busStop.jpg",
     tags: [
       t("projects.tags.graficDesign"),
       t("projects.tags.brandDesign"),
@@ -621,31 +594,15 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/tube/business-cards.jpg",
-      "./src/assets/img/projects/grafic/tube/geschaeftsdrucksorten.jpg",
-      "./src/assets/img/projects/grafic/tube/folder.jpg",
-      "./src/assets/img/projects/grafic/tube/eintrittskarten.jpg",
-      "./src/assets/img/projects/grafic/tube/tshirts_2.jpg",
-      "./src/assets/img/projects/grafic/tube/flyerstaender.jpg",
-      "./src/assets/img/projects/grafic/tube/wristband.jpg",
-      "./src/assets/img/projects/grafic/tube/taschen.jpg",
-      "./src/assets/img/projects/grafic/tube/busstop.jpg",
-      "./src/assets/img/projects/grafic/tube/plakate.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-eintrittskarte.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-flyer.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/alice-busstop.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/schiller-busstop.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/schillder-eintrittskarte.jpg",
-      "./src/assets/img/projects/grafic/tube/veranstaltungen/schiller-flyer.jpg",
+      "./src/assets/img/projects/grafic/tube/geschaeftsdrucksorten-mock.jpg",
+      "./src/assets/img/projects/grafic/tube/folder-mock.jpg",
+      "./src/assets/img/projects/grafic/tube/plakate-mock.jpg",
+      "./src/assets/img/projects/grafic/tube/merch.jpg",
+      "./src/assets/img/projects/grafic/tube/oeffi-design.jpg",
+      "./src/assets/img/projects/grafic/tube/alice-design.jpg",
+      "./src/assets/img/projects/grafic/tube/schillder-design.jpg",
     ],
-    links: [
-      {
-        title: "Website",
-        url: "https://www.inspiranto.com/",
-        icon: "pi pi-external-link",
-        type: "external",
-      },
-    ],
+    galleryGrid: "full",
   },
   {
     id: "untersbergbahn",
@@ -681,25 +638,14 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/untersbergbahn/visitenkarte-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/visitenkarte-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/briefpapier.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/bilder.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/geschaeftsdrucksorten.jpg",
       "./src/assets/img/projects/grafic/untersbergbahn/broschuere.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/bild-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/bild-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/innen-02.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/innen-01.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/innen-03.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/flyer.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/postkarten.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/gondel-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-blau.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/bogenplakat-both.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/busstation.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/busdesign-gruen.jpg",
-      "./src/assets/img/projects/grafic/untersbergbahn/busdesign-blau.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/innenraum.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/busstop-flyer-postkarte.jpg",
+      "./src/assets/img/projects/grafic/untersbergbahn/oeffis.jpg",
     ],
+    galleryGrid: "full",
   },
   {
     id: "heartBeat",
@@ -720,14 +666,11 @@ const projects = ref<ProjectItem[]>([
     role: t("projects.roles.graficDesign"),
     client: t("projects.clients.internshipProject"),
     gallery: [
-      "./src/assets/img/projects/grafic/heartbeat/business-cards.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/business-cards-2.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/briefpapier.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/speisekarte-2.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/speisekarte.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/aussenansicht.jpg",
-      "./src/assets/img/projects/grafic/heartbeat/innenansicht.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/cafe-mocks.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/geschaeftsdrucksorten.jpg",
+      "./src/assets/img/projects/grafic/heartbeat/folder.jpg",
     ],
+    galleryGrid: "full",
   },
   {
     id: "cruiseMissilesRoyality",
@@ -754,11 +697,10 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/geschlossen.jpg",
-      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/offen1.jpg",
-      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/offen2.jpg",
-      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/offen3.jpg",
+      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/mock1.jpg",
+      "./src/assets/img/projects/grafic/cruiseMissilesRoyality/mock2.jpg",
     ],
+     galleryGrid: "full",
   },
 ]);
 
@@ -769,21 +711,19 @@ const filteredProjects = computed(() => {
   );
 });
 
-const toggleProject = (project: ProjectItem) => {
-  selectedProject.value = selectedProject.value?.id === project.id ? null : project;
+const toggleProject = (project: ProjectItem | null) => {
+  selectedProject.value = selectedProject.value?.id === project?.id ? null : project;
 
-  let scrollToElementId = selectedProject.value ? selectedProject.value.id : project.id;
+  let scrollToElementId = selectedProject.value ? selectedProject.value.id : project?.id;
+  let timeoutCount = selectedProject.value ? 150 : 300;
 
-  if (selectedProject.value) {
-    document
-      .getElementById(`${scrollToElementId}-content`)
-      ?.scrollIntoView({ behavior: "smooth" });
-  } else {
-    document
-      .getElementById(`${scrollToElementId}-header`)
-      ?.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  setTimeout(() => {
+      document
+        .getElementById(`${scrollToElementId}-header`)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, timeoutCount)
+}
+
 
 const getSkillName = (skillCode: string) => {
   const skill = filterItems.value.find((s) => s.code === skillCode);
