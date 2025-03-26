@@ -56,7 +56,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.soundDesignSnippets.title"),
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
     image:
-      "./src/assets/audio/audioSnippets/theDealer-preview.jpg",
+      "./src/assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     role: t("projects.roles.audioDev"),
@@ -64,26 +64,26 @@ const projects = ref<ProjectItem[]>([
     audio: [
       {
         title: "100% und mehr Abspann",
-        link: "./src/assets/audio/audioSnippets/abspann.mp3",
+        link: "./src/assets/freeProjects/audio/audioSnippets/abspann.mp3",
         type: "audio/mpeg",
       },
       {
         title: "Showree Begleitung",
-        link: "./src/assets/audio/audioSnippets/final.mp3",
+        link: "./src/assets/freeProjects/audio/audioSnippets/final.mp3",
         type: "audio/mpeg",
       },
       {
         title: "Soundaufnahme Morgenroutine",
-        link: "./src/assets/audio/audioSnippets/morning-routine.mp3",
+        link: "./src/assets/freeProjects/audio/audioSnippets/morning-routine.mp3",
         type: "audio/mpeg",
       },
     ],
     video: [
       {
         title: "The Dealer Sounddesign Konzept",
-        link: "./src/assets/audio/audioSnippets/theDealer.mp4",
+        link: "./src/assets/freeProjects/audio/audioSnippets/theDealer.mp4",
         poster:
-          "./src/assets/audio/audioSnippets/theDealer-preview.jpg",
+          "./src/assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
       },
     ],
   },
@@ -92,7 +92,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.subitorato.title"),
     description: t("projects.freeProjectList.subitorato.description"),
     image:
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800&h=600",
+      "./src/assets/freeProjects/audio/subitorato/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     year: "2011",
@@ -105,13 +105,13 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&q=80&w=800",
+      "./src/assets/freeProjects/audio/subitorato/bildkomposition-mock.jpg",
     ],
+    galleryGrid: 'full',
     audio: [
       {
         title: t('projects.detailTitle.demoTrack'),
-        link: "./src/assets/audio/subitorato/subitorato.mp3",
+        link: "./src/assets/freeProjects/audio/subitorato/subitorato.mp3",
         type: "audio/mpeg",
       },
     ],
@@ -121,32 +121,15 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.meerdesLebens.title"),
     description: t("projects.freeProjectList.meerdesLebens.description"),
     image:
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800&h=600",
+      "./src/assets/freeProjects/audio/meerDesLebens/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
-    year: "???",
-    role: "Audio Developer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Geschichte",
-        content:
-          "Soundscape is an interactive audio experience that allows users to create and manipulate ambient soundscapes in real-time.",
-      },
-      {
-        title: "Technical Implementation",
-        content:
-          "Built using the Web Audio API for sound processing and synthesis, with a Vue.js frontend for the interactive interface.",
-      },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1519874179391-3ebc752241dd?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&q=80&w=800",
-    ],
+    year: "2008",
+    role: t('projects.roles.audioDev'),
+    client: t('projects.clients.personalProject'),
     audio: [
       {
-        title: "Audio Snippet",
-        link: "./src/assets/audio/meerLeben/meerLeben.mp3",
+        link: "./src/assets/freeProjects/audio/meerDesLeben/meerLeben.mp3",
         type: "audio/mpeg",
       },
     ],

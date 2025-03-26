@@ -132,10 +132,9 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
                 class="audio-player grid grid-cols-6 gap-2 items-center justify-stretch mb-2"
                 :key="index"
               >
+                  <p v-if="audio.title" class="audio-title col-span-2">{{ audio.title }}</p>
 
-                  <p class="audio-title col-span-2">{{ audio.title }}</p>
-
-                  <audio controls :src="audio.link" :type="audio.type" class="col-span-4">
+                  <audio controls :src="audio.link" :type="audio.type" :class="audio.title ? 'col-span-4' : 'col-span-6'">
                     Your browser does not support the audio element.
                   </audio>
 
@@ -158,6 +157,7 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
 
             <!-- Gallery -->
             <div
+              v-if="project.gallery"
               class="gallery cursor-pointer"
               @click="emit('toggledProject', project.id)"
             >

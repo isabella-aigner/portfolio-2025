@@ -31,7 +31,7 @@ export interface ProjectLink {
 }
 
 export interface AudioDetail {
-    title: string,
+    title?: string,
     link: string,
     type?: string
 }
