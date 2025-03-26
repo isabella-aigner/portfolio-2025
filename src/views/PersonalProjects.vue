@@ -52,6 +52,38 @@ const filterItems = ref<FilterItem[]>([
 
 const projects = ref<ProjectItem[]>([
   {
+    id: "makro",
+    title: t('projects.freeProjectList.makro.title'),
+    subtitle: t('projects.freeProjectList.makro.subtitle'),
+    description: t('projects.freeProjectList.makro.description'),
+    image:
+      "./src/assets/freeProjects/fotografie/makro/makro_small02.jpg",
+    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing'), t('projects.tags.visualArts')],
+    filterTags: ["photo"],
+    role: t('projects.roles.photographer'),
+    client: t('projects.clients.studyProject'),
+    gallery: [
+      "./src/assets/freeProjects/fotografie/makro/macro.jpg",
+    ],
+    galleryGrid: "full"
+  },    
+{
+    id: "hausMaschine",
+    title: t('projects.freeProjectList.hausMaschine.title'),
+    subtitle: t('projects.freeProjectList.hausMaschine.subtitle'),
+    description: t('projects.freeProjectList.hausMaschine.description'),
+    image:
+      "./src/assets/freeProjects/fotografie/hausMaschine/objekt2.jpg",
+    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
+    filterTags: ["photo"],
+    role: t('projects.roles.photographer'),
+    client: t('projects.clients.studyProject'),
+    gallery: [
+      "./src/assets/freeProjects/fotografie/hausMaschine/fotoserie2.jpg",
+    ],
+    galleryGrid: "full"
+  },  
+  {
     id: "soundDesignSnippets",
     title: t("projects.freeProjectList.soundDesignSnippets.title"),
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
@@ -88,6 +120,23 @@ const projects = ref<ProjectItem[]>([
     ],
   },
   {
+    id: "capoeira",
+    title: t('projects.freeProjectList.capoeira.title'),
+    subtitle: t('projects.freeProjectList.capoeira.subtitle'),
+    description: t('projects.freeProjectList.capoeira.description'),
+    image:
+      "./src/assets/freeProjects/fotografie/capoeira/capoeira04.jpg",
+    tags: [t('projects.tags.photography'), t('projects.tags.studioPhotography'), t('projects.tags.digitalEditing')],
+    filterTags: ["photo"],
+    role: t('projects.roles.photographer'),
+    client: t('projects.clients.studyProject'),
+    gallery: [
+      "./src/assets/freeProjects/fotografie/capoeira/capoeira-row1.jpg",
+      "./src/assets/freeProjects/fotografie/capoeira/capoeira-row2.jpg",
+    ],
+    galleryGrid: "full"
+  },
+  {
     id: "subitorato",
     title: t("projects.freeProjectList.subitorato.title"),
     description: t("projects.freeProjectList.subitorato.description"),
@@ -95,7 +144,6 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/freeProjects/audio/subitorato/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
-    year: "2011",
     role: t('projects.roles.audioDev'),
     client: t('projects.clients.studyProject'),
     details: [
@@ -124,7 +172,6 @@ const projects = ref<ProjectItem[]>([
       "./src/assets/freeProjects/audio/meerDesLebens/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
-    year: "2008",
     role: t('projects.roles.audioDev'),
     client: t('projects.clients.personalProject'),
     audio: [
@@ -135,37 +182,21 @@ const projects = ref<ProjectItem[]>([
     ],
   },
   {
-    id: "photography",
-    title: "Photography Portfolio",
-    subtitle: "Visual Stories Through Lens",
-    description:
-      "A curated collection of photographs capturing moments, landscapes, and stories.",
+    id: "landscapePhotography",
+    title: t('projects.freeProjectList.landscapePhotography.title'),
+    description: t('projects.freeProjectList.landscapePhotography.description'),
     image:
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Photography", "Visual Arts", "Digital Editing"],
-    filterTags: ["design"],
-    year: "2023",
-    role: "Photographer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Project Overview",
-        content:
-          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
-      },
-      {
-        title: "Technical Details",
-        content:
-          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
-      },
-    ],
+      "./src/assets/freeProjects/fotografie/landscape/prag.jpg",
+    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
+    filterTags: ["photo"],
+    role: t('projects.roles.photographer'),
+    client: t('projects.clients.freeProject'),
     gallery: [
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
+      "./src/assets/freeProjects/fotografie/landscape/norway-mock.jpg",
+      "./src/assets/freeProjects/fotografie/landscape/prag.jpg",
     ],
-  },
+    galleryGrid: "full"
+  },  
   {
     id: "3d",
     title: "3D Playground",

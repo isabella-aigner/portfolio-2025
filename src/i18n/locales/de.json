@@ -99,7 +99,9 @@
       "graficDesign": "Grafikdesignerin",
       "productDev": "Produktentwicklung",
       "brandDev": "Markenentwicklung",
-      "audioDev": "Audio Developer"
+      "audioDev": "Audio Developer",
+      "photographer": "Fotografin"
+
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -111,7 +113,11 @@
       "recording": "Aufnahme",
       "redesign": "Redesign",
       "merch": "Give Aways",
-      "promo": "Promo Design"
+      "promo": "Promo Design",
+      "digitalEditing": "Digital Editing",
+      "photography": "Fotografie",
+      "studioPhotography": "Studiofotografie",
+      "visualArts": "Visual Arts"
     },
     "projectList": {
       "redlinkGPT": {
@@ -246,6 +252,25 @@
       "meerdesLebens": {
         "title": "Das Meer des Lebens",
         "description": "Das Musikstück erzählt die Geschichte eines Menschen, der sich zunächst frei fühlt, doch nach und nach in den Strudel des Lebens gerät. Ein Moment der Neugier – eine geheimnisvolle Entdeckung am Meer – öffnet die Tür zu einer anderen Welt. Doch was als Abenteuer beginnt, wird zur Reflexion über das Verlorengehen im Alltag, das Getriebenwerden von der Masse und das allmähliche Vergessen des eigenen Selbst."
+      },
+      "capoeira": {
+        "title": "Capoeira",
+        "subtitle": "Fotoserie",
+        "description": "Dynamik, Eleganz und Kraft – diese Fotoserie fängt die fließenden Bewegungen und akrobatischen Elemente des Capoeira ein. Im Studio entstehen kraftvolle Bilder, die den Rhythmus, die Körperbeherrschung und die Tradition dieser einzigartigen Kampfkunst lebendig werden lassen."
+      },
+      "hausMaschine": {
+        "title": "Haus-Maschine",
+        "subtitle": "Fotoserie",
+        "description": "Das Fotoprojekt thematisiert die Verschmelzung von Mensch und Technologie in einem Haus, das zur Maschine wird. Inspiriert von \"Ghost in the Shell\" zeigt es die Abhängigkeit vom digitalen Netzwerk. Die Inszenierung mit Kabeln, Lichtinstallationen und kühlen Farbtönen verstärkt die dystopische Atmosphäre."
+      },
+      "makro": {
+        "title": "Makro",
+        "subtitle": "Fotoserie",
+        "description": "Diese Makro-Fotoserie entdeckt die verborgenen Details der Natur. Mit einem Fokus auf winzige Strukturen und lebendige Farben wird die faszinierende Schönheit der natürlichen Welt aus überraschenden Perspektiven eingefangen."
+      },
+      "landscapePhotography": {
+        "title": "Landschaftsfotografie",
+        "description": "Umgebungsfotografie fängt die Stimmung und Details eines Ortes ein, sei es in der Natur oder der Stadt. Sie konzentriert sich auf das Zusammenspiel von Licht, Schatten und Umgebungselementen, um den Betrachter visuell in den Raum zu versetzen."
       }
     } 
   },
