@@ -57,13 +57,13 @@ const projects = ref<ProjectItem[]>([
     subtitle: t('projects.freeProjectList.makro.subtitle'),
     description: t('projects.freeProjectList.makro.description'),
     image:
-      "./src/assets/freeProjects/fotografie/makro/makro_small02.jpg",
+      "./assets/freeProjects/fotografie/makro/makro_small02.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing'), t('projects.tags.visualArts')],
     filterTags: ["photo"],
     role: t('projects.roles.photographer'),
     client: t('projects.clients.studyProject'),
     gallery: [
-      "./src/assets/freeProjects/fotografie/makro/macro.jpg",
+      "./assets/freeProjects/fotografie/makro/macro.jpg",
     ],
     galleryGrid: "full"
   },    
@@ -73,13 +73,13 @@ const projects = ref<ProjectItem[]>([
     subtitle: t('projects.freeProjectList.hausMaschine.subtitle'),
     description: t('projects.freeProjectList.hausMaschine.description'),
     image:
-      "./src/assets/freeProjects/fotografie/hausMaschine/objekt2.jpg",
+      "./assets/freeProjects/fotografie/hausMaschine/objekt2.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
     role: t('projects.roles.photographer'),
     client: t('projects.clients.studyProject'),
     gallery: [
-      "./src/assets/freeProjects/fotografie/hausMaschine/fotoserie2.jpg",
+      "./assets/freeProjects/fotografie/hausMaschine/fotoserie2.jpg",
     ],
     galleryGrid: "full"
   },  
@@ -88,7 +88,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.soundDesignSnippets.title"),
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
     image:
-      "./src/assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
+      "./assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     role: t("projects.roles.audioDev"),
@@ -96,26 +96,26 @@ const projects = ref<ProjectItem[]>([
     audio: [
       {
         title: "100% und mehr Abspann",
-        link: "./src/assets/freeProjects/audio/audioSnippets/abspann.mp3",
+        link: "./assets/freeProjects/audio/audioSnippets/abspann.mp3",
         type: "audio/mpeg",
       },
       {
         title: "Showree Begleitung",
-        link: "./src/assets/freeProjects/audio/audioSnippets/final.mp3",
+        link: "./assets/freeProjects/audio/audioSnippets/final.mp3",
         type: "audio/mpeg",
       },
       {
         title: "Soundaufnahme Morgenroutine",
-        link: "./src/assets/freeProjects/audio/audioSnippets/morning-routine.mp3",
+        link: "./assets/freeProjects/audio/audioSnippets/morning-routine.mp3",
         type: "audio/mpeg",
       },
     ],
     video: [
       {
         title: "The Dealer Sounddesign Konzept",
-        link: "./src/assets/freeProjects/audio/audioSnippets/theDealer.mp4",
+        link: "./assets/freeProjects/audio/audioSnippets/theDealer.mp4",
         poster:
-          "./src/assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
+          "./assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
       },
     ],
   },
@@ -125,14 +125,14 @@ const projects = ref<ProjectItem[]>([
     subtitle: t('projects.freeProjectList.capoeira.subtitle'),
     description: t('projects.freeProjectList.capoeira.description'),
     image:
-      "./src/assets/freeProjects/fotografie/capoeira/capoeira04.jpg",
+      "./assets/freeProjects/fotografie/capoeira/capoeira04.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.studioPhotography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
     role: t('projects.roles.photographer'),
     client: t('projects.clients.studyProject'),
     gallery: [
-      "./src/assets/freeProjects/fotografie/capoeira/capoeira-row1.jpg",
-      "./src/assets/freeProjects/fotografie/capoeira/capoeira-row2.jpg",
+      "./assets/freeProjects/fotografie/capoeira/capoeira-row1.jpg",
+      "./assets/freeProjects/fotografie/capoeira/capoeira-row2.jpg",
     ],
     galleryGrid: "full"
   },
@@ -141,14 +141,14 @@ const projects = ref<ProjectItem[]>([
     title: t('projects.freeProjectList.republic.title'),
     description: t('projects.freeProjectList.republic.description'),
     image:
-      "./src/assets/freeProjects/fotografie/republic/republic_qf.jpg",
+      "./assets/freeProjects/fotografie/republic/republic_qf.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
     role: t('projects.roles.photographer'),
     client: t('projects.clients.studyProject'),
     gallery: [
-      "./src/assets/freeProjects/fotografie/republic/republic_qf.jpg",
-      "./src/assets/freeProjects/fotografie/republic/republic-mock.jpg",
+      "./assets/freeProjects/fotografie/republic/republic_qf.jpg",
+      "./assets/freeProjects/fotografie/republic/republic-mock.jpg",
     ],
     galleryGrid: "full"
   },
@@ -157,7 +157,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.subitorato.title"),
     description: t("projects.freeProjectList.subitorato.description"),
     image:
-      "./src/assets/freeProjects/audio/subitorato/cover.jpg",
+      "./assets/freeProjects/audio/subitorato/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     role: t('projects.roles.audioDev'),
@@ -169,13 +169,13 @@ const projects = ref<ProjectItem[]>([
       },
     ],
     gallery: [
-      "./src/assets/freeProjects/audio/subitorato/bildkomposition-mock.jpg",
+      "./assets/freeProjects/audio/subitorato/bildkomposition-mock.jpg",
     ],
     galleryGrid: 'full',
     audio: [
       {
         title: t('projects.detailTitle.demoTrack'),
-        link: "./src/assets/freeProjects/audio/subitorato/subitorato.mp3",
+        link: "./assets/freeProjects/audio/subitorato/subitorato.mp3",
         type: "audio/mpeg",
       },
     ],
@@ -185,14 +185,14 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.meerdesLebens.title"),
     description: t("projects.freeProjectList.meerdesLebens.description"),
     image:
-      "./src/assets/freeProjects/audio/meerDesLebens/cover.jpg",
+      "./assets/freeProjects/audio/meerDesLebens/cover.jpg",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     role: t('projects.roles.audioDev'),
     client: t('projects.clients.personalProject'),
     audio: [
       {
-        link: "./src/assets/freeProjects/audio/meerDesLeben/meerLeben.mp3",
+        link: "./assets/freeProjects/audio/meerDesLeben/meerLeben.mp3",
         type: "audio/mpeg",
       },
     ],
@@ -202,14 +202,14 @@ const projects = ref<ProjectItem[]>([
     title: t('projects.freeProjectList.landscapePhotography.title'),
     description: t('projects.freeProjectList.landscapePhotography.description'),
     image:
-      "./src/assets/freeProjects/fotografie/landscape/prag.jpg",
+      "./assets/freeProjects/fotografie/landscape/prag.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
     role: t('projects.roles.photographer'),
     client: t('projects.clients.freeProject'),
     gallery: [
-      "./src/assets/freeProjects/fotografie/landscape/norway-mock.jpg",
-      "./src/assets/freeProjects/fotografie/landscape/prag.jpg",
+      "./assets/freeProjects/fotografie/landscape/norway-mock.jpg",
+      "./assets/freeProjects/fotografie/landscape/prag.jpg",
     ],
     galleryGrid: "full"
   },  

@@ -719,15 +719,14 @@ const filteredProjects = computed(() => {
 });
 
 const toggleProject = (project: ProjectItem | null) => {
-    selectedProject.value = selectedProject.value ? .id === project ? .id ? null : project;
+    selectedProject.value = selectedProject.value?.id === project?.id ? null : project;
 
-    let scrollToElementId = selectedProject.value ? selectedProject.value.id : project ? .id;
+    let scrollToElementId = selectedProject.value ? selectedProject.value.id : project?.id;
     let timeoutCount = selectedProject.value ? 150 : 300;
 
     setTimeout(() => {
         document
-            .getElementById(`${scrollToElementId}-header`) ?
-            .scrollIntoView({ behavior: "smooth" });
+            .getElementById(`${scrollToElementId}-header`)?.scrollIntoView({ behavior: "smooth" })
     }, timeoutCount)
 }
 
