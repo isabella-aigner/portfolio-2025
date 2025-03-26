@@ -137,6 +137,22 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full"
   },
   {
+    id: "republic",
+    title: t('projects.freeProjectList.republic.title'),
+    description: t('projects.freeProjectList.republic.description'),
+    image:
+      "./src/assets/freeProjects/fotografie/republic/republic_qf.jpg",
+    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
+    filterTags: ["photo"],
+    role: t('projects.roles.photographer'),
+    client: t('projects.clients.studyProject'),
+    gallery: [
+      "./src/assets/freeProjects/fotografie/republic/republic_qf.jpg",
+      "./src/assets/freeProjects/fotografie/republic/republic-mock.jpg",
+    ],
+    galleryGrid: "full"
+  },
+  {
     id: "subitorato",
     title: t("projects.freeProjectList.subitorato.title"),
     description: t("projects.freeProjectList.subitorato.description"),

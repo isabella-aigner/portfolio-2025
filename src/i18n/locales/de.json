@@ -271,6 +271,10 @@
       "landscapePhotography": {
         "title": "Landschaftsfotografie",
         "description": "Umgebungsfotografie fängt die Stimmung und Details eines Ortes ein, sei es in der Natur oder der Stadt. Sie konzentriert sich auf das Zusammenspiel von Licht, Schatten und Umgebungselementen, um den Betrachter visuell in den Raum zu versetzen."
+      },
+      "republic": {
+        "title": "Innenraumfotografie",
+        "description": "Innenraumfotografie fängt die Atmosphäre des Raumes ein, indem sie Beleuchtung, Möbel und Architektur in den Fokus stellt. Ziel ist es, die Stimmung des Ortes visuell zu vermitteln und den Betrachter in die Umgebung zu entführen."
       }
     } 
   },
