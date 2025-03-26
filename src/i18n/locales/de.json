@@ -80,7 +80,8 @@
       "usp": "USP",
       "targetGroup": "Zielgruppe",
       "concept": "Konzept",
-      "demoTrack": "Demo Track"
+      "demoTrack": "Demo Track",
+      "service": "Service"
     },
     "clients": {
       "personalProject": "Freies Projekt",
@@ -201,6 +202,11 @@
         "uspDesc": "Tube entführt seine Besucher in eine andere Welt und koppelt hierfür digitale Techniken mit analoger Bühnenkunst und Raumaufbereitung. Es wird Raum für außergewöhnliche Performance, einzigartige digitale Welten und überwältigende Erlebnisse in allen von Tube angebotenen Bereichen geschaffen, welche durch speziell engagiertes und professionelles Personal entwickelt und geleitet wird.",
         "targetGroupDesc": "Sie beinhaltet alle kreative Köpfe und Menschen, die sich gerne kreativ betätigen und/oder auf ihre Art und Weise kreativ leben. Dadurch nehmen weder gesellschaftliche, soziale oder kulturelle Unterschiede, noch das Alter einen Einfluss auf die Zielgruppe."
       },
+      "landespreis2014": {
+        "title": "Landespreis 2014",
+        "subtitle": "Descover Perspectives",
+        "description": "Der Mensch ist im allgemeinen ein Gewohnheitstier. Er orientiert sich nach Erfahrungen und Erlebnissen und geht, geprägt von diesen, mit einem Tunnelblick durch die Welt. So gewöhnt er sich großteils eine oberflächliche Sichtweise an. Um die Menschen zu erreichen müssen wir ihr Wahrnehmungsverhalten durchbrechen."
+      },
       "hajimaru": {
         "title": "Hajimaru",
         "subtitle": "Manga Café",
@@ -210,12 +216,15 @@
       "untersbergbahn": {
         "title": "Untersbergbahn",
         "subtitle": "Redesign der Salzburger Untersbergbahn",
-        "description": "Im Rahmen der WDA wurde bei einer Ausschreibung für die Salzburger Untersbahn teilgenommen und ein neues Corporate Design Konzept entwickelt."       
+        "description": "Im Zuge der WDA konnten wir, innerhalb eiber Wettbewerbssituation mit unseren KollegInnen, das neue Design für die Untersbergbahn entwerfen. Unsere Probeagentur hat sich dafür auf die “zeitlosen Momente” des Berges konzentriert, welche den Besuch unvergesslich gestalten. Darüber hinaus haben wir uns für die gestalterische Umsetzung auf die Natur konzentriert, was sich unter anderem innerhalb unseres Farbcodes und unserer seperaten Gestaltung für Winter und Sommer wiederspiegelt."       
       },
       "heratBeat": {
         "title": "Café Heart.Beat",
-        "subtitle": "Konzeptdesign für ein Bio-Café",
-        "description": "Entwicklung eines Corporate Designs & Corproate Identity Konzeptes für das Café Heart.Beat"
+        "subtitle": "Konzeptdesign für ein Bio-Café", 
+        "description": "Das Cafe öffnet die Türen für jeden, der einen Ort zur Entspannung braucht und sich vom Stress des Alltags zurückziehen möchte. Hier haben sie Zeit für sich und für den Moment, den sie in vollen Zügen genißen können, ohne sich von äußerlichen negativen Einflussen beeinflussen zu lassen. Sie können befreit, im Jetzt momentnah lebend, sich mit anderen Menschen austauschen und sich durch dessen fließenden Austausch treiben lassen.",
+        "philosophyDesc": "Das Cafe öffnet die Türen für jeden, der einen Ort zur Entspannung braucht und sich vom Stress des Alltags zurückziehen möchte. Hier haben sie Zeit für sich und für den Moment, den sie in vollen Zügen genißen können, ohne sich von äußerlichen negativen Einflussen beeinflussen zu lassen. Sie können befreit, im Jetzt  momentnah lebend, sich mit anderen Menschen austauschen und sich durch dessen fließenden Austausch treiben lassen.",
+        "targetGroupDesc": "Zielgruppe sind all jene, die dem stressigen Alltag entfliehen wollen und ungezwungen von äußeren Einflüssen den Moment erleben und sich frei vom Stress mit anderen Menschen unterhalten und austauschen wollen. Das Hauptalter der Zielgruppe sind Menschen ab 18 aufwärts, die gerne ihre Erfahrungen und Erlebnisse auch mit anderen Teilen.",
+        "serviceDesc": "Das Cafe bezieht seine Haupteinnahmequelle durch die Verrechnung der dort verbrachten Zeit. Seine Angebote sind hauptsächlich Getränke – Tee, Kaffee, Säfte, Alkoholfreies. Des weiteren gibt es noch kleine Häppchen, die gegen den kleinen Hunger under Guster helfen sollen. Die Speisekarte wird mit “Special” Angebote erweitert, welche größeren bzw. spezielleren Wünschen der Kunden – z.B. eine Hauptspeise oder frisch gepresste Säfte – nachkommt. Diese sind mit einem kleinen Aufpreis, der geringer ist als in herkömmlichen Cafes, verbunden."
       },
       "cruiseMissilesRoyality": {
         "title": "Cruise Missiles Royality",
