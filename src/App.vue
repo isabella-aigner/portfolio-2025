@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
 import Navigation from "./components/Navigation.vue";
 
-const router = useRouter();
 const { t, locale } = useI18n();
 
 const languages = ref([
@@ -19,27 +17,6 @@ const switchLanguage = (lang: string) => {
   locale.value = lang;
   selectedLanguage.value = lang;
 };
-
-/*
-const handleNavigation = (path: string) => {
-  if (path === '/#contact') {
-    if (router.currentRoute.value.path !== '/') {
-      router.push('/')
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const contactSection = document.querySelector('.contact-section')
-        contactSection?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
-    } else {
-      const contactSection = document.querySelector('.contact-section')
-      contactSection?.scrollIntoView({ behavior: 'smooth' })
-    }
-  } else {
-    router.push(path)
-  }
-  isMobileMenuOpen.value = false
-}
-*/
 
 // Update menu items whenever language changes
 const menuItems = ref([

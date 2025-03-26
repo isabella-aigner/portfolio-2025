@@ -22,9 +22,10 @@ const router = createRouter({
     { path: '/personal-projects', component: PersonalProjects },
     { path: '/career', component: Career },
   ],
+  /*
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };
-  },
+  },*/
 });
 
 const app = createApp(App);

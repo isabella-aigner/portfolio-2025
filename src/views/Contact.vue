@@ -9,6 +9,10 @@ const socialLinks = ref([
   { name: "LinkedIn", icon: "pi pi-linkedin", url: "#" },
   { name: "Email", icon: "pi pi-envelope", url: "mailto:your.email@example.com" },
 ]);
+
+const openLink = (url: string) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -26,7 +30,7 @@ const socialLinks = ref([
             :icon="link.icon"
             :label="link.name"
             class="p-button-outlined"
-            @click="window.open(link.url, '_blank')"
+            @click="openLink(link.url)"
           />
         </div>
       </template>

@@ -26,9 +26,8 @@ const emit = defineEmits<{
 const getFilterName = (filterCode: string) =>
   props.filterItems.find((s) => s.code === filterCode)?.name || filterCode;
 
-const handleActionBtnClick = (type: string, url: string) => {
-  console.log("handleActionBtnClick", type, url);
-  if (type === "external") {
+const handleActionBtnClick = (type: string | undefined, url: string) => {
+  if (type && type === "external") {
     window.open(url, "_blank");
   }
 };

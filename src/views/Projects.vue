@@ -2,7 +2,6 @@
 import { ref, computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
-import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
 import { ProjectItem } from "../models/ProjectItem";
 
@@ -767,11 +766,12 @@ const toggleProject = (project: ProjectItem | null) => {
     }, timeoutCount)
 }
 
-
+/*
 const getSkillName = (skillCode: string) => {
   const skill = filterItems.value.find((s) => s.code === skillCode);
   return skill ? skill.name : skillCode;
 };
+*/
 
 const isModalVisible = ref<boolean>(false);
 </script>

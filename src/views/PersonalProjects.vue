@@ -2,7 +2,6 @@
 import { ref, computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
-import { TransitionGroup } from "vue";
 import { FilterItem } from "../models/FilterItem";
 
 import ContactSection from "../components/ContactCard.vue";
@@ -161,7 +160,7 @@ const projects = ref<ProjectItem[]>([
     image:
       "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
     tags: ["Photography", "Visual Arts", "Digital Editing"],
-    skills: ["design"],
+    filterTags: ["design"],
     year: "2023",
     role: "Photographer",
     client: "Personal Project",
@@ -183,10 +182,6 @@ const projects = ref<ProjectItem[]>([
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
     ],
-    links: [
-      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
-    ],
   },
   {
     id: "3d",
@@ -197,7 +192,7 @@ const projects = ref<ProjectItem[]>([
     image:
       "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
     tags: ["Photography", "Visual Arts", "Digital Editing"],
-    skills: ["design"],
+    filterTags: ["design"],
     year: "2023",
     role: "Photographer",
     client: "Personal Project",
@@ -233,7 +228,7 @@ const projects = ref<ProjectItem[]>([
     image:
       "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
     tags: ["Photography", "Visual Arts", "Digital Editing"],
-    skills: ["design"],
+    filterTags: ["design"],
     year: "2023",
     role: "Photographer",
     client: "Personal Project",
@@ -269,7 +264,7 @@ const projects = ref<ProjectItem[]>([
     image:
       "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
     tags: ["Photography", "Visual Arts", "Digital Editing"],
-    skills: ["design"],
+    filterTags: ["design"],
     year: "2023",
     role: "Photographer",
     client: "Personal Project",
@@ -331,10 +326,11 @@ const toggleFilter = (filterId: string | null) => {
   selectedFilter.value = filterId;
 };
 
+/*
 const getSkillName = (skillCode: string) => {
   const skill = filterItems.value.find((s) => s.code === skillCode);
   return skill ? skill.name : skillCode;
-};
+};*/
 </script>
 
 <template>

@@ -27,13 +27,13 @@ export interface ProjectLink {
     title: string,
     url: string,
     icon: string,
-    type: string
+    type?: string
 }
 
 export interface AudioDetail {
     title: string,
     link: string,
-    type: string
+    type?: string
 }
 
 export interface VideoDetail {

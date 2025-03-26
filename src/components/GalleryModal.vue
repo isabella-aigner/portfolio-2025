@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { ProjectItem } from "../models/ProjectItem";
-import { useI18n } from "vue-i18n";
 
 import Dialog from "primevue/dialog";
-
-const { t } = useI18n();
 
 const props = withDefaults(
   defineProps<{

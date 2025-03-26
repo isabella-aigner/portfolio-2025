@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-const route = useRoute()
 
 // This would typically come from an API or store
 const project = ref({
@@ -41,6 +36,10 @@ const project = ref({
     { title: 'GitHub', url: 'https://github.com', icon: 'pi pi-github' }
   ]
 })
+
+const openLink = (url: string) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -118,7 +117,7 @@ const project = ref({
             :label="link.title"
             :icon="link.icon"
             class="p-button-outlined"
-            @click="window.open(link.url, '_blank')"
+            @click="openLink(link.url)"
           />
         </div>
       </section>
