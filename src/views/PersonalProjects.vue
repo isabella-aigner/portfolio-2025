@@ -58,6 +58,11 @@ const filterItems = ref<FilterItem[]>([
     icon: "pi pi-desktop",
     code: "game",
   },
+  {
+    name: t("home.skillsList.freeDesign"),
+    icon: "pi pi-image",
+    code: "design",
+  },
 ]);
 
 const projects = ref<ProjectItem[]>([
@@ -221,6 +226,28 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full"
   },
   {
+    id: "microfobius",
+    title: t('projects.freeProjectList.microfobius.title'),
+    description: t('projects.freeProjectList.microfobius.description'),
+    image:
+      "./assets/freeProjects/infografics/microfobius/futuristic-city-wallpaper-38.jpg",
+    tags: [t('projects.tags.infografic'), "Adobe Illustrator"],
+    filterTags: ["design"],
+    role: t('projects.roles.design'),
+    client: t('projects.clients.freeProject'),
+    details: [
+      {
+        title: t('projects.detailTitle.concept'),
+        content: t('projects.freeProjectList.microfobius.storyDesc')      
+      },
+    ],
+    gallery: [
+      "./assets/freeProjects/infografics/microfobius/logo-mock.jpg",
+      "./assets/freeProjects/infografics/microfobius/republic-1.jpg",
+    ],
+    galleryGrid: "full"
+  },  
+  {
     id: "vectorIllu",
     title: t("projects.freeProjectList.vectorIllu.title"),
     description: t("projects.freeProjectList.vectorIllu.description"),
@@ -311,6 +338,21 @@ const projects = ref<ProjectItem[]>([
     gallery: [
       "./assets/freeProjects/fotografie/landscape/norway-mock.jpg",
       "./assets/freeProjects/fotografie/landscape/prag.jpg",
+    ],
+    galleryGrid: "full"
+  },  
+  {
+    id: "mediaInfoGrafic2016",
+    title: t('projects.freeProjectList.mediaInfoGrafik2016.title'),
+    description: t('projects.freeProjectList.mediaInfoGrafik2016.description'),
+    image:
+      "./assets/freeProjects/infografics/mediaInfoGrafik2016/cover.jpg",
+    tags: [t('projects.tags.infoGrafic'), "Adobe Illustrator"],
+    filterTags: ["design"],
+    role: t('projects.roles.design'),
+    client: t('projects.clients.freeProject'),
+    gallery: [
+      "./assets/freeProjects/infografics/mediaInfoGrafik2016/infografik2.jpg",
     ],
     galleryGrid: "full"
   },  

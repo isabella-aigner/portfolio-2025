@@ -27,7 +27,8 @@
       "illustration": "Illustration",
       "creativeWriting": "Kreatives schreiben",
       "3d": "3D Art",
-      "game": "Gamedesign"
+      "game": "Gamedesign",
+      "freeDesign": "Design"
     },
     "skillElements": {
       "colorTheory": "Farbtheorie",
@@ -109,7 +110,8 @@
       "photographer": "Fotografin",
       "3dArtist": "3D Artist",
       "gameDev": "Gameentwicklerin",
-      "illustration": "Illustratorin"
+      "illustration": "Illustratorin",
+      "design": "Designer"
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -130,7 +132,8 @@
       "grafit": "Grafit",
       "aquarell": "Aquarell",
       "tusche": "Tusche",
-      "buntstifte": "Buntstifte"
+      "buntstifte": "Buntstifte",
+      "infografic": "Infografik"
     },
     "projectList": {
       "redlinkGPT": {
@@ -307,6 +310,15 @@
       "illu": {
         "title": "Illustration",
         "description": "Illustration ist mehr als nur Zeichnen – sie bringt Ideen zum Leben, erzählt Geschichten ohne Worte und schafft neue Welten auf Papier oder Bildschirm. Mal verspielt, mal detailreich, aber immer mit Charakter."
+      },
+      "mediaInfoGrafik2016": {
+        "title": "Infografik Movie Trends 2016",
+        "description": "Die Infografik zeigt Informationen über Besucherzahlen, Marktanteil, Ersterscheinungen, Produzierte Filme und die beliebtesten Filme in Relation zu den österreichischen Bundesländern im Jahr 2016."
+      },
+      "microfobius": {
+        "title": "Microfobius",
+        "description": "Microfobius ist ein fiktiver Staat einer dystopischen Zukunft. Es ist ein totalitäerer Staat, welcher einfach von einer Person bzw. Personengruppe regiert werden kann.",
+        "storyDesc": "Microfobius hat durch seinen hohen Standart an technologischen Errungenschaften mit der Zeit seine Gesellschaft immer mehr in ein technisches Zeitalter gedrängt und die Natur immer weiter verdrängt (Umweltverpestung). In dieser Gesellschaft existiert die Technologie jedoch nicht mehr für das Wohl des Einzelnen, sondern ausschließlich für einen winzig kleinen Bruchteil der Bevölkerung – die Obrigkeit innerhalb der Staatsgewalt welche auch dafür verantwortlich ist, die Republic zu führen. Dieser Umstand hat zur Folgen, dass das Leben des Einzelnen sich willenlos in eine Massengesellschaft einfügt, die für den technologischen Fortschritt arbeitet, jedoch selbst nichts dafür bekommt. Die Bevölkerung lebt also für die Arbeit und arbeiten nicht für das Leben."
       }
     } 
   },
