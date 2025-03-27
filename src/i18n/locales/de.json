@@ -125,7 +125,12 @@
       "digitalEditing": "Digital Editing",
       "photography": "Fotografie",
       "studioPhotography": "Studiofotografie",
-      "visualArts": "Visual Arts"
+      "visualArts": "Visual Arts",
+      "roetel": "Rötel",
+      "grafit": "Grafit",
+      "aquarell": "Aquarell",
+      "tusche": "Tusche",
+      "buntstifte": "Buntstifte"
     },
     "projectList": {
       "redlinkGPT": {
@@ -294,6 +299,14 @@
         "settingDesc": "Iris, eine 35-jährige Journalistin, ist aufgrund einer Erkrankung des Sehnervs (inkl. Charles-Bonnet-Syndrom) erblindet. Sie kann nur noch verschwommene Konturen, Licht und Schatten ohne Farben wahrnehmen. Durch ihre Erkrankung musste sie ihren Lebensstil anpassen und ihren Beruf von Illustratorin zu Journalistin wechseln, einer Tätigkeit, die sie nun von zuhause aus ausübt. Iris lebt im Elternhaus und stellt sich täglich den Herausforderungen des Alltags.",
         "videoStart": "Startsequenz",
         "videoAlarm": "Wecker-Sequenz"
+      },
+      "vectorIllu": {
+        "title": "Vektorillustration",
+        "description": "Vektorillustrationen sind skalierbare, klare Grafiken, ideal für Logos, Icons und detailreiche Designs."
+      },
+      "illu": {
+        "title": "Illustration",
+        "description": "Illustration ist mehr als nur Zeichnen – sie bringt Ideen zum Leben, erzählt Geschichten ohne Worte und schafft neue Welten auf Papier oder Bildschirm. Mal verspielt, mal detailreich, aber immer mit Charakter."
       }
     } 
   },

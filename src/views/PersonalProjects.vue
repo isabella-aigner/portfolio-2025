@@ -187,6 +187,23 @@ const projects = ref<ProjectItem[]>([
     ],
   },
   {
+    id: "illu",
+    title: t("projects.freeProjectList.illu.title"),
+    description: t("projects.freeProjectList.illu.description"),
+    image: "./assets/freeProjects/illustration/illu/dragon.jpg",
+    tags: [t('projects.tags.visualArts'), t('projects.tags.illustration'), t('projects.tags.roetel'), t('projects.tags.grafit'), t('projects.tags.buntstifte'), t('projects.tags.aquarell'), t('projects.tags.tusche'), "Copic Marker", "Adobe Photoshop"],
+    filterTags: ["illustration"],
+    role: `${t("projects.roles.illustration")}`,
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/illustration/illu/illus-1.jpg",
+      "./assets/freeProjects/illustration/illu/illus-2.jpg",
+      "./assets/freeProjects/illustration/illu/sketches.jpg",
+      "./assets/freeProjects/illustration/illu/dragon.jpg"
+    ],
+    galleryGrid: "full",
+  },
+  {
     id: "capoeira",
     title: t('projects.freeProjectList.capoeira.title'),
     subtitle: t('projects.freeProjectList.capoeira.subtitle'),
@@ -202,6 +219,23 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/fotografie/capoeira/capoeira-row2.jpg",
     ],
     galleryGrid: "full"
+  },
+  {
+    id: "vectorIllu",
+    title: t("projects.freeProjectList.vectorIllu.title"),
+    description: t("projects.freeProjectList.vectorIllu.description"),
+    image: "./assets/freeProjects/illustration/vectorIllustration/cat02.jpg",
+    tags: ["Vector", t('projects.tags.visualArts'), t('projects.tags.illustration'), "Adobe Illustrator"],
+    filterTags: ["illustration"],
+    role: `${t("projects.roles.illustration")}`,
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/illustration/vectorIllustration/howToTrainYourDragon.jpg",
+      "./assets/freeProjects/illustration/vectorIllustration/cat-illustration.jpg",
+      "./assets/freeProjects/illustration/vectorIllustration/cat-illustration2.jpg",
+      "./assets/freeProjects/illustration/vectorIllustration/human.jpg"
+    ],
+    galleryGrid: "full",
   },
   {
     id: "republic",
