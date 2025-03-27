@@ -191,7 +191,7 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.illu.title"),
     description: t("projects.freeProjectList.illu.description"),
     image: "./assets/freeProjects/illustration/illu/dragon.jpg",
-    tags: [t('projects.tags.visualArts'), t('projects.tags.illustration'), t('projects.tags.roetel'), t('projects.tags.grafit'), t('projects.tags.buntstifte'), t('projects.tags.aquarell'), t('projects.tags.tusche'), "Copic Marker", "Adobe Photoshop"],
+    tags: [t('projects.tags.visualArts'), t('projects.tags.illustration'), t('projects.tags.roetel'), t('projects.tags.grafit'), t('projects.tags.buntstifte'), t('projects.tags.aquarell'), t('projects.tags.tusche'), "Copic Marker", "Paper Art", "Adobe Photoshop"],
     filterTags: ["illustration"],
     role: `${t("projects.roles.illustration")}`,
     client: t('projects.clients.personalProject'),
@@ -199,7 +199,7 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/illustration/illu/illus-1.jpg",
       "./assets/freeProjects/illustration/illu/illus-2.jpg",
       "./assets/freeProjects/illustration/illu/sketches.jpg",
-      "./assets/freeProjects/illustration/illu/dragon.jpg"
+      "./assets/freeProjects/illustration/illu/dragon-paperart.jpg"
     ],
     galleryGrid: "full",
   },
@@ -314,78 +314,6 @@ const projects = ref<ProjectItem[]>([
     ],
     galleryGrid: "full"
   },  
-  {
-    id: "illu",
-    title: "Illustration",
-    subtitle: "Visual Stories Through Lens",
-    description:
-      "A curated collection of photographs capturing moments, landscapes, and stories.",
-    image:
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Photography", "Visual Arts", "Digital Editing"],
-    filterTags: ["design"],
-    year: "2023",
-    role: "Photographer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Project Overview",
-        content:
-          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
-      },
-      {
-        title: "Technical Details",
-        content:
-          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
-      },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
-    ],
-    links: [
-      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
-    ],
-  },
-  {
-    id: "iris",
-    title: "Iris",
-    subtitle: "Visual Stories Through Lens",
-    description:
-      "A curated collection of photographs capturing moments, landscapes, and stories.",
-    image:
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Photography", "Visual Arts", "Digital Editing"],
-    filterTags: ["design"],
-    year: "2023",
-    role: "Photographer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Project Overview",
-        content:
-          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
-      },
-      {
-        title: "Technical Details",
-        content:
-          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
-      },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
-    ],
-    links: [
-      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
-    ],
-  },
 ]);
 
 const filteredProjects = computed(() => {
