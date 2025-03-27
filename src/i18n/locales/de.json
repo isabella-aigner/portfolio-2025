@@ -350,60 +350,60 @@
           "title": "Fachhochschule Hagenberg, Medientechnik und Design (BAKK)",
           "subtitle": "Bachelor of Science",
           "description": "Kompetenzen: Webentwicklung & Design, Film, Audio, 3D, Online-Marketing, 2D Motion Graphics",
-          "icon": "./src/assets/img/icons/education_base_icon.svg"
+          "icon": "./assets/icons/education_base_icon.svg"
         },
         "item2": {
           "period": "Sept. 2017 - Juli 2018",
           "title": "Illuskills Wien",
           "subtitle": "Zertifikat: Medienillustration",
           "description": "Berufsbegleitende Ausbildung im Bereich Medienillustration",
-          "icon": "./src/assets/img/icons/education_art_icon.svg"
+          "icon": "./assets/icons/education_art_icon.svg"
         },
         "item3": {
           "period": "Sept. 2017 - Dez. 2017",
           "title": "bit Schulungscenter, Linz",
           "subtitle": "ECDL Weiterbildung",
           "description": "ECDL Web Editing (HTML5, CSS3, Responsive), ECDL Powerpoint Advance",
-          "icon": "./src/assets/img/icons/education_temp_icon.svg"
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
         "item4": {
           "period": "Otk. 2010 - Juni. 2014",
           "title": "Werbe-Design-Academie (WDA), WIFI Salzburg",
           "subtitle": "Diplom im Bereich Kommunikationsdesign",
           "description": "Kompetenzen: Print, Dorporate Design, Packaging Design, Fotografie",
-          "icon": "./src/assets/img/icons/education_design_icon.svg"
+          "icon": "./assets/icons/education_design_icon.svg"
         },
         "item5": {
           "period": "Nov. 2011 - Feb. 2012",
           "title": "FiT - Frauen in Handwerk und Technik, BFI Salzburg",
           "subtitle": "Neuorientierung",
-          "icon": "./src/assets/img/icons/education_temp_icon.svg"
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
         "item6": {
           "period": "Okt. 2008 - Dez. 2010",
           "title": "Fachhochschule Salzburg Urstein, MultiMediaArt",
           "subtitle": "Kein Abschluss",
           "description": "Spezialisierung: Audio/Audiotechnik | Kompetenzen: Multimedia, Audiotechnik, 3D, Film",
-          "icon": "./src/assets/img/icons/education_base_icon.svg"
+          "icon": "./assets/icons/education_base_icon.svg"
         },
         "item7": {
           "period": "Nov. 2007 - Juni 2008",
           "title": "Orff-Institut, Salzburg",
           "subtitle": "Überbrückung",
           "description": "Außerordentliche Hörerin elementare Musik- und Tanzpädagogin (Überbrückung)",
-          "icon": "./src/assets/img/icons/education_temp_icon.svg"
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
         "item8": {
           "period": "Sept. 2003 - Juni 2007",
           "title": "Bundesrealstufengymnasium (Musischer Zweig), Salzburg",
           "subtitle": "Matura",
-          "icon": "./src/assets/img/icons/education_base_icon.svg"
+          "icon": "./assets/icons/education_base_icon.svg"
         },
         "item9": {
           "period": "Sept. 1995 - Juni 2003",
           "title": "Volks- und Hauptschulausbildung, Faistenau",
           "subtitle": "Grundschulausbildung",
-          "icon": "./src/assets/img/icons/education_base_icon.svg"
+          "icon": "./assets/icons/education_base_icon.svg"
         }
       }
     },
@@ -415,101 +415,101 @@
           "company": "Redlink GmbH, Salzburg",
           "position": "Frontend-Entwicklerin, UI/UX-Designerin, Marketing & Design",
           "description": "Entwicklung von Webanwendungen und Design von Benutzeroberflächen für verschiedene Kunden. Interne Grafik und Marketing.",
-          "icon": "./src/assets/img/icons/work_web_icon.svg"
+          "icon": "./assets/icons/work_web_icon.svg"
         },
         "item2": {
           "period": "Feb. 2021 - Aug. 2021",
           "company": "Elements New Media Solutions, Salzburg",
           "position": "Praktikum im Bereich Web-Development, Frontend",
           "description": "Arbeit an verschiedenen Frontend-Projekten mit modernen Web-Technologien.",
-          "icon": "./src/assets/img/icons/internship_icon.svg"
+          "icon": "./assets/icons/internship_icon.svg"
         },
         "item3": {
           "period": "Juli 2018 - Sept. 2018",
           "company": "Rotax Maxdome, Linz",
           "position": "Empfangs- & Service-Mitarbeiter:in",
           "description": "Empfang & Kundenbetreuung, Unterstützung bei Events in der Karthalle.",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         },
         "item4": {
           "period": "Juli 2018 - Sept. 2018",
           "company": "Bäckerei Winkler, Gallneukirchen",
           "position": "Verkauf & Service",
           "description": "Bäckerei Verkaufsmitarbeiter & Service im Café.",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         },
         "item5": {
           "period": "April 2018 - Sept. 2018",
           "company": "MAG Personal GmbH, Linz",
           "position": "Service & Gastronomiemitarbeiter",
           "description": "Servicemitarbeiterin bei Veranstaltungen, z. B. Hochzeiten und Firmenfeiern.",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         },
         "item6": {
           "period": "Jänner 2018 - März 2018",
           "company": "Atikon EDV & Marketing GmbH, Linz",
           "position": "Praktikum im Bereich Web-Development und -Design",
           "description": "Erstellung von Weblayouts und Entwicklung von Webkomponenten.",
-          "icon": "./src/assets/img/icons/internship_icon.svg"
+          "icon": "./assets/icons/internship_icon.svg"
         },
         "item7": {
           "period": "Okt. 2016 - April 2017",
           "company": "INVENT Marketing und Tourismus GmbH, Linz",
           "position": "Grafik & Design, Interne Marketingabteilung",
           "description": "Gestaltung von Print- und Online-Materialien für Marketingkampagnen.",
-          "icon": "./src/assets/img/icons/work_design_icon.svg"
+          "icon": "./assets/icons/work_design_icon.svg"
         },
         "item8": {
           "period": "Mai 2015 - Juli 2016",
           "company": "Roco Modelleisenbahn Holding GmbH, Bergheim",
           "position": "Grafik & Design, Interne Marketingabteilung",
           "description": "Erstellung von Werbematerialien und Produktdesigns für Modelleisenbahnen.",
-          "icon": "./src/assets/img/icons/work_design_icon.svg"
+          "icon": "./assets/icons/work_design_icon.svg"
         },
         "item9": {
           "period": "Feb. 2015 - April 2015",
           "company": "Wiberg GmbH, Salzburg",
           "position": "Praktikum Grafik & Design, Interne Marketingabteilung",
           "description": "Mitarbeit an Verpackungsdesigns und Werbematerialien.",
-          "icon": "./src/assets/img/icons/internship_icon.svg"
+          "icon": "./assets/icons/internship_icon.svg"
         },
         "item10": {
           "period": "Juli 2014 - Sept. 2014",
           "company": "Maya Inspiranto Werbeagentur, Salzburg",
           "position": "Urlaubsvertretung, Grafik & Design",
           "description": "Design und Layoutarbeiten für Kundenprojekte.",
-          "icon": "./src/assets/img/icons/work_design_icon.svg"
+          "icon": "./assets/icons/work_design_icon.svg"
         },
         "item11": {
           "period": "Juli 2013 - Sept. 2013",
           "company": "Maya Inspiranto Werbeagentur, Salzburg",
           "position": "Berufspraktikum, Grafik & Design",
           "description": "Design und Layoutarbeiten für Kundenprojekte.",
-          "icon": "./src/assets/img/icons/internship_icon.svg"
+          "icon": "./assets/icons/internship_icon.svg"
         },
         "item12": {
           "period": "Aug. 2012 - März 2013",
           "company": "Bäckerei und Konditorei Flöckner, Salzburg Gnigl",
           "position": "Teilzeitmitarbeiterin im Verkauf und Café",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         },
         "item13": {
           "period": "Mai 2012 - Juli 2012",
           "company": "Café-Restaurant & Pizzeria Papageno, St. Gilgen",
           "position": "Ferialmitarbeitern, Eisverkauf und Service",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         },
         "item14": {
           "period": "Jän. 2012 - März 2012",
           "company": "Schnupperpraktika Grafik & Design",
           "position": "Herkules-Artworks Werbeagentur Linz, Maya Inspiranto Werbeagentur Salzburg",
-          "icon": "./src/assets/img/icons/internship_icon.svg"
+          "icon": "./assets/icons/internship_icon.svg"
         },
         "item15": {
           "period": "2003-2007",
           "company": "Klavier Dinnermusik",
           "position": "Gasthof zur Post, Faistenau",
-          "icon": "./src/assets/img/icons/work_temporary_icon.svg"
+          "icon": "./assets/icons/work_temporary_icon.svg"
         }
       }
     }
