@@ -144,6 +144,7 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
             <!-- Video Player -->
             <div v-if="!!project.video" class="video-section">
               <h4 class="project-subhl">Video Preview</h4>
+              <div :class="{ 'grid grid-cols-2 gap-2': project.video.length > 1 }">
               <div
                 v-for="(video, index) in project.video"
                 :key="index"
@@ -152,6 +153,7 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
                 <video controls :src="video.link" :poster="video.poster">
                   Your browser does not support the video element.
                 </video>
+              </div>
               </div>
             </div>
 

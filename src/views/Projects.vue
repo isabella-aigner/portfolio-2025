@@ -121,12 +121,14 @@ const projects = ref < ProjectItem[] > ([{
             "./assets/projects/redlinkGPT/redlinkgpt-reisekosten-terminbuchung.jpg",
             "./assets/projects/redlinkGPT/redlinkGpt-zweier.jpg"
         ],
-        links: [{
-            title: "Website",
-            url: "https://redlink.ai/",
-            icon: "pi pi-external-link",
-            type: "external",
-        }, ],
+        links: [
+            {
+                title: "Website",
+                url: "https://redlink.ai/",
+                icon: "pi pi-external-link",
+                type: "external",
+            }, 
+        ],
         galleryGrid: "full",
     },
     {

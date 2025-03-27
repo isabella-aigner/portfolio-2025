@@ -26,7 +26,8 @@
       "audio": "Audio",
       "illustration": "Illustration",
       "creativeWriting": "Kreatives schreiben",
-      "3d": "3D Art"
+      "3d": "3D Art",
+      "game": "Gamedesign"
     },
     "skillElements": {
       "colorTheory": "Farbtheorie",
@@ -82,7 +83,11 @@
       "targetGroup": "Zielgruppe",
       "concept": "Konzept",
       "demoTrack": "Demo Track",
-      "service": "Service"
+      "service": "Service",
+      "setting": "Setting"
+    },
+    "links": {
+      "gamejolt": "Gamejolt"
     },
     "clients": {
       "personalProject": "Freies Projekt",
@@ -102,7 +107,9 @@
       "brandDev": "Markenentwicklung",
       "audioDev": "Audio Developer",
       "photographer": "Fotografin",
-      "3dArtist": "3D Artist"
+      "3dArtist": "3D Artist",
+      "gameDev": "Gameentwicklerin",
+      "illustration": "Illustratorin"
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -280,6 +287,13 @@
       "3dPlayground": {
         "title": "3D Playground",
         "description": "3D-Modelling ist die digitale Erstellung dreidimensionaler Objekte, genutzt in Animation, Gaming, Architektur und Design."
+      },
+      "iris": {
+        "title": "Iris",
+        "description": "Iris thematisiert das Leben mit einer Sehbehinderung und stellt die Fragen: „Wie erlebt ein sehbeeinträchtigter Mensch seinen Alltag?“ und „Wie kann dies sehenden Menschen nähergebracht und ihr Bewusstsein dafür geschärft werden?“. Diese Fragen bilden die konzeptionellen Leitlinien des Spiels und bestimmen dessen Design und Umsetzung.",
+        "settingDesc": "Iris, eine 35-jährige Journalistin, ist aufgrund einer Erkrankung des Sehnervs (inkl. Charles-Bonnet-Syndrom) erblindet. Sie kann nur noch verschwommene Konturen, Licht und Schatten ohne Farben wahrnehmen. Durch ihre Erkrankung musste sie ihren Lebensstil anpassen und ihren Beruf von Illustratorin zu Journalistin wechseln, einer Tätigkeit, die sie nun von zuhause aus ausübt. Iris lebt im Elternhaus und stellt sich täglich den Herausforderungen des Alltags.",
+        "videoStart": "Startsequenz",
+        "videoAlarm": "Wecker-Sequenz"
       }
     } 
   },

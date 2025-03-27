@@ -30,7 +30,7 @@ onMounted(() => {
 const filterItems = ref<FilterItem[]>([
   {
     name: t("home.skillsList.photography"),
-    icon: "pi pi-images",
+    icon: "pi pi-camera",
     code: "photo",
   },
   {
@@ -40,7 +40,7 @@ const filterItems = ref<FilterItem[]>([
   },
   {
     name: t("home.skillsList.illustration"),
-    icon: "pi pi-pencil",
+    icon: "pi pi-palette",
     code: "illustration",
   },
   {
@@ -52,6 +52,11 @@ const filterItems = ref<FilterItem[]>([
     name: t("home.skillsList.3d"),
     icon: "pi pi-box",
     code: "3d",
+  },
+  {
+    name: t("home.skillsList.game"),
+    icon: "pi pi-desktop",
+    code: "game",
   },
 ]);
 
@@ -138,6 +143,47 @@ const projects = ref<ProjectItem[]>([
         poster:
           "./assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
       },
+    ],
+  },
+  {
+    id: "iris",
+    title: t("projects.freeProjectList.iris.title"),
+    description: t("projects.freeProjectList.iris.description"),
+    image: "./assets/freeProjects/game/iris/Iris_Intro_Single.jpg",
+    tags: ["Unity", "3D Modelling", "Autodesk Maya", t('projects.tags.visualArts'), t('projects.tags.illustration')],
+    filterTags: ["game", "3d", "illustration", "audio"],
+    role: `${t("projects.roles.audioDev")}, ${t("projects.roles.gameDev")}, ${t("projects.roles.illustration")}`,
+    client: t('projects.clients.personalProject'),
+    details: [
+      {
+        title: t('projects.detailTitle.setting'),
+        content: t('projects.freeProjectList.iris.settingDesc')      
+      },
+    ],
+    video: [
+      {
+        title: t('projects.freeProjectList.iris.videoStart'),
+        link: "./assets/freeProjects/game/iris/start-short.mp4",
+        poster: "./assets/freeProjects/game/iris/iris-menu.jpg",
+      },
+      {
+        title: t('projects.freeProjectList.iris.videoAlarm'),
+        link: "./assets/freeProjects/game/iris/wecker-short.mp4",
+        poster: "./assets/freeProjects/game/iris/iris-menu.jpg",
+      },
+    ],
+    gallery: [
+      "./assets/freeProjects/game/iris/iris-illustrations.jpg",
+      "./assets/freeProjects/game/iris/iris-level.jpg",
+    ],
+    galleryGrid: "full",
+    links: [
+      {
+        title: t('projects.links.gamejolt'),
+        url: "https://gamejolt.com/games/iris/540740",
+        icon: "pi pi-external-link",
+        type: "external",
+      }, 
     ],
   },
   {
