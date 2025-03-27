@@ -5,13 +5,21 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const socialLinks = ref([
-  { name: "GitHub", icon: "pi pi-github", url: "https://github.com/isabella-aigner" },
   {
     name: "LinkedIn",
     icon: "pi pi-linkedin",
     url: "https://www.linkedin.com/in/isabella-aigner",
   },
-  { name: "Email", icon: "pi pi-envelope", url: "mailto:isabella.aigner@gmail.com" },
+  { 
+    name: "Email", 
+    icon: "pi pi-envelope", 
+    url: "mailto:isabella.aigner@gmail.com" 
+  },
+  { 
+    name: "Linktree", 
+    icon: "pi pi-external-link", 
+    url: "https://linktr.ee/isabella.c.aigner" 
+  },
 ]);
 
 const handleBtnClick = (url: string) => {

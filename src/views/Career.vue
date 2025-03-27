@@ -44,12 +44,14 @@ const downloadCV = () => {
                 <p>
                   {{ t("career.cvDownload") }}
                 </p>
-                <Button
-                  icon="pi pi-download"
-                  :label="t('career.download')"
-                  class="p-button-outlined download-cv"
-                  @click="downloadCV"
-                />
+                <div class=" btn btn-outlined rounded">
+                  <Button
+                    icon="pi pi-download"
+                    :label="t('career.download')"
+                    class="p-button-outlined download-cv"
+                    @click="downloadCV"
+                  />
+                </div>
               </div>
             </template>
           </Card>
