@@ -323,7 +323,15 @@
       },
       "nintendoMessestand": {
         "title": "Nintendo Messestand",
-        "description": ""
+        "description": "Ein Konzept für einen Nintendo Messestand mit Besprechungsraum, Spielebereich und Ausstellungsbereich."
+      },
+      "nevilleBrody": {
+        "title": "Neville Brody Design",
+        "description": "Angelehnt an das Design von Neville Brody, wurden Plakate und Magazinseiten designt."
+      },
+      "dummyMagazin": {
+        "title": "Dummy Magazin",
+        "description": "Das Design des Dummy Magazins kreist um das Thema Rhythmus – von klar strukturiertem Editorial Design bis hin zur bewussten Zerstörung von Satz und Layout, die das visuelle Tempo herausfordert und neu definiert."
       }
     } 
   },

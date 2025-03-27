@@ -209,6 +209,21 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full",
   },
   {
+    id: "dummyMagazin",
+    title: t('projects.freeProjectList.dummyMagazin.title'),
+    description: t('projects.freeProjectList.dummyMagazin.description'),
+    image: "./assets/freeProjects/design/dummyMagazin/dummy-magazin.jpg",
+    tags: [t('projects.tags.infografic'), "Adobe Illustrator", "Adobe InDesign","Adobe Photoshop"],
+    filterTags: ["design"],
+    role: t('projects.roles.design'),
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/design/dummyMagazin/dummy-mockup1.jpg",
+      "./assets/freeProjects/design/dummyMagazin/dummy-mockup2.jpg",
+    ],
+    galleryGrid: "full"
+  }, 
+  {
     id: "capoeira",
     title: t('projects.freeProjectList.capoeira.title'),
     subtitle: t('projects.freeProjectList.capoeira.subtitle'),
@@ -246,7 +261,22 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/infografics/microfobius/republic-1.jpg",
     ],
     galleryGrid: "full"
-  },  
+  },
+  {
+    id: "nevilleBrody",
+    title: t('projects.freeProjectList.nevilleBrody.title'),
+    description: t('projects.freeProjectList.nevilleBrody.description'),
+    image: "./assets/freeProjects/design/nevilleBrody/nevillebrody.jpg",
+    tags: [t('projects.tags.infografic'), "Adobe Illustrator", "Adobe InDesign"],
+    filterTags: ["design"],
+    role: t('projects.roles.design'),
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/design/nevilleBrody/neville-brody-plakate.jpg",
+      "./assets/freeProjects/design/nevilleBrody/nevillebrody.jpg",
+    ],
+    galleryGrid: "full"
+  },   
   {
     id: "vectorIllu",
     title: t("projects.freeProjectList.vectorIllu.title"),
