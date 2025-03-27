@@ -347,12 +347,27 @@ const projects = ref<ProjectItem[]>([
     description: t('projects.freeProjectList.mediaInfoGrafik2016.description'),
     image:
       "./assets/freeProjects/infografics/mediaInfoGrafik2016/cover.jpg",
-    tags: [t('projects.tags.infoGrafic'), "Adobe Illustrator"],
+    tags: [t('projects.tags.infografic'), "Adobe Illustrator"],
     filterTags: ["design"],
     role: t('projects.roles.design'),
-    client: t('projects.clients.freeProject'),
+    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/infografics/mediaInfoGrafik2016/infografik2.jpg",
+    ],
+    galleryGrid: "full"
+  },
+  {
+    id: "nintendoMessestand",
+    title: t('projects.freeProjectList.nintendoMessestand.title'),
+    description: t('projects.freeProjectList.nintendoMessestand.description'),
+    image:
+      "./assets/freeProjects/messestand/nintendo/cover.png",
+    tags: [t('projects.tags.messe'), "SketchUp"],
+    filterTags: ["design"],
+    role: t('projects.roles.design'),
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/messestand/nintendo/nintendo-messestand.jpg",
     ],
     galleryGrid: "full"
   },  
