@@ -48,6 +48,11 @@ const filterItems = ref<FilterItem[]>([
     icon: "pi pi-align-left",
     code: "writing",
   },
+  {
+    name: t("home.skillsList.3d"),
+    icon: "pi pi-box",
+    code: "3d",
+  },
 ]);
 
 const projects = ref<ProjectItem[]>([
@@ -67,7 +72,7 @@ const projects = ref<ProjectItem[]>([
     ],
     galleryGrid: "full"
   },    
-{
+  {
     id: "hausMaschine",
     title: t('projects.freeProjectList.hausMaschine.title'),
     subtitle: t('projects.freeProjectList.hausMaschine.subtitle'),
@@ -84,11 +89,27 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full"
   },  
   {
+    id: "3d",
+    title: t('projects.freeProjectList.3dPlayground.title'),
+    description: t('projects.freeProjectList.3dPlayground.description'),
+    image: "./assets/freeProjects/3d/fraktale01.jpg",
+    tags: [t('projects.tags.visualArts'), "3D Modelling", "3D Sculpting", "Autodesk Maya", "ZBrush"],
+    filterTags: ["3d"],
+    role: t('projects.roles.3dArtist'),
+    client: t('projects.clients.personalProject'),
+    gallery: [
+      "./assets/freeProjects/3d/fraktale-mock.jpg",
+      "./assets/freeProjects/3d/hexeninsel.jpg",
+      "./assets/freeProjects/3d/render-qf2.jpg"
+    ],
+    galleryGrid: "full",
+  },
+  {
     id: "soundDesignSnippets",
     title: t("projects.freeProjectList.soundDesignSnippets.title"),
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
     image:
-      "./assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
+      "./assets/freeProjects/audio/audioSnippets/theDealer-preview.JPG",
     tags: [t("projects.tags.recording"), "Cubase"],
     filterTags: ["audio"],
     role: t("projects.roles.audioDev"),
@@ -214,42 +235,6 @@ const projects = ref<ProjectItem[]>([
     galleryGrid: "full"
   },  
   {
-    id: "3d",
-    title: "3D Playground",
-    subtitle: "Visual Stories Through Lens",
-    description:
-      "A curated collection of photographs capturing moments, landscapes, and stories.",
-    image:
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800&h=600",
-    tags: ["Photography", "Visual Arts", "Digital Editing"],
-    filterTags: ["design"],
-    year: "2023",
-    role: "Photographer",
-    client: "Personal Project",
-    details: [
-      {
-        title: "Project Overview",
-        content:
-          "A photography portfolio showcasing various styles and subjects, from landscape to portrait photography.",
-      },
-      {
-        title: "Technical Details",
-        content:
-          "Shot with professional DSLR equipment and processed using advanced photo editing techniques.",
-      },
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1505028106030-e07ea1bd80c3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800",
-    ],
-    links: [
-      { title: "View Gallery", url: "https://example.com", icon: "pi pi-external-link" },
-      { title: "Instagram", url: "https://instagram.com", icon: "pi pi-instagram" },
-    ],
-  },
-  {
     id: "illu",
     title: "Illustration",
     subtitle: "Visual Stories Through Lens",
@@ -330,21 +315,17 @@ const filteredProjects = computed(() => {
   );
 });
 
-const toggleProject = (project: ProjectItem) => {
-  selectedProject.value = selectedProject.value?.id === project.id ? null : project;
+const toggleProject = (project: ProjectItem | null) => {
+    selectedProject.value = selectedProject.value?.id === project?.id ? null : project;
 
-  let scrollToElementId = selectedProject.value ? selectedProject.value.id : project.id;
+    let scrollToElementId = selectedProject.value ? selectedProject.value.id : project?.id;
+    let timeoutCount = selectedProject.value ? 150 : 300;
 
-  if (selectedProject.value) {
-    document
-      .getElementById(`${scrollToElementId}-content`)
-      ?.scrollIntoView({ behavior: "smooth" });
-  } else {
-    document
-      .getElementById(`${scrollToElementId}-header`)
-      ?.scrollIntoView({ behavior: "smooth" });
-  }
-};
+    setTimeout(() => {
+        document
+            .getElementById(`${scrollToElementId}-header`)?.scrollIntoView({ behavior: "smooth" })
+    }, timeoutCount)
+}
 
 const toggleFilter = (filterId: string | null) => {
   if (filterId) router.replace({ query: { ...route.query, filter: filterId } });

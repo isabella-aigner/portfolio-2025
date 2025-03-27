@@ -25,7 +25,8 @@
       "photography": "Fotografie",
       "audio": "Audio",
       "illustration": "Illustration",
-      "creativeWriting": "Kreatives schreiben"
+      "creativeWriting": "Kreatives schreiben",
+      "3d": "3D Art"
     },
     "skillElements": {
       "colorTheory": "Farbtheorie",
@@ -100,8 +101,8 @@
       "productDev": "Produktentwicklung",
       "brandDev": "Markenentwicklung",
       "audioDev": "Audio Developer",
-      "photographer": "Fotografin"
-
+      "photographer": "Fotografin",
+      "3dArtist": "3D Artist"
     },
     "tags": {
       "graficDesign": "Grafikdesign",
@@ -275,6 +276,10 @@
       "republic": {
         "title": "Innenraumfotografie",
         "description": "Innenraumfotografie fängt die Atmosphäre des Raumes ein, indem sie Beleuchtung, Möbel und Architektur in den Fokus stellt. Ziel ist es, die Stimmung des Ortes visuell zu vermitteln und den Betrachter in die Umgebung zu entführen."
+      },
+      "3dPlayground": {
+        "title": "3D Playground",
+        "description": "3D-Modelling ist die digitale Erstellung dreidimensionaler Objekte, genutzt in Animation, Gaming, Architektur und Design."
       }
     } 
   },
