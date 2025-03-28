@@ -204,7 +204,7 @@ const softSkills = ref([
               <template #title>
                 <div class="section-title">
                   <i class="pi pi-users"></i>
-                  <span>Soft Skills</span>
+                  <span>{{ t('home.softSkillTitle') }}</span>
                 </div>
               </template>
               <template #content>
