@@ -62,7 +62,7 @@ const filterItems = ref < FilterItem[] > ([{
     {
         name: t("home.skillsList.design"),
         icon: "pi pi-image",
-        code: "design",
+        code: "grafic",
     },
     {
         name: t("home.skillsList.print"),
@@ -81,7 +81,8 @@ const filterItems = ref < FilterItem[] > ([{
     },
 ]);
 
-const projects = ref < ProjectItem[] > ([{
+const projects = ref < ProjectItem[] > ([
+    {
         id: "redlinkGPT",
         title: t("projects.projectList.redlinkGPT.title"),
         subtitle: t("projects.projectList.redlinkGPT.subtitle"),
@@ -93,25 +94,19 @@ const projects = ref < ProjectItem[] > ([{
             "HTML",
             "CSS",
             "VanillaJs",
+            t("projects.tags.layout"),
             "Adobe InDesign",
             "Adobe Photoshop",
             "Adobe Illustrator",
         ],
-        filterTags: ["uiux", "frontend", "design", "print", "product"],
+        filterTags: ["product", "uiux", "frontend", "grafic", "print"],
         year: "2025",
-        role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}, ${t(
-      "projects.roles.brandDev"
-    )}, ${t("projects.roles.productDev")}, ${t("projects.roles.graficDesign")}, ${t(
-      "projects.roles.brandDev"
-    )}`,
+        role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}, ${t("projects.roles.brandDev")}, ${t("projects.roles.graficDesign")}`,
         client: t("projects.clients.companyWork"),
-        details: [{
-                title: t("projects.detailTitle.projectOverview"),
-                content: t("projects.projectList.redlinkGPT.overviewDesc"),
-            },
+        details: [
             {
-                title: t("projects.detailTitle.usp"),
-                content: t("projects.projectList.redlinkGPT.appDesc"),
+                title:  t("projects.projectList.redlinkGPT.uspTitle"),
+                content: t("projects.projectList.redlinkGPT.uspDesc"),
             },
         ],
         gallery: [
@@ -138,6 +133,7 @@ const projects = ref < ProjectItem[] > ([{
         description: t("projects.projectList.moreStudyManager.description"),
         image: "./assets/projects/more/more-visual-prev.png",
         tags: [
+            t('projects.tags.brandDev'),
             "Adobe XD",
             "Prototyping",
             "Vue.js",
@@ -148,21 +144,12 @@ const projects = ref < ProjectItem[] > ([{
             "Kotlin",
             "Swift",
         ],
-        filterTags: ["uiux", "design", "frontend", "mobile", "product"],
+        filterTags: ["uiux", "frontend", "mobile", "grafic"],
         year: "2023",
         role: `${t("projects.roles.brandDev")}, ${t("projects.roles.uiuxDesigner")}, ${t(
       "projects.roles.frontendDev"
     )}, ${t("projects.roles.mobileDev")}`,
         client: t("projects.clients.companyWork"),
-        details: [{
-                title: t("projects.detailTitle.projectOverview"),
-                content: t("projects.projectList.moreStudyManager.overviewDesc"),
-            },
-            {
-                title: t("projects.detailTitle.technicalImplementation"),
-                content: t("projects.projectList.moreStudyManager.technicalDesc"),
-            },
-        ],
         gallery: [
             "./assets/projects/more/more-banner-2.jpg",
             "./assets/projects/more/more-mockup.jpg",
@@ -198,9 +185,10 @@ const projects = ref < ProjectItem[] > ([{
         image: "./assets/projects/redlinkat/redlinkat.jpg",
         tags: [
             t("projects.tags.redesign"),
-            "Corporate Design",
-            "Corborate Deisgn Guidlines",
+            t("projects.tags.corporateDesign"),
+            t("projects.tags.brandGuidlines"),
             t("projects.tags.merch"),
+            t("projects.tags.layout"),
             "Adobe XD",
             "Adobe InDesign",
             "Adobe Photoshop",
@@ -211,7 +199,7 @@ const projects = ref < ProjectItem[] > ([{
             "CSS",
             "HTML",
         ],
-        filterTags: ["uiux", "frontend", "backend", "design", "print"],
+        filterTags: ["uiux", "frontend", "backend", "grafic", "print"],
         year: "2022-2025",
         role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.brandDev")}, ${t(
       "projects.roles.uiuxDesigner"
@@ -240,10 +228,10 @@ const projects = ref < ProjectItem[] > ([{
         subtitle: t("projects.projectList.redlinkatWhitepaper.subtitle"),
         description: t("projects.projectList.redlinkatWhitepaper.description"),
         image: "./assets/projects/redlinkat-whitepaper/redlink-llm-whitepaper-front.jpg",
-        tags: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
-        filterTags: ["design", "print", "product"],
+        tags: [t("projects.tags.layout"), "Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
+        filterTags: ["product", "grafic", "print"],
         year: "2023-2024",
-        role: `${t("projects.roles.graficDesign")}, ${t("projects.roles.developer")}`,
+        role: `${t("projects.roles.graficDesign")}`,
         client: t("projects.clients.companyWork"),
         details: [{
                 title: t("projects.projectList.redlinkatWhitepaper.goodSearchUXTitle"),
@@ -284,15 +272,6 @@ const projects = ref < ProjectItem[] > ([{
         year: "2021",
         role: t("projects.roles.frontendDev"),
         client: t("projects.clients.internshipProject"),
-        details: [{
-                title: t("projects.detailTitle.projectOverview"),
-                content: t("projects.projectList.dachsteinTicketshop.overviewDesc"),
-            },
-            {
-                title: t("projects.detailTitle.technicalImplementation"),
-                content: t("projects.projectList.dachsteinTicketshop.technicalDesc"),
-            },
-        ],
         gallery: [
             "./assets/projects/dachsteinTicketshop/ticketshop_dreier.jpg",
             "./assets/projects/dachsteinTicketshop/ticketshop-more.jpg",
@@ -316,19 +295,10 @@ const projects = ref < ProjectItem[] > ([{
             "MySQL",
             "Xamp"
         ],
-        filterTags: ["uiux", "frontend", "backend"],
+        filterTags: ["product", "uiux", "frontend", "backend"],
         year: "2020",
         role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.fullstackDev")}`,
         client: t("projects.clients.studyProject"),
-        details: [{
-                title: t("projects.detailTitle.projectOverview"),
-                content: t("projects.projectList.plantbase.overviewDesc"),
-            },
-            {
-                title: t("projects.detailTitle.technicalImplementation"),
-                content: t("projects.projectList.plantbase.techincalDesc"),
-            },
-        ],
         gallery: [
             "./assets/projects/plantbase/plantbase_mockup.jpg",
             "./assets/projects/plantbase/unterseiten01.jpg",
@@ -347,10 +317,6 @@ const projects = ref < ProjectItem[] > ([{
         year: "2019",
         role: `${t("projects.roles.uiuxDesigner")}`,
         client: t("projects.clients.studyProject"),
-        details: [{
-            title: t("projects.detailTitle.projectOverview"),
-            content: t("projects.projectList.gameShop.overviewDesc"),
-        }, ],
         gallery: [
             "./assets/projects/gameShop/mockup.jpg",
             "./assets/projects/gameShop/mockup_all.jpg",
@@ -368,10 +334,6 @@ const projects = ref < ProjectItem[] > ([{
         year: "2018",
         role: `${t("projects.roles.uiuxDesigner")}, ${t("projects.roles.frontendDev")}`,
         client: t("projects.clients.internshipProject"),
-        details: [{
-            title: t("projects.detailTitle.projectOverview"),
-            content: t("projects.projectList.steuerkanzleiKaufmann.overviewDesc"),
-        }, ],
         gallery: [
             "./assets/projects/steuerkanzleiKaufmann/mockup.jpg",
             "./assets/projects/steuerkanzleiKaufmann/unterseiten.jpg",
@@ -392,12 +354,12 @@ const projects = ref < ProjectItem[] > ([{
         image: "./assets/projects/invent/geschaeftsdrucksorten.jpg",
         tags: [
             t("projects.tags.graficDesign"),
-            t("projects.tags.brandDesign"),
+            t("projects.tags.corporateDesign"),
             "Adobe InDesign",
             "Adobe Illustrator",
             "Adobe Photoshop",
         ],
-        filterTags: ["design", "print", "product"],
+        filterTags: ["design", "print"],
         year: "2016-2017",
         role: t("projects.roles.graficDesign"),
         client: t("projects.clients.companyWork"),
@@ -732,74 +694,36 @@ const toggleProject = (project: ProjectItem | null) => {
     }, timeoutCount)
 }
 
-/*
-const getSkillName = (skillCode: string) => {
-  const skill = filterItems.value.find((s) => s.code === skillCode);
-  return skill ? skill.name : skillCode;
-};
-*/
-
 const isModalVisible = ref < boolean > (false);
 </script>
 
 <template>
     <div class="projects">
-    
         <FullWidthHeader image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000">
-    
-            <h1>{{ t("projects.title") }}</h1>
-    
-            <p>Innovative solutions crafted with passion and precision</p>
-    
+            <h1>{{ t("projects.headerTitle") }}</h1>
+            <p>{{ t("projects.headerSubtitle")}}</p>
         </FullWidthHeader>
     
-    
-    
         <ContentContainer>
-    
             <!-- Filter Skills -->
-    
             <ScrollReveal>
-    
                 <FilterGroup :filters="filterItems" :selected-filter="selectedFilter" @toggled-filter="toggleFilter($event)" />
-    
             </ScrollReveal>
-    
-    
     
             <TransitionGroup name="projects-grid" tag="div" class="grid" :class="[selectedProject ? 'grid-cols-1' : 'grid-cols-2']">
     
                 <ScrollReveal v-for="(project, index) in filteredProjects" :key="project.id" :delay="index * 100" direction="up">
     
                     <ProjectCard :project="project" :is-selected="selectedProject?.id === project.id" :selected-filter="selectedFilter" :filter-items="filterItems" @toggled-project="toggleProject(project)" @open-gallery-modal="
-    
-                  () => {
-    
-                    console.log('open gallery modal emit was called: ');
-    
-                    isModalVisible = true;
-    
-                  }
-    
-                " />
-    
+                  () => {isModalVisible = true;}" />
                 </ScrollReveal>
-    
             </TransitionGroup>
-    
-    
-    
+
             <ScrollReveal>
-    
                 <ContactSection />
-    
             </ScrollReveal>
-    
         </ContentContainer>
-    
     </div>
-    
-    
     
     <GalleryModal v-if="selectedProject" :is-visible="isModalVisible" :selected-project="selectedProject" @close-gallery-modal="isModalVisible = false" />
 </template>

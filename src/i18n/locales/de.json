@@ -77,7 +77,8 @@
     }
   },
   "projects": {
-    "title": "Meine Projekte",
+    "headerTitle": "Kreative Lösungen und Visionen",
+    "headerSubtitle": "Mit Expertise in Design, Entwicklung und Branding – Maßgeschneiderte für jegliche Bedürfnisse.",
     "viewProject": "Projekt ansehen",
     "year": "Jahr",
     "role": "Rolle",
@@ -123,7 +124,9 @@
     },
     "tags": {
       "graficDesign": "Grafikdesign",
-      "brandDesign": "Corporate Design",
+      "corporateDesign": "Corporate Design",
+      "brandGuidlines": "CD Manual",
+      "brandDev": "Markenentwicklung",
       "printProduction": "Print Produktion",
       "illustration": "Illustration",
       "campaignDesign": "Kampagnenentwicklung",
@@ -142,36 +145,31 @@
       "tusche": "Tusche",
       "buntstifte": "Buntstifte",
       "infografic": "Infografik",
-      "messe": "Messestanddesign"
+      "messe": "Messestanddesign",
+      "layout": "Layout & Satz"
     },
     "projectList": {
       "redlinkGPT": {
         "title": "RedlinkGPT",
         "subtitle": "Intelligente KI-Toolbox für die Verwendung von Firmeninternen Daten",
-        "description": "RedlinkGPT ist eine leistungsstarke KI-Toolbox, die Unternehmen dabei unterstützt, große Mengen an Dokumenten effizient zu durchsuchen, zu analysieren und zu verstehen. Die Lösung integriert sich nahtlos in bestehende Arbeitsabläufe, einschließlich Microsoft Teams, und ermöglicht eine schnelle, kontextbezogene Suche mit KI-Unterstützung.",
-        "overviewDesc": "Entwicklung von RedlinkGPT, eines neuen Produktkonzeptes, welches die Bereitstellung einer KI-gestützten Toolbaox zur Optimierung und Suche von firmeninternen Informationen und Dokumenten. In diesem Zuge wurde die Website aufgesetzt und ein UI/UX-Design für den RedlinGPT Client entwickelt.",
-        "appDesc": "RedlinkGPT ermöglicht Unternehmen eine effiziente Nutzung großer Datenmengen durch KI-gestützte Dokumentenanalyse und intelligente Suchfunktionen. Mit einer nativen Integration in Microsoft Teams bietet es eine nahtlose Nutzererfahrung. Die Plattform basiert auf modernen LLMs (Large Language Models) und nutzt fortschrittliche Suchalgorithmen, um relevante Informationen schnell und präzise zu extrahieren. Durch API-Integrationen können Unternehmen die Lösung flexibel in ihre bestehenden Systeme einbinden."
-      },
-      "redlinkGPTPrint": {
-        "title": "RedlinkGPT Printprodukte",
-        "description": "Erstellung von Info Print-Produkte für das RedlinkGPT Produkt."
+        "description": "RedlinkGPT ist ein innovatives Produkt der Redlink GmbH, das Unternehmen mithilfe konversationaler KI unterstützt, ihre Arbeitsprozesse zu optimieren und die Nutzung firmeninterner Daten zu revolutionieren. Bei der Entwicklung liegt der persönliche Fokus auf der Konzeption, dem UI/UX-Design sowie der Erstellung von Werbematerialien.",
+        "uspTitle": "Was ist RedlinkGPT?",
+        "uspDesc": "RedlinkGPT ist eine modulare, konversationale KI-Toolbox auf Basis von RAG (Retrieval-Augmented Generation), die Unternehmen hilft, ihre Prozesse zu optimieren und die Produktivität zu steigern. Mit nativer Integration in Microsoft Teams ermöglicht die Lösung eine präzise Analyse und Suche von firmeninternen Daten und lässt sich flexibel in bestehende Systeme integrieren."
       },
       "moreStudyManager": {
         "title": "MORE",
         "subtitle": "Multimodal Research Environment",
-        "description": "Die MORE Plattform unterstützt die Forschung durch die Bereitstellung einer digitalen Infrastruktur, die für die Erhebung und Analyse multimodaler Daten ausgelegt ist. Sie fördert die interdisziplinäre Zusammenarbeit und ist in verschiedenen wissenschaftlichen Projekten im Bereich der digitalen Gesundheit und nachhaltiger Forschung tätig.",
-        "overviewDesc": "Die MORE Plattform dient der Sammlung, Verarbeitung und Analyse von multimodalen Daten und fördert so die interdisziplinäre Forschung in Bereichen wie Gesundheit und digitale Technologien.",
-        "technicalDesc": "Die Plattform wurde als Web-App und Mobile-App entwickelt. Die Web-App ermöglicht Studienleiter eine Studie durchzuführen und Daten auszulesen, wobei die Mobile App für die Studienteilnehmer entwickelt wurde"
+        "description": "Die MORE Plattform bietet eine digitale Infrastruktur zur Erhebung und Analyse multimodaler Daten und fördert interdisziplinäre Zusammenarbeit in Projekten zur digitalen Gesundheit und nachhaltiger Forschung. Sie ermöglicht es, Daten aus verschiedenen Quellen zu sammeln und zu analysieren. Die technische Umsetzung umfasst eine Web-App für Studienleiter zur Verwaltung und Auswertung von Daten sowie eine Mobile-App für Studienteilnehmer zur einfachen Datenerfassung."
       },
       "redlinkat": {
         "title": "Redlink GmbH",
-        "subtitle": "Redesign des Firmenauftritts",
-        "description": "Im Rahmen des Redesigns für Redlink GmbH wurden Website, Geschäftsdrucksorten und unterschiedliche Druckwerke und Merchandise entwickelt und der Auftritt modernisiert."
+        "subtitle": "Redesign und Betreuung des Firmenauftritts",
+        "description": "Im Rahmen des Redesigns der Redlink GmbH wurden Website, Geschäftsdrucksorten, diverse Druckwerke und Merchandise entwickelt, um den Auftritt des Unternehmens zu modernisieren und eine konsistente Markenidentität zu schaffen."
         },
       "redlinkatWhitepaper": {
         "title": "Redlink Whitepaper",
         "subtitle": "Whitepaper zu Search UX und LLM",
-        "description": "Produktion zweier Whitepaper zu den Firmen-Dachthemen: \"Good Search UX\", \"Find Things Smarter: Über den Einsatz von Large Language Models im Enterprise Content Retrieval\"",
+        "description": "Produktion zweier Whitepaper innerhalb der Firmen-Dachthemen: „Good Search UX“ und „Find Things Smarter: Über den Einsatz von Large Language Models im Enterprise Content Retrieval“. Die Whitepaper bieten fundierte Einblicke einerseits in die Entwicklung von UX-Komponenten für eine effiziente Suche und andererseits in den Einsatz von KI-Technologien, um die Effizienz bei der Daten- und Informationssuche in Unternehmen zu steigern.",
         "goodSearchUXTitle": "Good Search User Experience",
         "goodSearchUX": "Im digitalen Zeitalter ertrinken wir in einer Lawine von Informationen und Daten. Hier kommen Suchanwendungen ins Spiel: Aus dem Unternehmensumfeld kommt häufig der Wunsch nach etwas Einfachem „wie Google“, aber mit eigenen Daten – nur einem Suchfeld. Das klingt einfach, aber es gibt viele Herausforderungen und Nuancen zu berücksichtigen. In den meisten realen Situationen benötigen Menschen mehr als nur ein Suchfeld, sie benötigen mehrere Möglichkeiten, um mit der Suche zu interagieren. Unser Whitepaper Good Search User Experience ist eine Zusammenfassung der Lektionen, die wir im letzten Jahrzehnt gelernt haben.",
         "llmTitle": "Find Things Smarter: Über den Einsatz von Large Language Models im Enterprise Content Retrieval",
@@ -181,28 +179,22 @@
       "dachsteinTicketshop": {
         "title": "Dachstein Ticketshop",
         "subtitle": "Online-Ticketshop für das Dachstein Skigeiet",
-        "description": "Der Dachstein Ticketshop ermöglicht Besuchern, ihre Tickets für den Dachstein Gletscher bequem online zu buchen. Die Plattform bietet eine benutzerfreundliche Oberfläche, verschiedene Ticketoptionen und eine sichere Zahlungsabwicklung.",
-        "overviewDesc": "Das Ziel des Projekts war die Entwicklung eines modernen Online-Ticketshops für den Dachstein Gletscher. Die Plattform bietet eine intuitive Benutzerführung, um den Ticketkauf so einfach wie möglich zu gestalten.",
-        "technicalDesc": "Der Ticketshop wurde in der Umgebung der Firma Elements aufbereitet. Pimcore, PHP, Vue.js"
+        "description": "Der Dachstein Ticketshop ermöglicht Besuchern eine bequeme Online-Buchung ihrer Tickets für den Dachstein Gletscher. Die Plattform bietet eine benutzerfreundliche Oberfläche, verschiedene Ticketoptionen und eine sichere Zahlungsabwicklung. Ziel des Projekts war die Umsetzung eines modernen Online-Ticketshops im Rahmen des Relaunches, der eine intuitive Benutzerführung bietet, um den Ticketkauf so einfach und komfortabel wie möglich zu gestalten."
       },
       "plantbase": {
         "title": "PlantBase",
         "subtitle": "Plant Care Management System",
-        "description": "Eine umfassende Webanwendung für Pflanzenliebhaber zur Verwaltung und Pflege ihrer Zimmerpflanzen.",
-        "overviewDesc": "PlantBase ist eine moderne Webanwendung, die Pflanzenliebhaber dabei unterstützt, ihre Zimmerpflanzen zu verwalten. Die Anwendung bietet detaillierte Pflegehinweise, Bewässerungspläne und Funktionen zur Wachstumskontrolle.",
-        "techincalDesc": "Design erstellt mit Adobe XD. Frontend entwickelt mit Vue.js, Twig und TypeScript unter Verwendung der Composition API und einer typsicheren Entwicklungsweise. Das Backend basiert auf Symfony und PHP."
+        "description": "PlantBase ist eine umfassende Webanwendung, die dabei hilft, Zimmerpflanzen zu verwalten und zu pflegen. Die Anwendung bietet detaillierte Pflegehinweise, Bewässerungspläne und Funktionen zur Wachstumskontrolle. Zudem umfasst sie ein integriertes Usermanagement und Foren, um eine optimale Pflanzenpflege zu ermöglichen und den Austausch von Erfahrungen innerhalb der Community zu fördern."
       },
       "gameShop": {
         "title": "Game Shop",
         "subtitle": "Ein modernes E-Commerce-Design für Game E-Shop",
-        "description": "Das Game Shop UI/UX-Projekt konzentriert sich auf ein ansprechendes, benutzerfreundliches Design für einen digitalen Spiele-Store. Durch eine intuitive Navigation, ansprechende visuelle Gestaltung und eine optimierte User Experience bietet der Store ein reibungsloses Einkaufserlebnis für Gamer.",
-        "overviewDesc": "Das Game Shop Projekt zielte darauf ab, eine moderne E-Commerce-Plattform für digitale Spiele zu gestalten. Der Fokus lag auf einer klaren Informationsstruktur, einfacher Navigation und einer ästhetisch ansprechenden Gestaltung, die sich an die Gaming-Community richtet."
+        "description": "Das Game Shop UI/UX-Projekt fokussiert sich auf ein ansprechendes, benutzerfreundliches Design für einen digitalen Spiele-Store. Mit einer klaren Informationsstruktur, einfacher Navigation und ästhetischer Gestaltung bietet der Store ein reibungsloses Einkaufserlebnis für Gamer. Ziel war es, eine moderne E-Commerce-Plattform zu schaffen, die den Bedürfnissen der Gaming-Community gerecht wird und eine optimale User Experience bietet."
       },
       "steuerkanzleiKaufmann": {
         "title": "Steuerkanzlei Kaufmann",
         "subtitle": "Moderne Website Redesign",
-        "description": "Für die Steuerkanzlei Kaufmann wurde eine moderne und professionelle Website entwickelt. Das Ziel war es, eine klare und benutzerfreundliche Plattform zu schaffen, die Mandanten über Dienstleistungen informiert und eine einfache Kontaktaufnahme ermöglicht.",
-        "overviewDesc": "Die Website für die Steuerkanzlei Kaufmann wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer klaren Benutzerführung."
+        "description": "Für die Steuerkanzlei Kaufmann wurde eine moderne und professionelle Website entwickelt, die eine klare, benutzerfreundliche Plattform bietet. Ziel war es, die Mandanten über die angebotenen Dienstleistungen zu informieren und die Kontaktaufnahme zu erleichtern. Die Website wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer intuitiven Benutzerführung."
       },
       "invent": {
         "title": "INVENT Urlaubsboxen",
