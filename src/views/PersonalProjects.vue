@@ -45,7 +45,7 @@ const filterItems = ref<FilterItem[]>([
   },
   {
     name: t("home.skillsList.creativeWriting"),
-    icon: "pi pi-align-left",
+    icon: "pi pi-book",
     code: "writing",
   },
   {
@@ -75,8 +75,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/fotografie/makro/makro_small02.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing'), t('projects.tags.visualArts')],
     filterTags: ["photo"],
-    role: t('projects.roles.photographer'),
-    client: t('projects.clients.studyProject'),
     gallery: [
       "./assets/freeProjects/fotografie/makro/macro.jpg",
     ],
@@ -89,10 +87,8 @@ const projects = ref<ProjectItem[]>([
     description: t('projects.freeProjectList.hausMaschine.description'),
     image:
       "./assets/freeProjects/fotografie/hausMaschine/objekt2.jpg",
-    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
+    tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing'), t('projects.tags.visualArts'), t('projects.tags.crafting')],
     filterTags: ["photo"],
-    role: t('projects.roles.photographer'),
-    client: t('projects.clients.studyProject'),
     gallery: [
       "./assets/freeProjects/fotografie/hausMaschine/fotoserie2.jpg",
     ],
@@ -103,10 +99,8 @@ const projects = ref<ProjectItem[]>([
     title: t('projects.freeProjectList.3dPlayground.title'),
     description: t('projects.freeProjectList.3dPlayground.description'),
     image: "./assets/freeProjects/3d/fraktale01.jpg",
-    tags: [t('projects.tags.visualArts'), "3D Modelling", "3D Sculpting", "Autodesk Maya", "ZBrush"],
+    tags: ["3D Modelling", "3D Sculpting", "Autodesk Maya", "ZBrush", t('projects.tags.visualArts')],
     filterTags: ["3d"],
-    role: t('projects.roles.3dArtist'),
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/3d/fraktale-mock.jpg",
       "./assets/freeProjects/3d/hexeninsel.jpg",
@@ -120,10 +114,8 @@ const projects = ref<ProjectItem[]>([
     description: t("projects.freeProjectList.soundDesignSnippets.description"),
     image:
       "./assets/freeProjects/audio/audioSnippets/theDealer-preview.JPG",
-    tags: [t("projects.tags.recording"), "Cubase"],
+    tags: [t("projects.tags.recording"), t("projects.tags.audioProd"), "Cubase"],
     filterTags: ["audio"],
-    role: t("projects.roles.audioDev"),
-    client: t('projects.clients.personalProject'),
     audio: [
       {
         title: "100% und mehr Abspann",
@@ -145,8 +137,7 @@ const projects = ref<ProjectItem[]>([
       {
         title: "The Dealer Sounddesign Konzept",
         link: "./assets/freeProjects/audio/audioSnippets/theDealer.mp4",
-        poster:
-          "./assets/freeProjects/audio/audioSnippets/theDealer-preview.jpg",
+        poster: "./assets/freeProjects/audio/audioSnippets/theDealer-preview.JPG",
       },
     ],
   },
@@ -155,10 +146,8 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.iris.title"),
     description: t("projects.freeProjectList.iris.description"),
     image: "./assets/freeProjects/game/iris/Iris_Intro_Single.jpg",
-    tags: ["Unity", "3D Modelling", "Autodesk Maya", t('projects.tags.visualArts'), t('projects.tags.illustration')],
+    tags: ["Unity", "3D Modelling", "Autodesk Maya",  t('projects.tags.illustration'), t('projects.tags.visualArts')],
     filterTags: ["game", "3d", "illustration", "audio"],
-    role: `${t("projects.roles.audioDev")}, ${t("projects.roles.gameDev")}, ${t("projects.roles.illustration")}`,
-    client: t('projects.clients.personalProject'),
     details: [
       {
         title: t('projects.detailTitle.setting'),
@@ -198,8 +187,6 @@ const projects = ref<ProjectItem[]>([
     image: "./assets/freeProjects/illustration/illu/dragon.jpg",
     tags: [t('projects.tags.visualArts'), t('projects.tags.illustration'), t('projects.tags.roetel'), t('projects.tags.grafit'), t('projects.tags.buntstifte'), t('projects.tags.aquarell'), t('projects.tags.tusche'), "Copic Marker", "Paper Art", "Adobe Photoshop"],
     filterTags: ["illustration"],
-    role: `${t("projects.roles.illustration")}`,
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/illustration/illu/illus-1.jpg",
       "./assets/freeProjects/illustration/illu/illus-2.jpg",
@@ -213,10 +200,8 @@ const projects = ref<ProjectItem[]>([
     title: t('projects.freeProjectList.dummyMagazin.title'),
     description: t('projects.freeProjectList.dummyMagazin.description'),
     image: "./assets/freeProjects/design/dummyMagazin/dummy-magazin.jpg",
-    tags: [t('projects.tags.infografic'), "Adobe Illustrator", "Adobe InDesign","Adobe Photoshop"],
+    tags: [t('projects.tags.graficDesign'), t('projects.tags.infografic'), t('projects.tags.printProduction'), "Adobe Illustrator", "Adobe InDesign","Adobe Photoshop"],
     filterTags: ["design"],
-    role: t('projects.roles.design'),
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/design/dummyMagazin/dummy-mockup1.jpg",
       "./assets/freeProjects/design/dummyMagazin/dummy-mockup2.jpg",
@@ -232,8 +217,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/fotografie/capoeira/capoeira04.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.studioPhotography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
-    role: t('projects.roles.photographer'),
-    client: t('projects.clients.studyProject'),
     gallery: [
       "./assets/freeProjects/fotografie/capoeira/capoeira-row1.jpg",
       "./assets/freeProjects/fotografie/capoeira/capoeira-row2.jpg",
@@ -248,14 +231,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/infografics/microfobius/futuristic-city-wallpaper-38.jpg",
     tags: [t('projects.tags.infografic'), "Adobe Illustrator"],
     filterTags: ["design"],
-    role: t('projects.roles.design'),
-    client: t('projects.clients.freeProject'),
-    details: [
-      {
-        title: t('projects.detailTitle.concept'),
-        content: t('projects.freeProjectList.microfobius.storyDesc')      
-      },
-    ],
     gallery: [
       "./assets/freeProjects/infografics/microfobius/logo-mock.jpg",
       "./assets/freeProjects/infografics/microfobius/republic-1.jpg",
@@ -267,10 +242,8 @@ const projects = ref<ProjectItem[]>([
     title: t('projects.freeProjectList.nevilleBrody.title'),
     description: t('projects.freeProjectList.nevilleBrody.description'),
     image: "./assets/freeProjects/design/nevilleBrody/nevillebrody.jpg",
-    tags: [t('projects.tags.infografic'), "Adobe Illustrator", "Adobe InDesign"],
+    tags: [t('projects.tags.printProduction'), "Adobe Illustrator", "Adobe InDesign"],
     filterTags: ["design"],
-    role: t('projects.roles.design'),
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/design/nevilleBrody/neville-brody-plakate.jpg",
       "./assets/freeProjects/design/nevilleBrody/nevillebrody.jpg",
@@ -282,10 +255,8 @@ const projects = ref<ProjectItem[]>([
     title: t("projects.freeProjectList.vectorIllu.title"),
     description: t("projects.freeProjectList.vectorIllu.description"),
     image: "./assets/freeProjects/illustration/vectorIllustration/cat02.jpg",
-    tags: ["Vector", t('projects.tags.visualArts'), t('projects.tags.illustration'), "Adobe Illustrator"],
+    tags: ["Vector", t('projects.tags.illustration'), t('projects.tags.visualArts'), "Adobe Illustrator"],
     filterTags: ["illustration"],
-    role: `${t("projects.roles.illustration")}`,
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/illustration/vectorIllustration/howToTrainYourDragon.jpg",
       "./assets/freeProjects/illustration/vectorIllustration/cat-illustration.jpg",
@@ -302,8 +273,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/fotografie/republic/republic_qf.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
-    role: t('projects.roles.photographer'),
-    client: t('projects.clients.studyProject'),
     gallery: [
       "./assets/freeProjects/fotografie/republic/republic_qf.jpg",
       "./assets/freeProjects/fotografie/republic/republic-mock.jpg",
@@ -316,16 +285,10 @@ const projects = ref<ProjectItem[]>([
     description: t("projects.freeProjectList.subitorato.description"),
     image:
       "./assets/freeProjects/audio/subitorato/cover.jpg",
-    tags: [t("projects.tags.recording"), "Cubase"],
+    tags: [t("projects.tags.recording"), t("projects.tags.audioProd"), "Cubase"],
     filterTags: ["audio"],
     role: t('projects.roles.audioDev'),
     client: t('projects.clients.studyProject'),
-    details: [
-      {
-        title: t('projects.detailDtail.concept'),
-        content: t('projects.freeProjectList.subitorato.conceptDesc')      
-      },
-    ],
     gallery: [
       "./assets/freeProjects/audio/subitorato/bildkomposition-mock.jpg",
     ],
@@ -344,10 +307,8 @@ const projects = ref<ProjectItem[]>([
     description: t("projects.freeProjectList.meerdesLebens.description"),
     image:
       "./assets/freeProjects/audio/meerDesLebens/cover.jpg",
-    tags: [t("projects.tags.recording"), "Cubase"],
+    tags: [t("projects.tags.recording"), t("projects.tags.audioProd"), "Audacity"],
     filterTags: ["audio"],
-    role: t('projects.roles.audioDev'),
-    client: t('projects.clients.personalProject'),
     audio: [
       {
         link: "./assets/freeProjects/audio/meerDesLeben/meerLeben.mp3",
@@ -363,8 +324,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/fotografie/landscape/prag.jpg",
     tags: [t('projects.tags.photography'), t('projects.tags.digitalEditing')],
     filterTags: ["photo"],
-    role: t('projects.roles.photographer'),
-    client: t('projects.clients.freeProject'),
     gallery: [
       "./assets/freeProjects/fotografie/landscape/norway-mock.jpg",
       "./assets/freeProjects/fotografie/landscape/prag.jpg",
@@ -379,8 +338,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/infografics/mediaInfoGrafik2016/cover.jpg",
     tags: [t('projects.tags.infografic'), "Adobe Illustrator"],
     filterTags: ["design"],
-    role: t('projects.roles.design'),
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/infografics/mediaInfoGrafik2016/infografik2.jpg",
     ],
@@ -394,8 +351,6 @@ const projects = ref<ProjectItem[]>([
       "./assets/freeProjects/messestand/nintendo/cover.png",
     tags: [t('projects.tags.messe'), "SketchUp"],
     filterTags: ["design"],
-    role: t('projects.roles.design'),
-    client: t('projects.clients.personalProject'),
     gallery: [
       "./assets/freeProjects/messestand/nintendo/nintendo-messestand.jpg",
     ],
@@ -431,12 +386,6 @@ const toggleFilter = (filterId: string | null) => {
   }
   selectedFilter.value = filterId;
 };
-
-/*
-const getSkillName = (skillCode: string) => {
-  const skill = filterItems.value.find((s) => s.code === skillCode);
-  return skill ? skill.name : skillCode;
-};*/
 </script>
 
 <template>
@@ -444,8 +393,8 @@ const getSkillName = (skillCode: string) => {
     <FullWidthHeader
       image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000"
     >
-      <h1>{{ t("projects.title") }}</h1>
-      <p>Innovative solutions crafted with passion and precision</p>
+      <h1>{{ t("projects.headerFreeTitle") }}</h1>
+      <p>{{ t("projects.headerFreeSubtitle")}}</p>
     </FullWidthHeader>
 
     <ContentContainer>
@@ -467,7 +416,7 @@ const getSkillName = (skillCode: string) => {
         <ScrollReveal
           v-for="(project, index) in filteredProjects"
           :key="project.id"
-          :delay="index * 200"
+          :delay="index * 50"
           direction="up"
         >
           <ProjectCard

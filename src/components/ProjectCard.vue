@@ -82,6 +82,7 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
           <div v-if="isSelected" class="expanded-content">
             <!-- Project Info -->
             <div
+              v-if="project.year || project.role || project.client"
               class="info-grid cursor-pointer"
               @click="emit('toggledProject', project.id)"
             >
@@ -91,13 +92,13 @@ const handleActionBtnClick = (type: string | undefined, url: string) => {
                   <p>{{ project.year }}</p>
                 </div>
               </Transition>
-              <Transition name="fade-slide-up" appear>
+              <Transition v-if="project.role" name="fade-slide-up" appear>
                 <div class="info-item" style="transition-delay: 100ms">
                   <h4 class="project-subhl">{{ t("projects.role") }}</h4>
                   <p>{{ project.role }}</p>
                 </div>
               </Transition>
-              <Transition name="fade-slide-up" appear>
+              <Transition v-if="project.client" name="fade-slide-up" appear>
                 <div class="info-item" style="transition-delay: 200ms">
                   <h4 class="project-subhl">{{ t("projects.client") }}</h4>
                   <p>{{ project.client }}</p>

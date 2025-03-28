@@ -79,6 +79,8 @@
   "projects": {
     "headerTitle": "Kreative Lösungen und Visionen",
     "headerSubtitle": "Mit Expertise in Design, Entwicklung und Branding – Maßgeschneiderte für jegliche Bedürfnisse.",
+    "headerFreeTitle": "Kreative Leidenschaft",
+    "headerFreeSubtitle": "Mit Herz und Leidenschaft – Kreative Experimente, die inspirieren.",
     "viewProject": "Projekt ansehen",
     "year": "Jahr",
     "role": "Rolle",
@@ -147,7 +149,9 @@
       "infografic": "Infografik",
       "messe": "Messestanddesign",
       "layout": "Layout & Satz",
-      "typoDev": "Schriftentwicklung"
+      "typoDev": "Schriftentwicklung",
+      "crafting": "Crafting",
+      "audioProd": "Audioproduktion"
     },
     "projectList": {
       "redlinkGPT": {
@@ -166,7 +170,7 @@
         "title": "Redlink GmbH",
         "subtitle": "Redesign und Betreuung des Firmenauftritts",
         "description": "Im Rahmen des Redesigns der Redlink GmbH wurden Website, Geschäftsdrucksorten, diverse Druckwerke und Merchandise entwickelt, um den Auftritt des Unternehmens zu modernisieren und eine konsistente Markenidentität zu schaffen."
-        },
+      },
       "redlinkatWhitepaper": {
         "title": "Redlink Whitepaper",
         "subtitle": "Whitepaper zu Search UX und LLM",
@@ -255,45 +259,23 @@
       }
     },
     "freeProjectList": {
-      "soundDesignSnippets": {
-        "title": "Sound Design Snippets",
-        "description": "Sounddesign ist die kreative Gestaltung und Bearbeitung von Klängen für Film, Musik, Games oder andere Medien. Durch die gezielte Kombination von Geräuschen, Effekten und Atmosphären entsteht eine einzigartige Klangwelt, die Emotionen verstärkt und Erlebnisse intensiviert."
-      },
-      "subitorato": {
-        "title": "Subitorato",
-        "description": "\"subitorato\" thematisiert ein extrem des Umstandes, dass jeder Mensch seinen Alltag anders wahrnimmt und treibt dies in ein Extrem. Charakteristisch für die Musik ist, dass sie mit Klangsphären und Dissonanzen spielt, vor allem im Bereich der Stimmen.",
-        "conceptDesc": "Dem musikalischen Konzept von \"subitorato\" liegt die Verstrickung des Menschen in seine eigene persönliche Wirklichkeit zugrunde. Egal wo der Mensch lebt und seine Arbeit verrichtet teilt er seine Wirklichkeit nach seinen persönlichen Vorstellungen und Erfahrungen ein, die durch seine Umwelt beeinflusst werden. Die Komposition thematisiert somit ein Extrem dieses Umstandes. Der Mensch verstrickt sich in die Fäden seiner persönlichen Wirklichkeit, die sich von der Realität zu unterscheiden beginnt. Tag für Tag erlebt er den selben Alltag und lebt nach dem selben gewohnten Schema, jedoch bemerkt er anfangs nicht, dass er eigentlich nichts mehr zu seinem Leben beiträgt und sein Alltag maschinenartig verläuft. Als er merkt, dass er sich nur mehr selbst beobachtet und sich eigentlich nach Freiheit und Individualität sehnt, erfasst ihn ein Gefühl der Ungewissheit welches schiere Panik auslöst."
-      },
-      "meerdesLebens": {
-        "title": "Das Meer des Lebens",
-        "description": "Das Musikstück erzählt die Geschichte eines Menschen, der sich zunächst frei fühlt, doch nach und nach in den Strudel des Lebens gerät. Ein Moment der Neugier – eine geheimnisvolle Entdeckung am Meer – öffnet die Tür zu einer anderen Welt. Doch was als Abenteuer beginnt, wird zur Reflexion über das Verlorengehen im Alltag, das Getriebenwerden von der Masse und das allmähliche Vergessen des eigenen Selbst."
-      },
-      "capoeira": {
-        "title": "Capoeira",
+      "makro": {
+        "title": "Makro",
         "subtitle": "Fotoserie",
-        "description": "Dynamik, Eleganz und Kraft – diese Fotoserie fängt die fließenden Bewegungen und akrobatischen Elemente des Capoeira ein. Im Studio entstehen kraftvolle Bilder, die den Rhythmus, die Körperbeherrschung und die Tradition dieser einzigartigen Kampfkunst lebendig werden lassen."
+        "description": "Diese Makro-Fotoserie enthüllt die unscheinbaren Details der Natur. Mit einem Blick auf mikroskopisch kleine Strukturen und lebendige Farben wird die erstaunliche Schönheit der natürlichen Welt aus einzigartigen Perspektiven eingefangen."
       },
       "hausMaschine": {
         "title": "Haus-Maschine",
         "subtitle": "Fotoserie",
-        "description": "Das Fotoprojekt thematisiert die Verschmelzung von Mensch und Technologie in einem Haus, das zur Maschine wird. Inspiriert von \"Ghost in the Shell\" zeigt es die Abhängigkeit vom digitalen Netzwerk. Die Inszenierung mit Kabeln, Lichtinstallationen und kühlen Farbtönen verstärkt die dystopische Atmosphäre."
-      },
-      "makro": {
-        "title": "Makro",
-        "subtitle": "Fotoserie",
-        "description": "Diese Makro-Fotoserie entdeckt die verborgenen Details der Natur. Mit einem Fokus auf winzige Strukturen und lebendige Farben wird die faszinierende Schönheit der natürlichen Welt aus überraschenden Perspektiven eingefangen."
-      },
-      "landscapePhotography": {
-        "title": "Landschaftsfotografie",
-        "description": "Umgebungsfotografie fängt die Stimmung und Details eines Ortes ein, sei es in der Natur oder der Stadt. Sie konzentriert sich auf das Zusammenspiel von Licht, Schatten und Umgebungselementen, um den Betrachter visuell in den Raum zu versetzen."
-      },
-      "republic": {
-        "title": "Innenraumfotografie",
-        "description": "Innenraumfotografie fängt die Atmosphäre des Raumes ein, indem sie Beleuchtung, Möbel und Architektur in den Fokus stellt. Ziel ist es, die Stimmung des Ortes visuell zu vermitteln und den Betrachter in die Umgebung zu entführen."
+        "description": "Das Fotoprojekt untersucht die Verschmelzung von Mensch und Technologie in einem Haus, das zur Maschine wird. Inspiriert von „Ghost in the Shell“ zeigt es die Abhängigkeit vom digitalen Netzwerk. Kabel, Lichtinstallationen und kühle Farbtöne intensivieren die dystopische Atmosphäre und verdeutlichen die technologische Allgegenwart."
       },
       "3dPlayground": {
         "title": "3D Playground",
-        "description": "3D-Modelling ist die digitale Erstellung dreidimensionaler Objekte, genutzt in Animation, Gaming, Architektur und Design."
+        "description": "Im „3D Playground“ wird die digitale Welt mit kreativen Formen und Strukturen zum Leben erweckt. Hier entstehen faszinierende, dreidimensionale Objekte, Figuren und Landschaften. Es ist ein Raum, in dem die Vorstellungskraft die Form annimmt und digitale Kreationen zu beeindruckenden Erlebnissen werden."
+      },
+      "soundDesignSnippets": {
+        "title": "Sound Design Snippets",
+        "description": "Hier entstehen Klanglandschaften aus dem, was oft im Hintergrund bleibt. Mit präziser Finesse wird die Welt der alltäglichen Geräusche in fesselnde Soundkulissen verwandelt. Durch Foley-Techniken werden Geräusche aus der realen Welt kreativ neu erschaffen, um Film, Musik und andere Medien mit authentischen, lebendigen Klängen zu füllen, die Emotionen verstärken und das Erlebnis intensivieren."
       },
       "iris": {
         "title": "Iris",
@@ -302,41 +284,61 @@
         "videoStart": "Startsequenz",
         "videoAlarm": "Wecker-Sequenz"
       },
-      "vectorIllu": {
-        "title": "Vektorillustration",
-        "description": "Vektorillustrationen sind skalierbare, klare Grafiken, ideal für Logos, Icons und detailreiche Designs."
-      },
       "illu": {
         "title": "Illustration",
-        "description": "Illustration ist mehr als nur Zeichnen – sie bringt Ideen zum Leben, erzählt Geschichten ohne Worte und schafft neue Welten auf Papier oder Bildschirm. Mal verspielt, mal detailreich, aber immer mit Charakter."
+        "description": "Illustration ist weit mehr als nur Zeichnen – sie erweckt Ideen zum Leben, erzählt Geschichten ohne Worte und erschafft neue Welten auf Papier oder Bildschirm. Ob verspielt oder detailreich, jede Illustration hat ihren eigenen Charakter."
+      },
+      "dummyMagazin": {
+        "title": "Dummy Magazin",
+        "description": "Das Design des Dummy Magazins dreht sich um das Thema Rhythmus – von einem klar strukturierten Editorial Design bis hin zur gezielten Zerstörung von Satz und Layout, die das visuelle Tempo herausfordern und neu definieren."
+      },
+      "capoeira": {
+        "title": "Capoeira",
+        "subtitle": "Fotoserie",
+        "description": "Dynamik, Eleganz und Kraft – diese Fotoserie fängt die fließenden Bewegungen und akrobatischen Elemente des Capoeira ein. Im Studio entstehen kraftvolle Bilder, die den Rhythmus, die Körperbeherrschung und die Tradition dieser einzigartigen Kampfkunst lebendig werden lassen."
+      },
+      "microfobius": {
+        "title": "Microfobius",
+        "description": "Microfobius ist ein fiktiver, totalitärer Staat einer dystopischen Zukunft, in dem die Technologie nicht mehr dem Wohl der Einzelnen dient, sondern ausschließlich einer kleinen Elite, die das Land regiert. Die Gesellschaft ist immer weiter in ein technisches Zeitalter gedrängt worden, während die Natur verdrängt und die Umwelt verpestet wurde. Die Bevölkerung lebt in einer Massengesellschaft, die für den technologischen Fortschritt arbeitet, jedoch selbst nichts davon profitiert. Für diesen fiktiven Staat wurden Infografiken entwickelt, die die Lebenszustände der Menschen veranschaulichen."
+      },
+      "nevilleBrody": {
+        "title": "Neville Brody Design",
+        "description": "Für das Neville Brody Design-Projekt wurden Plakate und Magazinseiten gestaltet, die sich stark an den markanten und experimentellen Stil von Neville Brody anlehnen. Mit einem Fokus auf typografische Innovation und visuelle Ausdruckskraft, wurden die Designelemente genutzt, um eine einzigartige und moderne Ästhetik zu schaffen, die Brodys Einfluss auf das Grafikdesign widerspiegelt."
+      },
+      "vectorIllu": {
+        "title": "Vektorillustration",
+        "description": "Vektorillustrationen sind präzise und skalierbare Grafiken, die sich durch klare Linien und detailreiche Darstellungen auszeichnen. Sie eignen sich perfekt für Logos, Icons sowie klare Illustrationen und Designs, da sie in jeder Größe gestochen scharf bleiben und eine hohe Flexibilität in der Anwendung bieten."
+      },
+      "republic": {
+        "title": "Innenraumfotografie",
+        "description": "Innenraumfotografie fängt die Atmosphäre des Raumes ein, indem sie Beleuchtung, Möbel und Architektur in den Fokus stellt. Ziel ist es, die Stimmung des Ortes visuell zu vermitteln und den Betrachter in die Umgebung zu entführen."
+      },
+      "subitorato": {
+        "title": "Subitorato",
+        "description": "„Subitorato“ thematisiert die Wahrnehmung des Alltags und seine Auswirkungen auf das Individuum, indem es den Zustand extrem darstellt. Die Musik spielt mit Klangsphären und Dissonanzen, insbesondere durch den Einsatz von Stimmen. Sie beschreibt den Prozess, in dem sich der Mensch in seiner eigenen, von seiner Umwelt beeinflussten Wirklichkeit verstrickt, die sich zunehmend von der Realität entfernt. Der Mensch lebt in gewohnten Mustern, ohne zu merken, dass er sich immer weiter von seiner eigenen Individualität entfremdet. Erst als er die Leere seines Alltags erkennt, wird er von einem Gefühl der Ungewissheit erfasst, das Panik auslöst."
+      },
+      "meerdesLebens": {
+        "title": "Das Meer des Lebens",
+        "description": "Das Musikstück erzählt die Geschichte eines Menschen, der sich zunächst frei fühlt, doch nach und nach in den Strudel des Lebens gerät. Ein Moment der Neugier – eine geheimnisvolle Entdeckung am Meer – öffnet die Tür zu einer anderen Welt. Doch was als Abenteuer beginnt, wird zur Reflexion über das Verlorengehen im Alltag, das Getriebenwerden von der Masse und das allmähliche Vergessen des eigenen Selbst."
+      },
+      "landscapePhotography": {
+        "title": "Landschaftsfotografie",
+        "description": "Umgebungsfotografie fängt die Stimmung und Details eines Ortes ein, sei es in der Natur oder der Stadt. Sie konzentriert sich auf das Zusammenspiel von Licht, Schatten und Umgebungselementen, um den Betrachter visuell in den Raum zu versetzen."
       },
       "mediaInfoGrafik2016": {
         "title": "Infografik Movie Trends 2016",
         "description": "Die Infografik zeigt Informationen über Besucherzahlen, Marktanteil, Ersterscheinungen, Produzierte Filme und die beliebtesten Filme in Relation zu den österreichischen Bundesländern im Jahr 2016."
       },
-      "microfobius": {
-        "title": "Microfobius",
-        "description": "Microfobius ist ein fiktiver Staat einer dystopischen Zukunft. Es ist ein totalitäerer Staat, welcher einfach von einer Person bzw. Personengruppe regiert werden kann.",
-        "storyDesc": "Microfobius hat durch seinen hohen Standart an technologischen Errungenschaften mit der Zeit seine Gesellschaft immer mehr in ein technisches Zeitalter gedrängt und die Natur immer weiter verdrängt (Umweltverpestung). In dieser Gesellschaft existiert die Technologie jedoch nicht mehr für das Wohl des Einzelnen, sondern ausschließlich für einen winzig kleinen Bruchteil der Bevölkerung – die Obrigkeit innerhalb der Staatsgewalt welche auch dafür verantwortlich ist, die Republic zu führen. Dieser Umstand hat zur Folgen, dass das Leben des Einzelnen sich willenlos in eine Massengesellschaft einfügt, die für den technologischen Fortschritt arbeitet, jedoch selbst nichts dafür bekommt. Die Bevölkerung lebt also für die Arbeit und arbeiten nicht für das Leben."
-      },
       "nintendoMessestand": {
         "title": "Nintendo Messestand",
-        "description": "Ein Konzept für einen Nintendo Messestand mit Besprechungsraum, Spielebereich und Ausstellungsbereich."
-      },
-      "nevilleBrody": {
-        "title": "Neville Brody Design",
-        "description": "Angelehnt an das Design von Neville Brody, wurden Plakate und Magazinseiten designt."
-      },
-      "dummyMagazin": {
-        "title": "Dummy Magazin",
-        "description": "Das Design des Dummy Magazins kreist um das Thema Rhythmus – von klar strukturiertem Editorial Design bis hin zur bewussten Zerstörung von Satz und Layout, die das visuelle Tempo herausfordert und neu definiert."
+        "description": "Für einen fiktiven Nintendo Messestand wurde ein Konzept entwickelt, das einen Besprechungsraum, einen Spielebereich und einen Ausstellungsbereich umfasst. Der Stand kombiniert interaktive Erlebnisse mit einer modernen, funktionalen Gestaltung, um die Besucher in die Welt von Nintendo zu entführen."
       }
     } 
   },
   "career": {
     "title": "Werdegang",
-    "claim": "Building the future through code and design - one project at a time",
-    "intro": "Mein Werdegang wurde durch kontinuierliches Lernen und vielfältige Erfahrungen in der Softwareentwicklung und im Design geprägt.",
+    "claim": "Meine Reise: Design, Code und Kreativität",
+    "intro": "Mit einer Leidenschaft für Design und Technologie kombiniere ich kreative und technische Expertise, um innovative Lösungen zu entwickeln. Als Designer und Entwickler gestalte ich visuelle Erlebnisse, die sowohl ästhetisch ansprechend als auch funktional sind. Meine Projekte reichen von klassischem Printdesign und -produktion, Branding, Corporate Design bis hin zu UX/UI-Design und hin zu komplexen technischen Entwicklungen, bei denen ich moderne Technologien und kreative Ansätze miteinander vereine. Mit einem starken Fokus auf Benutzererfahrung und Usability optimiere ich digitale Produkte und bringe sie auf das nächste Level.",
     "location": "Salzburg, Österreich",
     "cvDownload": "Lade meinen gesamten Lebenslauf herunter.",
     "download": "Herunterladen",

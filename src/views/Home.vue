@@ -146,7 +146,7 @@ const softSkills = ref([
   t("home.softSkills.attentionToDetailAndPrecision"),
   t("home.softSkills.logicalAndAnalyticalThinking"),
   t("home.softSkills.receptivenessToCriticism"),
-  t("home.softSkills.discipleAndReliability"),
+  t("home.softSkills.disciplineAndReliability"),
 ]);
 </script>
 

@@ -7,15 +7,21 @@ export interface ProjectItem {
     tags: string[],
     filterTags: string[],
     year?: string,
-    role: string,
-    client: string,
+    role?: string,
+    client?: string,
     details?: ProjectDetail[],
     gallery?: string[],
     fullScreenGallery?: boolean,
     galleryGrid?: string,
     audio?: AudioDetail[],
     video?: VideoDetail[],
-    links?: ProjectLink[]
+    links?: ProjectLink[],
+    story?: StoryDetail,
+}
+
+export interface StoryDetail {
+    title: string,
+    story: string[]
 }
 
 export interface ProjectDetail {
