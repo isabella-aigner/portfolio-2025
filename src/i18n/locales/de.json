@@ -146,7 +146,8 @@
       "buntstifte": "Buntstifte",
       "infografic": "Infografik",
       "messe": "Messestanddesign",
-      "layout": "Layout & Satz"
+      "layout": "Layout & Satz",
+      "typoDev": "Schriftentwicklung"
     },
     "projectList": {
       "redlinkGPT": {
@@ -199,28 +200,32 @@
       "invent": {
         "title": "INVENT Urlaubsboxen",
         "subtitle": "Urlaubsboxen für Firmen und Einzelpersonen",
-        "description": "In der internen Grafik für INVENT wurden Urlaubsboxen für Firmen und einzelnpersonen erstellt, unterstützt durch individualisierte Werbeangebote und E-Commerce.",
-        "overviewDesc": "Die Website für die Steuerkanzlei Kaufmann wurde von Grund auf neu gestaltet, um eine zeitgemäße digitale Präsenz zu gewährleisten. Der Fokus lag auf einer übersichtlichen Informationsarchitektur und einer klaren Benutzerführung."
+        "description": "In der internen Grafikabteilung von INVENT wurden Urlaubsboxen für Firmen und Einzelpersonen erstellt, begleitet von einem Redesign des Corporate Designs. Zusätzlich wurden individualisierte Werbeprodukte und Werbeangebote sowie E-Commerce-Assets erstellt, um die Vermarktung der Produkte zu optimieren."
       },
       "roco": {
-        "title": "Roco & Fleischmann Modelleisenbahnen",
-        "subtitle": "Gestaltung hochwertiger Printmedien für Modellbahn-Enthusiasten",
-        "description": "Für Roco, einen führenden Hersteller von Modellbahnen, wurden verschiedene Printmedien gestaltet. Dazu gehörten Produktkataloge, Flyer, Anzeigen und Verpackungsdesigns, die das hochwertige Sortiment von Roco visuell ansprechend präsentieren. Besonderes Augenmerk lag auf einer detailgetreuen Darstellung der Modelle sowie einem einheitlichen, markenkonformen Design."
+        "title": "Roco & Fleischmann",
+        "subtitle": "Das Paradies für Modellbahn-Enthusiasten",
+        "description": "Für Roco und Fleischmann, einen führenden Hersteller von Modellbahnen, wurden hochwertige Printmedien gestaltet, darunter Produktkataloge, Flyer, Anzeigen und Verpackungsdesigns. Diese Materialien präsentieren das Sortiment von Roco visuell ansprechend. Der Fokus lag auf einer detailgetreuen Darstellung der Modelle sowie einem konsistenten, markenkonformen Design."
       },
       "wiberg": {
         "title": "Wiberg GmbH",
-        "subtitle": "Hochwertige Printmedien für Gewürz- und Genussprodukte",
-        "description": "Für Wiberg, einen renommierten Hersteller von Gewürzen und Feinkostprodukten, wurden ansprechende Printmedien gestaltet. Dazu gehörten Produktbroschüren, Kataloge, Verpackungsdesigns und Werbematerialien, die die Qualität und Vielfalt der Wiberg-Produkte visuell unterstreichen."
+        "subtitle": "Genussvolle Gewürzwelten",
+        "description": "Für Wiberg, einen renommierten Hersteller von Gewürzen und Feinkostprodukten, wurden ansprechende Printmedien erstellt. Dazu gehörten Produktkataloge, Verpackungsdesigns für Gewürze und Rezeptbroschüren, die die Qualität und Vielfalt der Wiberg-Produkte visuell hervorheben."
       },
       "inspiranto": {
         "title": "Inspiranto GmbH",
-        "subtitle": "Werbeagentur für Strategie, Kreation, Kampagnen, Werbeservices",
-        "description": "Visuelle Gestaltung für hochwertige Werbematerialien und Illustrationen"
+        "subtitle": "Kreative Konzepte für effektive Markenkommunikation",
+        "description": "Für die Inspiranto GmbH, eine Werbeagentur, die auf Strategie, Kreation und Werbeservices spezialisiert ist, wurde die visuelle Gestaltung von hochwertigen Werbematerialien und Illustrationen übernommen. Der Fokus lag auf der Entwicklung kreativer Designs, die die Markenbotschaft der Werbeagentur-Kunden wirkungsvoll unterstützen."
+      },
+      "hajimaru": {
+        "title": "Hajimaru",
+        "subtitle": "Manga-Café Konzeptdesign",
+        "description": "Für das Konzeptdesign des Manga-Cafés Hajimaru in Wien wurde ein kreativer Raum entwickelt, der speziell für die Manga- und Anime-Community konzipiert ist. Das Design fokussiert sich auf eine interaktive Erlebnismöglichkeit, bei der Besucher in die Welt der „Geschichten“ eintauchen können – sei es durch das Lesen von Manga, themenbezogene Dekorationen und Ausstellungen oder durch Events wie Workshops und Diskussionen. Das Konzept zielt darauf ab, einen Treffpunkt zu schaffen, an dem Fans ihre Leidenschaft für Manga und Anime teilen, sich austauschen und ihre Begeisterung für diese Geschichten erleben können."
       },
       "tube": {
-        "title": "Tube Nightclub",
-        "subtitle": "Konzeptdesign für ein Künstler Nightclub & Networking Treffpunkt",
-        "description": "Entwicklung eines Corporate Designs & Corproate Identity Konzeptes für einen Nightclub in der Künstler und Kreativ-Zone. Von Kampagnenentwicklung bis hin zur Event-Location.",
+        "title": "Tube Club",
+        "subtitle": "Konzeptdesign für einen Künstler-Club",
+        "description": "Für das Konzeptdesign des Künstlerclubs \"Tube\" wurde ein innovativer Raum entwickelt, der kreative Köpfe und Künstler zusammenbringt. Der Club vereint digitale Kunst, analoge Bühnenkunst und außergewöhnliche Raumgestaltung, um ein einzigartiges Erlebnis zu schaffen. Das Design fördert eine offene, inspirierende Atmosphäre, in der sich Menschen aus verschiedenen kreativen Bereichen frei entfalten können.",
         "philosophyDesc": "Tube ist ein Club in Wien, welcher Raum für kreative Köpfe und Kommunikation bietet. Dort wird nicht zwischen Persönlichkeiten und gesellschaftlichen Schichten unterschieden, da jeder willkommen ist, der sich wohl fühlt.",
         "uspDesc": "Tube entführt seine Besucher in eine andere Welt und koppelt hierfür digitale Techniken mit analoger Bühnenkunst und Raumaufbereitung. Es wird Raum für außergewöhnliche Performance, einzigartige digitale Welten und überwältigende Erlebnisse in allen von Tube angebotenen Bereichen geschaffen, welche durch speziell engagiertes und professionelles Personal entwickelt und geleitet wird.",
         "targetGroupDesc": "Sie beinhaltet alle kreative Köpfe und Menschen, die sich gerne kreativ betätigen und/oder auf ihre Art und Weise kreativ leben. Dadurch nehmen weder gesellschaftliche, soziale oder kulturelle Unterschiede, noch das Alter einen Einfluss auf die Zielgruppe."
@@ -228,23 +233,17 @@
       "landespreis2014": {
         "title": "Landespreis 2014",
         "subtitle": "Descover Perspectives",
-        "description": "Der Mensch ist im allgemeinen ein Gewohnheitstier. Er orientiert sich nach Erfahrungen und Erlebnissen und geht, geprägt von diesen, mit einem Tunnelblick durch die Welt. So gewöhnt er sich großteils eine oberflächliche Sichtweise an. Um die Menschen zu erreichen müssen wir ihr Wahrnehmungsverhalten durchbrechen."
-      },
-      "hajimaru": {
-        "title": "Hajimaru",
-        "subtitle": "Manga Café",
-        "description": "Konzeptdesign für ein Manga-Café in Wien.",
-        "overviewDesc": "Die Manga-Anime-Community in Österreich und Deutschland wächst järhlich immer weiter. Diese Community, die das Manga-Anima-Thema oft schon als Lebensstil praktiziert, organisiert von Zeit zu Zeit zwar eigene Treffen, doch fehlt es ihnen oft an Orten und Räumen, an denen sie sich ungezwungen unter diesem Motto treffen und austauschen bzw. zusammen diskutieren können. So bietet das Manga-Themencafé Hajimaru den perfekten Treffpunkt für diese Community, welches den Gesichtspunkt der Geschichten in den Mittelpunkt stellt. Hier können Besucher, Geschichten genießen” (lesen), “Geschichten beobachten” (Themendekorationen und -ausstellungen innerhalb des Cafés, themebenzogene Verhaltensmuster der Mitarbeiter) und “Geschichten erleben” (Events, Workshops, Diskussionen, Vorträge, etc.)."
+        "description": "Für den \"Landespreis 2014\" Wettbewerb wurde das Konzept \"Discover Perspectives\" entwickelt. Ziel war es, die gewohnte Wahrnehmung der Menschen herauszufordern und ihren Tunnelblick zu durchbrechen. Durch das Konzept wurde versucht, eine neue Sichtweise zu fördern, die es den Menschen ermöglicht, über ihre bisherigen Erfahrungen hinauszublicken und neue Perspektiven zu entdecken."
       },
       "untersbergbahn": {
         "title": "Untersbergbahn",
         "subtitle": "Redesign der Salzburger Untersbergbahn",
-        "description": "Im Zuge der WDA konnten wir, innerhalb eiber Wettbewerbssituation mit unseren KollegInnen, das neue Design für die Untersbergbahn entwerfen. Unsere Probeagentur hat sich dafür auf die “zeitlosen Momente” des Berges konzentriert, welche den Besuch unvergesslich gestalten. Darüber hinaus haben wir uns für die gestalterische Umsetzung auf die Natur konzentriert, was sich unter anderem innerhalb unseres Farbcodes und unserer seperaten Gestaltung für Winter und Sommer wiederspiegelt."       
+        "description": "Im Zuge der WDA wurde innerhalb einer Wettbewerbssituation ein Redesign und Kampagnenkonzept für die Salzburger Untersbergbahn entwickelt. Das Konzept legte den Fokus auf die „zeitlosen Momente“ des Berges, die den Besuch unvergesslich machen. Die gestalterische Umsetzung orientierte sich an der Natur und spiegelte sich im Farbcodes sowie in einer saisonalen Gestaltung für Winter und Sommer wider."       
       },
       "heratBeat": {
         "title": "Café Heart.Beat",
         "subtitle": "Konzeptdesign für ein Bio-Café", 
-        "description": "Das Cafe öffnet die Türen für jeden, der einen Ort zur Entspannung braucht und sich vom Stress des Alltags zurückziehen möchte. Hier haben sie Zeit für sich und für den Moment, den sie in vollen Zügen genißen können, ohne sich von äußerlichen negativen Einflussen beeinflussen zu lassen. Sie können befreit, im Jetzt momentnah lebend, sich mit anderen Menschen austauschen und sich durch dessen fließenden Austausch treiben lassen.",
+        "description": "Das Konzeptdesign für das Café Heart.Beat wurde entwickelt, um einen Ort der Entspannung und des Austauschs zu schaffen. Es richtet sich an Menschen, die dem stressigen Alltag entfliehen und im Hier und Jetzt leben möchten. Gäste können den Moment genießen, sich mit anderen austauschen und eine stressfreie Atmosphäre erleben. Das Design setzt auf eine einladende und ruhige Umgebung, die zum Verweilen und gemeinsamen Dialog anregt.",
         "philosophyDesc": "Das Cafe öffnet die Türen für jeden, der einen Ort zur Entspannung braucht und sich vom Stress des Alltags zurückziehen möchte. Hier haben sie Zeit für sich und für den Moment, den sie in vollen Zügen genißen können, ohne sich von äußerlichen negativen Einflussen beeinflussen zu lassen. Sie können befreit, im Jetzt  momentnah lebend, sich mit anderen Menschen austauschen und sich durch dessen fließenden Austausch treiben lassen.",
         "targetGroupDesc": "Zielgruppe sind all jene, die dem stressigen Alltag entfliehen wollen und ungezwungen von äußeren Einflüssen den Moment erleben und sich frei vom Stress mit anderen Menschen unterhalten und austauschen wollen. Das Hauptalter der Zielgruppe sind Menschen ab 18 aufwärts, die gerne ihre Erfahrungen und Erlebnisse auch mit anderen Teilen.",
         "serviceDesc": "Das Cafe bezieht seine Haupteinnahmequelle durch die Verrechnung der dort verbrachten Zeit. Seine Angebote sind hauptsächlich Getränke – Tee, Kaffee, Säfte, Alkoholfreies. Des weiteren gibt es noch kleine Häppchen, die gegen den kleinen Hunger under Guster helfen sollen. Die Speisekarte wird mit “Special” Angebote erweitert, welche größeren bzw. spezielleren Wünschen der Kunden – z.B. eine Hauptspeise oder frisch gepresste Säfte – nachkommt. Diese sind mit einem kleinen Aufpreis, der geringer ist als in herkömmlichen Cafes, verbunden."
@@ -252,8 +251,7 @@
       "cruiseMissilesRoyality": {
         "title": "Cruise Missiles Royality",
         "subtitle": "Promo CD",
-        "description": "Entwiclkung eines Promo-CD Designs anhand des Musikcharakters der Band.",
-        "overviewDesc": "Die Farben und Formen des Booklets versinnbildlichen eine vergängliche aber starke Persönlichkeit, die im Musikcharakter verankert ist. Die Form der Promo-CD bildet metaphorisch den klaren und durchdringlichen Charakter der Musik ab. Hier soll jedoch die Verpackung schon vorab einen eindringlichen Eindruck interlassen, ohne dass die Musik bekannt sein muss. Die Form der Pyramide (Prismas), lässt sich zu einen Stern aufklappen, der einerseits das Potential der Band etwas besonderes zu werden (“Stern am Musikhimmel”) zeigt, andererseits aber auch durch seine Form auf eine unbewusste Übermittlung der Gefühlen hindeutet, die durch die Musik stattfindet. Die Holzhülle deutet darüber hinaus auf die zukünftige Bühne hin, auf welcher der emotionale Austausch von Stimmungen durch Musik und der physische Kontakt mit der Fangemeinde stattfinden wird."
+        "description": "Das Design der Promo-CD wurde basierend auf dem Musikcharakter der Band entwickelt, um bereits vor dem Hören eine starke visuelle Wirkung zu erzielen. Die Farben und Formen des Booklets symbolisieren eine starke, aber vergängliche Persönlichkeit, die sich im Klang der Musik widerspiegelt. Die Promo-CD in Form eines aufklappbaren Pyramidensterns verdeutlicht das Potenzial der Band, ein „Stern am Musikhimmel“ zu werden, und verweist auf die emotionalen Erlebnisse, die durch die Musik entstehen. Die Holzhülle stellt die Bühne dar, auf der der Austausch von Gefühlen durch Musik und die Verbindung zur Fangemeinde stattfinden."
       }
     },
     "freeProjectList": {
