@@ -6,7 +6,14 @@
     "contact": "Kontakt",
     "career": "Werdegang"
   },
+  "contact": {
+    "title": "Kontaktiere mich!",
+    "message": "Ob frische Ideen, spannende Projekte oder neue Kooperationen – ich bin immer offen für kreative Herausforderungen.",
+    "imprint": "Isabella Aigner. Alle Rechte vorbehalten."
+  },
   "home": {
+    "headerTitle": "Kreativität trifft Technologie",
+    "headerSubtitle": "Frontend, UI/UX, Print & Marketing – durchdachte Designs, die begeistern",
     "greeting": "Hi, ich bin Isabella Aigner",
     "subtitle": "Frontend-Entwicklerin & UI/UX-Designerin",
     "viewWork": "Projekte ansehen",

@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
-import ContactSection from "../components/ContactCard.vue";
+import ContactCard from "../components/ContactCard.vue";
 import PageHeader from "../components/PageHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
@@ -153,8 +153,8 @@ const softSkills = ref([
 <template>
   <div id="home" class="home">
     <PageHeader
-      title="Isabella Aigner"
-      claim="Frontend Developer & UI/UX Designer crafting beautiful digital experiences"
+      :title="t('home.headerTitle')"
+      :claim="t('home.headerSubtitle')"
       image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
     />
 
@@ -220,7 +220,7 @@ const softSkills = ref([
       </section>
 
       <ScrollReveal>
-        <ContactSection />
+        <ContactCard />
       </ScrollReveal>
     </ContentContainer>
   </div>

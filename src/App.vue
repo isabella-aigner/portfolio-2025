@@ -54,6 +54,6 @@ watch(locale, () => {
   </main>
 
   <footer class="footer">
-    <p>&copy; {{ new Date().getFullYear() }} Isabella Aigner. All rights reserved.</p>
+    <p>&copy; {{ new Date().getFullYear() }} {{ t('contact.imprint') }}</p>
   </footer>
 </template>
