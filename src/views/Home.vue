@@ -73,7 +73,7 @@ const skills = ref([
       "Design Systems",
       "Material UI",
       "Usability Testing",
-      "Personass",
+      "Personas",
       "User Journeys",
       "Responsive Design",
       "bolt.new",
@@ -123,7 +123,7 @@ const skills = ref([
       t("home.skillElements.jewelryDesign"),
       "Game Design",
       "Painting",
-      "Storrytelling & Worldbuilding",
+      "Storytelling & Worldbuilding",
     ],
   },
 ]);
