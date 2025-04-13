@@ -9,6 +9,7 @@ import ContactCard from "../components/ContactCard.vue";
 import PageHeader from "../components/PageHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
+import HeaderSlider from "../components/HeaderSlider.vue";
 
 const { t } = useI18n();
 const router = useRouter();
@@ -154,11 +155,12 @@ const softSkills: ComputedRef<string[]> = computed(() => ([
 
 <template>
   <div id="home" class="home">
-    <PageHeader
+    <HeaderSlider 
       :title="t('home.headerTitle')"
-      :claim="t('home.headerSubtitle')"
-      image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200"
-    />
+      :description="t('home.headerSubtitle')"
+      :imageList="[{imgLink: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200', altText: 'test'}, 
+      {imgLink: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200', altText: 'test2'}]"
+      />
 
     <ContentContainer>
       <section class="skills section">
