@@ -48,6 +48,7 @@ const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
         </Card>
       </ScrollReveal>
 
+      <!--
       <ScrollReveal>
         <div class="cv-section">
           <Card>
@@ -69,6 +70,7 @@ const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
           </Card>
         </div>
       </ScrollReveal>
+      -->
 
       <section class="timeline-section">
         <ScrollReveal>
