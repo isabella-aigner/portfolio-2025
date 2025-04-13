@@ -31,15 +31,15 @@ const navigateToProjects = (skillCode: string) => {
 
 const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
   {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_plantbase.jpg`,
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/plantbase.jpg`,
     altText: t('headerAltText.plantBase')
   },
   {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_invent.jpg`,
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/invent.jpg`,
     altText: t('headerAltText.invent')
   },
   {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_republic.jpg`,
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/republic.jpg`,
     altText: t('headerAltText.republic')
   }
 ])

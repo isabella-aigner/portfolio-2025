@@ -27,7 +27,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative h-[700px] overflow-hidden">
+  <div class="relative h-[85vh] overflow-hidden">
     <!-- Slides -->
     <template v-for="(image, index) in imageList" :key="index" >
       <div
@@ -56,7 +56,7 @@ onUnmounted(() => {
     </div>
 
     <!-- Navigation Dots -->
-    <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+    <div v-if="imageList.length > 1" class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
       <button
         v-for="(_, index) in imageList"
         :key="index"

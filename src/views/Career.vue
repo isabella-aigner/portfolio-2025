@@ -21,16 +21,8 @@ const downloadCV = () => {
 
 const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
   {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_plantbase.jpg`,
-    altText: t('headerAltText.plantBase')
-  },
-  {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_invent.jpg`,
-    altText: t('headerAltText.invent')
-  },
-  {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_republic.jpg`,
-    altText: t('headerAltText.republic')
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/career.jpg`,
+    altText: t('headerAltText.career')
   }
 ])
 </script>
