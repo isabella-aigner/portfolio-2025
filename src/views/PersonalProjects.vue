@@ -8,7 +8,6 @@ import { ImageItem } from "../models/ImageItem";
 import { useIsMobile } from '../composables/useIsModbile';
 
 import ContactSection from "../components/ContactCard.vue";
-import FullWidthHeader from "../components/FullWidthHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
 import FilterGroup from "../components/FilterGroup.vue";
