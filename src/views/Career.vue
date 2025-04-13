@@ -1,27 +1,48 @@
 <script setup lang="ts">
+import { computed, ComputedRef } from "vue";
+import { useI18n } from "vue-i18n";
+import { ImageItem } from "../models/ImageItem";
+import { useIsMobile } from '../composables/useIsModbile';
+
 import ContactSection from "../components/ContactCard.vue";
 import FullWidthHeader from "../components/FullWidthHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
-import { useI18n } from "vue-i18n";
+import HeaderSlider from "../components/HeaderSlider.vue";
 
 const { t, te } = useI18n();
+const { isMobile } = useIsMobile()
 
 const downloadCV = () => {
   // Replace this URL with the actual URL to your CV
   const cvUrl = "/cv-isabella-aigner.pdf";
   window.open(cvUrl, "_blank");
 };
+
+const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_plantbase.jpg`,
+    altText: t('headerAltText.plantBase')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_invent.jpg`,
+    altText: t('headerAltText.invent')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_republic.jpg`,
+    altText: t('headerAltText.republic')
+  }
+])
 </script>
 
 <template>
   <div class="career">
-    <FullWidthHeader
-      image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
-    >
-      <h1>{{ t("career.title") }}</h1>
-      <p>{{ t("career.claim") }}</p>
-    </FullWidthHeader>
+    <HeaderSlider 
+      class="mb-20"
+      :title="t('career.title')"
+      :description="t('career.claim')"
+      :imageList="sliderImages"
+      />
 
     <ContentContainer>
       <ScrollReveal>

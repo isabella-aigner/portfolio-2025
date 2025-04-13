@@ -9,6 +9,7 @@ const route = useRoute();
 
 defineProps<{
   filters: FilterItem[];
+  styleModifier?: string;
 }>();
 
 const emit = defineEmits<{
@@ -30,7 +31,7 @@ const toggleFilter = (filter: string) => {
 <template>
   <div class="filter-group">
     <TransitionGroup name="tag">
-      <div class="flex gap-2 filter-group-el">
+      <div class="flex gap-2 filter-group-el" :class="styleModifier">
         <template
           v-for="(filter) in filters"
           :key="filter.code">

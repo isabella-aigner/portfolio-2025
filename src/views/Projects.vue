@@ -4,18 +4,21 @@ import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { FilterItem } from "../models/FilterItem";
 import { ProjectItem } from "../models/ProjectItem";
+import { ImageItem } from "../models/ImageItem";
+import { useIsMobile } from '../composables/useIsModbile';
 
 import ContactSection from "../components/ContactCard.vue";
-import FullWidthHeader from "../components/FullWidthHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
 import FilterGroup from "../components/FilterGroup.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import GalleryModal from "../components/GalleryModal.vue";
+import HeaderSlider from "../components/HeaderSlider.vue";
 
 const { t } = useI18n();
 const router = useRouter();
 const route = useRoute();
+const { isMobile } = useIsMobile()
 
 const selectedProject = ref < ProjectItem | null > (null);
 const selectedFilter = ref < string | null > (null);
@@ -38,6 +41,21 @@ const toggleFilter = (filterId: string | null) => {
     }
     selectedFilter.value = filterId;
 };
+
+const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_plantbase.jpg`,
+    altText: t('headerAltText.plantBase')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_invent.jpg`,
+    altText: t('headerAltText.invent')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_republic.jpg`,
+    altText: t('headerAltText.republic')
+  }
+])
 
 const filterItems: ComputedRef<FilterItem[]> = computed(() =>([{
         name: t("home.skillsList.uiux"),
@@ -676,15 +694,21 @@ const isModalVisible = ref < boolean > (false);
 
 <template>
     <div class="projects">
-        <FullWidthHeader image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000">
-            <h1>{{ t("projects.headerTitle") }}</h1>
-            <p>{{ t("projects.headerSubtitle")}}</p>
-        </FullWidthHeader>
+        <HeaderSlider 
+            class="mb-20"
+            :title="t('projects.headerTitle')"
+            :description="t('projects.headerSubtitle')"
+            :imageList="sliderImages"
+            />
     
         <ContentContainer>
             <!-- Filter Skills -->
             <ScrollReveal>
-                <FilterGroup :filters="filterItems" :selected-filter="selectedFilter" @toggled-filter="toggleFilter($event)" />
+                <FilterGroup 
+                    style-modifier="max-w-4xl"
+                    :filters="filterItems" 
+                    :selected-filter="selectedFilter" 
+                    @toggled-filter="toggleFilter($event)" />
             </ScrollReveal>
     
             <TransitionGroup name="projects-grid" tag="div" class="grid" :class="[selectedProject ? 'grid-cols-1' : 'grid-cols-2']">

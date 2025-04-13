@@ -6,6 +6,11 @@
     "contact": "Kontakt",
     "career": "Werdegang"
   },
+  "headerAltText": {
+    "plantBase": "Übersicht der PlantBase-Webanwendung mit Funktionen zur Pflanzenpflege, Bewässerungsplänen und Community-Bereich für Nutzer:innen.",
+    "invent": "Visueller Überblick über das überarbeitete Corporate Design und vielfältige Printprodukte für INVENT.",
+    "republic": "Stimmungsvolle Innenaufnahme mit Fokus auf Licht, Möblierung und Raumwirkung."
+  },
   "contact": {
     "title": "Kontaktiere mich!",
     "message": "Ob frische Ideen, spannende Projekte oder neue Kooperationen – ich bin immer offen für kreative Herausforderungen.",

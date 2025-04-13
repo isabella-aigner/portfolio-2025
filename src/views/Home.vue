@@ -4,14 +4,19 @@ import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 
 import { SkillItem } from "../models/SkillItem";
+import { ImageItem } from "../models/ImageItem";
 
 import ContactCard from "../components/ContactCard.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
 import HeaderSlider from "../components/HeaderSlider.vue";
+import { useIsMobile } from '../composables/useIsModbile';
 
 const { t } = useI18n();
 const router = useRouter();
+
+
+const { isMobile } = useIsMobile()
 
 const navigateToProjects = (skillCode: string) => {
   if (skillCode === "creative") {
@@ -23,6 +28,21 @@ const navigateToProjects = (skillCode: string) => {
     });
   }
 };
+
+const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_plantbase.jpg`,
+    altText: t('headerAltText.plantBase')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_invent.jpg`,
+    altText: t('headerAltText.invent')
+  },
+  {
+    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/header_republic.jpg`,
+    altText: t('headerAltText.republic')
+  }
+])
 
 const skills: ComputedRef<SkillItem[]> = computed(() => ([
   {
@@ -157,8 +177,7 @@ const softSkills: ComputedRef<string[]> = computed(() => ([
     <HeaderSlider 
       :title="t('home.headerTitle')"
       :description="t('home.headerSubtitle')"
-      :imageList="[{imgLink: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200', altText: 'test'}, 
-      {imgLink: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200', altText: 'test2'}]"
+      :imageList="sliderImages"
       />
 
     <ContentContainer>

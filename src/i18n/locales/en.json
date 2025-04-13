@@ -6,6 +6,11 @@
     "contact": "Contact",
     "career": "Career"
   },
+  "headerAltText": {
+    "plantBase": "Overview of the PlantBase web application showcasing plant care features, watering schedules, and user community tools",
+    "invent": "Visual overview of the redesigned corporate identity and diverse print materials created for INVENT.",
+    "republic": "Atmospheric interior shot highlighting lighting, furnishings, and spatial mood."
+  },
   "contact": {
     "title": "Get in Touch!",
     "message": "Whether fresh ideas, exciting projects, or new collaborations – I'm always open to creative challenges.",

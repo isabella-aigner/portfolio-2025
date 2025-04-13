@@ -16,7 +16,7 @@ const nextSlide = () => {
 };
 
 onMounted(() => {
-  timer.value = setInterval(nextSlide, 5000);
+  timer.value = setInterval(nextSlide, 7000);
 });
 
 onUnmounted(() => {
@@ -29,9 +29,9 @@ onUnmounted(() => {
 <template>
   <div class="relative h-[700px] overflow-hidden">
     <!-- Slides -->
-    <template v-for="(image, index) in imageList" :key="index">
+    <template v-for="(image, index) in imageList" :key="index" >
       <div
-        class="absolute inset-0 w-full h-full transition-opacity duration-1000"
+        class="absolute inset-0 w-full h-full transition-opacity duration-1000 headerImageArea"
         :class="{ 'opacity-0': currentSlide !== index }"
       >
         <img
@@ -46,10 +46,10 @@ onUnmounted(() => {
     <!-- Static Text Content -->
     <div class="absolute inset-0 flex items-center justify-center text-white">
       <div class="text-center px-4">
-        <h1 class="text-5xl font-bold mb-4">
+        <h1 class="text-5xl font-bold mb-4 header-title">
           {{ title }}
         </h1>
-        <p class="text-xl">
+        <p class="text-xl header-claim">
           {{ description }}
         </p>
       </div>

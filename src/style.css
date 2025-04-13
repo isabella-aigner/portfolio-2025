@@ -11,6 +11,7 @@
 @import './styles/components/career.scss';
 
 @import './styles/components/pageHeader.scss';
+@import './styles/components/headerSlider.scss';
 @import './styles/components/skillCard.scss';
 @import './styles/components/projects.scss';
 @import './styles/components/projectDetails.scss';
