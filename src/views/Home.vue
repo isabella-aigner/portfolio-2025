@@ -6,7 +6,6 @@ import { useRouter } from "vue-router";
 import { SkillItem } from "../models/SkillItem";
 
 import ContactCard from "../components/ContactCard.vue";
-import PageHeader from "../components/PageHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
 import ScrollReveal from "../components/ScrollReveal.vue";
 import HeaderSlider from "../components/HeaderSlider.vue";

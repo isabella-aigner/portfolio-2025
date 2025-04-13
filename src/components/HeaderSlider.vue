@@ -9,7 +9,7 @@ const props = defineProps<{
 }>();
 
 const currentSlide = ref(0);
-const timer = ref<number>();
+const timer = ref();
 
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % props.imageList.length;
