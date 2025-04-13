@@ -32,7 +32,7 @@ const toggleFilter = (filter: string) => {
     <TransitionGroup name="tag">
       <div class="flex gap-2 filter-group-el">
         <template
-          v-for="(filter, index) in filters"
+          v-for="(filter) in filters"
           :key="filter.code">
           <FilterButton
             :filter="filter"
