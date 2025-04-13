@@ -12,11 +12,13 @@ import HeaderSlider from "../components/HeaderSlider.vue";
 const { t, te } = useI18n();
 const { isMobile } = useIsMobile()
 
+/*
 const downloadCV = () => {
   // Replace this URL with the actual URL to your CV
   const cvUrl = "/cv-isabella-aigner.pdf";
   window.open(cvUrl, "_blank");
 };
+*/
 
 const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
   {
