@@ -6,150 +6,469 @@
     "contact": "Contact",
     "career": "Career"
   },
+  "contact": {
+    "title": "Get in Touch!",
+    "message": "Whether fresh ideas, exciting projects, or new collaborations – I'm always open to creative challenges.",
+    "imprint": "Isabella Aigner. All rights reserved."
+  },
   "home": {
+    "headerTitle": "Creativity meets Technology",
+    "headerSubtitle": "Frontend, UI/UX, Print & Marketing – Thoughtful designs that inspire",
     "greeting": "Hi, I'm Isabella Aigner",
     "subtitle": "Frontend Developer & UI/UX Designer",
     "viewWork": "View My Work",
     "skills": "My Skills",
+    "softSkillTitle": "Soft Skills",
     "skillsList": {
       "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "mobile": "App Development",
       "uiux": "UI/UX Design",
       "responsive": "Responsive Design",
-      "design": "Graphic Design"
+      "design": "Graphic & Brand Design",
+      "creativeSkills": "Passions & Creative Skills",
+      "product": "Product Development",
+      "print": "Print Production",
+      "packaging": "Packaging Design",
+      "photography": "Photography",
+      "audio": "Audio",
+      "illustration": "Illustration",
+      "creativeWriting": "Creative Writing",
+      "3d": "3D Art",
+      "game": "Game Design",
+      "freeDesign": "Design"
+    },
+    "skillElements": {
+      "colorTheory": "Color Theory",
+      "layoutDesign": "Layout Design",
+      "logoDesign": "Logo Design",
+      "visualDesignPrinciples": "Visual Design Principles",
+      "typographyAndImagery": "Typography & Imagery",
+      "conceptDevelopment": "Concept Development",
+      "productDevelopment": "Product Development",
+      "musicComposition": "Music Composition",
+      "creativeWriting": "Creative Writing",
+      "makingMusic": "Making Music",
+      "photography": "Photography",
+      "imageEditing": "Image Editing",
+      "vectorGraficDesign": "Vector Graphic Design",
+      "calligraphy": "Calligraphy",
+      "jewelryDesign": "Jewelry Design"
+    },
+    "softSkills": {
+      "conflictResolutionSkills": "Conflict Resolution Skills",
+      "communicationSkills": "Communication Skills",
+      "socialSensitivity": "Social Sensitivity",
+      "strongTeamworkSkills": "Excellent Teamwork Skills",
+      "criticalThinking": "Critical Thinking",
+      "adaptability": "Adaptability",
+      "structuredAndIndependentWork": "Structured and Independent Work",
+      "empathyAndActiveListening": "Empathy & Active Listening",
+      "selfManagement": "Self-Management",
+      "goalOrientationAndResultFocus": "Goal Orientation & Results Focus",
+      "creativeThinking": "Creative Thinking",
+      "designThinking": "Design Thinking",
+      "willingnessToLearn": "Willingness to Learn",
+      "curiosity": "Curiosity",
+      "attentionToDetailAndPrecision": "Attention to Detail & Precision",
+      "logicalAndAnalyticalThinking": "Logical & Analytical Thinking",
+      "receptivenessToCriticism": "Openness to Criticism",
+      "disciplineAndReliability": "Discipline & Reliability"
     }
   },
   "projects": {
-    "title": "My Projects",
-    "viewProject": "View Project"
-  },
-  "personalProjects": {
-    "title": "Personal Projects",
+    "headerTitle": "Creative Solutions and Visions",
+    "headerSubtitle": "With expertise in design, development, and branding – tailored for every need.",
+    "headerFreeTitle": "Creative Passion",
+    "headerFreeSubtitle": "With heart and passion – creative experiments that inspire.",
     "viewProject": "View Project",
-    "hobbies": {
-      "title": "My Hobbies & Interests",
-      "description": "Beyond coding and design, I am passionate about various activities that keep me creative and energized.",
-      "items": [
-        {
-          "title": "Photography",
-          "icon": "pi pi-camera",
-          "description": "Capturing moments and exploring visual storytelling through digital photography."
-        },
-        {
-          "title": "Digital Art",
-          "icon": "pi pi-palette",
-          "description": "Creating digital illustrations and exploring different artistic styles."
-        },
-        {
-          "title": "Reading",
-          "icon": "pi pi-book",
-          "description": "Exploring tech literature, design books, and science fiction."
-        },
-        {
-          "title": "Hiking",
-          "icon": "pi pi-map",
-          "description": "Exploring nature trails and enjoying outdoor activities."
-        }
-      ]
+    "year": "Year",
+    "role": "Role",
+    "client": "Type",
+    "gallery": "Gallery",
+    "closeCard": "Collapse",
+    "detailTitle": {
+      "projectOverview": "Project Overview",
+      "technicalImplementation": "Technical Implementation",
+      "philosophy": "Philosophy",
+      "usp": "USP",
+      "targetGroup": "Target Group",
+      "concept": "Concept",
+      "demoTrack": "Demo Track",
+      "service": "Service",
+      "setting": "Setting"
+    },
+    "links": {
+      "gamejolt": "Gamejolt"
+    },
+    "clients": {
+      "personalProject": "Personal Project",
+      "studyProject": "Study Project",
+      "internshipProject": "Internship Project",
+      "companyWork": "Company Project"
+    },
+    "roles": {
+      "uiuxDesigner": "UI/UX Designer",
+      "frontendDev": "Frontend Developer",
+      "backendDev": "Backend Developer",
+      "fullstackDev": "Fullstack Developer",
+      "developer": "Developer",
+      "mobileDev": "App Developer",
+      "graficDesign": "Graphic Designer",
+      "productDev": "Product Development",
+      "brandDev": "Brand Development",
+      "audioDev": "Audio Developer",
+      "photographer": "Photographer",
+      "3dArtist": "3D Artist",
+      "gameDev": "Game Developer",
+      "illustration": "Illustrator",
+      "design": "Designer"
+    },
+    "tags": {
+      "graficDesign": "Graphic Design",
+      "corporateDesign": "Corporate Design",
+      "brandGuidlines": "Brand Guidelines",
+      "brandDev": "Brand Development",
+      "printProduction": "Print Production",
+      "illustration": "Illustration",
+      "campaignDesign": "Campaign Design",
+      "packagingDesgin": "Packaging Design",
+      "recording": "Recording",
+      "redesign": "Redesign",
+      "merch": "Giveaways",
+      "promo": "Promo Design",
+      "digitalEditing": "Digital Editing",
+      "photography": "Photography",
+      "studioPhotography": "Studio Photography",
+      "visualArts": "Visual Arts",
+      "roetel": "Red Chalk",
+      "grafit": "Graphite",
+      "aquarell": "Watercolor",
+      "tusche": "Ink",
+      "buntstifte": "Colored Pencils",
+      "infografic": "Infographic",
+      "messe": "Exhibition Booth Design",
+      "layout": "Layout & Typesetting",
+      "typoDev": "Font Design",
+      "crafting": "Crafting",
+      "audioProd": "Audio Production"
+    },
+    "projectList": {
+      "redlinkGPT": {
+        "title": "RedlinkGPT",
+        "subtitle": "Intelligent AI Toolbox for Internal Company Data",
+        "description": "RedlinkGPT is an innovative product by Redlink GmbH that supports companies in optimizing their workflows and revolutionizing the use of internal data with conversational AI. The focus during development was on concept creation, UI/UX design, and the creation of promotional materials.",
+        "uspTitle": "What is RedlinkGPT?",
+        "uspDesc": "RedlinkGPT is a modular, conversational AI toolbox based on RAG (Retrieval-Augmented Generation) that helps companies streamline their processes and increase productivity. With native Microsoft Teams integration, the solution enables precise analysis and search of internal data and can be flexibly integrated into existing systems."
+      },      
+      "moreStudyManager": {
+        "title": "MORE",
+        "subtitle": "Multimodal Research Environment",
+        "description": "The MORE platform offers a digital infrastructure for collecting and analyzing multimodal data and promotes interdisciplinary collaboration in digital health and sustainable research projects. It enables the collection and analysis of data from various sources. The technical implementation includes a web app for study managers to manage and evaluate data, and a mobile app for participants to easily collect data."
+      },     
+      "redlinkat": {
+        "title": "Redlink GmbH",
+        "subtitle": "Redesign and Management of the Corporate Identity",
+        "description": "As part of the redesign of Redlink GmbH, the website, business documents, various print materials, and merchandise were developed to modernize the company’s presence and create a consistent brand identity."
+      },
+      "redlinkatWhitepaper": {
+        "title": "Redlink Whitepaper",
+        "subtitle": "Whitepapers on Search UX and LLM",
+        "description": "Creation of two whitepapers as part of Redlink’s focus areas: “Good Search UX” and “Find Things Smarter: On the Use of Large Language Models in Enterprise Content Retrieval.” The whitepapers offer insights into UX component development for efficient search, and how AI technologies can increase the efficiency of information retrieval in companies.",
+        "goodSearchUXTitle": "Good Search User Experience",
+        "goodSearchUX": "In the digital age, we’re drowning in a flood of data and information. That’s where search applications come in. Many enterprises wish for something simple, 'like Google' — but with their own data and just one search box. It sounds easy, but there are many nuances. In reality, people need more than a search box. They need multiple ways to interact with search. Our whitepaper summarizes what we’ve learned over the past decade.",
+        "llmTitle": "Find Things Smarter: On the Use of Large Language Models in Enterprise Content Retrieval",
+        "llmTitleShort": "LLMs for Enterprise Content Retrieval",
+        "llm": "Large Language Models (LLMs) play an important role in unlocking information within enterprises — both internally and for their customers. Our whitepaper 'Finding Things Smarter' shows how modern technologies such as Retrieval Augmented Generation (RAG) can be effectively used in companies to generate relevant, contextual answers. The topic was developed in collaboration with the IDA Lab."
+      },      
+      "dachsteinTicketshop": {
+        "title": "Dachstein Ticketshop",
+        "subtitle": "Online Ticket Shop for the Dachstein Ski Area",
+        "description": "The Dachstein Ticketshop allows visitors to conveniently book their tickets online for the Dachstein Glacier. The platform offers a user-friendly interface, various ticket options, and secure payment. The goal of the project was to implement a modern online ticket shop as part of the relaunch, providing an intuitive user experience to make ticket purchasing as easy and comfortable as possible."
+      },    
+      "plantbase": {
+        "title": "PlantBase",
+        "subtitle": "Plant Care Management System",
+        "description": "PlantBase is a comprehensive web application that helps users manage and care for their indoor plants. It offers detailed care instructions, watering schedules, and growth tracking features. Additionally, it includes integrated user management and forums to support optimal plant care and enable users to share experiences within the community."
+      },      
+      "gameShop": {
+        "title": "Game Shop",
+        "subtitle": "A Modern E-Commerce Design for a Game E-Shop",
+        "description": "The Game Shop UI/UX project focuses on creating an appealing, user-friendly design for a digital game store. With a clear information structure, easy navigation, and aesthetic design, the shop provides a smooth shopping experience for gamers. The goal was to develop a modern e-commerce platform that meets the needs of the gaming community and offers an optimal user experience."
+      },      
+      "steuerkanzleiKaufmann": {
+        "title": "Kaufmann Ticketshop",
+        "subtitle": "Modern Website Redesign",
+        "description": "A modern and professional website was developed for the Kaufmann Tax Office, offering a clear, user-friendly platform. The aim was to inform clients about the services offered and to simplify the contact process. The website was completely redesigned to ensure a contemporary digital presence, with a focus on intuitive navigation and well-structured content."
+      },      
+      "invent": {
+        "title": "INVENT Urlaubsbox",
+        "subtitle": "Holiday Packages for Companies and Individuals",
+        "description": "In the internal graphics department at INVENT, holiday boxes were created for companies and individuals, accompanied by a redesign of the corporate design. Additionally, customized promotional materials and offers, as well as e-commerce assets, were created to optimize product marketing."
+      },      
+      "roco": {
+        "title": "Roco & Fleischmann",
+        "subtitle": "A Paradise for Model Train Enthusiasts",
+        "description": "For Roco and Fleischmann, a leading manufacturer of model trains, high-quality print materials were created, including product catalogs, flyers, advertisements, and packaging designs. These materials present the Roco product range in a visually appealing way. The focus was on accurately depicting the models and maintaining consistent brand-compliant design."
+      },      
+      "wiberg": {
+        "title": "Wiberg GmbH",
+        "subtitle": "Flavorful Spice Worlds",
+        "description": "For Wiberg, a renowned manufacturer of spices and gourmet products, appealing print materials were created. These included product catalogs, packaging designs for spices, and recipe brochures that visually emphasize the quality and variety of Wiberg products."
+      },      
+      "inspiranto": {
+        "title": "Inspiranto GmbH",
+        "subtitle": "Creative Concepts for Effective Brand Communication",
+        "description": "For Inspiranto GmbH, an advertising agency specializing in strategy, creation, and marketing services, the visual design of high-quality promotional materials and illustrations was developed. The focus was on creating creative designs that effectively support clients' brand messaging."
+      },      
+      "hajimaru": {
+        "title": "Hajimaru",
+        "subtitle": "Manga Café Concept Design",
+        "description": "A creative space was developed for the concept design of the Hajimaru Manga Café in Vienna, specifically tailored to the manga and anime community. The design focuses on interactive experiences that immerse visitors in the world of 'stories' — whether through manga reading, themed decorations and exhibitions, or events such as workshops and discussions. The goal is to create a meeting place where fans can share their passion for manga and anime."
+      },      
+      "tube": {
+        "title": "Tube Club",
+        "subtitle": "Concept Design for an Artist Club",
+        "description": "An innovative space was developed for the concept design of the artist club 'Tube', which brings together creative minds and artists. The club combines digital art, analog stage performance, and exceptional spatial design to create a unique experience. The design fosters an open, inspiring atmosphere where people from different creative fields can express themselves freely.",
+        "philosophyDesc": "Tube is a club in Vienna that offers space for creative minds and communication. It does not distinguish between personalities or social classes — everyone who feels comfortable is welcome.",
+        "uspDesc": "Tube transports its visitors into another world by combining digital technologies with analog stage art and spatial design. It creates space for extraordinary performances, unique digital worlds, and overwhelming experiences across all areas offered by Tube, developed and led by specially trained and professional staff.",
+        "targetGroupDesc": "The target group includes all creative individuals and people who enjoy expressing themselves creatively or living creatively in their own way. As a result, social, cultural, or age differences do not limit the audience."
+      },      
+      "landespreis2014": {
+        "title": "Landespreis 2014",
+        "subtitle": "Discover Perspectives",
+        "description": "The concept 'Discover Perspectives' was developed for the 'State Prize 2014' competition. The goal was to challenge people’s usual perception and break their tunnel vision. The concept aimed to promote a new way of seeing, encouraging people to look beyond their past experiences and discover new perspectives."
+      },
+      "untersbergbahn": {
+        "title": "Untersbergbahn",
+        "subtitle": "Redesign of the Salzburg Untersberg Cable Car",
+        "description": "As part of a competition at the WDA, a redesign and campaign concept was developed for the Salzburg Untersberg Cable Car. The concept focused on the 'timeless moments' of the mountain that make each visit unforgettable. The visual implementation was inspired by nature and featured seasonal design elements for both winter and summer."
+      },      
+      "heratBeat": {
+        "title": "Café Heart.Beat",
+        "subtitle": "Concept Design for a Bio Café",
+        "description": "The concept design for Café Heart.Beat was created to offer a place for relaxation and connection. It is aimed at people seeking an escape from their stressful everyday lives to live more in the moment. Guests are encouraged to enjoy the present, engage with others, and experience a stress-free environment. The design promotes a welcoming, peaceful atmosphere that invites people to linger and engage in conversation.",
+        "philosophyDesc": "The café welcomes anyone looking for a place to unwind and step away from everyday stress. Here, they can enjoy time for themselves and be present in the moment without being affected by external negativity. They can live freely in the now, exchanging thoughts with others and letting conversations flow.",
+        "targetGroupDesc": "The target group includes everyone looking to escape daily stress and freely experience the moment without external pressure — people who enjoy sharing their experiences with others. The core age range is 18 and older.",
+        "serviceDesc": "The café generates its main revenue by charging for time spent there. The primary offerings are drinks — tea, coffee, juices, non-alcoholic beverages — along with light snacks for small cravings. The menu includes 'specials' that cater to larger or more specific requests, such as full meals or freshly squeezed juices, which are offered at a small additional cost that’s lower than in typical cafés."
+      },
+      "cruiseMissilesRoyality": {
+        "title": "Cruise Missiles Royality",
+        "subtitle": "Promo CD",
+        "description": "The design of the promo CD was developed based on the band’s musical character, aiming to make a strong visual impression even before listening. The booklet’s colors and shapes symbolize a powerful yet transient personality that reflects the music’s tone. The CD, shaped like a foldable star pyramid, emphasizes the band’s potential to become a 'star in the music sky' and evokes the emotional connection formed through music. The wooden case represents the stage where emotions are exchanged between the band and its fans."
+      }      
+    },
+    "freeProjectList": {
+      "makro": {
+        "title": "Macro",
+        "subtitle": "Photo Series",
+        "description": "This macro photo series reveals the often-overlooked details of nature. By focusing on microscopic structures and vivid colors, it captures the stunning beauty of the natural world from unique perspectives."
+      },      
+      "hausMaschine": {
+        "title": "House-Machine",
+        "subtitle": "Photo Series",
+        "description": "This photo project explores the fusion of human and technology within a house that becomes a machine. Inspired by 'Ghost in the Shell', it highlights dependency on digital networks. Cables, lighting installations, and cold tones intensify the dystopian atmosphere, illustrating the technological omnipresence."
+      },      
+      "3dPlayground": {
+        "title": "3D Playground",
+        "description": "In the '3D Playground', the digital world comes alive with creative forms and structures. Fascinating 3D objects, characters, and landscapes emerge — a space where imagination takes shape and digital creations become immersive experiences."
+      },      
+      "soundDesignSnippets": {
+        "title": "Sound Design Snippets",
+        "description": "This project creates soundscapes from what usually goes unnoticed. With precise finesse, everyday sounds are transformed into captivating audio environments. Using Foley techniques, real-world noises are creatively recreated to enrich film, music, and other media with authentic, emotional sound."
+      },      
+      "iris": {
+        "title": "Iris",
+        "description": "Iris explores life with visual impairment and poses the questions: 'How does a visually impaired person experience everyday life?' and 'How can this be made tangible for sighted individuals to raise awareness?' These questions shape the concept and design of the game.",
+        "settingDesc": "Iris, a 35-year-old journalist, lost her sight due to an optic nerve disease (including Charles Bonnet syndrome). She can now only perceive blurry shapes, light, and shadow — without color. As a result of her condition, she shifted from being an illustrator to working as a journalist from home. Iris lives in her childhood home and faces the daily challenges of independent living.",
+        "videoStart": "Opening Sequence",
+        "videoAlarm": "Alarm Clock Sequence"
+      },      
+      "illu": {
+        "title": "Illustration",
+        "description": "Illustration is much more than just drawing — it brings ideas to life, tells stories without words, and creates entire new worlds on paper or screen. Whether playful or detailed, every illustration has its own personality."
+      },      
+      "dummyMagazin": {
+        "title": "Dummy Magazine",
+        "description": "The design of the Dummy Magazine revolves around the theme of rhythm — from clearly structured editorial layouts to deliberate deconstruction of typesetting and layout that challenge and redefine visual tempo."
+      },      
+      "capoeira": {
+        "title": "Capoeira",
+        "subtitle": "Photo Series",
+        "description": "Dynamism, elegance, and power — this photo series captures the flowing movements and acrobatic elements of Capoeira. Powerful images are created in the studio that bring rhythm, body control, and the tradition of this unique martial art to life."
+      },      
+      "microfobius": {
+        "title": "Microfobius",
+        "description": "Microfobius is a fictional totalitarian state in a dystopian future, where technology no longer serves individuals but a small elite that rules the country. Society is increasingly pushed into a technical age, while nature is suppressed and the environment destroyed. The population lives in a mass society working for technological progress without benefiting from it. Infographics were created for this fictional state to illustrate the population’s living conditions."
+      },      
+      "nevilleBrody": {
+        "title": "Neville Brody Design",
+        "description": "For the Neville Brody design project, posters and magazine pages were created inspired by Brody’s distinctive, experimental style. With a focus on typographic innovation and expressive visuals, the design elements reflect Brody’s influence on modern graphic design."
+      },      
+      "vectorIllu": {
+        "title": "Vector Illustration",
+        "description": "Vector illustrations are precise and scalable graphics characterized by clean lines and detailed representations. Perfect for logos, icons, and sharp illustrations and designs, they remain crisp at any size and offer great flexibility in use."
+      },      
+      "republic": {
+        "title": "Interior Photography",
+        "description": "Interior photography captures the atmosphere of a space by focusing on lighting, furniture, and architecture. The goal is to visually convey the mood of the location and immerse the viewer in its environment."
+      },      
+      "subitorato": {
+        "title": "Subitorato",
+        "description": "‘Subitorato’ explores everyday perception and its effects on the individual by portraying an extreme state. The music plays with soundscapes and dissonance, especially using voices. It depicts how people become entangled in a reality shaped by their environment, gradually alienating themselves from their individuality. Only when they realize the emptiness of their routine are they overwhelmed by a sense of uncertainty that leads to panic."
+      },      
+      "meerdesLebens": {
+        "title": "The Sea of Life",
+        "description": "This piece of music tells the story of a person who initially feels free but gradually gets caught in the swirl of life. A moment of curiosity — a mysterious discovery by the sea — opens a door to another world. What begins as an adventure becomes a reflection on losing oneself in the everyday, being swept along by the masses, and slowly forgetting one's own identity."
+      },      
+      "landscapePhotography": {
+        "title": "Landscape Photography",
+        "description": "Environmental photography captures the mood and details of a location, whether in nature or urban spaces. It focuses on the interplay of light, shadow, and surroundings to visually draw the viewer into the scene."
+      },      
+      "mediaInfoGrafik2016": {
+        "title": "Infographic: Movie Trends 2016",
+        "description": "The infographic presents information on visitor numbers, market share, first releases, produced films, and the most popular movies across Austria's federal states in 2016."
+      },      
+      "nintendoMessestand": {
+        "title": "Nintendo Trade Show Booth",
+        "description": "A concept was developed for a fictional Nintendo trade show booth, including a meeting space, gaming area, and exhibition zone. The booth combines interactive experiences with a modern, functional design to immerse visitors in the world of Nintendo."
+      }      
     }
   },
-  "contact": {
-    "title": "Get in Touch",
-    "message": "I'm always interested in hearing about new projects and opportunities."
-  },
   "career": {
-    "title": "Career Path",
-    "intro": "My career path has been shaped by continuous learning and diverse experiences in software development and design.",
+    "title": "Career",
+    "claim": "My Journey: Design, Code and Creativity",
+    "intro": "With a passion for design and technology, I combine creative and technical expertise to develop innovative solutions. As a designer and developer, I create visual experiences that are both aesthetically appealing and functional. My projects range from classic print design and production, branding, and corporate design to UX/UI design and complex technical development, where I merge modern technologies with creative approaches. With a strong focus on user experience and usability, I optimize digital products and take them to the next level.",
+    "location": "Salzburg, Austria",
+    "cvDownload": "Download my full CV.",
+    "download": "Download",
     "education": {
       "title": "Education",
-      "items": [
-        {
+      "elements": {
+        "item1": {
           "period": "Sept. 2018 - Jan. 2022",
-          "title": "FH Hagenberg",
-          "subtitle": "Media Technology and Design (BAKK)",
-          "description": "Degree: Bachelor of Science. Competencies: Web Development & Design, Film, Audio, 3D, Online Marketing, 2D Motion Graphics"
+          "title": "University of Applied Sciences Hagenberg, Media Technology and Design (BA)",
+          "subtitle": "Bachelor of Science",
+          "description": "Skills: Web Development & Design, Film, Audio, 3D, Online Marketing, 2D Motion Graphics",
+          "icon": "./assets/icons/education_base_icon.svg"
         },
-        {
+        "item2": {
           "period": "Sept. 2017 - July 2018",
           "title": "Illuskills Vienna",
-          "subtitle": "Media Illustration Course",
-          "description": "Part-time training in media illustration"
+          "subtitle": "Certificate: Media Illustration",
+          "description": "Part-time training in media illustration",
+          "icon": "./assets/icons/education_art_icon.svg"
         },
-        {
+        "item3": {
           "period": "Sept. 2017 - Dec. 2017",
           "title": "bit Training Center, Linz",
           "subtitle": "ECDL Training",
-          "description": "ECDL Web Editing (HTML5, CSS3, Responsive), ECDL PowerPoint Advanced"
+          "description": "ECDL Web Editing (HTML5, CSS3, Responsive), ECDL PowerPoint Advanced",
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
-        {
+        "item4": {
           "period": "Oct. 2010 - June 2014",
-          "title": "Advertising Design Academy (WDA), Wifi Salzburg",
-          "subtitle": "Communication Design",
-          "description": "Diploma in Communication Design"
+          "title": "Advertising Design Academy (WDA), WIFI Salzburg",
+          "subtitle": "Diploma in Communication Design",
+          "description": "Skills: Print, Corporate Design, Packaging Design, Photography",
+          "icon": "./assets/icons/education_design_icon.svg"
         },
-        {
+        "item5": {
           "period": "Nov. 2011 - Feb. 2012",
-          "title": "BFI Salzburg",
-          "subtitle": "FiT - Women in Crafts and Technology",
-          "description": "Further education and reorientation"
+          "title": "FiT – Women in Crafts and Technology, BFI Salzburg",
+          "subtitle": "Career Reorientation",
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
-        {
+        "item6": {
           "period": "Oct. 2008 - Dec. 2010",
-          "title": "FH Salzburg Urstein",
-          "subtitle": "MultiMediaArt (MMA)",
-          "description": "Specialization: Audio/Audio Technology (no degree)"
+          "title": "University of Applied Sciences Salzburg Urstein, MultiMediaArt",
+          "subtitle": "No Degree",
+          "description": "Specialization: Audio/Audio Technology | Skills: Multimedia, Audio Technology, 3D, Film",
+          "icon": "./assets/icons/education_base_icon.svg"
         },
-        {
+        "item7": {
           "period": "Nov. 2007 - June 2008",
           "title": "Orff Institute, Salzburg",
-          "subtitle": "Elementary Music and Dance Education",
-          "description": "Extraordinary student (bridging period)"
+          "subtitle": "Transition Period",
+          "description": "Guest student in Elementary Music and Dance Education (bridging semester)",
+          "icon": "./assets/icons/education_temp_icon.svg"
         },
-        {
-          "period": "Sept. 2004 - June 2007",
-          "title": "Federal Secondary School, Salzburg",
-          "subtitle": "Music Branch",
-          "description": "Graduation: Matura"
+        "item8": {
+          "period": "Sept. 2003 - June 2007",
+          "title": "Musical Branch, Federal Academic High School, Salzburg",
+          "subtitle": "Matura (Austrian High School Diploma)",
+          "icon": "./assets/icons/education_base_icon.svg"
         },
-        {
-          "period": "Sept. 1995 - June 2004",
-          "title": "Primary and Secondary School Faistenau",
-          "subtitle": "Basic Education",
-          "description": "Fundamental school education"
+        "item9": {
+          "period": "Sept. 1995 - June 2003",
+          "title": "Primary and Secondary School, Faistenau",
+          "subtitle": "Basic School Education",
+          "icon": "./assets/icons/education_base_icon.svg"
         }
-      ]
+      }
     },
     "experience": {
       "title": "Work Experience",
       "items": [
         {
-          "period": "Feb. 2021 - Aug. 2021",
-          "title": "Frontend Developer Intern",
-          "company": "Elements New Media Solutions",
-          "description": "Internship in web development focusing on frontend technologies. Worked on client projects and gained practical experience in modern web development practices."
+          "period": "April 2022 - present",
+          "title": "Frontend Developer, UI/UX Designer, Marketing & Design",
+          "company": "Redlink GmbH, Salzburg",
+          "description": "Development of web applications and user interface design for various clients. Internal graphics and marketing work."
         },
         {
-          "period": "Jan. 2018 - March 2018",
-          "title": "Web Developer & Designer Intern",
-          "company": "Atikon EDV & Marketing GmbH, Linz",
-          "description": "Internship in web development and design"
+          "period": "July 2018 - Sept. 2018",
+          "title": "Front Desk & Service Staff",
+          "company": "Rotax Maxdome, Linz",
+          "description": "Customer service, event support in the karting hall."
         },
         {
-          "period": "Feb. 2015 - April 2015",
-          "title": "Graphic Design Intern",
-          "company": "Wiberg GmbH, Salzburg",
-          "description": "Internship in internal graphics department, graphics & design"
+          "period": "July 2018 - Sept. 2018",
+          "title": "Sales & Service",
+          "company": "Winkler Bakery, Gallneukirchen",
+          "description": "Sales and service in bakery café."
         },
         {
-          "period": "July 2014 - Sept. 2013",
-          "title": "Graphic Design Intern",
+          "period": "April 2018 - Sept. 2018",
+          "title": "Service & Hospitality Assistant",
+          "company": "MAG Personal GmbH, Linz",
+          "description": "Service staff for events such as weddings and corporate parties."
+        },
+        {
+          "period": "Oct. 2016 - April 2017",
+          "title": "Graphic Design, Internal Marketing Department",
+          "company": "INVENT Marketing and Tourism GmbH, Linz",
+          "description": "Creation of print and online materials for marketing campaigns."
+        },
+        {
+          "period": "May 2015 - July 2016",
+          "title": "Graphic Design, Internal Marketing Department",
+          "company": "Roco Model Railways Holding GmbH, Bergheim",
+          "description": "Development of advertising materials and product designs for model railways."
+        },
+        {
+          "period": "July 2014 - Sept. 2014",
+          "title": "Vacation Cover, Graphic Design",
           "company": "Maya Inspiranto Advertising Agency, Salzburg",
-          "description": "Professional internship in graphics & design"
+          "description": "Design and layout work for client projects."
         },
         {
-          "period": "Jan. 2012 - March 2012",
-          "title": "Graphic Design Internships",
-          "company": "Herkules-Artworks & Maya Inspiranto",
-          "description": "Trial internships at Herkules-Artworks Advertising Agency Linz and Maya Inspiranto Advertising Agency Salzburg"
+          "period": "Aug. 2012 - March 2013",
+          "title": "Part-Time Sales and Café Staff",
+          "company": "Flöckner Bakery and Pastry, Salzburg Gnigl",
+          "description": "Sales and service in the café."
+        },
+        {
+          "period": "May 2012 - July 2012",
+          "title": "Summer Assistant, Ice Cream Sales & Service",
+          "company": "Café-Restaurant & Pizzeria Papageno, St. Gilgen",
+          "description": "Ice cream sales and table service."
+        },
+        {
+          "period": "2003–2007",
+          "title": "Piano Dinner Music",
+          "company": "Gasthof zur Post, Faistenau",
+          "description": "Live piano performances for dinner guests."
         }
       ]
     }

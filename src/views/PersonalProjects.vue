@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, ComputedRef } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { FilterItem } from "../models/FilterItem";
@@ -27,7 +27,7 @@ onMounted(() => {
   }
 });
 
-const filterItems = ref<FilterItem[]>([
+const filterItems: ComputedRef<FilterItem[]> = computed(() => ([
   {
     name: t("home.skillsList.photography"),
     icon: "pi pi-camera",
@@ -63,9 +63,9 @@ const filterItems = ref<FilterItem[]>([
     icon: "pi pi-image",
     code: "design",
   },
-]);
+]));
 
-const projects = ref<ProjectItem[]>([
+const projects: ComputedRef<ProjectItem[]> = computed(() =>([
   {
     id: "makro",
     title: t('projects.freeProjectList.makro.title'),
@@ -356,7 +356,7 @@ const projects = ref<ProjectItem[]>([
     ],
     galleryGrid: "full"
   },  
-]);
+]));
 
 const filteredProjects = computed(() => {
   if (!selectedFilter.value) return projects.value;

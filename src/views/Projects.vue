@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, ComputedRef, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { FilterItem } from "../models/FilterItem";
@@ -39,7 +39,7 @@ const toggleFilter = (filterId: string | null) => {
     selectedFilter.value = filterId;
 };
 
-const filterItems = ref < FilterItem[] > ([{
+const filterItems: ComputedRef<FilterItem[]> = computed(() =>([{
         name: t("home.skillsList.uiux"),
         icon: "pi pi-palette",
         code: "uiux",
@@ -79,9 +79,9 @@ const filterItems = ref < FilterItem[] > ([{
         icon: "pi pi-wallet",
         code: "product",
     },
-]);
+]));
 
-const projects = ref < ProjectItem[] > ([
+const projects: ComputedRef<ProjectItem[]> = computed(() =>([
     {
         id: "redlinkGPT",
         title: t("projects.projectList.redlinkGPT.title"),
@@ -650,7 +650,7 @@ const projects = ref < ProjectItem[] > ([
         ],
         galleryGrid: "full",
     },
-]);
+]));
 
 const filteredProjects = computed(() => {
     if (!selectedFilter.value) return projects.value;

@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ComputedRef } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
+
+import { SkillItem } from "../models/SkillItem";
+
 import ContactCard from "../components/ContactCard.vue";
 import PageHeader from "../components/PageHeader.vue";
 import ContentContainer from "../components/ContentContainer.vue";
@@ -21,7 +24,7 @@ const navigateToProjects = (skillCode: string) => {
   }
 };
 
-const skills = ref([
+const skills: ComputedRef<SkillItem[]> = computed(() => ([
   {
     name: t("home.skillsList.frontend"),
     icon: "pi pi-desktop",
@@ -126,9 +129,9 @@ const skills = ref([
       "Storytelling & Worldbuilding",
     ],
   },
-]);
+]));
 
-const softSkills = ref([
+const softSkills: ComputedRef<string[]> = computed(() => ([
   t("home.softSkills.conflictResolutionSkills"),
   t("home.softSkills.communicationSkills"),
   t("home.softSkills.socialSensitivity"),
@@ -146,7 +149,7 @@ const softSkills = ref([
   t("home.softSkills.logicalAndAnalyticalThinking"),
   t("home.softSkills.receptivenessToCriticism"),
   t("home.softSkills.disciplineAndReliability"),
-]);
+]));
 </script>
 
 <template>
