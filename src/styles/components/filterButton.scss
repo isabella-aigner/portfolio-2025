@@ -5,6 +5,12 @@
     justify-content: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+
+    .filter-group-el {
+        max-width: 1000px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
 }
 
 .filter-button {
