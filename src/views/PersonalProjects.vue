@@ -67,11 +67,13 @@ const filterItems: ComputedRef<FilterItem[]> = computed(() => ([
     icon: "pi pi-palette",
     code: "illustration",
   },
+  /*
   {
     name: t("home.skillsList.creativeWriting"),
     icon: "pi pi-book",
     code: "writing",
   },
+  */
   {
     name: t("home.skillsList.3d"),
     icon: "pi pi-box",
