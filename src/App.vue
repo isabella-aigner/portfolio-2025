@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
 import Navigation from "./components/Navigation.vue";
@@ -19,24 +19,13 @@ const switchLanguage = (lang: string) => {
 };
 
 // Update menu items whenever language changes
-const menuItems = ref([
+const menuItems = computed(() => ([
   { label: t("nav.home"), path: "/" },
   { label: t("nav.projects"), path: "/projects" },
   { label: t("nav.personalProjects"), path: "/personal-projects" },
   { label: t("nav.career"), path: "/career" },
   { label: t("nav.contact"), path: "/#contact" },
-]);
-
-// Watch for language changes and update menu items
-watch(locale, () => {
-  menuItems.value = [
-    { label: t("nav.home"), path: "/" },
-    { label: t("nav.projects"), path: "/projects" },
-    { label: t("nav.personalProjects"), path: "/personal-projects" },
-    { label: t("nav.career"), path: "/career" },
-    { label: t("nav.contact"), path: "/#contact" },
-  ];
-});
+]));
 </script>
 
 <template>
