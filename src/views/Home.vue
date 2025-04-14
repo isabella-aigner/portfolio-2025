@@ -12,6 +12,8 @@ import ScrollReveal from "../components/ScrollReveal.vue";
 import HeaderSlider from "../components/HeaderSlider.vue";
 import { useIsMobile } from '../composables/useIsModbile';
 
+import HeroSection from "../components/HeroSection.vue";
+
 const { t } = useI18n();
 const router = useRouter();
 
@@ -174,11 +176,18 @@ const softSkills: ComputedRef<string[]> = computed(() => ([
 
 <template>
   <div id="home" class="home">
+
+    <HeroSection />
+
+    	<div>after herosection</div>
+
+    <!--
     <HeaderSlider 
       :title="t('home.headerTitle')"
       :description="t('home.headerSubtitle')"
       :imageList="sliderImages"
       />
+      -->
 
     <ContentContainer>
       <section class="skills section">

@@ -29,6 +29,7 @@ const menuItems = computed(() => ([
 </script>
 
 <template>
+  <!--
   <header class="header">
     <Navigation
       :navItems="menuItems"
@@ -37,6 +38,7 @@ const menuItems = computed(() => ([
       @switch-language="switchLanguage"
     />
   </header>
+  -->
 
   <main>
     <router-view></router-view>

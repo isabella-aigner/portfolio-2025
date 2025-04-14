@@ -7,6 +7,8 @@ import SelectButton from 'primevue/selectbutton';
 import Dialog from 'primevue/dialog';
 import { i18n } from './i18n';
 import './style.css';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import App from './App.vue';
 
 import Home from './views/Home.vue';
@@ -28,11 +30,14 @@ const router = createRouter({
   },*/
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
 const app = createApp(App);
 
 app.use(PrimeVue);
 app.use(router);
 app.use(i18n);
+app.use(gsap);
 app.component('Button', Button);
 app.component('Card', Card);
 app.component('SelectButton', SelectButton);
