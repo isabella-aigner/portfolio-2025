@@ -9,6 +9,8 @@ module.exports = {
     },
     plugins: {
         tailwindcss: {},
-        autoprefixer: {}
+        autoprefixer: {},
+        "postcss-import": {},
+        "@tailwindcss/postcss": {}
     },
 }

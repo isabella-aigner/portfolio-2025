@@ -1,18 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import 'primevue/resources/themes/lara-light-blue/theme.css';
 @import 'primeicons/primeicons.css';
 
 :root {
-  --primary-color: theme('colors.primary');
-  --text-color: theme('colors.text');
-  --surface-ground: theme('colors.surface.ground');
-  --secondary-color: theme('colors.secondary');
-  --section-bg-1: theme('colors.surface.section1');
-  --section-bg-2: theme('colors.surface.section2');
-  --section-bg-3: theme('colors.surface.section3');
+  --primary-color: #4A6FA5;
+  --text-color: #334155;
+  --surface-ground: #F1F5F9;
+  --secondary-color: #94A3B8;
+  --section-bg-1: #ffffff;
+  --section-bg-2: #F8FAFC;
+  --section-bg-3: #EFF6FF;
+  --surface-section1: #ffffff;
   font-family: Roboto, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -28,7 +25,7 @@ body {
 
 main {
   min-height: calc(100vh - 60px);
-  padding-top: 60px; // Add padding to account for fixed header
+  padding-top: 60px;
 }
 
 
@@ -45,7 +42,7 @@ main {
 }
 
 .section-bg-1 {
-  @apply bg-surface-section1 relative;
+  @apply relative;
   background-image: radial-gradient(circle at 1px 1px,
       var(--primary-color) 1px,
       transparent 0);
@@ -62,7 +59,7 @@ main {
 }
 
 .section-bg-2 {
-  @apply bg-surface-section2 relative;
+  @apply relative;
   background-image: linear-gradient(45deg,
       var(--primary-color) 25%,
       transparent 25%),
@@ -83,7 +80,7 @@ main {
 }
 
 .section-bg-3 {
-  @apply bg-surface-section3 relative;
+  @apply relative;
   background-image: linear-gradient(30deg,
       var(--primary-color) 12%,
       transparent 12.5%,
@@ -144,7 +141,7 @@ main {
 
 @media (max-width: 768px) {
   main {
-    padding-top: 56px; // Adjust for smaller mobile header
+    padding-top: 56px;
   }
 
   .grid {

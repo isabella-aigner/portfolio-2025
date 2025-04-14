@@ -14,7 +14,6 @@
     }
 }
 
-// Desktop Navigation
 .desktop-nav {
     display: flex;
     align-items: center;
@@ -70,7 +69,6 @@
 
 }
 
-// Mobile Menu Button
 .mobile-menu-button {
     display: none;
     background: transparent;
@@ -83,7 +81,6 @@
     }
 }
 
-// Mobile Navigation
 .mobile-nav {
     position: absolute;
     top: 100%;
@@ -155,7 +152,6 @@
     }
 }
 
-// Slide down animation for mobile menu
 .mobile-nav .slide-down-enter-active,
 .mobile-nav .slide-down-leave-active {
     transition: all 0.3s ease-out;
@@ -171,8 +167,6 @@
     transform: translateY(-10px);
 }
 
-
-// Media queries for responsive design
 @media (max-width: 768px) {
     .desktop-nav {
         display: none;

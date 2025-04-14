@@ -3,8 +3,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    margin: -4rem -2rem 2rem; // Increased top margin to account for nav height
-
+    margin: -4rem -2rem 2rem;
     .header-overlay {
         position: absolute;
         top: 0;
@@ -24,7 +23,7 @@
         max-width: 800px;
         text-align: center;
         color: white;
-        padding-top: 2rem; // Add padding to account for nav overlap
+        padding-top: 2rem;
 
         h1 {
             font-size: 3rem;

@@ -1,3 +1,6 @@
+
+@import "tailwindcss";
+
 @import './styles/utilities.scss';
 @import './styles/btn.scss';
 

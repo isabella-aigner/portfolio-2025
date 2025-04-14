@@ -39,7 +39,6 @@ onUnmounted(() => {
           :alt="image.altText"
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
     </template>
 
