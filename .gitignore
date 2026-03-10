@@ -114,3 +114,5 @@ dist
 # Temporary folders
 tmp/
 temp/
+# Claude Code local settings (contains API tokens)
+.claude/
