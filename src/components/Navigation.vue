@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { NavItem } from "../models/NavItem";
 import { ref, defineProps } from "vue";
 import { LanguageItem } from "../models/LanguageItem";
 
 const router = useRouter();
+const route = useRoute();
 
 const props = defineProps<{
   navItems: NavItem[];
@@ -52,7 +53,7 @@ const handleNavigation = (path: string) => {
           v-for="item in navItems"
           :key="item.path"
           :label="item.label"
-          :class="{ active: $route.path === item.path }"
+          :class="{ active: route.path === item.path }"
           link
           @click="handleNavigation(item.path)"
         />
@@ -84,7 +85,7 @@ const handleNavigation = (path: string) => {
               v-for="item in navItems"
               :key="item.path"
               :label="item.label"
-              :class="{ active: $route.path === item.path }"
+              :class="{ active: route.path === item.path }"
               class="mobile-nav-item"
               link
               @click="handleNavigation(item.path)"

@@ -1,5 +1,7 @@
 
 @import "tailwindcss";
+@config "../tailwind.config.js";
+@plugin "@tailwindcss/forms";
 
 @import './styles/utilities.scss';
 @import './styles/btn.scss';
@@ -25,3 +27,4 @@
 
 /*---- new ---*/
 @import './styles/components/dynamicHero.scss';
+@import './styles/components/home.scss';

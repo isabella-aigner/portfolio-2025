@@ -9,9 +9,8 @@ export default defineConfig({
     vue(),
     imagePresets({
       default: widthPreset({
-        class: 'responsive-image',
         widths: [320, 640, 960],
-        formats: ['webp', 'jpeg'],
+        formats: { webp: { quality: 80 }, jpeg: { quality: 80 } },
       }),
     }),
     tailwindcss(),

@@ -6,29 +6,51 @@
     flex-wrap: wrap;
 
     .filter-group-el {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
 
 .filter-button {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    font-weight: 700;
-    padding: 0.5rem 1rem;
+    background: #728492;
+    color: #D8EBFF;
+    border: none;
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: background 0.2s ease, color 0.2s ease;
 
     &:hover {
-        background: var(--primary-color);
-        color: white;
+        background: #429EC8;
+        color: #D8EBFF;
     }
 
     &.active {
-        background: var(--primary-color);
-        color: white;
+        background: #429EC8;
+        color: #D8EBFF;
+        font-weight: 600;
 
         &:hover {
-            background: white;
-            color: var(--primary-color);
+            background: #3589b0;
+            color: #D8EBFF;
+        }
+    }
+
+    // PrimeVue button overrides
+    &.p-button {
+        background: #728492;
+        color: #D8EBFF;
+        border: none;
+
+        &:hover {
+            background: #429EC8;
+            color: #D8EBFF;
+        }
+
+        &.active {
+            background: #429EC8;
+            color: #D8EBFF;
         }
     }
 }

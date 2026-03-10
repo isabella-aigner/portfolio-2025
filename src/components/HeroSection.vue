@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref, ref } from 'vue';
+import { ref } from 'vue';
 
 import { HeroDynamicText } from '../models/HeroDynamicText';
 
@@ -80,15 +80,15 @@ const handleBtnClick = (url: string, type?: string) => {
                             <div class="hero-text col-start-2">
                                 <h1>
                                     <span class="block">
-                                        Hi, I'm 
+                                        Hi, I'm
                                         <span class="big-text lisu-bosa-medium">Isabella</span>
-                                    </span> 
+                                    </span>
                                     <span class="block">Mit Herz, Hirn und Hand</span>
                                     <span class="block hero-description">
                                         für
                                         <span class="slide">
                                             <span class="wrapper">
-                                                <span 
+                                                <span
                                                     v-for="(text, index) in dynamicText"
                                                     :key="index"
                                                     class="flex items-center md:gap-3 gap-1 pb-2 flex-nowrap">
@@ -102,8 +102,9 @@ const handleBtnClick = (url: string, type?: string) => {
                                         </span>
                                     </span>
                                 </h1>
+                                <p class="hero-subtitle">Mit innovativen Ideen bringe ich Projekte zuverlässig zum Erfolg</p>
                                 <div>
-                                    <button class="btn mt-5 md:mt-7 lg:mt-10">
+                                    <button class="hero-cta-btn mt-5 md:mt-7 lg:mt-10">
                                         Jetzt kontaktieren
                                     </button>
                                 </div>

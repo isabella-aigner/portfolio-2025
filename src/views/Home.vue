@@ -1,276 +1,325 @@
 <script setup lang="ts">
-import { computed, ComputedRef } from "vue";
-import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
-
-import { SkillItem } from "../models/SkillItem";
-import { ImageItem } from "../models/ImageItem";
-
-import ContactCard from "../components/ContactCard.vue";
-import ContentContainer from "../components/ContentContainer.vue";
-import ScrollReveal from "../components/ScrollReveal.vue";
-import HeaderSlider from "../components/HeaderSlider.vue";
-import { useIsMobile } from '../composables/useIsModbile';
-
 import HeroSection from "../components/HeroSection.vue";
 
-const { t } = useI18n();
 const router = useRouter();
 
+const skillPanels = [
+  {
+    title: "Frontend Development",
+    desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
+    tags: [
+      "CSS", "HTML", "TailwindCSS", "Bootstrap", "Javascript", "VanillaJS",
+      "TypeScript", "Twig", "Vue.js", "Vue CLI", "Webpack", "Vite", "Vitest",
+      "node.js", "nuxt.js", "express.js", "Symphony", "PHP", "Playwright",
+      "Typo3", "Stylelab", "Pimcore", "Pinia", "Web Components", "REST APIs",
+      "EsLint & Prettier", "Git", "Docker", "Jira", "Agile/Scrum",
+    ],
+  },
+  {
+    title: "UI/UX-Design",
+    desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
+    tags: [
+      "User Interface Design", "User Experience Design", "Wireframing",
+      "Prototyping", "Adobe XD", "Figma", "Usability Testing", "Personas",
+      "User Journeys", "Design Systems", "Responsive Design", "Material UI", "bolt.new",
+    ],
+  },
+  {
+    title: "Grafik- & Branddesign",
+    desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
+    tags: [
+      "Adobe Creative Suite", "Visual Design Prinzipien", "Brand Guidelines",
+      "Corporate Design", "Corporate Identity", "Layoutdesign",
+      "Typografie & Bildsprache", "Printdesign", "Webdesign", "Logodesign",
+      "Konzeptentwicklung", "Produktentwicklung",
+    ],
+  },
+  {
+    title: "Leidenschaften & Creative Skills",
+    desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
+    tags: [
+      "3D Sculpting", "Musikkomposition", "Musizieren", "Kreatives Schreiben",
+      "Kalligrafie", "Fotografie", "Illustration", "Painting",
+      "Vektorgrafik-Design", "Bildbearbeitung", "Generative Art",
+      "Schmuckdesign", "DYI Crafts", "Game Design", "Storytelling & Worldbuilding",
+      "Prompt Engineering",
+    ],
+  },
+];
 
-const { isMobile } = useIsMobile()
+const softSkillCards = [
+  {
+    icon: "✦",
+    title: "Qualitätsfokus & Auge für Detail",
+    desc: "Höchste Ansprüche an Präzision und Sorgfalt, um exzellente Ergebnisse sicherzustellen.",
+  },
+  {
+    icon: "💬",
+    title: "Kommunikations- & Kritikfähigkeit",
+    desc: "Offen, klar und konstruktiv kommunizieren, um Vertrauen zu stärken und kontinuierlich besser zu werden.",
+  },
+  {
+    icon: "💡",
+    title: "Lernbereitschaft & Kreatives Denken",
+    desc: "Neue Ansätze entwickeln und kontinuierlich Wissen erweitern, um innovative Lösungen zu schaffen.",
+  },
+];
 
-const navigateToProjects = (skillCode: string) => {
-  if (skillCode === "creative") {
-    router.push("/personal-projects");
-  } else {
-    router.push({
-      path: "/projects",
-      query: { filter: skillCode },
-    });
-  }
+const logos = [
+  "/assets/logos/logo-1.svg",
+  "/assets/logos/logo-2.svg",
+  "/assets/logos/logo-3.svg",
+  "/assets/logos/logo-4.svg",
+  "/assets/logos/logo-5.svg",
+  "/assets/logos/logo-6.svg",
+  "/assets/logos/logo-7.svg",
+];
+
+const handleContactSubmit = () => {
+  const el = document.querySelector("#contact-form") as HTMLFormElement;
+  const data = new FormData(el);
+  const subject = encodeURIComponent("Kontaktanfrage Portfolio");
+  const body = encodeURIComponent(
+    `Name: ${data.get("name")}\nE-Mail: ${data.get("email")}\n\n${data.get("message")}`
+  );
+  window.location.href = `mailto:isabella.aigner@gmail.com?subject=${subject}&body=${body}`;
 };
-
-const sliderImages: ComputedRef<ImageItem[]> = computed(() => [
-  {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/plantbase.jpg`,
-    altText: t('headerAltText.plantBase')
-  },
-  {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/invent.jpg`,
-    altText: t('headerAltText.invent')
-  },
-  {
-    imgLink: `./assets/header/${isMobile.value ? 'mobile' : 'desktop'}/republic.jpg`,
-    altText: t('headerAltText.republic')
-  }
-])
-
-const skills: ComputedRef<SkillItem[]> = computed(() => ([
-  {
-    name: t("home.skillsList.frontend"),
-    icon: "pi pi-desktop",
-    code: "frontend",
-    background:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=600",
-    items: [
-      "Vue.js",
-      "Vite",
-      "Webpack",
-      "Vitest",
-      "Pimcore",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3/SCSS",
-      "node.js",
-      "TailwindCSS",
-      "Bootstrap",
-      "Primevue",
-      "Twig",
-      "Stylelab",
-      "Symphony",
-      "PHP",
-      "Playwright",
-      "REST APIs",
-      "Web Components",
-      "Pinia",
-      "ESLint & Prettier",
-      "Jira",
-      "Git",
-      "Docker",
-      "Agile/Scrum",
-    ],
-  },
-  {
-    name: t("home.skillsList.uiux"),
-    icon: "pi pi-palette",
-    code: "uiux",
-    background:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
-    items: [
-      "User Interface Design",
-      "User Experience Design",
-      "Wireframing",
-      "Prototyping",
-      "Adobe XD",
-      "Figma",
-      "Design Systems",
-      "Material UI",
-      "Usability Testing",
-      "Personas",
-      "User Journeys",
-      "Responsive Design",
-      "bolt.new",
-    ],
-  },
-  {
-    name: t("home.skillsList.design"),
-    icon: "pi pi-image",
-    code: "design",
-    background:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800&h=600",
-    items: [
-      "Adobe Creative Suite",
-      "Brand Design",
-      t("home.skillElements.colorTheory"),
-      t("home.skillElements.layoutDesign"),
-      t("home.skillElements.visualDesignPrinciples"),
-      t("home.skillElements.logoDesign"),
-      "Brand Guidelines",
-      "Printdesign",
-      "Webdesign",
-      t("home.skillElements.typographyAndImagery"),
-      "Corporate Identity",
-      "Corporate Design",
-      t("home.skillElements.conceptDevelopment"),
-      t("home.skillElements.productDevelopment"),
-    ],
-  },
-  {
-    name: t("home.skillsList.creativeSkills"),
-    icon: "pi pi-heart",
-    code: "creative",
-    background:
-      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800&h=600",
-    items: [
-      "3D Sculpting",
-      t("home.skillElements.musicComposition"),
-      "Illustration",
-      "DYI Crafts",
-      t("home.skillElements.creativeWriting"),
-      t("home.skillElements.makingMusic"),
-      t("home.skillElements.photography"),
-      t("home.skillElements.imageEditing"),
-      t("home.skillElements.vectorGraficDesign"),
-      "Generative Art",
-      t("home.skillElements.calligraphy"),
-      t("home.skillElements.jewelryDesign"),
-      "Game Design",
-      "Painting",
-      "Storytelling & Worldbuilding",
-    ],
-  },
-]));
-
-const softSkills: ComputedRef<string[]> = computed(() => ([
-  t("home.softSkills.conflictResolutionSkills"),
-  t("home.softSkills.communicationSkills"),
-  t("home.softSkills.socialSensitivity"),
-  t("home.softSkills.criticalThinking"),
-  t("home.softSkills.adaptability"),
-  t("home.softSkills.structuredAndIndependentWork"),
-  t("home.softSkills.empathyAndActiveListening"),
-  t("home.softSkills.selfManagement"),
-  t("home.softSkills.goalOrientationAndResultFocus"),
-  t("home.softSkills.creativeThinking"),
-  t("home.softSkills.designThinking"),
-  t("home.softSkills.willingnessToLearn"),
-  t("home.softSkills.curiosity"),
-  t("home.softSkills.attentionToDetailAndPrecision"),
-  t("home.softSkills.logicalAndAnalyticalThinking"),
-  t("home.softSkills.receptivenessToCriticism"),
-  t("home.softSkills.disciplineAndReliability"),
-]));
 </script>
 
 <template>
   <div id="home" class="home">
 
-    <HeroSection />
+    <!-- Hero -->
+    <HeroSection title="Isabella Aigner" :dynamic-text="[]" />
 
-    	<div>after herosection</div>
+    <!-- Stats -->
+    <section class="stats-section">
+      <div class="page-inner">
+        <span class="section-tag">💼 Berufserfahrung</span>
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-num">7+</span>
+            <span class="stat-lbl">Grafik Design</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-lbl">Frontend-Dev</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-lbl">UI/UX-Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--
-    <HeaderSlider 
-      :title="t('home.headerTitle')"
-      :description="t('home.headerSubtitle')"
-      :imageList="sliderImages"
-      />
-      -->
-
-    <ContentContainer>
-      <section class="skills section">
-        <ScrollReveal>
-          <h2 class="text-center font-bold m-6 text-xl">{{ t("home.skills") }}</h2>
-        </ScrollReveal>
-
-        <!-- Main Skills -->
-        <div class="grid grid-cols-2">
-          <ScrollReveal
-            v-for="(skill, index) in skills"
-            :key="skill.name"
-            :delay="index * 100"
-            direction="up"
-          >
-            <Card class="skill-card" @click="navigateToProjects(skill.code)">
-              <template #header>
-                <div
-                  class="skill-header"
-                  :style="{ backgroundImage: `url(${skill.background})` }"
-                >
-                  <div class="skill-overlay">
-                    <i :class="skill.icon"></i>
-                  </div>
-                </div>
-              </template>
-              <template #title>
-                {{ skill.name }}
-              </template>
-              <template #content>
-                <div class="skill-items">
-                  <span v-for="item in skill.items" :key="item" class="skill-item">
-                    {{ item }}
-                  </span>
-                </div>
-              </template>
-            </Card>
-          </ScrollReveal>
+    <!-- Featured Projects -->
+    <section class="projects-section">
+      <div class="page-inner">
+        <div class="projects-header">
+          <span class="section-tag">💼 Projekte</span>
+          <button class="btn-outline btn-outline-sm" @click="router.push('/projects')">
+            Alle Projekte einsehen <span class="arrow">→</span>
+          </button>
         </div>
 
-        <!-- Additional Skills -->
-        <div class="additional-skills">
-          <ScrollReveal direction="right" :delay="200">
-            <Card>
-              <template #title>
-                <div class="section-title">
-                  <i class="pi pi-users"></i>
-                  <span>{{ t('home.softSkillTitle') }}</span>
-                </div>
-              </template>
-              <template #content>
-                <div class="skill-items">
-                  <span v-for="skill in softSkills" :key="skill" class="skill-item tool">
-                    {{ skill }}
-                  </span>
-                </div>
-              </template>
-            </Card>
-          </ScrollReveal>
-        </div>
-      </section>
+        <div class="projects-grid">
+          <div class="proj-card proj-large" @click="router.push('/projects')">
+            <div class="proj-img-wrap">
+              <img src="/assets/projects/more/MOREBanner.jpg" alt="MORE" />
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title">Multimodale Gesundheitsforschung leicht gemacht mit MORE.</h3>
+              <p class="proj-desc">Eine Web- und Mobile-App zur Erfassung, Verwaltung und Analyse multimodaler Daten für interdisziplinäre Studien.</p>
+            </div>
+          </div>
 
-      <ScrollReveal>
-        <ContactCard />
-      </ScrollReveal>
-    </ContentContainer>
+          <div class="proj-right-col">
+            <div class="proj-card proj-small" @click="router.push('/projects')">
+              <div class="proj-img-wrap">
+                <img src="/assets/images/redlink-llm.jpg" alt="Whitepaper LLM" />
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Whitepaper zu LLM &amp; smarter Suche.</h3>
+              </div>
+            </div>
+            <div class="proj-card proj-small" @click="router.push('/projects')">
+              <div class="proj-img-wrap">
+                <img src="/assets/projects/plantbase/plantbase_mockup.jpg" alt="PlantBase" />
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">PlantBase – smarte Pflanzenpflege.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Marquee -->
+    <section class="logos-section">
+      <div class="logos-fade logos-fade-left"></div>
+      <div class="logos-track">
+        <div class="logos-strip">
+          <img v-for="src in logos" :key="'a-' + src" :src="src" alt="company logo" class="logo-item" />
+          <img v-for="src in logos" :key="'b-' + src" :src="src" alt="company logo" class="logo-item" />
+          <img v-for="src in logos" :key="'c-' + src" :src="src" alt="company logo" class="logo-item" />
+        </div>
+      </div>
+      <div class="logos-fade logos-fade-right"></div>
+    </section>
+
+    <!-- Soft Skills Cards -->
+    <section class="soft-skills-section">
+      <div class="page-inner">
+        <div class="soft-skills-grid">
+          <div v-for="card in softSkillCards" :key="card.title" class="soft-skill-card">
+            <div class="soft-skill-icon">{{ card.icon }}</div>
+            <div class="soft-skill-text">
+              <h3 class="soft-skill-title">{{ card.title }}</h3>
+              <p class="soft-skill-desc">{{ card.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV / Lebenslauf Preview -->
+    <section class="cv-section">
+      <div class="page-inner">
+        <div class="cv-head">
+          <span class="section-tag">💼 Lebenslauf</span>
+          <h2 class="section-h2">Professionelle Erfahrung</h2>
+        </div>
+        <div class="cv-cols">
+          <!-- Left: Testimonials -->
+          <div class="cv-testimonials">
+            <div class="testimonial-card testimonial-logo-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-company">redlink</p>
+              <img src="/assets/logos/logo-1.svg" alt="redlink" class="testimonial-logo" />
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">„Isabella kombiniert fundierte Frontend-Expertise mit ausgeprägtem Engagement und professionellem Teamgeist."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">„Mit kreativer Expertise, Zuverlässigkeit und ruhiger Ausstrahlung war Isabella eine wertvolle Unterstützung im Team."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">„Isabella erledigt Aufgaben effizient, verantwortungsvoll und auf höchstem Qualitätsniveau."</p>
+            </div>
+          </div>
+          <!-- Right: Timeline -->
+          <div class="cv-timeline">
+            <div class="cv-entry">
+              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-details">
+                <h3 class="cv-entry-title">Frontend Developer, UI/UX &amp; Grafik Design</h3>
+                <div class="cv-entry-date">📅 April 2022 – Heute · redlink GmbH</div>
+                <p class="cv-entry-label">Verantwortlichkeiten</p>
+                <p class="cv-entry-text">Erstellung und Konzipierung von interaktiven Software-Lösungen. Umsetzung, Testing und Weiterentwicklung von Applikationen mit Vue.js, TypeScript und modernen Web-Technologien.</p>
+              </div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-details">
+                <h3 class="cv-entry-title">Ausbildung: MTD (Hagenberg)</h3>
+                <div class="cv-entry-date">📅 Okt. 2018 – Jan. 2022 · FH Oberösterreich</div>
+                <p class="cv-entry-label">Schwerpunkte</p>
+                <p class="cv-entry-text">Nachgezogene Ausbildung, um die Technologiekompetenz zu schärfen. Schwerpunkte: Web- &amp; Frontend-Entwicklung, UI/UX-Design.</p>
+              </div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-details">
+                <h3 class="cv-entry-title">Grafikdesign &amp; Marketingmitarbeiterin</h3>
+                <div class="cv-entry-date">📅 Feb. 2015 – April 2017</div>
+                <p class="cv-entry-label">Verantwortlichkeiten</p>
+                <p class="cv-entry-text">Modernisierung und Entwicklung eines neuen Corporate Designs. Umsetzung der Geschäftsdrucksorten, Konzeption und Gestaltung von Printmedien und Webdesign.</p>
+              </div>
+            </div>
+            <button class="btn-outline" @click="router.push('/career')">
+              Lebenslauf einsehen <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Competencies -->
+    <section class="skills-section">
+      <div class="page-inner">
+        <div class="skills-head">
+          <span class="section-tag">🤝 Mein Techstack</span>
+          <h2 class="section-h2">Meine Kernkompetenzen</h2>
+        </div>
+        <!-- Core skill tiles -->
+        <div class="core-skills-tiles">
+          <div class="core-skill-tile">
+            <img src="/assets/images/skill-vue.png" alt="Vue.js" />
+          </div>
+          <div class="core-skill-tile">
+            <img src="/assets/images/skill-vite.png" alt="Vite" />
+          </div>
+          <div class="core-skill-tile">
+            <img src="/assets/images/skill-frontend.png" alt="Frontend Dev" />
+          </div>
+          <div class="core-skill-tile">
+            <img src="/assets/images/skill-figma.png" alt="Figma" />
+          </div>
+          <div class="core-skill-tile">
+            <img src="/assets/images/skill-adobe.png" alt="Adobe CC" />
+          </div>
+        </div>
+        <!-- Competencies overview -->
+        <h3 class="skills-sub-heading">Kompetenzen im Überblick</h3>
+        <div class="skills-grid">
+          <div v-for="panel in skillPanels" :key="panel.title" class="skill-panel">
+            <h3 class="skill-panel-title">{{ panel.title }}</h3>
+            <p class="skill-panel-desc">{{ panel.desc }}</p>
+            <div class="skill-tags">
+              <span v-for="tag in panel.tags" :key="tag" class="skill-tag">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+      <div class="page-inner">
+        <div class="contact-head">
+          <span class="section-tag">💬 Hast du Fragen oder Ideen? Lass uns reden! 🚀</span>
+          <h2 class="section-h2">Jetzt kontaktieren!</h2>
+        </div>
+        <div class="contact-cols">
+          <div class="contact-form-wrap">
+            <form id="contact-form" @submit.prevent="handleContactSubmit">
+              <div class="form-group">
+                <label>Name</label>
+                <input name="name" type="text" placeholder="Vorname Nachname" required />
+              </div>
+              <div class="form-group">
+                <label>E-Mail</label>
+                <input name="email" type="email" placeholder="E-Mail Adresse" required />
+              </div>
+              <div class="form-group">
+                <label>Nachricht</label>
+                <textarea name="message" placeholder="Was möchtest du mir sagen?" required></textarea>
+              </div>
+              <button type="submit" class="contact-btn">Nachricht senden →</button>
+            </form>
+          </div>
+          <div class="contact-img-wrap">
+            <img src="/assets/images/contact-form-bg.jpg" alt="Isabella Aigner" />
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
-
-<style scoped lang="scss">
-@media (max-width: 768px) {
-  .hero {
-    h1 {
-      font-size: 2rem;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-    }
-  }
-
-  .grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-</style>
