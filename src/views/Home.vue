@@ -192,29 +192,17 @@ const handleContactSubmit = () => {
           <span class="section-tag">💼 Lebenslauf</span>
           <h2 class="section-h2">Professionelle Erfahrung</h2>
         </div>
-        <div class="cv-cols">
-          <!-- Left: Testimonials -->
-          <div class="cv-testimonials">
-            <div class="testimonial-card testimonial-logo-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-company">redlink</p>
-              <img src="/assets/logos/logo-1.svg" alt="redlink" class="testimonial-logo" />
+
+        <div class="cv-timeline-rows">
+          <!-- Row 1: redlink — has testimonial -->
+          <div class="cv-timeline-row">
+            <div class="cv-row-aside">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Isabella kombiniert fundierte Frontend-Expertise mit ausgeprägtem Engagement und professionellem Teamgeist."</p>
+                <img src="/assets/logos/logo-1.svg" alt="redlink" class="testimonial-logo" />
+              </div>
             </div>
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">„Isabella kombiniert fundierte Frontend-Expertise mit ausgeprägtem Engagement und professionellem Teamgeist."</p>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">„Mit kreativer Expertise, Zuverlässigkeit und ruhiger Ausstrahlung war Isabella eine wertvolle Unterstützung im Team."</p>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">„Isabella erledigt Aufgaben effizient, verantwortungsvoll und auf höchstem Qualitätsniveau."</p>
-            </div>
-          </div>
-          <!-- Right: Timeline -->
-          <div class="cv-timeline">
             <div class="cv-entry">
               <div class="cv-entry-dot"></div>
               <div class="cv-entry-details">
@@ -224,6 +212,11 @@ const handleContactSubmit = () => {
                 <p class="cv-entry-text">Erstellung und Konzipierung von interaktiven Software-Lösungen. Umsetzung, Testing und Weiterentwicklung von Applikationen mit Vue.js, TypeScript und modernen Web-Technologien.</p>
               </div>
             </div>
+          </div>
+
+          <!-- Row 2: MTD — no testimonial -->
+          <div class="cv-timeline-row">
+            <div class="cv-row-aside"></div>
             <div class="cv-entry">
               <div class="cv-entry-dot"></div>
               <div class="cv-entry-details">
@@ -233,6 +226,11 @@ const handleContactSubmit = () => {
                 <p class="cv-entry-text">Nachgezogene Ausbildung, um die Technologiekompetenz zu schärfen. Schwerpunkte: Web- &amp; Frontend-Entwicklung, UI/UX-Design.</p>
               </div>
             </div>
+          </div>
+
+          <!-- Row 3: Grafik — no testimonial -->
+          <div class="cv-timeline-row">
+            <div class="cv-row-aside"></div>
             <div class="cv-entry">
               <div class="cv-entry-dot"></div>
               <div class="cv-entry-details">
@@ -242,11 +240,12 @@ const handleContactSubmit = () => {
                 <p class="cv-entry-text">Modernisierung und Entwicklung eines neuen Corporate Designs. Umsetzung der Geschäftsdrucksorten, Konzeption und Gestaltung von Printmedien und Webdesign.</p>
               </div>
             </div>
-            <button class="btn-outline" @click="router.push('/career')">
-              Lebenslauf einsehen <span class="arrow">→</span>
-            </button>
           </div>
         </div>
+
+        <button class="btn-outline" @click="router.push('/career')">
+          Lebenslauf einsehen <span class="arrow">→</span>
+        </button>
       </div>
     </section>
 

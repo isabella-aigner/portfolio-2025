@@ -327,7 +327,9 @@ const toggleProject = (project: ProjectItem) => {
                         :key="project.id"
                         class="proj-card"
                         :class="{ 'is-open': selectedProject?.id === project.id }"
-                        :id="`${project.id}-header`">
+                        :id="`${project.id}-header`"
+                        @click="selectedProject?.id !== project.id && toggleProject(project)"
+                        :style="selectedProject?.id !== project.id ? 'cursor: pointer' : ''">
 
                         <!-- ── COLLAPSED STATE (image + info + arrow) ── -->
                         <template v-if="selectedProject?.id !== project.id">
@@ -351,7 +353,7 @@ const toggleProject = (project: ProjectItem) => {
                             </div>
 
                             <div class="proj-card-footer">
-                                <button class="proj-toggle-btn" @click="toggleProject(project)">
+                                <button class="proj-toggle-btn" @click.stop="toggleProject(project)">
                                     <span>Details ansehen</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -424,7 +426,8 @@ const toggleProject = (project: ProjectItem) => {
                                             :href="link.url"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            class="proj-link-btn">
+                                            class="proj-link-btn"
+                                            @click.stop>
                                             {{ link.title }} →
                                         </a>
                                     </div>

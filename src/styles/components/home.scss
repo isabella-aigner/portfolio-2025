@@ -88,9 +88,9 @@
   background: transparent;
   border: 1px solid rgba(216,235,255,0.25);
   color: #D8EBFF;
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  padding: 10px 24px;
+  padding: 8px 18px;
   border-radius: 8px;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
@@ -102,8 +102,8 @@
   }
 
   &.btn-outline-sm {
-    font-size: 1rem;
-    padding: 8px 18px;
+    font-size: 0.875rem;
+    padding: 6px 14px;
   }
 
   .arrow { font-size: 1.1em; }
@@ -527,52 +527,35 @@
     margin-bottom: 40px;
   }
 
-  .cv-cols {
+  /* Paired rows: each row = optional testimonial (left) + timeline entry (right) */
+  .cv-timeline-rows {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .cv-timeline-row {
     display: grid;
     grid-template-columns: 380fr 772fr;
     gap: 40px;
-    align-items: start;
+    align-items: flex-start;
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
+
+      .cv-row-aside { display: none; }
     }
   }
 
-  .cv-testimonials {
+  .cv-row-aside {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    padding-top: 2px;
   }
 
-  .cv-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 19px;
-      top: 40px;
-      bottom: 40px;
-      width: 2px;
-      border-radius: 2px;
-      background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        #122E5B 8%,
-        #F37021 40%,
-        #C22132 100%
-      );
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .btn-outline {
-      margin-top: 30px;
-      align-self: flex-start;
-    }
+  .btn-outline {
+    align-self: flex-start;
   }
 }
 
