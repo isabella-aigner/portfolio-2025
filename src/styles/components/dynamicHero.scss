@@ -23,7 +23,11 @@
       }
 
       .hero-img {
-        @apply absolute z-5 left-[30vw] top-[-5vh] xl:left-0 xl:top-0 overflow-hidden xl:h-dvh h-[40vh] lg:block w-full
+        @apply absolute z-5 left-[30vw] top-[-5vh] xl:left-0 xl:top-0 overflow-hidden xl:h-dvh h-[40vh] lg:block;
+        width: 100%;
+        @media (min-width: 1280px) {
+          width: 44%;
+        }
       }
       .hero-info {
         @apply md:h-dvh h-[80vh] flex justify-center items-center lg:justify-end mr-[10vw];

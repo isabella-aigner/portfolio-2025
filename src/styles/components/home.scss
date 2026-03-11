@@ -405,6 +405,9 @@
   background: #0D1A2C;
   padding: 0 0 110px;
   scroll-margin-top: 70px;
+  max-width: none;
+  margin-left: unset;
+  margin-right: unset;
 
   .contact-head {
     display: flex;
@@ -418,9 +421,9 @@
 
   .contact-cols {
     display: grid;
-    grid-template-columns: 558fr 662fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: stretch;
+    align-items: start;
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
@@ -428,17 +431,16 @@
   }
 
   .contact-form-wrap {
-    background: rgb(37, 51, 73);
-    border-radius: 8px;
+    background: #253349;
+    border-radius: 4px;
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 16px;
     }
   }
 
@@ -448,23 +450,24 @@
     gap: 8px;
 
     label {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #D8EBFF;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: rgba(216,235,255,0.75);
     }
 
     input, textarea {
-      background: #D8EBFF;
+      background: #D9ECFF;
       border: none;
       border-radius: 6px;
-      padding: 17px;
+      padding: 16px 17px;
       color: #1F2E42;
       font-size: 1rem;
       font-family: inherit;
       outline: none;
+      width: 100%;
       transition: opacity 0.2s;
 
-      &::placeholder { color: rgb(53,64,83); }
+      &::placeholder { color: rgba(31,46,66,0.55); }
       &:focus { opacity: 0.9; }
     }
 
@@ -476,11 +479,12 @@
 
   .contact-btn {
     width: 100%;
+    margin-top: 8px;
     padding: 14px 24px;
-    background: #ffffff;
-    color: #000000;
+    background: linear-gradient(180deg, #EBF3FA 0%, #DFEDFA 100%);
+    color: #1F2E42;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     font-family: inherit;
@@ -495,7 +499,7 @@
   }
 
   .contact-img-wrap {
-    border-radius: 8px;
+    border-radius: 20px;
     overflow: hidden;
 
     img {
@@ -544,6 +548,26 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      bottom: 40px;
+      width: 2px;
+      border-radius: 2px;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #122E5B 8%,
+        #F37021 40%,
+        #C22132 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
 
     .btn-outline {
       margin-top: 30px;
@@ -590,68 +614,69 @@
   }
 }
 
-.cv-entry {
+.cv-section .cv-entry {
   display: flex;
-  gap: 20px;
-  padding: 0 0 30px;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
   position: relative;
+  z-index: 1;
 
-  &:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 9px;
-    top: 20px;
-    bottom: 0;
-    width: 2px;
-    background: rgba(216,235,255,0.15);
+  &:last-of-type {
+    padding-bottom: 0;
   }
 
   .cv-entry-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #429EC8;
-    border: 3px solid #0D1A2C;
-    box-shadow: 0 0 0 2px rgba(66,158,200,0.4);
     flex-shrink: 0;
-    margin-top: 4px;
-    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F37021 0%, #C22132 100%);
+    box-shadow: 0 0 0 4px rgba(13, 26, 44, 0.8);
+    z-index: 2;
+    position: relative;
   }
 
   .cv-entry-details {
     flex: 1;
+    background: #1D2B40;
+    border-radius: 10px;
+    padding: 14px 18px;
+    border: 1px solid rgba(150, 166, 198, 0.08);
+    margin-top: 2px;
   }
 
   .cv-entry-title {
-    font-size: 1.375rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     line-height: 1.3;
   }
 
   .cv-entry-date {
-    font-size: 0.9375rem;
-    color: rgba(216,235,255,0.65);
-    margin-bottom: 12px;
+    font-size: 0.8125rem;
+    color: #839CB5;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .cv-entry-label {
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: #D8EBFF;
-    margin: 0 0 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     font-size: 0.75rem;
-    opacity: 0.7;
+    font-weight: 700;
+    color: #429EC8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 4px;
   }
 
   .cv-entry-text {
-    font-size: 0.9375rem;
-    color: rgba(216,235,255,0.8);
+    font-size: 0.875rem;
+    color: rgba(216,235,255,0.75);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 }
 
