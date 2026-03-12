@@ -287,8 +287,13 @@ const toggleProject = (project: ProjectItem) => {
 
         <!-- Page Header — text only, no image -->
         <section class="proj-page-header">
-            <div class="page-inner">
-                <span class="section-tag">💼 Portfolio &amp; Playground</span>
+            <div class="absolute top-0 left-0 pointer-events-none">
+                <img src="/assets/images/bg.png" alt="" />
+            </div>
+            <div class="absolute top-[-50px] right-0 pointer-events-none">
+                <img src="/assets/images/header-lines.svg" alt="" />
+            </div>
+            <div class="page-inner relative z-10">
                 <h1 class="proj-page-title">Meine Projekte</h1>
                 <p class="proj-page-subtitle">Einblicke in kreative und technische Arbeiten aus Webentwicklung, UI/UX-Design und Grafikdesign.</p>
             </div>

@@ -252,8 +252,13 @@ const hasLeftMedia = (project: ProjectItem) =>
 
         <!-- Page Header -->
         <section class="proj-page-header">
-            <div class="page-inner">
-                <span class="section-tag">🎨 Playground</span>
+            <div class="absolute top-0 left-0 pointer-events-none">
+                <img src="/assets/images/bg.png" alt="" />
+            </div>
+            <div class="absolute top-[-50px] right-0 pointer-events-none">
+                <img src="/assets/images/header-lines.svg" alt="" />
+            </div>
+            <div class="page-inner relative z-10">
                 <h1 class="proj-page-title">Persönliche Projekte</h1>
                 <p class="proj-page-subtitle">Kreative Experimente, Hobbyprojekte und persönliche Arbeiten aus Fotografie, Illustration, Audio und mehr.</p>
             </div>

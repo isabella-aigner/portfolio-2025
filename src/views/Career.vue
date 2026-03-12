@@ -209,10 +209,9 @@ onMounted(async () => {
 
     // --- Page header ---
     gsap.timeline({ defaults: { ease: "power3.out" } })
-      .from(".cv-page-header .section-tag", { y: 16, opacity: 0, duration: 0.6 }, 0)
-      .from(".cv-page-title", { y: 30, opacity: 0, duration: 0.7 }, 0.15)
+      .from(".cv-page-title", { y: 30, opacity: 0, duration: 0.7 }, 0)
       .from(".cv-page-subtitle", { y: 20, opacity: 0, duration: 0.6 }, 0.3)
-      .from(".cv-download-btn", { y: 16, opacity: 0, duration: 0.5 }, 0.45);
+      .from(".cv-page-header .cv-download-btn", { y: 16, opacity: 0, duration: 0.5, clearProps: "all" }, 0.45);
 
     // Bio
     gsap.from(".cv-bio-title", {
@@ -368,8 +367,13 @@ const toolLevels = [
 
     <!-- Page Header -->
     <section class="cv-page-header">
-      <div class="page-inner">
-        <span class="section-tag">💼 Werdegang</span>
+      <div class="absolute top-0 left-0 pointer-events-none">
+        <img src="/assets/images/bg.png" alt="" />
+      </div>
+      <div class="absolute top-[-50px] right-0 pointer-events-none">
+        <img src="/assets/images/header-lines.svg" alt="" />
+      </div>
+      <div class="page-inner relative z-10">
         <h1 class="cv-page-title">Werdegang</h1>
         <p class="cv-page-subtitle">Meine Reise: Design, Code und Kreativität</p>
         <a class="cv-download-btn" href="/cv-isabella-aigner.pdf" target="_blank" rel="noopener noreferrer">
@@ -377,6 +381,7 @@ const toolLevels = [
         </a>
       </div>
     </section>
+
 
     <!-- Bio -->
     <section class="cv-bio-section">
