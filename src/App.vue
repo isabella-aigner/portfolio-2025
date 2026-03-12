@@ -50,3 +50,24 @@ const menuItems = computed(() => ([
     <p>© {{ new Date().getFullYear() }} Isabella Aigner. All rights reserved.</p>
   </footer>
 </template>
+
+<style>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0D1A2C;
+  color: #D8EBFF;
+  font-size: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+</style>

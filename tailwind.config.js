@@ -7,15 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#4A6FA5',
-        secondary: '#94A3B8',
-        text: '#334155',
-        surface: {
-          ground: '#F1F5F9',
-          section1: '#ffffff',
-          section2: '#F8FAFC',
-          section3: '#EFF6FF',
-        },
+        'bg-base':    '#0D1A2C',
+        'bg-card':    '#1D2B40',
+        'bg-section': '#122033',
+        'primary':    '#429EC8',
+        'primary-dark': '#4A6FA5',
+        'text-light': '#D8EBFF',
+        'text-muted': '#839CB5',
+        'nav-text':   '#1F2E42',
+      },
+      fontFamily: {
+        sans: ['Inter', 'Roboto', 'sans-serif'],
       },
     },
   },

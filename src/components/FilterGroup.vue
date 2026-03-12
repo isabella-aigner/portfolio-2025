@@ -29,9 +29,9 @@ const toggleFilter = (filter: string) => {
 </script>
 
 <template>
-  <div class="filter-group">
+  <div class="flex gap-2 justify-center mb-8 flex-wrap">
     <TransitionGroup name="tag">
-      <div class="flex gap-2 filter-group-el" :class="styleModifier">
+      <div class="flex gap-2 flex-wrap justify-center" :class="styleModifier">
         <template
           v-for="(filter) in filters"
           :key="filter.code">

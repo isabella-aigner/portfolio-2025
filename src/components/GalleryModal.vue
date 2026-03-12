@@ -36,7 +36,7 @@ const previousImage = () => {
 
 onMounted(() => {
   if (props.selectedProject?.gallery)
-    selectedImage.value = props.selectedProject?.gallery[0] 
+    selectedImage.value = props.selectedProject?.gallery[0]
 })
 
 const emit = defineEmits<{
@@ -45,51 +45,79 @@ const emit = defineEmits<{
 </script>
 
 <template>
-      <Dialog
-       :visible="isVisible"
-        modal
-        :dismissableMask="true"
-        class="gallery-dialog"
-      >
-        <template #header>
-          <div class="gallery-dialog-header">
-            <h3>{{ selectedProject?.title }} Gallery</h3>
-            <div class="gallery-dialog-header-right">
-              <span class="image-counter" v-if="selectedProject?.gallery">
-                {{ currentImageIndex + 1 }} / {{ selectedProject.gallery.length }}
-              </span>
-              <Button
-                class="btn close-btn"
-                icon="pi pi-times"
-                @click="emit('closeGalleryModal')"
-                />
-            </div>
-          </div>
-          <div class="gallery-white-line" />
-        </template>
-
-        <div class="gallery-dialog-content">
-          <Button
-            icon="pi pi-chevron-left"
-            class="gallery-nav-button prev"
-            @click="previousImage"
-            :disabled="!selectedProject?.gallery?.length"
-          />
-
-          <div class="gallery-image-container">
-            <img
-              :src="selectedImage || ''"
-              :alt="selectedProject?.title"
-              class="gallery-dialog-image"
-            />
-          </div>
-
-          <Button
-            icon="pi pi-chevron-right"
-            class="gallery-nav-button next"
-            @click="nextImage"
-            :disabled="!selectedProject?.gallery?.length"
-          />
+  <Dialog
+    :visible="isVisible"
+    modal
+    :dismissableMask="true"
+    class="gallery-dialog"
+  >
+    <template #header>
+      <div class="flex items-center justify-between w-full px-8 py-4 text-white">
+        <h3 class="m-0 font-semibold text-lg">{{ selectedProject?.title }} Gallery</h3>
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-white/70" v-if="selectedProject?.gallery">
+            {{ currentImageIndex + 1 }} / {{ selectedProject.gallery.length }}
+          </span>
+          <button
+            class="text-white bg-transparent border-none p-1 cursor-pointer hover:opacity-70 transition-opacity"
+            @click="emit('closeGalleryModal')"
+          >
+            <i class="pi pi-times"></i>
+          </button>
         </div>
-      </Dialog>
+      </div>
+      <div class="w-full h-px bg-white/30" />
+    </template>
+
+    <div class="relative flex items-center justify-center h-full">
+      <button
+        class="gallery-nav-button absolute left-[5px] top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center text-white border-none cursor-pointer transition-all hover:bg-[#429EC8] hover:scale-110 opacity-30 hover:opacity-100 disabled:opacity-20 disabled:cursor-not-allowed"
+        @click="previousImage"
+        :disabled="!selectedProject?.gallery?.length"
+      >
+        <i class="pi pi-chevron-left"></i>
+      </button>
+
+      <div class="flex-1 flex justify-center items-center h-full">
+        <img
+          :src="selectedImage || ''"
+          :alt="selectedProject?.title"
+          class="max-w-full object-contain rounded"
+        />
+      </div>
+
+      <button
+        class="gallery-nav-button absolute right-[5px] top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center text-white border-none cursor-pointer transition-all hover:bg-[#429EC8] hover:scale-110 opacity-30 hover:opacity-100 disabled:opacity-20 disabled:cursor-not-allowed"
+        @click="nextImage"
+        :disabled="!selectedProject?.gallery?.length"
+      >
+        <i class="pi pi-chevron-right"></i>
+      </button>
+    </div>
+  </Dialog>
 </template>
+
+<style scoped>
+:deep(.gallery-dialog) {
+  background: #32343a;
+  color: white;
+  width: 98vw;
+  height: 85vh;
+  padding: 0;
+  margin: 0;
+}
+:deep(.gallery-dialog .p-dialog-header),
+:deep(.gallery-dialog .p-dialog-content),
+:deep(.gallery-dialog .p-dialog-footer) {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+:deep(.gallery-dialog .p-dialog-header-icons) {
+  display: none;
+}
+:deep(.gallery-dialog .p-dialog-content) {
+  height: 100%;
+}
+</style>

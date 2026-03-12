@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     ref="elementRef"
     :class="[
       'scroll-reveal',
@@ -57,3 +57,31 @@ onUnmounted(() => {
   }
 })
 </script>
+
+<style scoped>
+.scroll-reveal {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.reveal-up {
+  transform: translateY(50px);
+}
+
+.scroll-reveal.reveal-down {
+  transform: translateY(-50px);
+}
+
+.scroll-reveal.reveal-left {
+  transform: translateX(50px);
+}
+
+.scroll-reveal.reveal-right {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal.reveal-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+</style>
