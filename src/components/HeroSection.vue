@@ -47,7 +47,7 @@ const handleBtnClick = (url: string, type?: string) => {
         </div>
 
         <!--social media section rechts-->
-        <div class="absolute right-20 top-70 z-30">
+        <div class="hidden md:block absolute right-20 top-70 z-30">
             <div class="flex flex-col gap-5 justify-center items-center">
                 <div class="flex flex-col gap-3">
                     <button 

@@ -792,3 +792,49 @@
     height: 160px;
   }
 }
+
+/* =============================================
+   MOBILE RESPONSIVE OVERRIDES (≤ 768px)
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* Section spacing */
+  .stats-section          { padding-top: 60px; }
+  .projects-section       { padding-top: 60px; }
+  .logos-section          { margin-top: 60px; padding: 36px 0; }
+  .soft-skills-section    { padding-top: 60px; }
+  .skills-section         { padding: 60px 0; }
+  .cv-section             { padding-top: 60px; }
+  #contact.contact-section {
+    padding-bottom: 60px;
+    .contact-head { padding-top: 60px; margin-bottom: 36px; }
+    .contact-form-wrap { padding: 24px 20px; }
+  }
+
+  /* Headings */
+  .section-h2             { font-size: 1.875rem; }
+  .skills-head .section-h2 { font-size: 1.875rem; }
+  .skills-sub-heading     { font-size: 1.375rem; margin: 32px 0 16px; }
+
+  /* Stats */
+  .stat-num               { font-size: 2rem; }
+  .stat-lbl               { font-size: 1.25rem; }
+
+  /* Project images: less tall when stacked */
+  .proj-card.proj-large .proj-img-wrap img { height: 220px; }
+  .proj-card.proj-small .proj-img-wrap img { height: 160px; }
+
+  /* Logo marquee fade narrower on small screens */
+  .logos-fade { width: 60px; }
+
+  /* Soft skills */
+  .soft-skill-card        { padding: 20px; gap: 14px; }
+  .soft-skill-title       { font-size: 1.25rem; }
+
+  /* Skill panels */
+  .skill-panel            { padding: 20px; gap: 18px; }
+  .skill-panel-title      { font-size: 1.375rem; }
+
+  /* CV section */
+  .cv-section .cv-timeline-rows { gap: 24px; }
+}
