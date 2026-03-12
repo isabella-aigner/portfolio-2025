@@ -1,4 +1,23 @@
 /* =============================================
+   PAGE TRANSITIONS
+   ============================================= */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* =============================================
    HOME – matches Figma desktop layout
    Content width: 1240px centred in 1440px frame
    Main vertical gap between sections: 110px

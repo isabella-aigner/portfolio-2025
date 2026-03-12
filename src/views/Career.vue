@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted, nextTick } from "vue";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const showAllExperience = ref(false);
 const showAllEducation = ref(false);
@@ -198,6 +200,84 @@ const visibleExperience = computed(() =>
 const visibleEducation = computed(() =>
   showAllEducation.value ? educationEntries : educationEntries.slice(0, INITIAL_EDU)
 );
+
+let ctx: gsap.Context;
+
+onMounted(async () => {
+  await nextTick();
+  ctx = gsap.context(() => {
+
+    // --- Page header ---
+    gsap.timeline({ defaults: { ease: "power3.out" } })
+      .from(".cv-page-header .section-tag", { y: 16, opacity: 0, duration: 0.6 }, 0)
+      .from(".cv-page-title", { y: 30, opacity: 0, duration: 0.7 }, 0.15)
+      .from(".cv-page-subtitle", { y: 20, opacity: 0, duration: 0.6 }, 0.3)
+      .from(".cv-download-btn", { y: 16, opacity: 0, duration: 0.5 }, 0.45);
+
+    // Bio
+    gsap.from(".cv-bio-title", {
+      scrollTrigger: { trigger: ".cv-bio-section", start: "top 88%" },
+      y: 24, opacity: 0, duration: 0.7, ease: "power3.out",
+    });
+    gsap.from(".cv-bio-text", {
+      scrollTrigger: { trigger: ".cv-bio-section", start: "top 82%" },
+      y: 20, opacity: 0, duration: 0.7, ease: "power3.out", delay: 0.1,
+    });
+
+    // Timeline entries (work + edu)
+    gsap.utils.toArray<Element>(".cv-entry").forEach((entry, i) => {
+      gsap.from(entry, {
+        scrollTrigger: { trigger: entry, start: "top 90%" },
+        x: -28, opacity: 0, duration: 0.65,
+        ease: "power3.out",
+        delay: Math.min(i * 0.04, 0.25),
+      });
+    });
+
+    // Soft skills
+    gsap.from(".cv-soft-skill-card", {
+      scrollTrigger: { trigger: ".cv-soft-skills-section", start: "top 88%" },
+      y: 32, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.14,
+    });
+
+    // Skill level section heading
+    gsap.from(".cv-skill-levels-head", {
+      scrollTrigger: { trigger: ".cv-skill-levels-section", start: "top 88%" },
+      y: 20, opacity: 0, duration: 0.6, ease: "power3.out",
+    });
+
+    // Language dots — reveal with stagger
+    gsap.from(".cv-lang-item", {
+      scrollTrigger: { trigger: ".cv-lang-list", start: "top 88%" },
+      y: 16, opacity: 0, duration: 0.55, ease: "power3.out", stagger: 0.12,
+    });
+
+    // Tool bars — animate width from 0
+    gsap.utils.toArray<HTMLElement>(".cv-tool-bar-fill").forEach((bar) => {
+      const targetWidth = bar.style.width || "0%";
+      gsap.fromTo(bar,
+        { width: "0%" },
+        {
+          scrollTrigger: { trigger: bar, start: "top 92%" },
+          width: targetWidth,
+          duration: 1.1,
+          ease: "power3.out",
+        }
+      );
+    });
+
+    // Skill panels
+    gsap.from(".cv-skill-panel", {
+      scrollTrigger: { trigger: ".cv-skills-section", start: "top 88%" },
+      y: 30, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.12,
+    });
+
+  });
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 
 const skillPanels = [
   {

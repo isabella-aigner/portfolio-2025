@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
 import HeroSection from "../components/HeroSection.vue";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const router = useRouter();
 
@@ -79,6 +82,88 @@ const logos = [
   "/assets/logos/logo-6.svg",
   "/assets/logos/logo-7.svg",
 ];
+
+let ctx: gsap.Context;
+
+onMounted(async () => {
+  await nextTick();
+  ctx = gsap.context(() => {
+
+    // --- Hero entrance ---
+    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    heroTl
+      .from(".hero-img", { x: -60, opacity: 0, duration: 1.1 }, 0)
+      .from(".hero-text h1 .block", {
+        y: 28, opacity: 0, duration: 0.8, stagger: 0.14,
+      }, 0.2)
+      .from(".hero-subtitle", { y: 16, opacity: 0, duration: 0.7 }, 0.75)
+      .from(".hero-cta-btn", { y: 14, opacity: 0, duration: 0.6 }, 0.95)
+      .from(".hero-btn", { x: 20, opacity: 0, duration: 0.5, stagger: 0.1 }, 0.8);
+
+    // --- Shared scroll reveal helper ---
+    const reveal = (targets: string, vars?: gsap.TweenVars, triggerEl?: string) => {
+      gsap.from(targets, {
+        scrollTrigger: {
+          trigger: triggerEl ?? targets,
+          start: "top 88%",
+          toggleActions: "play none none none",
+        },
+        y: 36,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: 0.1,
+        ...vars,
+      });
+    };
+
+    // --- Stats ---
+    reveal(".stats-section .section-tag", { y: 16, duration: 0.5 }, ".stats-section");
+    reveal(".stat-card", { stagger: 0.12 }, ".stats-row");
+
+    // --- Projects ---
+    reveal(".projects-header .section-tag", { y: 16, duration: 0.5 }, ".projects-section");
+    reveal(".proj-large", { x: -30, y: 0, duration: 0.9 }, ".projects-grid");
+    reveal(".proj-small", { y: 30, duration: 0.8, stagger: 0.14 }, ".proj-right-col");
+
+    // --- Logos marquee strip ---
+    gsap.from(".logos-section", {
+      scrollTrigger: { trigger: ".logos-section", start: "top 90%" },
+      opacity: 0, duration: 0.8, ease: "power2.out",
+    });
+
+    // --- Soft skills ---
+    reveal(".soft-skill-card", { stagger: 0.15 }, ".soft-skills-section");
+
+    // --- CV timeline ---
+    reveal(".cv-head .section-tag", { y: 16, duration: 0.5 }, ".cv-section");
+    reveal(".cv-head .section-h2", { y: 20, duration: 0.6 }, ".cv-section");
+    gsap.utils.toArray<Element>(".cv-timeline-row").forEach((row, i) => {
+      gsap.from(row, {
+        scrollTrigger: { trigger: row, start: "top 88%" },
+        x: -24, opacity: 0, duration: 0.7,
+        ease: "power3.out",
+        delay: i * 0.05,
+      });
+    });
+
+    // --- Core skill tiles ---
+    reveal(".core-skill-tile", { y: 20, stagger: 0.1, duration: 0.6 }, ".core-skills-tiles");
+
+    // --- Skill panels ---
+    reveal(".skill-panel", { y: 30, stagger: 0.12, duration: 0.7 }, ".skills-grid");
+
+    // --- Contact ---
+    reveal(".contact-head .section-tag", { y: 16, duration: 0.5 }, ".contact-section");
+    reveal(".contact-head .section-h2", { y: 20, duration: 0.6 }, ".contact-head");
+    reveal(".contact-form-wrap", { x: -24, y: 0, duration: 0.8 }, ".contact-cols");
+    reveal(".contact-img-wrap", { x: 24, y: 0, duration: 0.8 }, ".contact-cols");
+  });
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 
 const handleContactSubmit = () => {
   const el = document.querySelector("#contact-form") as HTMLFormElement;

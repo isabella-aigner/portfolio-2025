@@ -39,7 +39,11 @@ const menuItems = computed(() => ([
   </header>
 
   <main class="pt-[60px]">
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <Transition name="page" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </router-view>
   </main>
 
   <footer class="footer">
