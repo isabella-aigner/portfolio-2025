@@ -790,8 +790,13 @@
   @media (max-width: 600px) {
     flex: 1 1 calc(50% - 12px);
     max-width: calc(50% - 6px);
-    height: 180px;
+    height: auto;
     padding: 12px;
+
+    img {
+      height: auto;
+      object-fit: contain;
+    }
 
     &:last-child {
       flex-grow: 0;
