@@ -201,6 +201,7 @@ const visibleEducation = computed(() =>
 
 const skillPanels = [
   {
+    icon: "</>",
     title: "Frontend Development",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -212,6 +213,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "⊞",
     title: "UI/UX-Design",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -221,6 +223,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "✦",
     title: "Grafik- & Branddesign",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -231,6 +234,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "❋",
     title: "Leidenschaften & Creative Skills",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -245,19 +249,16 @@ const skillPanels = [
 
 const softSkillCards = [
   {
-    accentBg: "rgba(255,230,168,0.15)",
     icon: "✦",
     title: "Qualitätsfokus & Auge für Detail",
     desc: "Höchste Ansprüche an Präzision und Sorgfalt, um exzellente Ergebnisse sicherzustellen.",
   },
   {
-    accentBg: "rgba(126,255,204,0.15)",
     icon: "💬",
     title: "Kommunikations- & Kritikfähigkeit",
     desc: "Offen, klar und konstruktiv kommunizieren, um Vertrauen zu stärken und kontinuierlich besser zu werden.",
   },
   {
-    accentBg: "rgba(245,135,255,0.15)",
     icon: "💡",
     title: "Lernbereitschaft & Kreatives Denken",
     desc: "Neue Ansätze entwickeln und kontinuierlich Wissen erweitern, um innovative Lösungen zu schaffen.",
@@ -431,7 +432,7 @@ const toolLevels = [
             :key="card.title"
             class="cv-soft-skill-card"
           >
-            <div class="cv-soft-skill-icon" :style="{ background: card.accentBg }">
+            <div class="cv-soft-skill-icon">
               {{ card.icon }}
             </div>
             <div>
@@ -506,8 +507,11 @@ const toolLevels = [
         </div>
         <div class="cv-skills-grid">
           <div v-for="panel in skillPanels" :key="panel.title" class="cv-skill-panel">
-            <h3 class="cv-skill-panel-title">{{ panel.title }}</h3>
-            <p class="cv-skill-panel-desc">{{ panel.desc }}</p>
+            <div class="cv-skill-panel-header">
+              <div class="cv-skill-panel-icon">{{ panel.icon }}</div>
+              <h3 class="cv-skill-panel-title">{{ panel.title }}</h3>
+              <p class="cv-skill-panel-desc">{{ panel.desc }}</p>
+            </div>
             <div class="cv-skill-tags">
               <span v-for="tag in panel.tags" :key="tag" class="cv-skill-tag">{{ tag }}</span>
             </div>

@@ -6,6 +6,7 @@ const router = useRouter();
 
 const skillPanels = [
   {
+    icon: "</>",
     title: "Frontend Development",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -17,6 +18,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "⊞",
     title: "UI/UX-Design",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -26,6 +28,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "✦",
     title: "Grafik- & Branddesign",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -36,6 +39,7 @@ const skillPanels = [
     ],
   },
   {
+    icon: "❋",
     title: "Leidenschaften & Creative Skills",
     desc: "Erstellung moderner, nutzerfreundlicher und performanter Weboberflächen mit Fokus auf Design und Usability.",
     tags: [
@@ -194,52 +198,108 @@ const handleContactSubmit = () => {
         </div>
 
         <div class="cv-timeline-rows">
-          <!-- Row 1: redlink — has testimonial -->
+          <!-- Row 1: redlink — compact testimonial -->
           <div class="cv-timeline-row">
             <div class="cv-row-aside">
-              <div class="testimonial-card">
+              <div class="testimonial-card testimonial-card--compact">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">„Isabella kombiniert fundierte Frontend-Expertise mit ausgeprägtem Engagement und professionellem Teamgeist."</p>
+                <span class="testimonial-company">redlink GmbH</span>
                 <img src="/assets/logos/logo-1.svg" alt="redlink" class="testimonial-logo" />
               </div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-dot">
+                <img src="/assets/logos/logo-1.svg" alt="redlink" class="cv-dot-logo" />
+              </div>
               <div class="cv-entry-details">
                 <h3 class="cv-entry-title">Frontend Developer, UI/UX &amp; Grafik Design</h3>
                 <div class="cv-entry-date">📅 April 2022 – Heute · redlink GmbH</div>
                 <p class="cv-entry-label">Verantwortlichkeiten</p>
-                <p class="cv-entry-text">Erstellung und Konzipierung von interaktiven Software-Lösungen. Umsetzung, Testing und Weiterentwicklung von Applikationen mit Vue.js, TypeScript und modernen Web-Technologien.</p>
+                <ul class="cv-entry-list">
+                  <li>Erstellung und Konzipierung von interaktiven Software-Lösungen</li>
+                  <li>Umsetzung, Testing und Weiterentwicklung von Applikationen</li>
+                  <li>Konzeption und Umsetzung von div. Marketing- und Salesspezifischen Unterlagen und Merch</li>
+                  <li>Unterstützung bei Inhouse Produktentwicklungen und Marketingmaßnahmen</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Row 2: MTD — no testimonial -->
+          <!-- Row 2: valantic testimonial + MTD entry -->
           <div class="cv-timeline-row">
-            <div class="cv-row-aside"></div>
+            <div class="cv-row-aside">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Isabella kombiniert fundierte Frontend-Expertise mit ausgeprägtem Engagement und professionellem Teamgeist. Ihre gewissenhafte Arbeit und Motivation machen sie zur idealen Verstärkung für jedes Projektteam."</p>
+                <span class="testimonial-company-text">valantic</span>
+              </div>
+            </div>
             <div class="cv-entry">
-              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-dot cv-entry-dot--fh">
+                <span class="cv-dot-text">FH</span>
+              </div>
               <div class="cv-entry-details">
                 <h3 class="cv-entry-title">Ausbildung: MTD (Hagenberg)</h3>
                 <div class="cv-entry-date">📅 Okt. 2018 – Jan. 2022 · FH Oberösterreich</div>
                 <p class="cv-entry-label">Schwerpunkte</p>
-                <p class="cv-entry-text">Nachgezogene Ausbildung, um die Technologiekompetenz zu schärfen. Schwerpunkte: Web- &amp; Frontend-Entwicklung, UI/UX-Design.</p>
+                <ul class="cv-entry-list">
+                  <li>Nachgezogene Ausbildung, um die Technologiekompetenz aufzunehmen und zu schärfen.</li>
+                  <li>Schwerpunkte: Web- &amp; Frontend-Entwicklung</li>
+                  <li>Weiters ausgebaut: Leidenschaft für 3D, Filmschnitt und Audiotechnik</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Row 3: Grafik — no testimonial -->
+          <!-- Row 3: INVENT/urlaubsbox testimonial + Grafik entry (Roco + INVENT) -->
           <div class="cv-timeline-row">
-            <div class="cv-row-aside"></div>
+            <div class="cv-row-aside">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Mit kreativer Expertise, Zuverlässigkeit und ruhiger Ausstrahlung war Isabella eine wertvolle Unterstützung. Auch unter Zeitdruck lieferte sie präzise Ergebnisse und überzeugte durch ihre hilfsbereitere Art."</p>
+                <div class="testimonial-logos">
+                  <img src="/assets/logos/logo-3.svg" alt="INVENT" class="testimonial-logo" />
+                  <img src="/assets/logos/logo-4.svg" alt="urlaubsbox" class="testimonial-logo" />
+                </div>
+              </div>
+            </div>
             <div class="cv-entry">
-              <div class="cv-entry-dot"></div>
+              <div class="cv-entry-dot-stack">
+                <div class="cv-entry-dot">
+                  <img src="/assets/logos/logo-5.svg" alt="Roco" class="cv-dot-logo" />
+                </div>
+                <div class="cv-entry-dot cv-entry-dot--sm">
+                  <img src="/assets/logos/logo-3.svg" alt="INVENT" class="cv-dot-logo" />
+                </div>
+              </div>
               <div class="cv-entry-details">
                 <h3 class="cv-entry-title">Grafikdesign &amp; Marketingmitarbeiterin</h3>
                 <div class="cv-entry-date">📅 Feb. 2015 – April 2017</div>
                 <p class="cv-entry-label">Verantwortlichkeiten</p>
-                <p class="cv-entry-text">Modernisierung und Entwicklung eines neuen Corporate Designs. Umsetzung der Geschäftsdrucksorten, Konzeption und Gestaltung von Printmedien und Webdesign.</p>
+                <ul class="cv-entry-list">
+                  <li>Modernisierung und Entwicklung eines neuen Corporate Designs und Umsetzung der Geschäftsdrucksorten</li>
+                  <li>Konzeption, Gestaltung, Produktion und Qualitätskontrolle von Druckwerken wie Firmenbroschüren, Plakate, Inserate, Gutscheine, Einleger, Flyer, etc.</li>
+                  <li>Erstellung von kundenspezifischen Produkten für Außendienst und Sales</li>
+                  <li>Bildretuschen, Illustrationen, Mock-Ups</li>
+                  <li>Konzeption und Gestaltung von Onlineinhalten wie z.B. Banner, Slider, Newsletter etc.</li>
+                </ul>
               </div>
             </div>
+          </div>
+
+          <!-- Row 4: Roco/Fleischmann testimonial (standalone) -->
+          <div class="cv-timeline-row">
+            <div class="cv-row-aside">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Isabella erledigt Aufgaben effizient, verantwortungsvoll und auf höchstem Qualitätsniveau. Ihre vielseitige und gewissenhafte Arbeitsweise sowie ihre freundliche, offene Art machen sie zu einer wertvollen Teamkollegin."</p>
+                <div class="testimonial-logos">
+                  <img src="/assets/logos/logo-5.svg" alt="Roco" class="testimonial-logo" />
+                  <img src="/assets/logos/logo-6.svg" alt="Fleischmann" class="testimonial-logo" />
+                </div>
+              </div>
+            </div>
+            <div class="cv-entry cv-entry--empty"></div>
           </div>
         </div>
 
@@ -278,8 +338,11 @@ const handleContactSubmit = () => {
         <h3 class="skills-sub-heading">Kompetenzen im Überblick</h3>
         <div class="skills-grid">
           <div v-for="panel in skillPanels" :key="panel.title" class="skill-panel">
-            <h3 class="skill-panel-title">{{ panel.title }}</h3>
-            <p class="skill-panel-desc">{{ panel.desc }}</p>
+            <div class="skill-panel-header">
+              <div class="skill-panel-icon">{{ panel.icon }}</div>
+              <h3 class="skill-panel-title">{{ panel.title }}</h3>
+              <p class="skill-panel-desc">{{ panel.desc }}</p>
+            </div>
             <div class="skill-tags">
               <span v-for="tag in panel.tags" :key="tag" class="skill-tag">{{ tag }}</span>
             </div>

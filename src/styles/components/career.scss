@@ -82,6 +82,10 @@
     background: #0a1420;
 }
 
+.cv-timeline-section--edu .cv-entry-icon {
+    box-shadow: 0 0 0 3px #0a1420;
+}
+
 .cv-timeline-section .cv-section-heading {
     font-size: 2rem;
     font-weight: 700;
@@ -97,36 +101,22 @@
     position: relative;
 }
 
-/* Gradient connector line */
+/* Connector line */
 .cv-timeline::before {
     content: '';
     position: absolute;
-    left: 27px;
-    top: 56px;
-    bottom: 28px;
+    left: 21px;
+    top: 44px;
+    bottom: 20px;
     width: 2px;
     border-radius: 2px;
     z-index: 0;
     pointer-events: none;
-}
-
-.cv-timeline--work::before {
     background: linear-gradient(
         to bottom,
-        transparent 0%,
-        #122E5B 8%,
-        #F37021 30%,
-        #C22132 100%
-    );
-}
-
-.cv-timeline--edu::before {
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        #122E5B 8%,
-        #429EC8 30%,
-        #4A6FA5 100%
+        rgba(150, 166, 198, 0.3) 0%,
+        rgba(150, 166, 198, 0.2) 60%,
+        transparent 100%
     );
 }
 
@@ -147,25 +137,29 @@
 /* Icon circle */
 .cv-entry-icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 2;
-    box-shadow: 0 0 0 4px rgba(13, 26, 44, 0.8);
+    background: #1D2B40;
+    border: 1.5px solid rgba(150, 166, 198, 0.25);
+    box-shadow: 0 0 0 3px #0D1A2C;
 }
 
 .cv-entry-icon--work {
-    background: linear-gradient(135deg, #F37021 0%, #C22132 100%);
-    color: #ffffff;
+    background: rgba(66, 158, 200, 0.12);
+    border-color: rgba(66, 158, 200, 0.35);
+    color: #429EC8;
 }
 
 .cv-entry-icon--edu {
-    background: linear-gradient(135deg, #429EC8 0%, #4A6FA5 100%);
-    color: #ffffff;
+    background: rgba(0, 140, 160, 0.2);
+    border-color: rgba(0, 190, 210, 0.4);
+    color: rgba(0, 210, 230, 0.9);
 }
 
 /* Content card */
@@ -276,41 +270,36 @@
 
 .cv-soft-skill-card {
     background: #1D2B40;
-    border-radius: 12px;
-    padding: 28px 24px;
+    border-radius: 8px;
+    padding: 32px;
     display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    border: 1px solid rgba(150, 166, 198, 0.06);
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(216, 235, 255, 0.06);
     transition: border-color 0.2s;
 }
 
 .cv-soft-skill-card:hover {
-    border-color: rgba(150, 166, 198, 0.15);
+    border-color: rgba(216, 235, 255, 0.15);
 }
 
 .cv-soft-skill-icon {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1;
     flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    background: rgba(66,158,200,0.15);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .cv-soft-skill-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0 0 6px;
+    margin: 0 0 8px;
+    line-height: 1.3;
 }
 
 .cv-soft-skill-desc {
-    font-size: 0.875rem;
-    color: rgba(216,235,255,0.65);
+    font-size: 1rem;
+    color: rgba(216, 235, 255, 0.7);
     line-height: 1.6;
     margin: 0;
 }
@@ -470,40 +459,57 @@
 }
 
 .cv-skill-panel {
-    background: #0D1A2C;
-    border-radius: 12px;
-    padding: 28px 28px 24px;
-    border: 1px solid rgba(150, 166, 198, 0.06);
+    background: rgb(37, 51, 73);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cv-skill-panel-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.cv-skill-panel-icon {
+    font-size: 2rem;
+    line-height: 1;
+    color: rgba(216, 235, 255, 0.85);
 }
 
 .cv-skill-panel-title {
-    font-size: 1.125rem;
+    font-size: 1.875rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0 0 8px;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .cv-skill-panel-desc {
-    font-size: 0.875rem;
-    color: rgba(216,235,255,0.6);
-    line-height: 1.6;
-    margin: 0 0 16px;
+    font-size: 1rem;
+    color: rgba(216, 235, 255, 0.7);
+    line-height: 1.5;
+    margin: 0;
 }
 
 .cv-skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 8px;
 }
 
 .cv-skill-tag {
     display: inline-flex;
     align-items: center;
-    padding: 4px 13px;
+    padding: 4px 14px;
     border-radius: 100px;
-    background: rgba(150,150,194,0.1);
-    border: 1px solid rgba(150,150,194,0.2);
-    color: #9696C2;
-    font-size: 0.8125rem;
+    background: rgba(150,150,194,0.12);
+    border: 1px solid rgba(150,150,194,0.25);
+    color: #9696C6;
+    font-size: 0.875rem;
     font-weight: 500;
 }
