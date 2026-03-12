@@ -1,6 +1,6 @@
 @layer components {
     .hero-layout {
-        @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+        @apply relative z-10 xl:mt-0 md:mt-6 mt-10 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
       }
 
       .hero-text {

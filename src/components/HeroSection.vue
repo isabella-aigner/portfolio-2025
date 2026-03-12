@@ -71,7 +71,7 @@ const handleBtnClick = (url: string, type?: string) => {
         </div>
          
             <div class="hero-layout relative">
-                <div class="hero-img bg-[url(/assets/header/landingpage-header.jpg)] bg-top-left bg-origin-content bg-no-repeat bg-cover">
+                <div class="hero-img bg-[url(/assets/header/landingpage-header.png)] bg-top-left bg-origin-content bg-no-repeat bg-cover">
                 </div>
                 <header class="justify-center h-full w-screen md:px-20 px-5
                     items-center align-center">

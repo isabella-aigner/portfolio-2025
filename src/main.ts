@@ -24,10 +24,11 @@ const router = createRouter({
     { path: '/personal-projects', component: PersonalProjects },
     { path: '/career', component: Career },
   ],
-  /*
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
-  },*/
+    if (savedPosition) return savedPosition;
+    if (to.hash) return { el: to.hash, behavior: 'smooth' };
+    return { top: 0, behavior: 'instant' };
+  },
 });
 
 gsap.registerPlugin(ScrollTrigger);
