@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router";
 import { NavItem } from "../models/NavItem";
-import { ref, defineProps } from "vue";
+import { ref } from "vue";
 import { LanguageItem } from "../models/LanguageItem";
 
 const router = useRouter();
