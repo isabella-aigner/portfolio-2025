@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-[rgb(37,51,73)] rounded-lg p-7 flex flex-col gap-6">
+  <div class="skill-panel bg-[rgb(37,51,73)] rounded-lg p-7 flex flex-col gap-6">
     <div class="flex flex-col items-center gap-3 text-center">
       <div class="text-[2rem] leading-none text-[#D8EBFF]/85">{{ icon }}</div>
       <h3 class="text-[1.875rem] font-semibold text-white m-0 leading-snug">{{ title }}</h3>

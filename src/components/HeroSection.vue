@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import AppButton from './AppButton.vue';
 
 import { HeroDynamicText } from '../models/HeroDynamicText';
 
@@ -104,9 +105,9 @@ const handleBtnClick = (url: string, type?: string) => {
                                 </h1>
                                 <p class="hero-subtitle">Mit innovativen Ideen bringe ich Projekte zuverlässig zum Erfolg</p>
                                 <div>
-                                    <button class="hero-cta-btn mt-5 md:mt-7 lg:mt-10">
+                                    <AppButton variant="primary" class="mt-5 md:mt-7 lg:mt-10">
                                         Jetzt kontaktieren
-                                    </button>
+                                    </AppButton>
                                 </div>
                             </div>
                         </div>
@@ -254,38 +255,6 @@ const handleBtnClick = (url: string, type?: string) => {
   .hero-subtitle { font-size: 1.25rem; }
 }
 
-/* Hero CTA button */
-.hero-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 220px;
-  height: 56px;
-  padding: 0 32px;
-  background: #429EC8;
-  color: #ffffff;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  font-family: inherit;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  pointer-events: all;
-}
-
-@media (min-width: 768px) {
-  .hero-cta-btn {
-    min-width: 262px;
-    height: 64px;
-    font-size: 1.125rem;
-  }
-}
-
-.hero-cta-btn:hover {
-  background: #5ab3d8;
-  transform: translateY(-2px);
-}
 
 /* Hero text slider */
 .slide {

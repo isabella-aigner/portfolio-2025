@@ -4,6 +4,9 @@ import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { FilterItem } from "../models/FilterItem";
 import { ProjectItem } from "../models/ProjectItem";
+import SubpageHeader from "../components/SubpageHeader.vue";
+import ProjectFilterPill from "../components/ProjectFilterPill.vue";
+import ProjectCard from "../components/ProjectCard.vue";
 
 const { t } = useI18n();
 const route = useRoute();
@@ -231,9 +234,6 @@ const filteredProjects = computed(() => {
     return projects.value.filter(p => p.filterTags.includes(selectedFilter.value!));
 });
 
-const getFilterName = (code: string) =>
-    filterItems.value.find(f => f.code === code)?.name || code;
-
 const toggleProject = (project: ProjectItem) => {
     const isOpen = selectedProject.value?.id === project.id;
     selectedProject.value = isOpen ? null : project;
@@ -241,42 +241,29 @@ const toggleProject = (project: ProjectItem) => {
         document.getElementById(`${project.id}-header`)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, isOpen ? 0 : 50);
 };
-
-/* True if the expanded card has any media to show on the left */
-const hasLeftMedia = (project: ProjectItem) =>
-    !!(project.gallery?.length || project.video?.length);
 </script>
 
 <template>
     <div class="projects-page">
 
         <!-- Page Header -->
-        <section class="proj-page-header">
-            <div class="absolute top-0 left-0 pointer-events-none">
-                <img src="/assets/images/bg.png" alt="" />
-            </div>
-            <div class="absolute top-[-50px] right-0 pointer-events-none">
-                <img src="/assets/images/header-lines.svg" alt="" />
-            </div>
-            <div class="page-inner relative z-10">
-                <h1 class="proj-page-title">Persönliche Projekte</h1>
-                <p class="proj-page-subtitle">Kreative Experimente, Hobbyprojekte und persönliche Arbeiten aus Fotografie, Illustration, Audio und mehr.</p>
-            </div>
-        </section>
+        <SubpageHeader
+            title="Persönliche Projekte"
+            subtitle="Kreative Projekte aus Fotografie, Illustration, 3D, Audio und mehr."
+        />
 
         <!-- Filter Bubbles -->
         <section class="proj-filters-section">
             <div class="page-inner">
                 <div class="proj-filter-pills">
-                    <button class="proj-filter-pill" :class="{ active: !selectedFilter }" @click="toggleFilter(null)">Alle</button>
-                    <button
+                    <ProjectFilterPill label="Alle" :active="!selectedFilter" @click="toggleFilter(null)" />
+                    <ProjectFilterPill
                         v-for="filter in filterItems"
                         :key="filter.code"
-                        class="proj-filter-pill"
-                        :class="{ active: selectedFilter === filter.code }"
-                        @click="toggleFilter(filter.code)">
-                        {{ filter.name }}
-                    </button>
+                        :label="filter.name"
+                        :active="selectedFilter === filter.code"
+                        @click="toggleFilter(filter.code)"
+                    />
                 </div>
             </div>
         </section>
@@ -285,126 +272,14 @@ const hasLeftMedia = (project: ProjectItem) =>
         <section class="proj-list-section">
             <div class="page-inner">
                 <TransitionGroup name="proj-list" tag="div" class="proj-grid">
-
-                    <div
+                    <ProjectCard
                         v-for="project in filteredProjects"
                         :key="project.id"
-                        class="proj-card"
-                        :class="{ 'is-open': selectedProject?.id === project.id }"
-                        :id="`${project.id}-header`">
-
-                        <!-- ── COLLAPSED STATE ── -->
-                        <template v-if="selectedProject?.id !== project.id">
-                            <div class="proj-card-img">
-                                <img :src="project.image" :alt="project.title" />
-                            </div>
-                            <div class="proj-card-body">
-                                <h2 class="proj-card-title">{{ project.title }}</h2>
-                                <p v-if="project.subtitle" class="proj-card-subtitle">{{ project.subtitle }}</p>
-                                <div class="proj-card-categories">
-                                    <span v-for="tag in project.filterTags" :key="tag" class="proj-cat-tag">{{ getFilterName(tag) }}</span>
-                                </div>
-                                <div class="proj-card-tools">
-                                    <span v-for="tool in project.tags.slice(0, 6)" :key="tool" class="proj-tool-tag">{{ tool }}</span>
-                                    <span v-if="project.tags.length > 6" class="proj-tool-tag proj-tool-more">+{{ project.tags.length - 6 }}</span>
-                                </div>
-                            </div>
-                            <div class="proj-card-footer">
-                                <button class="proj-toggle-btn" @click="toggleProject(project)">
-                                    <span>Details ansehen</span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </template>
-
-                        <!-- ── EXPANDED STATE (images/media left · text right) ── -->
-                        <template v-else>
-                            <div class="proj-exp-wrap" :class="{ 'proj-exp-wrap--text-only': !hasLeftMedia(project) }">
-
-                                <!-- Left: gallery + video -->
-                                <div v-if="hasLeftMedia(project)" class="proj-exp-images">
-                                    <img
-                                        v-for="(img, i) in project.gallery"
-                                        :key="`img-${i}`"
-                                        :src="img"
-                                        :alt="`${project.title} – Bild ${i + 1}`" />
-                                    <div v-for="(vid, i) in project.video" :key="`vid-${i}`" class="proj-exp-video">
-                                        <p v-if="vid.title" class="proj-video-title">{{ vid.title }}</p>
-                                        <video controls :src="vid.link" :poster="vid.poster"></video>
-                                    </div>
-                                </div>
-
-                                <!-- Right: all text -->
-                                <div class="proj-exp-text">
-                                    <div class="proj-exp-header">
-                                        <h2 class="proj-card-title">{{ project.title }}</h2>
-                                        <p v-if="project.subtitle" class="proj-card-subtitle">{{ project.subtitle }}</p>
-                                    </div>
-
-                                    <div class="proj-card-categories">
-                                        <span v-for="tag in project.filterTags" :key="tag" class="proj-cat-tag">{{ getFilterName(tag) }}</span>
-                                    </div>
-
-                                    <p v-if="project.description" class="proj-exp-desc">{{ project.description }}</p>
-
-                                    <div v-if="project.details" class="proj-expand-details">
-                                        <div v-for="detail in project.details" :key="detail.title" class="proj-detail-block">
-                                            <h4 class="proj-detail-title">{{ detail.title }}</h4>
-                                            <p class="proj-detail-text">{{ detail.content }}</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Meta -->
-                                    <div v-if="project.role || project.client" class="proj-expand-meta">
-                                        <div v-if="project.role" class="proj-meta-item">
-                                            <span class="proj-meta-label">Rolle</span>
-                                            <span class="proj-meta-value">{{ project.role }}</span>
-                                        </div>
-                                        <div v-if="project.client" class="proj-meta-item">
-                                            <span class="proj-meta-label">Auftraggeber</span>
-                                            <span class="proj-meta-value">{{ project.client }}</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- All tool tags -->
-                                    <div class="proj-expand-tech">
-                                        <span v-for="tag in project.tags" :key="tag" class="proj-tech-tag">{{ tag }}</span>
-                                    </div>
-
-                                    <!-- Audio players -->
-                                    <div v-if="project.audio?.length" class="proj-exp-audio">
-                                        <div v-for="(track, i) in project.audio" :key="i" class="proj-audio-item">
-                                            <p v-if="track.title" class="proj-audio-title">{{ track.title }}</p>
-                                            <audio controls :src="track.link"></audio>
-                                        </div>
-                                    </div>
-
-                                    <!-- Links -->
-                                    <div v-if="project.links?.length" class="proj-expand-links">
-                                        <a
-                                            v-for="link in project.links"
-                                            :key="link.title"
-                                            :href="link.url"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="proj-link-btn">
-                                            {{ link.title }} →
-                                        </a>
-                                    </div>
-
-                                    <button class="proj-toggle-btn proj-toggle-close" @click="toggleProject(project)">
-                                        <span>Schließen</span>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </template>
-
-                    </div>
+                        :project="project"
+                        :is-open="selectedProject?.id === project.id"
+                        :filter-items="filterItems"
+                        @toggle="toggleProject"
+                    />
                 </TransitionGroup>
             </div>
         </section>
