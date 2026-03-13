@@ -9,11 +9,11 @@
     "playground": "Playground"
   },
   "headerAltText": {
-    "plantBase": "Overview of the PlantBase web application showcasing plant care features, watering schedules, and user community tools",
+    "plantBase": "Overview of the PlantBase web application showcasing plant care features, watering schedules, and user community tools.",
     "invent": "Visual overview of the redesigned corporate identity and diverse print materials created for INVENT.",
     "republic": "Atmospheric interior shot highlighting lighting, furnishings, and spatial mood.",
     "redlink": "Modernized brand identity of Redlink GmbH with website and print materials.",
-    "more": "Digital platform for data collection and analysis in health research",
+    "more": "Digital platform for data collection and analysis in health research.",
     "iris": "Game concept exploring everyday life with visual impairment through a blind journalist’s perspective.",
     "rouka": "3D fantasy character modeled with ZBrush and Maya.",
     "prag": "HDR landscape photograph of Prague in daylight.",
@@ -318,7 +318,7 @@
         "description": "The Game Shop UI/UX project focuses on creating an appealing, user-friendly design for a digital game store. With a clear information structure, easy navigation, and aesthetic design, the shop provides a smooth shopping experience for gamers. The goal was to develop a modern e-commerce platform that meets the needs of the gaming community and offers an optimal user experience."
       },
       "steuerkanzleiKaufmann": {
-        "title": "Kaufmann Ticketshop",
+        "title": "Steuerkanzlei Kaufmann",
         "subtitle": "Modern Website Redesign",
         "description": "A modern and professional website was developed for the Kaufmann Tax Office, offering a clear, user-friendly platform. The aim was to inform clients about the services offered and to simplify the contact process. The website was completely redesigned to ensure a contemporary digital presence, with a focus on intuitive navigation and well-structured content."
       },
@@ -917,7 +917,7 @@
           "Image Editing",
           "Generative Art",
           "Jewelry Design",
-          "DYI Crafts",
+          "DIY Crafts",
           "Game Design",
           "Storytelling & Worldbuilding",
           "Prompt Engineering"
