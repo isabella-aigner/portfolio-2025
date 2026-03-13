@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import emailjs from '@emailjs/browser';
 
 const { t } = useI18n();
 
@@ -9,23 +8,18 @@ const sending = ref(false);
 const sent = ref(false);
 const sendError = ref(false);
 
-const fallbackMailto = () => {
-  const el = document.querySelector('#contact-form') as HTMLFormElement;
-  const data = new FormData(el);
-  const subject = encodeURIComponent('Kontaktanfrage Portfolio');
-  const body = encodeURIComponent(
-    `Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\n\n${data.get('message')}`
-  );
-  window.location.href = `mailto:isabella.c.aigner@gmail.com?subject=${subject}&body=${body}`;
-};
-
 const handleSubmit = async () => {
-  const serviceId  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
-  if (!serviceId || !templateId || !publicKey) {
-    fallbackMailto();
+  if (!accessKey) {
+    // fallback: open mail client if Web3Forms key is not configured
+    const el = document.querySelector('#contact-form') as HTMLFormElement;
+    const data = new FormData(el);
+    const subject = encodeURIComponent('Kontaktanfrage Portfolio');
+    const body = encodeURIComponent(
+      `Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\n\n${data.get('message')}`
+    );
+    window.location.href = `mailto:isabella.c.aigner@gmail.com?subject=${subject}&body=${body}`;
     return;
   }
 
@@ -33,9 +27,23 @@ const handleSubmit = async () => {
   sendError.value = false;
 
   try {
-    await emailjs.sendForm(serviceId, templateId, '#contact-form', publicKey);
-    sent.value = true;
-    (document.querySelector('#contact-form') as HTMLFormElement).reset();
+    const el = document.querySelector('#contact-form') as HTMLFormElement;
+    const formData = new FormData(el);
+    formData.append('access_key', accessKey);
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    });
+
+    const json = await res.json();
+
+    if (json.success) {
+      sent.value = true;
+      el.reset();
+    } else {
+      sendError.value = true;
+    }
   } catch {
     sendError.value = true;
   } finally {
