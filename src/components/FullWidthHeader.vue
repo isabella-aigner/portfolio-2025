@@ -1,13 +1,23 @@
 <template>
-  <div 
-    class="full-width-header" 
-    :class="{ 'is-loading': isLoading }"
+  <div
+    class="w-full h-[500px] max-md:h-[400px] bg-cover bg-center relative -mt-8 mb-16 max-md:-mt-4 max-md:mb-12"
+    :class="{ 'bg-[var(--surface-ground)]': isLoading }"
     :style="{ backgroundImage: isLoading ? 'none' : `url(${image})` }"
   >
-    <div class="loading-placeholder" v-if="isLoading">
-      <i class="pi pi-spin pi-spinner"></i>
+    <!-- gradient overlay -->
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.6))] transition-opacity duration-300"
+      :class="isLoading ? 'opacity-0' : 'opacity-100'"
+    ></div>
+
+    <div class="absolute inset-0 flex items-center justify-center bg-[var(--surface-ground)]" v-if="isLoading">
+      <i class="pi pi-spin pi-spinner text-[3rem] text-[var(--primary-color)]"></i>
     </div>
-    <div class="header-content" :class="{ 'fade-in': !isLoading }">
+
+    <div
+      class="header-content relative z-[1] h-full flex flex-col justify-center items-center text-white text-center p-8 max-md:p-4 max-w-[1200px] mx-auto opacity-0 translate-y-5 transition-all duration-500"
+      :class="{ '!opacity-100 !translate-y-0': !isLoading }"
+    >
       <slot></slot>
     </div>
   </div>
@@ -30,114 +40,3 @@ onMounted(() => {
   }
 })
 </script>
-
-<style scoped lang="scss">
-.full-width-header {
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin-top: -2rem;
-  margin-bottom: 4rem;
-
-  &.is-loading {
-    background-color: var(--surface-ground);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.6)
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  &:not(.is-loading)::before {
-    opacity: 1;
-  }
-}
-
-.loading-placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface-ground);
-
-  i {
-    font-size: 3rem;
-    color: var(--primary-color);
-  }
-}
-
-.header-content {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-
-  &.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  :deep(h1) {
-    font-size: 3.5rem;
-    margin: 0 0 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  :deep(p) {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0;
-    line-height: 1.4;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    opacity: 0.9;
-  }
-}
-
-@media (max-width: 768px) {
-  .full-width-header {
-    height: 400px;
-    margin-top: -1rem;
-    margin-bottom: 3rem;
-  }
-
-  .header-content {
-    padding: 1rem;
-
-    :deep(h1) {
-      font-size: 2.5rem;
-    }
-
-    :deep(p) {
-      font-size: 1.2rem;
-    }
-  }
-}
-</style>

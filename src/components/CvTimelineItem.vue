@@ -28,32 +28,11 @@ defineProps<{
 </script>
 
 <template>
-  <div class="cv-timeline-row">
-    <div class="cv-row-aside">
+  <div class="cv-timeline-row grid grid-cols-[380fr_772fr] max-[900px]:grid-cols-1 gap-10 items-start">
+    <div class="cv-row-aside flex flex-col gap-3 pt-[2px] max-[900px]:hidden">
       <TestimonialCard v-bind="testimonial" />
     </div>
     <CvPreviewEntry v-if="entry" v-bind="entry" />
     <CvPreviewEntry v-else :empty="true" />
   </div>
 </template>
-
-<style>
-.cv-timeline-row {
-  display: grid;
-  grid-template-columns: 380fr 772fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-@media (max-width: 900px) {
-  .cv-timeline-row { grid-template-columns: 1fr; }
-  .cv-timeline-row .cv-row-aside { display: none; }
-}
-
-.cv-row-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 2px;
-}
-</style>

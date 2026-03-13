@@ -286,3 +286,219 @@ html, body {
   opacity: 0;
   transform: translateY(10px);
 }
+
+/* =============================================
+   KEYFRAME ANIMATIONS
+   ============================================= */
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes wordSlider {
+  0%    { transform: translateY(0.5%); }
+  12.5% { transform: translateY(-12.5%); }
+  25%   { transform: translateY(-25%); }
+  37.5% { transform: translateY(-37.5%); }
+  50%   { transform: translateY(-50%); }
+  62.5% { transform: translateY(-62.5%); }
+  75%   { transform: translateY(-75%); }
+  87.5% { transform: translateY(-87.5%); }
+}
+
+.animate-word-slider {
+  animation: wordSlider 12s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+
+/* =============================================
+   GALLERY MODAL (PrimeVue Dialog overrides)
+   ============================================= */
+
+.gallery-dialog {
+  background: #32343a;
+  color: white;
+  width: 98vw;
+  height: 85vh;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-dialog .p-dialog-header,
+.gallery-dialog .p-dialog-content,
+.gallery-dialog .p-dialog-footer {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.gallery-dialog .p-dialog-header-icons {
+  display: none;
+}
+
+.gallery-dialog .p-dialog-content {
+  height: 100%;
+}
+
+/* =============================================
+   NAVIGATION (PrimeVue overrides + transitions)
+   ============================================= */
+
+.mobile-menu-button {
+  background: transparent !important;
+  border: none !important;
+  color: var(--nav-text) !important;
+  padding: 0.5rem !important;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(66, 158, 200, 0.1) !important;
+}
+
+.desktop-nav .nav-links .p-button {
+  color: var(--nav-text);
+  opacity: 0.75;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.desktop-nav .nav-links .p-button.active {
+  color: #4A6FA5;
+  opacity: 1;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.desktop-nav .nav-links .p-button.active .p-button-label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #4A6FA5;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.desktop-nav .nav-links .p-button:not(.active):hover {
+  color: #4A6FA5;
+  opacity: 1;
+}
+
+.desktop-nav .language-switch.p-selectbutton {
+  border: 1px solid #4A6FA5;
+  border-radius: 8px;
+}
+
+.desktop-nav .language-switch.p-selectbutton .p-button {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.75rem;
+  min-width: 2rem;
+  color: var(--nav-text);
+  opacity: 0.7;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.desktop-nav .language-switch.p-selectbutton .p-button.p-highlight {
+  background: #4A6FA5;
+  border-color: #4A6FA5;
+  color: white;
+  opacity: 1;
+}
+
+.desktop-nav .language-switch.p-selectbutton .p-button:not(.p-highlight):hover {
+  color: #4A6FA5;
+  opacity: 1;
+}
+
+.mobile-nav .mobile-nav-item {
+  width: 100%;
+  justify-content: flex-start !important;
+  padding: 0.75rem 1rem !important;
+  color: var(--nav-text) !important;
+  opacity: 0.75 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mobile-nav .mobile-nav-item.active {
+  color: #4A6FA5 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.mobile-nav .mobile-nav-item:not(.active):hover {
+  color: #4A6FA5 !important;
+  opacity: 1 !important;
+}
+
+.mobile-nav .mobile-language-switch {
+  align-self: center;
+  margin-top: 0.5rem;
+  border: 2px solid #4A6FA5;
+  border-radius: 8px;
+}
+
+.mobile-nav .mobile-language-switch.p-selectbutton .p-button {
+  padding: 0.7rem 0.8rem;
+  font-size: 0.875rem;
+  min-width: 2.5rem;
+  color: var(--nav-text);
+  opacity: 0.7;
+}
+
+.mobile-nav .mobile-language-switch.p-selectbutton .p-button.p-highlight {
+  background: #4A6FA5;
+  border-color: #4A6FA5;
+  color: white;
+  opacity: 1;
+}
+
+.mobile-nav .mobile-language-switch.p-selectbutton .p-button:not(.p-highlight):hover {
+  color: #4A6FA5;
+  opacity: 1;
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s ease-out;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* =============================================
+   FULL WIDTH HEADER (slot :deep() overrides)
+   ============================================= */
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .header-content h1 { font-size: 2.5rem; }
+  .header-content p  { font-size: 1.2rem; }
+}

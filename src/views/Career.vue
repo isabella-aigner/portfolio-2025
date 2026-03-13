@@ -138,9 +138,9 @@ onUnmounted(() => {
     />
 
     <!-- Soft Skills -->
-    <section class="cv-soft-skills-section">
+    <section class="cv-soft-skills-section bg-[#122033] py-[60px] max-md:py-[40px]">
       <div class="page-inner">
-        <div class="cv-soft-skills-grid">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 gap-5">
           <SoftSkillCard
             v-for="card in softSkillCards"
             :key="card.title"
@@ -153,19 +153,19 @@ onUnmounted(() => {
     </section>
 
     <!-- Skill Levels -->
-    <section class="cv-skill-levels-section">
+    <section class="cv-skill-levels-section bg-[#0D1A2C] pt-[70px] pb-[80px] max-md:pt-[50px] max-md:pb-[60px]">
       <div class="page-inner">
-        <div class="cv-skill-levels-head">
+        <div class="cv-skill-levels-head mb-[48px]">
           <span class="section-tag">📊 Kenntnisstand</span>
-          <h2 class="section-h2">Skill Levels</h2>
+          <h2 class="section-h2 !mt-2">Skill Levels</h2>
         </div>
 
-        <div class="cv-skill-levels-grid">
+        <div class="grid grid-cols-[1fr_2fr] gap-[48px] items-start max-[900px]:grid-cols-1 max-[900px]:gap-[40px]">
 
           <!-- Languages -->
-          <div class="cv-skill-levels-col">
-            <h3 class="cv-skill-levels-col-title">Sprachkenntnisse</h3>
-            <div class="cv-lang-list">
+          <div>
+            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">Sprachkenntnisse</h3>
+            <div class="cv-lang-list flex flex-col gap-5">
               <CvLangItem
                 v-for="lang in languages"
                 :key="lang.name"
@@ -177,18 +177,18 @@ onUnmounted(() => {
           </div>
 
           <!-- Tools -->
-          <div class="cv-skill-levels-col">
-            <h3 class="cv-skill-levels-col-title">Tools & Technologien</h3>
-              <div class="cv-tool-list">
-                <ToolSkillBar
-                  v-for="tool in toolLevels"
-                  :key="tool.name"
-                  :name="tool.name"
-                  :pct="tool.pct"
-                  :color="tool.color"
-                  :color-dim="tool.colorDim"
-                />
-              </div>
+          <div>
+            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">Tools & Technologien</h3>
+            <div class="cv-tool-list">
+              <ToolSkillBar
+                v-for="tool in toolLevels"
+                :key="tool.name"
+                :name="tool.name"
+                :pct="tool.pct"
+                :color="tool.color"
+                :color-dim="tool.colorDim"
+              />
+            </div>
           </div>
 
         </div>
@@ -196,13 +196,13 @@ onUnmounted(() => {
     </section>
 
     <!-- Skills / Kompetenzen -->
-    <section class="cv-skills-section">
+    <section class="cv-skills-section bg-[#122033] pt-[70px] pb-[100px] max-md:pt-[50px] max-md:pb-[60px]">
       <div class="page-inner">
-        <div class="cv-skills-head">
+        <div class="mb-[40px]">
           <span class="section-tag">🤝 Mein Techstack</span>
-          <h2 class="section-h2">Meine Kernkompetenzen</h2>
+          <h2 class="section-h2 !mt-2">Meine Kernkompetenzen</h2>
         </div>
-        <div class="cv-skills-grid">
+        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
           <SkillPanel
             v-for="panel in skillPanels"
             :key="panel.title"
@@ -217,84 +217,3 @@ onUnmounted(() => {
 
   </div>
 </template>
-
-<style>
-/* ---- Soft Skills ---- */
-.cv-soft-skills-section {
-  background: #122033;
-  padding: 60px 0;
-}
-
-@media (max-width: 768px) {
-  .cv-soft-skills-section { padding: 40px 0; }
-}
-
-.cv-soft-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .cv-soft-skills-grid { grid-template-columns: 1fr; }
-}
-
-/* ---- Skill Levels ---- */
-.cv-skill-levels-section {
-  background: #0D1A2C;
-  padding: 70px 0 80px;
-}
-
-@media (max-width: 768px) {
-  .cv-skill-levels-section { padding: 50px 0 60px; }
-}
-
-.cv-skill-levels-section .cv-skill-levels-head { margin-bottom: 48px; }
-.cv-skill-levels-section .cv-skill-levels-head .section-h2 { margin-top: 8px; }
-
-.cv-skill-levels-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 48px;
-  align-items: start;
-}
-
-@media (max-width: 900px) {
-  .cv-skill-levels-grid { grid-template-columns: 1fr; gap: 40px; }
-}
-
-.cv-skill-levels-col-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0 0 28px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(150, 166, 198, 0.12);
-}
-
-.cv-lang-list { display: flex; flex-direction: column; gap: 20px; }
-
-/* ---- Skills / Kompetenzen ---- */
-.cv-skills-section {
-  background: #122033;
-  padding: 70px 0 100px;
-}
-
-@media (max-width: 768px) {
-  .cv-skills-section { padding: 50px 0 60px; }
-}
-
-.cv-skills-section .cv-skills-head { margin-bottom: 40px; }
-.cv-skills-section .cv-skills-head .section-h2 { margin-top: 8px; }
-
-.cv-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .cv-skills-grid { grid-template-columns: 1fr; }
-}
-
-</style>

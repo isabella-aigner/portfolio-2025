@@ -111,10 +111,10 @@ onUnmounted(() => {
     <HeroSection title="Isabella Aigner" :dynamic-text="[]" />
 
     <!-- Stats -->
-    <section class="stats-section">
+    <section class="stats-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
         <span class="section-tag">💼 Berufserfahrung</span>
-        <div class="stats-row">
+        <div class="stats-row flex gap-5 mt-[21px] max-md:flex-col">
           <StatCard num="7+" label="Grafik Design" />
           <StatCard num="3+" label="Frontend-Dev" />
           <StatCard num="3+" label="UI/UX-Design" />
@@ -123,20 +123,20 @@ onUnmounted(() => {
     </section>
 
     <!-- Featured Projects -->
-    <section class="projects-section">
+    <section class="projects-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
-        <div class="projects-header">
+        <div class="projects-header flex items-center justify-between mb-[21px] gap-4 flex-wrap">
           <span class="section-tag">💼 Projekte</span>
           <AppButton size="sm" @click="router.push('/projects')">
             Alle Projekte einsehen <span class="arrow">→</span>
           </AppButton>
         </div>
-        <div class="projects-grid">
+        <div class="projects-grid grid grid-cols-[59.4fr_37.3fr] gap-[41px] max-[900px]:grid-cols-1">
           <FeaturedProjectCard
             v-bind="featuredProjects[0]"
             @click="router.push('/projects')"
           />
-          <div class="proj-right-col">
+          <div class="proj-right-col flex flex-col gap-[40px]">
             <FeaturedProjectCard
               v-for="project in featuredProjects.slice(1)"
               :key="project.title"
@@ -152,9 +152,9 @@ onUnmounted(() => {
     <LogoMarquee :logos="logos" />
 
     <!-- Soft Skills Cards -->
-    <section class="soft-skills-section">
+    <section class="soft-skills-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
-        <div class="soft-skills-grid">
+        <div class="soft-skills-grid grid grid-cols-1 min-[601px]:grid-cols-2 min-[901px]:grid-cols-3 gap-[15px]">
           <SoftSkillCard
             v-for="card in softSkillCards"
             :key="card.title"
@@ -167,14 +167,14 @@ onUnmounted(() => {
     </section>
 
     <!-- CV / Lebenslauf Preview -->
-    <section class="cv-section">
+    <section class="cv-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
-        <div class="cv-head">
+        <div class="cv-head flex flex-col gap-4 mb-[40px]">
           <span class="section-tag">💼 Lebenslauf</span>
           <h2 class="section-h2">Professionelle Erfahrung</h2>
         </div>
 
-        <div class="cv-timeline-rows">
+        <div class="cv-timeline-rows flex flex-col gap-9 mb-[30px] max-md:gap-6">
           <CvTimelineItem
             v-for="(row, i) in cvRows"
             :key="i"
@@ -190,14 +190,14 @@ onUnmounted(() => {
     </section>
 
     <!-- Skills / Competencies -->
-    <section class="skills-section">
+    <section class="skills-section bg-[#0D1A2C] py-[110px] max-md:py-[60px]">
       <div class="page-inner">
-        <div class="skills-head">
+        <div class="skills-head flex flex-col items-start gap-4 mb-[40px]">
           <span class="section-tag">🤝 Mein Techstack</span>
-          <h2 class="section-h2">Meine Kernkompetenzen</h2>
+          <h2 class="section-h2 !text-[2.5rem] max-md:!text-[1.875rem]">Meine Kernkompetenzen</h2>
         </div>
         <!-- Core skill tiles -->
-        <div class="core-skills-tiles">
+        <div class="core-skills-tiles flex gap-5 max-md:gap-3 flex-wrap">
           <CoreSkillTile src="/assets/images/skill-vue.png" alt="Vue.js" />
           <CoreSkillTile src="/assets/images/skill-vite.png" alt="Vite" />
           <CoreSkillTile src="/assets/images/skill-frontend.png" alt="Frontend Dev" />
@@ -205,8 +205,8 @@ onUnmounted(() => {
           <CoreSkillTile src="/assets/images/skill-adobe.png" alt="Adobe CC" />
         </div>
         <!-- Competencies overview -->
-        <h3 class="skills-sub-heading">Kompetenzen im Überblick</h3>
-        <div class="skills-grid">
+        <h3 class="text-[2rem] max-md:text-[1.375rem] font-semibold text-white mt-[50px] mb-6 max-md:mt-8 max-md:mb-4 leading-[1.2]">Kompetenzen im Überblick</h3>
+        <div class="skills-grid grid grid-cols-2 max-md:grid-cols-1 gap-5">
           <SkillPanel
             v-for="panel in skillPanels"
             :key="panel.title"
@@ -224,177 +224,3 @@ onUnmounted(() => {
 
   </div>
 </template>
-
-<style>
-/* ---- Stats ---- */
-.stats-section {
-  background: #0D1A2C;
-  padding: 110px 0 0;
-}
-
-.stats-section .stats-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 21px;
-}
-
-@media (max-width: 768px) {
-  .stats-section { padding-top: 60px; }
-  .stats-section .stats-row { flex-direction: column; }
-}
-
-/* ---- Featured Projects ---- */
-.projects-section {
-  background: #0D1A2C;
-  padding: 110px 0 0;
-}
-
-.projects-section .projects-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 21px;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .projects-section { padding-top: 60px; }
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: 59.4fr 37.3fr;
-  gap: 41px;
-}
-
-@media (max-width: 900px) {
-  .projects-grid { grid-template-columns: 1fr; }
-}
-
-.proj-right-col {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* ---- Soft Skills Cards ---- */
-.soft-skills-section {
-  background: #0D1A2C;
-  padding: 110px 0 0;
-}
-
-@media (max-width: 768px) {
-  .soft-skills-section { padding-top: 60px; }
-}
-
-.soft-skills-section .soft-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-@media (max-width: 900px) {
-  .soft-skills-section .soft-skills-grid { grid-template-columns: 1fr; }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .soft-skills-section .soft-skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ---- Skills / Competencies ---- */
-.skills-section {
-  background: #0D1A2C;
-  padding: 110px 0;
-}
-
-@media (max-width: 768px) {
-  .skills-section { padding: 60px 0; }
-}
-
-.skills-section .skills-head {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 40px;
-}
-
-.skills-section .skills-head .section-h2 { font-size: 2.5rem; }
-
-.skills-section .skills-sub-heading {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 50px 0 24px;
-  line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-  .skills-section .skills-head .section-h2 { font-size: 1.875rem; }
-  .skills-section .skills-sub-heading { font-size: 1.375rem; margin: 32px 0 16px; }
-}
-
-.skills-section .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .skills-section .skills-grid { grid-template-columns: 1fr; }
-}
-
-/* ---- Core Skill Tiles ---- */
-.core-skills-tiles {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .core-skills-tiles { gap: 12px; }
-}
-
-/* ---- CV Preview on Home ---- */
-.cv-section {
-  background: #0D1A2C;
-  padding: 110px 0 0;
-}
-
-@media (max-width: 768px) {
-  .cv-section { padding-top: 60px; }
-}
-
-.cv-section .cv-head {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 40px;
-}
-
-.cv-section .cv-timeline-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-  .cv-section .cv-timeline-rows { gap: 24px; }
-}
-
-.cv-section .cv-timeline-row:not(:last-child) .cv-entry:not(.cv-entry--empty)::before {
-  content: '';
-  position: absolute;
-  left: 21px;
-  top: 22px;
-  bottom: calc(-36px);
-  width: 2px;
-  background: linear-gradient(to bottom, rgba(150, 166, 198, 0.25) 60%, transparent);
-  z-index: 0;
-}
-
-.cv-section .cv-entry:last-of-type { padding-bottom: 0; }
-</style>

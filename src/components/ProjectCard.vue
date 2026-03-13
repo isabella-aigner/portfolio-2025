@@ -21,8 +21,10 @@ const hasLeftMedia = computed(() =>
 
 <template>
   <div
-    class="proj-card"
-    :class="{ 'is-open': isOpen }"
+    class="proj-card bg-[#122033] rounded-lg overflow-hidden flex flex-col transition-[transform,box-shadow] duration-[250ms] ease-[ease]"
+    :class="isOpen
+      ? 'col-span-full shadow-[0_20px_60px_rgba(0,0,0,0.5)]'
+      : 'hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)] group'"
     :id="`${project.id}-header`"
     :style="clickableCard && !isOpen ? 'cursor: pointer' : ''"
     @click="clickableCard && !isOpen && emit('toggle', project)"
@@ -30,27 +32,27 @@ const hasLeftMedia = computed(() =>
 
     <!-- ── COLLAPSED STATE ── -->
     <template v-if="!isOpen">
-      <div class="proj-card-img">
-        <img :src="project.image" :alt="project.title" />
+      <div class="overflow-hidden w-full">
+        <img :src="project.image" :alt="project.title" class="w-full h-[280px] max-md:h-[220px] object-cover block transition-transform duration-[400ms] group-hover:scale-[1.04]" />
       </div>
-      <div class="proj-card-body">
-        <span v-if="project.year" class="proj-card-year">{{ project.year }}</span>
-        <h2 class="proj-card-title">{{ project.title }}</h2>
-        <p v-if="project.subtitle" class="proj-card-subtitle">{{ project.subtitle }}</p>
-        <div class="proj-card-categories">
-          <span v-for="tag in project.filterTags" :key="tag" class="proj-cat-tag">
+      <div class="px-7 pt-6 pb-4 flex flex-col gap-[10px] flex-1">
+        <span v-if="project.year" class="text-[0.8125rem] font-semibold text-[#429EC8] tracking-[0.07em] uppercase">{{ project.year }}</span>
+        <h2 class="text-[1.25rem] md:text-[1.5rem] font-semibold text-white m-0 leading-[1.25]">{{ project.title }}</h2>
+        <p v-if="project.subtitle" class="text-[0.9375rem] text-[rgba(216,235,255,0.65)] m-0 leading-[1.5]">{{ project.subtitle }}</p>
+        <div class="flex flex-wrap gap-[6px] mt-[2px]">
+          <span v-for="tag in project.filterTags" :key="tag" class="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(66,158,200,0.12)] border border-[rgba(66,158,200,0.3)] text-[#429EC8] text-[0.8125rem] font-medium whitespace-nowrap">
             {{ getFilterName(tag) }}
           </span>
         </div>
-        <div class="proj-card-tools">
-          <span v-for="tool in project.tags.slice(0, 6)" :key="tool" class="proj-tool-tag">{{ tool }}</span>
-          <span v-if="project.tags.length > 6" class="proj-tool-tag proj-tool-more">+{{ project.tags.length - 6 }}</span>
+        <div class="flex flex-wrap gap-[6px] pt-1">
+          <span v-for="tool in project.tags.slice(0, 6)" :key="tool" class="inline-flex items-center px-[11px] py-[3px] rounded-full bg-[rgba(150,150,194,0.1)] border border-[rgba(150,150,194,0.2)] text-[#9696C2] text-[0.8125rem] font-medium whitespace-nowrap">{{ tool }}</span>
+          <span v-if="project.tags.length > 6" class="inline-flex items-center px-[11px] py-[3px] rounded-full bg-[rgba(150,150,194,0.06)] border border-[rgba(150,150,194,0.2)] text-[rgba(150,150,194,0.6)] text-[0.8125rem] font-medium whitespace-nowrap">+{{ project.tags.length - 6 }}</span>
         </div>
       </div>
-      <div class="proj-card-footer">
-        <button class="proj-toggle-btn" @click.stop="emit('toggle', project)">
+      <div class="px-7 pt-3 pb-5 border-t border-[rgba(216,235,255,0.07)] mt-auto">
+        <button class="inline-flex items-center gap-2 bg-transparent border-none text-[rgba(216,235,255,0.5)] text-[0.9375rem] font-medium [font-family:inherit] cursor-pointer py-1 px-0 transition-colors duration-200 hover:text-[#D8EBFF]" @click.stop="emit('toggle', project)">
           <span>Details ansehen</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <svg class="transition-transform duration-[350ms] ease-[cubic-bezier(0.4,0,0.2,1)] flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -59,84 +61,87 @@ const hasLeftMedia = computed(() =>
 
     <!-- ── EXPANDED STATE ── -->
     <template v-else>
-      <div class="proj-exp-wrap" :class="{ 'proj-exp-wrap--text-only': !hasLeftMedia }">
+      <div class="grid min-h-[520px]" :class="hasLeftMedia ? 'grid-cols-2 max-[900px]:grid-cols-1' : 'grid-cols-1'">
 
         <!-- Left: gallery + video -->
-        <div v-if="hasLeftMedia" class="proj-exp-images">
+        <div v-if="hasLeftMedia" class="grid grid-cols-2 gap-[3px] bg-[#0a1420] content-start max-[900px]:max-h-[320px] max-[900px]:overflow-hidden">
           <img
             v-for="(img, i) in project.gallery"
             :key="`img-${i}`"
             :src="img"
-            :alt="`${project.title} – Bild ${i + 1}`" />
-          <div v-for="(vid, i) in project.video" :key="`vid-${i}`" class="proj-exp-video">
-            <p v-if="vid.title" class="proj-video-title">{{ vid.title }}</p>
-            <video controls :src="vid.link" :poster="vid.poster"></video>
+            :alt="`${project.title} – Bild ${i + 1}`"
+            class="w-full h-[260px] object-cover block [&:first-child:last-child]:col-span-full [&:first-child:last-child]:h-[360px] [&:nth-child(odd):last-child]:col-span-full [&:nth-child(odd):last-child]:h-[360px]" />
+          <div v-for="(vid, i) in project.video" :key="`vid-${i}`" class="w-full bg-[#0a1420]">
+            <p v-if="vid.title" class="text-[0.875rem] font-semibold text-[rgba(216,235,255,0.7)] m-0 px-3 pt-[10px] pb-[6px] uppercase tracking-[0.06em]">{{ vid.title }}</p>
+            <video controls :src="vid.link" :poster="vid.poster" class="w-full block max-h-[360px] object-cover"></video>
           </div>
         </div>
 
         <!-- Right: text -->
-        <div class="proj-exp-text">
-          <div class="proj-exp-header">
-            <span v-if="project.year" class="proj-card-year">{{ project.year }}</span>
-            <h2 class="proj-card-title">{{ project.title }}</h2>
-            <p v-if="project.subtitle" class="proj-card-subtitle">{{ project.subtitle }}</p>
+        <div class="pt-9 px-9 pb-8 max-[900px]:px-6 max-[900px]:py-7 flex flex-col gap-5 overflow-y-auto bg-[#122033]">
+          <div class="flex flex-col gap-[6px]">
+            <span v-if="project.year" class="text-[0.8125rem] font-semibold text-[#429EC8] tracking-[0.07em] uppercase">{{ project.year }}</span>
+            <h2 class="text-[1.25rem] md:text-[1.5rem] font-semibold text-white m-0 leading-[1.25]">{{ project.title }}</h2>
+            <p v-if="project.subtitle" class="text-[0.9375rem] text-[rgba(216,235,255,0.65)] m-0 leading-[1.5]">{{ project.subtitle }}</p>
           </div>
 
-          <div class="proj-card-categories">
-            <span v-for="tag in project.filterTags" :key="tag" class="proj-cat-tag">{{ getFilterName(tag) }}</span>
+          <div class="flex flex-wrap gap-[6px]">
+            <span v-for="tag in project.filterTags" :key="tag" class="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(66,158,200,0.12)] border border-[rgba(66,158,200,0.3)] text-[#429EC8] text-[0.8125rem] font-medium whitespace-nowrap">{{ getFilterName(tag) }}</span>
           </div>
 
-          <p v-if="project.description" class="proj-exp-desc">{{ project.description }}</p>
+          <p v-if="project.description" class="text-base text-[rgba(216,235,255,0.85)] leading-[1.7] m-0">{{ project.description }}</p>
 
-          <div v-if="project.details" class="proj-expand-details">
-            <div v-for="detail in project.details" :key="detail.title" class="proj-detail-block">
-              <h4 class="proj-detail-title">{{ detail.title }}</h4>
-              <p class="proj-detail-text">{{ detail.content }}</p>
+          <div v-if="project.details" class="flex flex-col gap-4">
+            <div v-for="detail in project.details" :key="detail.title" class="flex flex-col gap-[5px]">
+              <h4 class="text-[0.6875rem] font-bold text-[#429EC8] uppercase tracking-[0.08em] m-0">{{ detail.title }}</h4>
+              <p class="text-[0.9375rem] text-[rgba(216,235,255,0.8)] leading-[1.65] m-0">{{ detail.content }}</p>
             </div>
           </div>
 
-          <div v-if="project.year || project.role || project.client" class="proj-expand-meta">
-            <div v-if="project.year" class="proj-meta-item">
-              <span class="proj-meta-label">Jahr</span>
-              <span class="proj-meta-value">{{ project.year }}</span>
+          <div v-if="project.year || project.role || project.client" class="flex flex-wrap gap-6 pt-1 border-t border-[rgba(216,235,255,0.08)]">
+            <div v-if="project.year" class="flex flex-col gap-1">
+              <span class="text-[0.6875rem] font-bold text-[#429EC8] uppercase tracking-[0.1em]">Jahr</span>
+              <span class="text-[0.9375rem] text-[#D8EBFF] leading-[1.5]">{{ project.year }}</span>
             </div>
-            <div v-if="project.role" class="proj-meta-item">
-              <span class="proj-meta-label">Rolle</span>
-              <span class="proj-meta-value">{{ project.role }}</span>
+            <div v-if="project.role" class="flex flex-col gap-1">
+              <span class="text-[0.6875rem] font-bold text-[#429EC8] uppercase tracking-[0.1em]">Rolle</span>
+              <span class="text-[0.9375rem] text-[#D8EBFF] leading-[1.5]">{{ project.role }}</span>
             </div>
-            <div v-if="project.client" class="proj-meta-item">
-              <span class="proj-meta-label">Auftraggeber</span>
-              <span class="proj-meta-value">{{ project.client }}</span>
-            </div>
-          </div>
-
-          <div class="proj-expand-tech">
-            <span v-for="tag in project.tags" :key="tag" class="proj-tech-tag">{{ tag }}</span>
-          </div>
-
-          <div v-if="project.audio?.length" class="proj-exp-audio">
-            <div v-for="(track, i) in project.audio" :key="i" class="proj-audio-item">
-              <p v-if="track.title" class="proj-audio-title">{{ track.title }}</p>
-              <audio controls :src="track.link"></audio>
+            <div v-if="project.client" class="flex flex-col gap-1">
+              <span class="text-[0.6875rem] font-bold text-[#429EC8] uppercase tracking-[0.1em]">Auftraggeber</span>
+              <span class="text-[0.9375rem] text-[#D8EBFF] leading-[1.5]">{{ project.client }}</span>
             </div>
           </div>
 
-          <div v-if="project.links?.length" class="proj-expand-links">
+          <div class="flex flex-wrap gap-[7px]">
+            <span v-for="tag in project.tags" :key="tag" class="px-[13px] py-1 rounded-full bg-[rgba(150,150,194,0.1)] border border-[rgba(150,150,194,0.2)] text-[#9696C2] text-[0.8125rem] font-medium">{{ tag }}</span>
+          </div>
+
+          <div v-if="project.audio?.length" class="flex flex-col gap-3">
+            <div v-for="(track, i) in project.audio" :key="i" class="flex flex-col gap-[6px]">
+              <p v-if="track.title" class="text-[0.875rem] font-semibold text-[rgba(216,235,255,0.7)] m-0 uppercase tracking-[0.06em]">{{ track.title }}</p>
+              <audio controls :src="track.link" class="w-full accent-[#429EC8]"></audio>
+            </div>
+          </div>
+
+          <div v-if="project.links?.length" class="flex flex-wrap gap-[10px]">
             <a
               v-for="link in project.links"
               :key="link.title"
               :href="link.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="proj-link-btn"
+              class="inline-flex items-center gap-[6px] px-5 py-[9px] rounded-lg border border-[rgba(216,235,255,0.25)] bg-transparent text-[#D8EBFF] text-[0.9375rem] font-semibold no-underline transition-[border-color,color] duration-200 hover:border-[#429EC8] hover:text-[#429EC8]"
               @click.stop>
               {{ link.title }} →
             </a>
           </div>
 
-          <button class="proj-toggle-btn proj-toggle-close" @click="emit('toggle', project)">
+          <button
+            class="inline-flex items-center gap-2 bg-transparent border-none text-[rgba(216,235,255,0.5)] text-[0.9375rem] font-medium [font-family:inherit] cursor-pointer py-1 px-0 transition-colors duration-200 hover:text-[#D8EBFF] mt-auto pt-2 border-t border-[rgba(216,235,255,0.07)] self-start"
+            @click="emit('toggle', project)">
             <span>Schließen</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <svg class="transition-transform duration-[350ms] ease-[cubic-bezier(0.4,0,0.2,1)] flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
@@ -146,344 +151,3 @@ const hasLeftMedia = computed(() =>
 
   </div>
 </template>
-
-<style>
-/* Project card */
-.proj-card {
-  background: #122033;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.proj-card.is-open {
-  grid-column: 1 / -1;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-
-.proj-card:not(.is-open):hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-}
-
-.proj-card-img {
-  overflow: hidden;
-  width: 100%;
-}
-
-.proj-card-img img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-@media (max-width: 768px) {
-  .proj-card-img img { height: 220px; }
-}
-
-.proj-card:not(.is-open):hover .proj-card-img img {
-  transform: scale(1.04);
-}
-
-.proj-card-body {
-  padding: 24px 28px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-
-.proj-card-year {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #429EC8;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.proj-card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.25;
-}
-
-@media (max-width: 768px) {
-  .proj-card-title { font-size: 1.25rem; }
-}
-
-.proj-card-subtitle {
-  font-size: 0.9375rem;
-  color: rgba(216,235,255,0.65);
-  margin: 0;
-  line-height: 1.5;
-}
-
-.proj-card-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 2px;
-}
-
-.proj-cat-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 12px;
-  border-radius: 100px;
-  background: rgba(66,158,200,0.12);
-  border: 1px solid rgba(66,158,200,0.3);
-  color: #429EC8;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.proj-card-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-top: 4px;
-}
-
-.proj-tool-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 11px;
-  border-radius: 100px;
-  background: rgba(150,150,194,0.1);
-  border: 1px solid rgba(150,150,194,0.2);
-  color: #9696C2;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.proj-tool-tag.proj-tool-more {
-  background: rgba(150,150,194,0.06);
-  color: rgba(150,150,194,0.6);
-}
-
-.proj-card-footer {
-  padding: 12px 28px 20px;
-  border-top: 1px solid rgba(216,235,255,0.07);
-  margin-top: auto;
-}
-
-.proj-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: none;
-  color: rgba(216,235,255,0.5);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  padding: 4px 0;
-  transition: color 0.2s;
-}
-
-.proj-toggle-btn svg {
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  flex-shrink: 0;
-}
-
-.proj-toggle-btn:hover { color: #D8EBFF; }
-
-.proj-toggle-btn.is-open { color: #429EC8; }
-.proj-toggle-btn.is-open svg { transform: rotate(180deg); }
-
-/* Expanded card */
-.proj-exp-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 520px;
-}
-
-@media (max-width: 900px) {
-  .proj-exp-wrap { grid-template-columns: 1fr; }
-}
-
-.proj-exp-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
-  background: #0a1420;
-  align-content: start;
-}
-
-.proj-exp-images img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-.proj-exp-images img:first-child:last-child,
-.proj-exp-images img:nth-child(odd):last-child {
-  grid-column: 1 / -1;
-  height: 360px;
-}
-
-@media (max-width: 900px) {
-  .proj-exp-images {
-    grid-template-columns: repeat(2, 1fr);
-    max-height: 320px;
-    overflow: hidden;
-  }
-}
-
-.proj-exp-text {
-  padding: 36px 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  overflow-y: auto;
-  background: #122033;
-}
-
-@media (max-width: 900px) {
-  .proj-exp-text { padding: 28px 24px; }
-}
-
-.proj-exp-header {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.proj-exp-desc {
-  font-size: 1rem;
-  color: rgba(216,235,255,0.85);
-  line-height: 1.7;
-  margin: 0;
-}
-
-.proj-expand-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding-top: 4px;
-  border-top: 1px solid rgba(216,235,255,0.08);
-}
-
-.proj-meta-item { display: flex; flex-direction: column; gap: 4px; }
-
-.proj-meta-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: #429EC8;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.proj-meta-value {
-  font-size: 0.9375rem;
-  color: #D8EBFF;
-  line-height: 1.5;
-}
-
-.proj-expand-details { display: flex; flex-direction: column; gap: 16px; }
-.proj-detail-block   { display: flex; flex-direction: column; gap: 5px; }
-
-.proj-detail-title {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: #429EC8;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0;
-}
-
-.proj-detail-text {
-  font-size: 0.9375rem;
-  color: rgba(216,235,255,0.8);
-  line-height: 1.65;
-  margin: 0;
-}
-
-.proj-expand-tech { display: flex; flex-wrap: wrap; gap: 7px; }
-
-.proj-tech-tag {
-  padding: 4px 13px;
-  border-radius: 100px;
-  background: rgba(150,150,194,0.1);
-  border: 1px solid rgba(150,150,194,0.2);
-  color: #9696C2;
-  font-size: 0.8125rem;
-  font-weight: 500;
-}
-
-.proj-expand-links { display: flex; flex-wrap: wrap; gap: 10px; }
-
-.proj-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(216,235,255,0.25);
-  background: transparent;
-  color: #D8EBFF;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.proj-link-btn:hover {
-  border-color: #429EC8;
-  color: #429EC8;
-}
-
-.proj-toggle-close {
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid rgba(216,235,255,0.07);
-  align-self: flex-start;
-}
-
-/* Text-only expanded (no left media) */
-.proj-exp-wrap--text-only { grid-template-columns: 1fr; }
-
-/* Video block */
-.proj-exp-video { width: 100%; background: #0a1420; }
-.proj-exp-video video {
-  width: 100%;
-  display: block;
-  max-height: 360px;
-  object-fit: cover;
-}
-
-.proj-video-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(216,235,255,0.7);
-  margin: 0;
-  padding: 10px 12px 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* Audio block */
-.proj-exp-audio { display: flex; flex-direction: column; gap: 12px; }
-
-.proj-audio-item { display: flex; flex-direction: column; gap: 6px; }
-.proj-audio-item audio { width: 100%; accent-color: #429EC8; }
-
-.proj-audio-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(216,235,255,0.7);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-</style>

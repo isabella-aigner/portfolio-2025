@@ -1,13 +1,14 @@
 <template>
   <div
     ref="elementRef"
-    :class="[
-      'scroll-reveal',
-      {
-        'reveal-visible': isVisible,
-        [`reveal-${direction}`]: true
-      }
-    ]"
+    class="opacity-0 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+    :class="{
+      'translate-y-[50px]':  !isVisible && direction === 'up',
+      '-translate-y-[50px]': !isVisible && direction === 'down',
+      'translate-x-[50px]':  !isVisible && direction === 'left',
+      '-translate-x-[50px]': !isVisible && direction === 'right',
+      '!opacity-100 !translate-x-0 !translate-y-0': isVisible,
+    }"
   >
     <slot></slot>
   </div>
@@ -57,31 +58,3 @@ onUnmounted(() => {
   }
 })
 </script>
-
-<style scoped>
-.scroll-reveal {
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.scroll-reveal.reveal-up {
-  transform: translateY(50px);
-}
-
-.scroll-reveal.reveal-down {
-  transform: translateY(-50px);
-}
-
-.scroll-reveal.reveal-left {
-  transform: translateX(50px);
-}
-
-.scroll-reveal.reveal-right {
-  transform: translateX(-50px);
-}
-
-.scroll-reveal.reveal-visible {
-  opacity: 1;
-  transform: translate(0);
-}
-</style>

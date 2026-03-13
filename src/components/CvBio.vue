@@ -6,36 +6,10 @@ defineProps<{
 </script>
 
 <template>
-  <section class="cv-bio-section">
+  <section class="cv-bio-section pt-[44px] pb-[48px] max-[768px]:pt-[32px] max-[768px]:pb-[36px]">
     <div class="page-inner">
-      <h2 class="cv-bio-title">{{ title }}</h2>
-      <p class="cv-bio-text">{{ text }}</p>
+      <h2 class="cv-bio-title text-[1.375rem] font-semibold text-white mx-auto mt-0 mb-4 leading-[1.4] max-w-[820px] text-center">{{ title }}</h2>
+      <p class="cv-bio-text text-base text-[rgba(216,235,255,0.75)] leading-[1.75] mx-auto mt-0 mb-[1.75rem] max-w-[820px]">{{ text }}</p>
     </div>
   </section>
 </template>
-
-<style>
-.cv-bio-section { padding: 44px 0 48px; }
-
-@media (max-width: 768px) {
-  .cv-bio-section { padding: 32px 0 36px; }
-}
-
-.cv-bio-section .cv-bio-title {
-  font-size: 1.375rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0 auto 1rem;
-  line-height: 1.4;
-  max-width: 820px;
-  text-align: center;
-}
-
-.cv-bio-section .cv-bio-text {
-  font-size: 1rem;
-  color: rgba(216,235,255,0.75);
-  line-height: 1.75;
-  margin: 0 auto 1.75rem;
-  max-width: 820px;
-}
-</style>

@@ -16,71 +16,26 @@ withDefaults(defineProps<{
     :href="href"
     :target="target"
     :rel="target === '_blank' ? 'noopener noreferrer' : undefined"
-    class="app-btn"
-    :class="[`app-btn--${variant}`, { 'app-btn--sm': size === 'sm' }]"
+    class="app-btn inline-flex items-center gap-[6px] [font-family:inherit] font-semibold rounded-lg cursor-pointer no-underline whitespace-nowrap transition-[border-color,color,background,transform] duration-200"
+    :class="[
+      variant === 'primary'
+        ? 'app-btn--primary bg-[#429EC8] border-0 text-white text-[1.0625rem] min-w-[220px] h-14 px-8 justify-center pointer-events-auto hover:bg-[#5ab3d8] hover:-translate-y-0.5 md:min-w-[262px] md:h-16 md:text-lg'
+        : 'app-btn--outline bg-transparent border border-[rgba(216,235,255,0.25)] text-[#D8EBFF] hover:border-[#429EC8] hover:text-[#429EC8]',
+      variant === 'outline' && size === 'sm'
+        ? 'text-[0.875rem] px-[14px] py-[6px]'
+        : variant === 'outline' ? 'text-[0.9375rem] px-[18px] py-2' : ''
+    ]"
   ><slot /></a>
   <button
     v-else
-    class="app-btn"
-    :class="[`app-btn--${variant}`, { 'app-btn--sm': size === 'sm' }]"
+    class="app-btn inline-flex items-center gap-[6px] [font-family:inherit] font-semibold rounded-lg cursor-pointer whitespace-nowrap transition-[border-color,color,background,transform] duration-200"
+    :class="[
+      variant === 'primary'
+        ? 'app-btn--primary bg-[#429EC8] border-0 text-white text-[1.0625rem] min-w-[220px] h-14 px-8 justify-center pointer-events-auto hover:bg-[#5ab3d8] hover:-translate-y-0.5 md:min-w-[262px] md:h-16 md:text-lg'
+        : 'app-btn--outline bg-transparent border border-[rgba(216,235,255,0.25)] text-[#D8EBFF] hover:border-[#429EC8] hover:text-[#429EC8]',
+      variant === 'outline' && size === 'sm'
+        ? 'text-[0.875rem] px-[14px] py-[6px]'
+        : variant === 'outline' ? 'text-[0.9375rem] px-[18px] py-2' : ''
+    ]"
   ><slot /></button>
 </template>
-
-<style>
-.app-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: inherit;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
-}
-
-/* ── Outline ── */
-.app-btn--outline {
-  background: transparent;
-  border: 1px solid rgba(216,235,255,0.25);
-  color: #D8EBFF;
-  font-size: 0.9375rem;
-  padding: 8px 18px;
-}
-
-.app-btn--outline:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
-
-.app-btn--outline.app-btn--sm {
-  font-size: 0.875rem;
-  padding: 6px 14px;
-}
-
-/* ── Primary ── */
-.app-btn--primary {
-  background: #429EC8;
-  border: none;
-  color: #ffffff;
-  font-size: 1.0625rem;
-  min-width: 220px;
-  height: 56px;
-  padding: 0 32px;
-  justify-content: center;
-  pointer-events: all;
-}
-
-.app-btn--primary:hover {
-  background: #5ab3d8;
-  transform: translateY(-2px);
-}
-
-@media (min-width: 768px) {
-  .app-btn--primary { min-width: 262px; height: 64px; font-size: 1.125rem; }
-}
-
-/* arrow helper used inside buttons */
-.app-btn .arrow { font-size: 1.1em; }
-</style>

@@ -6,41 +6,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="stat-card">
-    <span class="stat-num">{{ num }}</span>
-    <span class="stat-lbl">{{ label }}</span>
+  <div class="stat-card flex-1 flex items-center gap-[10px] bg-[#0D1A2C] border border-[rgba(216,235,255,0.1)] rounded-lg py-6 px-[30px]">
+    <span class="text-[2rem] md:text-[2.5rem] font-bold text-white leading-none whitespace-nowrap">{{ num }}</span>
+    <span class="text-[1.25rem] md:text-[1.875rem] font-bold text-white leading-[1.1]">{{ label }}</span>
   </div>
 </template>
-
-<style>
-.stat-card {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #0D1A2C;
-  border: 1px solid rgba(216,235,255,0.1);
-  border-radius: 8px;
-  padding: 24px 30px;
-}
-
-.stat-card .stat-num {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.stat-card .stat-lbl {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.1;
-}
-
-@media (max-width: 768px) {
-  .stat-card .stat-num { font-size: 2rem; }
-  .stat-card .stat-lbl { font-size: 1.25rem; }
-}
-</style>

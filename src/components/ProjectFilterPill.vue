@@ -4,37 +4,13 @@ const emit = defineEmits<{ (e: 'click'): void }>();
 </script>
 
 <template>
-  <button class="proj-filter-pill" :class="{ active }" @click="emit('click')">
+  <button
+    class="inline-flex items-center px-5 py-2 rounded-full border cursor-pointer transition-all duration-200 whitespace-nowrap text-[0.9375rem] [font-family:inherit]"
+    :class="active
+      ? 'bg-[#429EC8] border-[#429EC8] text-white font-semibold'
+      : 'border-[rgba(216,235,255,0.2)] bg-transparent text-[rgba(216,235,255,0.65)] font-medium hover:border-[#429EC8] hover:text-[#D8EBFF]'"
+    @click="emit('click')"
+  >
     {{ label }}
   </button>
 </template>
-
-<style>
-.proj-filter-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 20px;
-  border-radius: 100px;
-  border: 1px solid rgba(216,235,255,0.2);
-  background: transparent;
-  color: rgba(216,235,255,0.65);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-  white-space: nowrap;
-}
-
-.proj-filter-pill:hover {
-  border-color: #429EC8;
-  color: #D8EBFF;
-}
-
-.proj-filter-pill.active {
-  background: #429EC8;
-  border-color: #429EC8;
-  color: #ffffff;
-  font-weight: 600;
-}
-</style>

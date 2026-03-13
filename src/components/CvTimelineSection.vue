@@ -31,11 +31,17 @@ const remaining = computed(() => props.entries.length - props.initialCount);
 </script>
 
 <template>
-  <section class="cv-timeline-section" :class="{ 'cv-timeline-section--edu': variant === 'edu' }">
+  <section
+    class="py-[50px] md:py-[70px] md:pb-[60px]"
+    :class="variant === 'edu' ? 'bg-[#0a1420]' : 'bg-[#0D1A2C]'"
+  >
     <div class="page-inner">
-      <h2 class="cv-section-heading">{{ heading }}</h2>
+      <h2 class="cv-section-heading text-[1.5rem] md:text-[2rem] font-bold text-white m-0 mb-7 md:mb-10">{{ heading }}</h2>
 
-      <div class="cv-timeline" :class="variant === 'work' ? 'cv-timeline--work' : 'cv-timeline--edu'">
+      <div
+        class="flex flex-col gap-0 relative before:content-[''] before:absolute before:left-[21px] before:top-[44px] before:bottom-5 before:w-0.5 before:rounded-sm before:z-0 before:pointer-events-none before:bg-[linear-gradient(to_bottom,rgba(150,166,198,0.3)_0%,rgba(150,166,198,0.2)_60%,transparent_100%)]"
+        :class="variant === 'work' ? 'cv-timeline--work' : 'cv-timeline--edu'"
+      >
         <CvEntryCard
           v-for="(entry, i) in visibleEntries"
           :key="entry.sub + i"
@@ -50,7 +56,7 @@ const remaining = computed(() => props.entries.length - props.initialCount);
 
       <AppButton
         v-if="entries.length > initialCount"
-        class="cv-expand-btn"
+        class="mt-7"
         @click="showAll = !showAll"
       >
         <svg
@@ -64,54 +70,3 @@ const remaining = computed(() => props.entries.length - props.initialCount);
     </div>
   </section>
 </template>
-
-<style>
-.cv-timeline-section {
-  background: #0D1A2C;
-  padding: 70px 0 60px;
-}
-
-@media (max-width: 768px) {
-  .cv-timeline-section { padding: 50px 0 40px; }
-}
-
-.cv-timeline-section--edu { background: #0a1420; }
-
-.cv-timeline-section .cv-section-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 40px;
-}
-
-@media (max-width: 768px) {
-  .cv-section-heading { font-size: 1.5rem; margin-bottom: 28px; }
-}
-
-.cv-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
-}
-
-.cv-timeline::before {
-  content: '';
-  position: absolute;
-  left: 21px;
-  top: 44px;
-  bottom: 20px;
-  width: 2px;
-  border-radius: 2px;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgba(150, 166, 198, 0.3) 0%,
-    rgba(150, 166, 198, 0.2) 60%,
-    transparent 100%
-  );
-}
-
-.cv-expand-btn { margin-top: 28px; }
-</style>

@@ -11,170 +11,48 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section id="contact" class="contact-section">
+  <section id="contact" class="contact-section bg-[#0D1A2C] pb-[110px] max-md:pb-[60px] scroll-mt-[70px]">
     <div class="page-inner">
-      <div class="contact-head">
+      <div class="contact-head flex flex-col items-center gap-4 text-center mb-[60px] pt-[110px] max-md:pt-[60px] max-md:mb-9">
         <span class="section-tag">💬 Hast du Fragen oder Ideen? Lass uns reden! 🚀</span>
         <h2 class="section-h2">Jetzt kontaktieren!</h2>
       </div>
-      <div class="contact-cols">
-        <div class="contact-form-wrap">
-          <form id="contact-form" @submit.prevent="handleSubmit">
-            <div class="form-group">
-              <label>Name</label>
-              <input name="name" type="text" placeholder="Vorname Nachname" required />
+      <div class="contact-cols grid grid-cols-2 gap-5 items-start max-[900px]:grid-cols-1">
+        <div class="contact-form-wrap bg-[#253349] rounded flex flex-col py-10 px-[30px] max-md:py-6 max-md:px-5">
+          <form id="contact-form" class="flex flex-col gap-4" @submit.prevent="handleSubmit">
+            <div class="flex flex-col gap-2">
+              <label class="text-[0.9375rem] font-medium text-[rgba(216,235,255,0.75)]">Name</label>
+              <input
+                name="name" type="text" placeholder="Vorname Nachname" required
+                class="bg-[#D9ECFF] border-none rounded-[6px] py-4 px-[17px] text-[#1F2E42] text-base [font-family:inherit] outline-none w-full transition-opacity duration-200 placeholder:text-[rgba(31,46,66,0.55)] focus:opacity-90"
+              />
             </div>
-            <div class="form-group">
-              <label>E-Mail</label>
-              <input name="email" type="email" placeholder="E-Mail Adresse" required />
+            <div class="flex flex-col gap-2">
+              <label class="text-[0.9375rem] font-medium text-[rgba(216,235,255,0.75)]">E-Mail</label>
+              <input
+                name="email" type="email" placeholder="E-Mail Adresse" required
+                class="bg-[#D9ECFF] border-none rounded-[6px] py-4 px-[17px] text-[#1F2E42] text-base [font-family:inherit] outline-none w-full transition-opacity duration-200 placeholder:text-[rgba(31,46,66,0.55)] focus:opacity-90"
+              />
             </div>
-            <div class="form-group">
-              <label>Nachricht</label>
-              <textarea name="message" placeholder="Was möchtest du mir sagen?" required></textarea>
+            <div class="flex flex-col gap-2">
+              <label class="text-[0.9375rem] font-medium text-[rgba(216,235,255,0.75)]">Nachricht</label>
+              <textarea
+                name="message" placeholder="Was möchtest du mir sagen?" required
+                class="bg-[#D9ECFF] border-none rounded-[6px] py-4 px-[17px] text-[#1F2E42] text-base [font-family:inherit] outline-none w-full transition-opacity duration-200 placeholder:text-[rgba(31,46,66,0.55)] focus:opacity-90 resize-y min-h-[141px]"
+              ></textarea>
             </div>
-            <button type="submit" class="contact-btn">Nachricht senden →</button>
+            <button
+              type="submit"
+              class="w-full mt-2 py-[14px] px-6 bg-[linear-gradient(180deg,#EBF3FA_0%,#DFEDFA_100%)] text-[#1F2E42] border-none rounded-lg text-base font-semibold [font-family:inherit] cursor-pointer flex items-center justify-center gap-2 transition-opacity duration-200 hover:opacity-[0.88]"
+            >
+              Nachricht senden →
+            </button>
           </form>
         </div>
-        <div class="contact-img-wrap">
-          <img src="/assets/images/contact-form-bg.jpg" alt="Isabella Aigner" />
+        <div class="contact-img-wrap rounded-[20px] overflow-hidden max-[900px]:h-[300px]">
+          <img src="/assets/images/contact-form-bg.jpg" alt="Isabella Aigner" class="w-full h-full object-cover block" />
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<style>
-#contact.contact-section {
-  background: #0D1A2C;
-  padding: 0 0 110px;
-  scroll-margin-top: 70px;
-  max-width: none;
-  margin-left: unset;
-  margin-right: unset;
-}
-
-@media (max-width: 768px) {
-  #contact.contact-section { padding-bottom: 60px; }
-}
-
-#contact.contact-section .contact-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 110px 0 0;
-}
-
-@media (max-width: 768px) {
-  #contact.contact-section .contact-head { padding-top: 60px; margin-bottom: 36px; }
-}
-
-#contact.contact-section .contact-cols {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: start;
-}
-
-@media (max-width: 900px) {
-  #contact.contact-section .contact-cols { grid-template-columns: 1fr; }
-}
-
-#contact.contact-section .contact-form-wrap {
-  background: #253349;
-  border-radius: 4px;
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  #contact.contact-section .contact-form-wrap { padding: 24px 20px; }
-}
-
-#contact.contact-section .contact-form-wrap form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-#contact.contact-section .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-#contact.contact-section .form-group label {
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: rgba(216,235,255,0.75);
-}
-
-#contact.contact-section .form-group input,
-#contact.contact-section .form-group textarea {
-  background: #D9ECFF;
-  border: none;
-  border-radius: 6px;
-  padding: 16px 17px;
-  color: #1F2E42;
-  font-size: 1rem;
-  font-family: inherit;
-  outline: none;
-  width: 100%;
-  transition: opacity 0.2s;
-}
-
-#contact.contact-section .form-group input::placeholder,
-#contact.contact-section .form-group textarea::placeholder {
-  color: rgba(31,46,66,0.55);
-}
-
-#contact.contact-section .form-group input:focus,
-#contact.contact-section .form-group textarea:focus {
-  opacity: 0.9;
-}
-
-#contact.contact-section .form-group textarea {
-  resize: vertical;
-  min-height: 141px;
-}
-
-#contact.contact-section .contact-btn {
-  width: 100%;
-  margin-top: 8px;
-  padding: 14px 24px;
-  background: linear-gradient(180deg, #EBF3FA 0%, #DFEDFA 100%);
-  color: #1F2E42;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: opacity 0.2s;
-}
-
-#contact.contact-section .contact-btn:hover { opacity: 0.88; }
-
-#contact.contact-section .contact-img-wrap {
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-#contact.contact-section .contact-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 900px) {
-  #contact.contact-section .contact-img-wrap { height: 300px; }
-}
-</style>

@@ -96,28 +96,3 @@ const emit = defineEmits<{
     </div>
   </Dialog>
 </template>
-
-<style scoped>
-:deep(.gallery-dialog) {
-  background: #32343a;
-  color: white;
-  width: 98vw;
-  height: 85vh;
-  padding: 0;
-  margin: 0;
-}
-:deep(.gallery-dialog .p-dialog-header),
-:deep(.gallery-dialog .p-dialog-content),
-:deep(.gallery-dialog .p-dialog-footer) {
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-:deep(.gallery-dialog .p-dialog-header-icons) {
-  display: none;
-}
-:deep(.gallery-dialog .p-dialog-content) {
-  height: 100%;
-}
-</style>

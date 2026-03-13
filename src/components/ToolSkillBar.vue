@@ -15,16 +15,9 @@ defineProps<{
     </div>
     <div class="h-[6px] rounded-[3px] bg-[rgba(150,166,198,0.12)] overflow-hidden">
       <div
-        class="cv-tool-bar-fill h-full rounded-[3px]"
-        :style="{ width: pct + '%', '--bar-color': color, '--bar-color-dim': colorDim }"
+        class="cv-tool-bar-fill h-full rounded-[3px] transition-[width] duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+        :style="{ width: pct + '%', background: `linear-gradient(90deg, ${colorDim}, ${color})` }"
       />
     </div>
   </div>
 </template>
-
-<style scoped>
-.cv-tool-bar-fill {
-  background: linear-gradient(90deg, var(--bar-color-dim, #1a3a5c), var(--bar-color, #429EC8));
-  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-</style>
