@@ -21,7 +21,7 @@ const handleSubmit = () => {
         <span class="section-tag">{{ t('contact.sectionTag') }}</span>
         <h2 class="section-h2">{{ t('contact.heading') }}</h2>
       </div>
-      <div class="contact-cols grid grid-cols-2 gap-5 items-start max-[900px]:grid-cols-1">
+      <div class="contact-cols grid grid-cols-2 gap-5 items-stretch max-[900px]:grid-cols-1">
         <div class="contact-form-wrap bg-[#253349] rounded flex flex-col py-10 px-[30px] max-md:py-6 max-md:px-5">
           <form id="contact-form" class="flex flex-col gap-4" @submit.prevent="handleSubmit">
             <div class="flex flex-col gap-2">
@@ -53,7 +53,7 @@ const handleSubmit = () => {
             </button>
           </form>
         </div>
-        <div class="contact-img-wrap rounded-[20px] overflow-hidden max-[900px]:h-[300px]">
+        <div class="contact-img-wrap rounded-[20px] overflow-hidden h-full max-[900px]:h-[300px]">
           <img src="/assets/images/contact-form-bg.jpg" alt="Isabella Aigner" class="w-full h-full object-cover block" />
         </div>
       </div>

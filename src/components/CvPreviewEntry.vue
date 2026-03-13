@@ -25,20 +25,20 @@ withDefaults(defineProps<{
       <div
         v-for="l in logos"
         :key="l.src"
-        class="flex-shrink-0 rounded-full bg-[#1D2B40] border-[1.5px] border-[rgba(150,166,198,0.25)] flex items-center justify-center overflow-hidden relative z-[2]"
+        class="flex-shrink-0 rounded-full bg-[#253349] border-[1.5px] border-[rgba(150,166,198,0.45)] flex items-center justify-center overflow-hidden relative z-[2]"
         :class="l.sm ? 'w-9 h-9 p-[7px]' : 'w-11 h-11 p-2'"
       >
-        <img :src="l.src" :alt="l.alt" class="w-full h-auto block brightness-0 invert opacity-[0.85]" />
+        <img :src="l.src" :alt="l.alt" class="w-full h-auto block brightness-0 invert" />
       </div>
     </div>
     <div
       v-else-if="!empty"
       class="flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center overflow-hidden p-2 z-[2] relative border-[1.5px]"
       :class="dotFh
-        ? 'bg-[rgba(0,140,160,0.2)] border-[rgba(0,190,210,0.4)]'
-        : 'bg-[#1D2B40] border-[rgba(150,166,198,0.25)]'"
+        ? 'bg-[rgba(0,140,160,0.25)] border-[rgba(0,190,210,0.55)]'
+        : 'bg-[#253349] border-[rgba(150,166,198,0.45)]'"
     >
-      <img v-if="logo" :src="logo" :alt="logoAlt || ''" class="w-full h-auto block brightness-0 invert opacity-[0.85]" />
+      <img v-if="logo" :src="logo" :alt="logoAlt || ''" class="w-full h-auto block brightness-0 invert" />
       <span v-if="dotText" class="text-[0.6875rem] font-bold text-[rgba(0,210,230,0.9)] tracking-[0.05em]">{{ dotText }}</span>
     </div>
     <div v-if="!empty" class="flex-1 pt-[2px]">

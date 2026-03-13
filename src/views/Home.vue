@@ -191,6 +191,7 @@ onUnmounted(() => {
             :key="i"
             :testimonial="row.testimonial"
             :entry="row.entry"
+            :is-last="i === cvRows.length - 1"
           />
         </div>
 

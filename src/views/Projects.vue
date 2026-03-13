@@ -86,6 +86,7 @@ const toggleProject = (project: ProjectItem) => {
                         :project="project"
                         :is-open="selectedProject?.id === project.id"
                         :filter-items="filterItems"
+                        :selected-filter="selectedFilter"
                         :clickable-card="true"
                         @toggle="toggleProject"
                     />

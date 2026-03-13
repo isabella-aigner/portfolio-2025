@@ -8,6 +8,7 @@ const props = defineProps<{
   isOpen: boolean;
   filterItems: FilterItem[];
   clickableCard?: boolean;
+  selectedFilter?: string | null;
 }>();
 
 const emit = defineEmits<{ (e: 'toggle', project: ProjectItem): void }>();
@@ -40,7 +41,14 @@ const hasLeftMedia = computed(() =>
         <h2 class="text-[1.25rem] md:text-[1.5rem] font-semibold text-white m-0 leading-[1.25]">{{ project.title }}</h2>
         <p v-if="project.subtitle" class="text-[0.9375rem] text-[rgba(216,235,255,0.65)] m-0 leading-[1.5]">{{ project.subtitle }}</p>
         <div class="flex flex-wrap gap-[6px] mt-[2px]">
-          <span v-for="tag in project.filterTags" :key="tag" class="inline-flex items-center px-3 py-1 rounded-full bg-[rgba(66,158,200,0.12)] border border-[rgba(66,158,200,0.3)] text-[#429EC8] text-[0.8125rem] font-medium whitespace-nowrap">
+          <span
+            v-for="tag in project.filterTags"
+            :key="tag"
+            class="inline-flex items-center px-3 py-1 rounded-full border text-[0.8125rem] font-medium whitespace-nowrap transition-colors duration-200"
+            :class="tag === selectedFilter
+              ? 'bg-[#429EC8] border-[#429EC8] text-white font-semibold'
+              : 'bg-[rgba(66,158,200,0.12)] border-[rgba(66,158,200,0.3)] text-[#429EC8]'"
+          >
             {{ getFilterName(tag) }}
           </span>
         </div>
