@@ -1,3 +1,18 @@
+type TmFunc = (key: string) => unknown;
+
+export function getSkillPanels(tm: TmFunc) {
+  const icons = ["</>", "⊞", "✦", "❋"];
+  const panels = tm('shared.skillPanels') as Array<{ title: string; desc: string; tags: string[] }>;
+  return panels.map((p, i) => ({ icon: icons[i], ...p }));
+}
+
+export function getSoftSkillCards(tm: TmFunc) {
+  const icons = ["✦", "💬", "💡"];
+  const cards = tm('shared.softSkillCards') as Array<{ title: string; desc: string }>;
+  return cards.map((c, i) => ({ icon: icons[i], ...c }));
+}
+
+// Keep legacy static exports for backwards compatibility (used before i18n)
 export const skillPanels = [
   {
     icon: "</>",

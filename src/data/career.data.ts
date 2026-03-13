@@ -1,3 +1,51 @@
+type TmFunc = (key: string) => unknown;
+
+type ExperienceEntry = {
+  position: string;
+  company: string;
+  period: string;
+  label?: string;
+  details: string[];
+};
+
+type EducationEntry = {
+  title: string;
+  subtitle: string;
+  period: string;
+  label?: string;
+  details: string[];
+};
+
+type LanguageEntry = {
+  name: string;
+  level: string;
+  score: number;
+};
+
+export function getExperienceEntries(tm: TmFunc): ExperienceEntry[] {
+  return tm('career.experienceEntries') as ExperienceEntry[];
+}
+
+export function getEducationEntries(tm: TmFunc): EducationEntry[] {
+  return tm('career.educationEntries') as EducationEntry[];
+}
+
+export function getLanguages(tm: TmFunc): LanguageEntry[] {
+  return tm('career.languages') as LanguageEntry[];
+}
+
+export const toolLevels = [
+  { name: "Figma", pct: 95, color: "#F587FF", colorDim: "#5a1a6b" },
+  { name: "Adobe Illustrator", pct: 90, color: "#F37021", colorDim: "#6b2a0a" },
+  { name: "Adobe Photoshop", pct: 85, color: "#429EC8", colorDim: "#1a3a5c" },
+  { name: "VS Code", pct: 92, color: "#7EFFCC", colorDim: "#0a4a36" },
+  { name: "Vue.js", pct: 88, color: "#7EFFCC", colorDim: "#0a4a36" },
+  { name: "CSS / SCSS", pct: 95, color: "#429EC8", colorDim: "#1a3a5c" },
+  { name: "TypeScript", pct: 78, color: "#429EC8", colorDim: "#1a3a5c" },
+  { name: "Adobe InDesign", pct: 85, color: "#F37021", colorDim: "#6b2a0a" },
+];
+
+// Legacy static exports
 export const experienceEntries = [
   {
     position: "Frontend-Entwicklerin, UI/UX-Designerin, Marketing & Design",
@@ -122,11 +170,7 @@ export const educationEntries = [
     subtitle: "Bachelor of Science",
     period: "Sept. 2018 – Jan. 2022",
     label: "Schwerpunkte",
-    details: [
-      "Webentwicklung & Design",
-      "Film, Audio, 3D, Motion Graphics",
-      "Online Marketing Basics",
-    ],
+    details: ["Webentwicklung & Design", "Film, Audio, 3D, Motion Graphics", "Online Marketing Basics"],
   },
   {
     title: "Illuskills Wien",
@@ -146,10 +190,7 @@ export const educationEntries = [
     subtitle: "Kommunikationsdesign",
     period: "Okt. 2010 – Juni 2014",
     label: "Diplom",
-    details: [
-      "Modellentwicklung Ausbildungs-, Akademie- & Kompetenzbeweise",
-      "Kompetenzen: Print, Corporate Design, Packaging Design, Fotografie",
-    ],
+    details: ["Modellentwicklung Ausbildungs-, Akademie- & Kompetenzbeweise", "Kompetenzen: Print, Corporate Design, Packaging Design, Fotografie"],
   },
   {
     title: "FiT – Frauen in Handwerk und Technik, BFI Salzburg",
@@ -187,15 +228,4 @@ export const languages = [
   { name: "Deutsch", level: "Muttersprache", score: 5 },
   { name: "Englisch", level: "B2 – C1", score: 4 },
   { name: "Französisch", level: "Grundkenntnisse", score: 1 },
-];
-
-export const toolLevels = [
-  { name: "Figma", pct: 95, color: "#F587FF", colorDim: "#5a1a6b" },
-  { name: "Adobe Illustrator", pct: 90, color: "#F37021", colorDim: "#6b2a0a" },
-  { name: "Adobe Photoshop", pct: 85, color: "#429EC8", colorDim: "#1a3a5c" },
-  { name: "VS Code", pct: 92, color: "#7EFFCC", colorDim: "#0a4a36" },
-  { name: "Vue.js", pct: 88, color: "#7EFFCC", colorDim: "#0a4a36" },
-  { name: "CSS / SCSS", pct: 95, color: "#429EC8", colorDim: "#1a3a5c" },
-  { name: "TypeScript", pct: 78, color: "#429EC8", colorDim: "#1a3a5c" },
-  { name: "Adobe InDesign", pct: 85, color: "#F37021", colorDim: "#6b2a0a" },
 ];

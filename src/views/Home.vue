@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, nextTick } from "vue";
+import { computed, onMounted, onUnmounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 import HeroSection from "../components/HeroSection.vue";
 import StatCard from "../components/StatCard.vue";
 import SoftSkillCard from "../components/SoftSkillCard.vue";
@@ -15,10 +16,17 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 // ScrollTrigger is registered globally in main.ts; import kept for type usage
 void ScrollTrigger;
-import { skillPanels, softSkillCards } from "../data/shared.data";
-import { featuredProjects, logos, cvRows } from "../data/home.data";
+import { getSkillPanels, getSoftSkillCards } from "../data/shared.data";
+import { getFeaturedProjects, getCvRows, logos } from "../data/home.data";
 
+const { t, tm } = useI18n();
 const router = useRouter();
+
+const skillPanels = computed(() => getSkillPanels(tm));
+const softSkillCards = computed(() => getSoftSkillCards(tm));
+const featuredProjects = computed(() => getFeaturedProjects(tm));
+const cvRows = computed(() => getCvRows(tm));
+const stats = computed(() => tm('home.stats') as Array<{ num: string; label: string }>);
 
 let ctx: gsap.Context;
 
@@ -108,16 +116,19 @@ onUnmounted(() => {
   <div id="home" class="home">
 
     <!-- Hero -->
-    <HeroSection title="Isabella Aigner" :dynamic-text="[]" />
+    <HeroSection />
 
     <!-- Stats -->
     <section class="stats-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
-        <span class="section-tag">💼 Berufserfahrung</span>
+        <span class="section-tag">{{ t('home.statsTag') }}</span>
         <div class="stats-row flex gap-5 mt-[21px] max-md:flex-col">
-          <StatCard num="7+" label="Grafik Design" />
-          <StatCard num="3+" label="Frontend-Dev" />
-          <StatCard num="3+" label="UI/UX-Design" />
+          <StatCard
+            v-for="stat in stats"
+            :key="stat.num + stat.label"
+            :num="stat.num"
+            :label="stat.label"
+          />
         </div>
       </div>
     </section>
@@ -126,9 +137,9 @@ onUnmounted(() => {
     <section class="projects-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
         <div class="projects-header flex items-center justify-between mb-[21px] gap-4 flex-wrap">
-          <span class="section-tag">💼 Projekte</span>
+          <span class="section-tag">{{ t('home.projectsTag') }}</span>
           <AppButton size="sm" @click="router.push('/projects')">
-            Alle Projekte einsehen <span class="arrow">→</span>
+            {{ t('home.allProjects') }} <span class="arrow">→</span>
           </AppButton>
         </div>
         <div class="projects-grid grid grid-cols-[59.4fr_37.3fr] gap-[41px] max-[900px]:grid-cols-1">
@@ -170,8 +181,8 @@ onUnmounted(() => {
     <section class="cv-section bg-[#0D1A2C] pt-[110px] max-md:pt-[60px]">
       <div class="page-inner">
         <div class="cv-head flex flex-col gap-4 mb-[40px]">
-          <span class="section-tag">💼 Lebenslauf</span>
-          <h2 class="section-h2">Professionelle Erfahrung</h2>
+          <span class="section-tag">{{ t('home.cvTag') }}</span>
+          <h2 class="section-h2">{{ t('home.cvHeading') }}</h2>
         </div>
 
         <div class="cv-timeline-rows flex flex-col gap-9 mb-[30px] max-md:gap-6">
@@ -184,7 +195,7 @@ onUnmounted(() => {
         </div>
 
         <AppButton href="/career">
-          Lebenslauf einsehen <span class="arrow">→</span>
+          {{ t('home.viewCareer') }} <span class="arrow">→</span>
         </AppButton>
       </div>
     </section>
@@ -193,8 +204,8 @@ onUnmounted(() => {
     <section class="skills-section bg-[#0D1A2C] py-[110px] max-md:py-[60px]">
       <div class="page-inner">
         <div class="skills-head flex flex-col items-start gap-4 mb-[40px]">
-          <span class="section-tag">🤝 Mein Techstack</span>
-          <h2 class="section-h2 !text-[2.5rem] max-md:!text-[1.875rem]">Meine Kernkompetenzen</h2>
+          <span class="section-tag">{{ t('home.techTag') }}</span>
+          <h2 class="section-h2 !text-[2.5rem] max-md:!text-[1.875rem]">{{ t('home.techHeading') }}</h2>
         </div>
         <!-- Core skill tiles -->
         <div class="core-skills-tiles flex gap-5 max-md:gap-3 flex-wrap">
@@ -205,7 +216,7 @@ onUnmounted(() => {
           <CoreSkillTile src="/assets/images/skill-adobe.png" alt="Adobe CC" />
         </div>
         <!-- Competencies overview -->
-        <h3 class="text-[2rem] max-md:text-[1.375rem] font-semibold text-white mt-[50px] mb-6 max-md:mt-8 max-md:mb-4 leading-[1.2]">Kompetenzen im Überblick</h3>
+        <h3 class="text-[2rem] max-md:text-[1.375rem] font-semibold text-white mt-[50px] mb-6 max-md:mt-8 max-md:mb-4 leading-[1.2]">{{ t('home.techSubHeading') }}</h3>
         <div class="skills-grid grid grid-cols-2 max-md:grid-cols-1 gap-5">
           <SkillPanel
             v-for="panel in skillPanels"

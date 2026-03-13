@@ -1,33 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import AppButton from './AppButton.vue';
 
-import { HeroDynamicText } from '../models/HeroDynamicText';
+const { t, tm } = useI18n();
 
-defineProps<{
-  title: string,
-  dynamicText: HeroDynamicText[],
-}>();
-
-const dynamicText = ref<HeroDynamicText[]>([
-    {
-        text: 'Grafikdesign',
-        imgLink: '/assets/images/graficdesign-icon.svg'
-    },
-    {
-        text: 'Frontend-Development',
-        imgLink: '/assets/images/development-icon.svg'
-    },
-    {
-        text: 'Ui/UX-Design',
-        imgLink: '/assets/images/ui-ux-icon.svg'
-    },
-])
+const dynamicText = computed(() =>
+  tm('home.heroSlides') as Array<{ text: string; imgLink: string }>
+);
 
 const handleBtnClick = (url: string, type?: string) => {
   type ? window.open(url, type) : window.open(url);
 };
-
 </script>
 
 <template>
@@ -88,29 +72,29 @@ const handleBtnClick = (url: string, type?: string) => {
                                         Hi, I'm
                                         <span class="text-[40px] text-[var(--primary-color)] lisu-bosa-medium md:text-[72px] xl:text-[80px]">Isabella</span>
                                     </span>
-                                    <span class="block">Mit Herz, Hirn und Hand</span>
+                                    <span class="block">{{ t('home.heroSlogan') }}</span>
                                     <span class="block text-[18px] md:text-[36px] xl:text-[40px]">
-                                        für
+                                        {{ t('home.heroFor') }}
                                         <span class="absolute px-2 py-5 h-[30px] overflow-hidden inline-block transition-all md:px-5 md:h-[48px] md:translate-y-1">
                                             <span class="flex flex-col animate-word-slider">
                                                 <span
-                                                    v-for="(text, index) in dynamicText"
+                                                    v-for="(slide, index) in dynamicText"
                                                     :key="index"
                                                     class="flex items-center md:gap-3 gap-1 pb-2 flex-nowrap">
                                                     <img
-                                                        :alt="text.text"
-                                                        :src="text.imgLink"
+                                                        :alt="slide.text"
+                                                        :src="slide.imgLink"
                                                         class="xl:size-9 md:size-7 size-6 md:p-2 p-1 rounded-full bg-white object-contain" />
-                                                    <span class="text-nowrap">{{ text.text }}</span>
+                                                    <span class="text-nowrap">{{ slide.text }}</span>
                                                 </span>
                                             </span>
                                         </span>
                                     </span>
                                 </h1>
-                                <p class="hero-subtitle text-[1.125rem] md:text-[1.25rem] text-[rgba(216,235,255,0.75)] font-normal leading-[1.5] mt-5 pointer-events-none">Mit innovativen Ideen bringe ich Projekte zuverlässig zum Erfolg</p>
+                                <p class="hero-subtitle text-[1.125rem] md:text-[1.25rem] text-[rgba(216,235,255,0.75)] font-normal leading-[1.5] mt-5 pointer-events-none">{{ t('home.heroSubtitle') }}</p>
                                 <div>
                                     <AppButton variant="primary" class="mt-5 md:mt-7 lg:mt-10">
-                                        Jetzt kontaktieren
+                                        {{ t('home.heroCta') }}
                                     </AppButton>
                                 </div>
                             </div>

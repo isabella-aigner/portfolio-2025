@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, nextTick } from "vue";
+import { useI18n } from "vue-i18n";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 // ScrollTrigger is registered globally in main.ts; import kept for type usage
@@ -11,14 +12,20 @@ import CvLangItem from "../components/CvLangItem.vue";
 import SoftSkillCard from "../components/SoftSkillCard.vue";
 import SkillPanel from "../components/SkillPanel.vue";
 import ToolSkillBar from "../components/ToolSkillBar.vue";
-import { skillPanels, softSkillCards } from "../data/shared.data";
-import { experienceEntries, educationEntries, languages, toolLevels } from "../data/career.data";
+import { getSkillPanels, getSoftSkillCards } from "../data/shared.data";
+import { getExperienceEntries, getEducationEntries, getLanguages, toolLevels } from "../data/career.data";
 
-const experienceMapped = computed(() => experienceEntries.map(e => ({
+const { t, tm } = useI18n();
+
+const skillPanels = computed(() => getSkillPanels(tm));
+const softSkillCards = computed(() => getSoftSkillCards(tm));
+const languages = computed(() => getLanguages(tm));
+
+const experienceMapped = computed(() => getExperienceEntries(tm).map(e => ({
   heading: e.position, sub: e.company, period: e.period, label: e.label, details: e.details,
 })));
 
-const educationMapped = computed(() => educationEntries.map(e => ({
+const educationMapped = computed(() => getEducationEntries(tm).map(e => ({
   heading: e.title, sub: e.subtitle, period: e.period, label: e.label, details: e.details,
 })));
 
@@ -107,31 +114,29 @@ onUnmounted(() => {
 
     <!-- Page Header -->
     <SubpageHeader
-      title="Werdegang"
-      subtitle="Meine Reise: Design, Code und Kreativität"
+      :title="t('career.title')"
+      :subtitle="t('career.claim')"
       cta-href="/cv-isabella-aigner.pdf"
-      cta-label="Lebenslauf herunterladen"
+      :cta-label="t('career.download')"
       :cta-external="true"
     />
 
 
     <!-- Bio -->
     <CvBio
-      title="Design & Development – meine Leidenschaft für digitale Erlebnisse"
-      text="Mit einer Leidenschaft für Design und Technologie kombiniere ich kreative und technische Expertise, um innovative Lösungen zu entwickeln. Als Designerin und Entwicklerin gestalte ich visuelle Erlebnisse, die sowohl ästhetisch ansprechend als auch funktional sind. Meine Projekte reichen von klassischem Printdesign und -produktion, Branding, Corporate Design bis hin zu UX/UI-Design und komplexen technischen Entwicklungen, bei denen ich moderne Technologien und kreative Ansätze miteinander vereine. Mit einem starken Fokus auf Benutzererfahrung und Usability optimiere ich digitale Produkte und bringe sie auf das nächste Level."
+      :title="t('career.bioTitle')"
+      :text="t('career.bioText')"
     />
 
-    <!-- Arbeitserfahrung -->
     <CvTimelineSection
-      heading="Arbeitserfahrung"
+      :heading="t('career.workHeading')"
       :entries="experienceMapped"
       variant="work"
       :initial-count="6"
     />
 
-    <!-- Ausbildung -->
     <CvTimelineSection
-      heading="Ausbildung"
+      :heading="t('career.eduHeading')"
       :entries="educationMapped"
       variant="edu"
       :initial-count="4"
@@ -156,15 +161,15 @@ onUnmounted(() => {
     <section class="cv-skill-levels-section bg-[#0D1A2C] pt-[70px] pb-[80px] max-md:pt-[50px] max-md:pb-[60px]">
       <div class="page-inner">
         <div class="cv-skill-levels-head mb-[48px]">
-          <span class="section-tag">📊 Kenntnisstand</span>
-          <h2 class="section-h2 !mt-2">Skill Levels</h2>
+          <span class="section-tag">{{ t('career.skillLevelTag') }}</span>
+          <h2 class="section-h2 !mt-2">{{ t('career.skillLevelHeading') }}</h2>
         </div>
 
         <div class="grid grid-cols-[1fr_2fr] gap-[48px] items-start max-[900px]:grid-cols-1 max-[900px]:gap-[40px]">
 
           <!-- Languages -->
           <div>
-            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">Sprachkenntnisse</h3>
+            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">{{ t('career.languagesCol') }}</h3>
             <div class="cv-lang-list flex flex-col gap-5">
               <CvLangItem
                 v-for="lang in languages"
@@ -178,7 +183,7 @@ onUnmounted(() => {
 
           <!-- Tools -->
           <div>
-            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">Tools & Technologien</h3>
+            <h3 class="text-[1.125rem] font-semibold text-white m-0 mb-7 pb-3 border-b border-[rgba(150,166,198,0.12)]">{{ t('career.toolsCol') }}</h3>
             <div class="cv-tool-list">
               <ToolSkillBar
                 v-for="tool in toolLevels"
@@ -199,8 +204,8 @@ onUnmounted(() => {
     <section class="cv-skills-section bg-[#122033] pt-[70px] pb-[100px] max-md:pt-[50px] max-md:pb-[60px]">
       <div class="page-inner">
         <div class="mb-[40px]">
-          <span class="section-tag">🤝 Mein Techstack</span>
-          <h2 class="section-h2 !mt-2">Meine Kernkompetenzen</h2>
+          <span class="section-tag">{{ t('career.techTag') }}</span>
+          <h2 class="section-h2 !mt-2">{{ t('career.techHeading') }}</h2>
         </div>
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-5">
           <SkillPanel

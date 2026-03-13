@@ -4,7 +4,7 @@ import { useI18n } from "vue-i18n";
 
 import Navigation from "./components/Navigation.vue";
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const languages = ref([
   { name: "DE", code: "de" },
@@ -18,13 +18,12 @@ const switchLanguage = (lang: string) => {
   selectedLanguage.value = lang;
 };
 
-// Update menu items whenever language changes
 const menuItems = computed(() => ([
-  { label: "Start", path: "/" },
-  { label: "Portfolio", path: "/projects" },
-  { label: "Playground", path: "/personal-projects" },
-  { label: "Werdegang", path: "/career" },
-  { label: "Kontakt", path: "/#contact" },
+  { label: t('nav.home'), path: "/" },
+  { label: t('nav.portfolio'), path: "/projects" },
+  { label: t('nav.playground'), path: "/personal-projects" },
+  { label: t('nav.career'), path: "/career" },
+  { label: t('nav.contact'), path: "/#contact" },
 ]));
 </script>
 
@@ -47,6 +46,6 @@ const menuItems = computed(() => ([
   </main>
 
   <footer class="text-center py-8 bg-[#0D1A2C] text-[#D8EBFF] text-base border-t border-[rgba(255,255,255,0.1)]">
-    <p>© {{ new Date().getFullYear() }} Isabella Aigner. All rights reserved.</p>
+    <p>{{ t('contact.imprint') }}</p>
   </footer>
 </template>
