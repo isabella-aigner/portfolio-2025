@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import CvEntryCard from './CvEntryCard.vue';
+import CvPreviewEntry from './CvPreviewEntry.vue';
 import AppButton from './AppButton.vue';
 
 interface Entry {
@@ -42,14 +42,13 @@ const remaining = computed(() => props.entries.length - props.initialCount);
         class="flex flex-col gap-0 relative before:content-[''] before:absolute before:left-[21px] before:top-[44px] before:bottom-5 before:w-0.5 before:rounded-sm before:z-0 before:pointer-events-none before:bg-[linear-gradient(to_bottom,rgba(150,166,198,0.3)_0%,rgba(150,166,198,0.2)_60%,transparent_100%)]"
         :class="variant === 'work' ? 'cv-timeline--work' : 'cv-timeline--edu'"
       >
-        <CvEntryCard
+        <CvPreviewEntry
           v-for="(entry, i) in visibleEntries"
           :key="entry.sub + i"
-          :heading="entry.heading"
-          :sub="entry.sub"
-          :period="entry.period"
-          :label="entry.label"
-          :details="entry.details"
+          :title="entry.heading"
+          :label="entry.sub"
+          :date="entry.period"
+          :items="entry.details"
           :variant="variant"
         />
       </div>
