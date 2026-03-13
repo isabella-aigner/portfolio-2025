@@ -13,6 +13,7 @@
     "format": "prettier --write \"src/**/*.{js,ts,vue,css,scss,html}\""
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "4.2.1",
     "@vueuse/core": "13.1.0",
     "@vueuse/motion": "^3.0.3",

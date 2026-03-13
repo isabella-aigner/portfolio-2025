@@ -21,18 +21,16 @@ const emit = defineEmits<{
 const isMobileMenuOpen = ref(false);
 const selectedLanguage = ref(props.selectedLanguage);
 
+const scrollToContact = () => {
+  document.querySelector(".contact-section")?.scrollIntoView({ behavior: "smooth" });
+};
+
 const handleNavigation = (path: string) => {
   if (path === "/#contact") {
     if (router.currentRoute.value.path !== "/") {
-      router.push("/");
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const contactSection = document.querySelector(".contact-section");
-        contactSection?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      router.push("/").then(() => setTimeout(scrollToContact, 400));
     } else {
-      const contactSection = document.querySelector(".contact-section");
-      contactSection?.scrollIntoView({ behavior: "smooth" });
+      scrollToContact();
     }
   } else {
     router.push(path);

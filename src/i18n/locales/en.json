@@ -32,7 +32,12 @@
     "messageLabel": "Message",
     "messagePlaceholder": "What would you like to tell me?",
     "sendBtn": "Send Message →",
-    "footerText": "© {year} Isabella Aigner. All rights reserved."
+    "footerText": "© {year} Isabella Aigner. All rights reserved.",
+    "sending": "Sending…",
+    "sentTitle": "Message sent!",
+    "sentText": "Thanks for reaching out. I'll get back to you as soon as possible.",
+    "sentReset": "Send another message",
+    "errorText": "Failed to send. Please try again."
   },
   "home": {
     "headerTitle": "Creativity meets Technology",

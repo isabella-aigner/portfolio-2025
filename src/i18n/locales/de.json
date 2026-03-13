@@ -32,6 +32,11 @@
     "messageLabel": "Nachricht",
     "messagePlaceholder": "Was möchtest du mir sagen?",
     "sendBtn": "Nachricht senden →",
+    "sending": "Wird gesendet…",
+    "sentTitle": "Nachricht gesendet!",
+    "sentText": "Danke für deine Nachricht. Ich melde mich so bald wie möglich.",
+    "sentReset": "Weitere Nachricht senden",
+    "errorText": "Senden fehlgeschlagen. Bitte versuche es erneut.",
     "footerText": "© {year} Isabella Aigner. Alle Rechte vorbehalten."
   },
   "home": {
