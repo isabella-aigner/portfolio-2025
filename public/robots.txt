@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isabellaaigner.at/sitemap.xml

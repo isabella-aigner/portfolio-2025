@@ -18,7 +18,10 @@ import { getExperienceEntries, getEducationEntries, getLanguages, toolLevels } f
 
 const { t, tm } = useI18n();
 
-useHead({ title: "Lebenslauf & Karriere – Isabella Aigner" });
+useHead({
+  title: "Lebenslauf & Karriere – Isabella Aigner",
+  link: [{ rel: "canonical", href: "https://isabellaaigner.at/career" }],
+});
 useSeoMeta({
   description: "Beruflicher Werdegang, Ausbildung, Soft Skills und Kompetenzen von Isabella Aigner – Frontend-Entwicklerin und UI/UX-Designerin mit Erfahrung bei Redlink GmbH.",
   ogTitle: "Lebenslauf & Karriere – Isabella Aigner",

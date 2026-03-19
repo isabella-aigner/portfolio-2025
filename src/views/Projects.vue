@@ -12,7 +12,10 @@ import { filterItems as rawFilterItems, getProjects } from "../data/projects.dat
 const { t } = useI18n();
 const router = useRouter();
 
-useHead({ title: "Projekte – Isabella Aigner" });
+useHead({
+  title: "Projekte – Isabella Aigner",
+  link: [{ rel: "canonical", href: "https://isabellaaigner.at/projects" }],
+});
 useSeoMeta({
   description: "Ausgewählte Kundenprojekte von Isabella Aigner im Bereich Frontend-Entwicklung, UI/UX-Design und Grafikdesign.",
   ogTitle: "Projekte – Isabella Aigner",

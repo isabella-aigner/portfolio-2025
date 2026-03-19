@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0D1A2C" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Default SEO -->
@@ -24,6 +26,32 @@
     <meta name="twitter:title" content="Isabella Aigner – Frontend Developer &amp; UI/UX Designer" />
     <meta name="twitter:description" content="Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg." />
     <meta name="twitter:image" content="/assets/images/og-image.jpg" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Isabella Aigner",
+      "jobTitle": "Frontend Developer & UI/UX Designer",
+      "description": "Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg mit über 7 Jahren Erfahrung.",
+      "url": "https://isabellaaigner.at",
+      "email": "isabella.aigner@gmail.com",
+      "image": "https://isabellaaigner.at/assets/images/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Salzburg",
+        "addressCountry": "AT"
+      },
+      "knowsAbout": [
+        "Frontend Development", "UI/UX Design", "Graphic Design",
+        "Vue.js", "TypeScript", "Figma", "Adobe Creative Suite"
+      ],
+      "sameAs": [
+        "https://github.com/isabella-aigner"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="app"></div>

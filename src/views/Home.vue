@@ -29,7 +29,10 @@ const featuredProjects = computed(() => getFeaturedProjects(tm));
 const cvRows = computed(() => getCvRows(tm));
 const stats = computed(() => tm('home.stats') as Array<{ num: string; label: string }>);
 
-useHead({ title: "Isabella Aigner – Frontend Developer & UI/UX Designer" });
+useHead({
+  title: "Isabella Aigner – Frontend Developer & UI/UX Designer",
+  link: [{ rel: "canonical", href: "https://isabellaaigner.at/" }],
+});
 useSeoMeta({
   description: "Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg mit 7+ Jahren Erfahrung in Web, Design und Branding.",
   ogTitle: "Isabella Aigner – Frontend Developer & UI/UX Designer",

@@ -24,4 +24,18 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/primevue') || id.includes('node_modules/primeicons')) return 'primevue';
+          if (id.includes('node_modules/gsap'))        return 'gsap';
+          if (id.includes('node_modules/@unhead'))     return 'unhead';
+          if (id.includes('node_modules/@vueuse'))     return 'vueuse';
+          if (id.includes('node_modules/vue-i18n') || id.includes('node_modules/@intlify')) return 'i18n';
+          if (id.includes('node_modules/vue') || id.includes('node_modules/vue-router')) return 'vue-core';
+        },
+      },
+    },
+  },
 })

@@ -4,7 +4,10 @@ import { ref, computed, onMounted, ComputedRef } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 
-useHead({ title: "Persönliche Projekte – Isabella Aigner" });
+useHead({
+  title: "Persönliche Projekte – Isabella Aigner",
+  link: [{ rel: "canonical", href: "https://isabellaaigner.at/personal-projects" }],
+});
 
 useSeoMeta({
   description: "Persönliche Projekte und kreative Experimente von Isabella Aigner – Illustration, Generative Art, Schmuckdesign, 3D Sculpting und mehr.",

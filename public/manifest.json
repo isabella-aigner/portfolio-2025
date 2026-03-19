@@ -1,0 +1,22 @@
+{
+  "name": "Isabella Aigner – Portfolio",
+  "short_name": "Isabella Aigner",
+  "description": "Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1A2C",
+  "theme_color": "#0D1A2C",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
