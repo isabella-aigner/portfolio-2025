@@ -63,9 +63,11 @@ const filteredProjects = computed(() => {
 const toggleProject = (project: ProjectItem) => {
     const isOpen = selectedProject.value?.id === project.id;
     selectedProject.value = isOpen ? null : project;
-    setTimeout(() => {
-        document.getElementById(`${project.id}-header`)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, isOpen ? 0 : 50);
+    if (!isOpen) {
+        setTimeout(() => {
+            document.getElementById(`${project.id}-header`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50);
+    }
 };
 </script>
 

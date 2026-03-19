@@ -27,8 +27,8 @@ const hasLeftMedia = computed(() =>
       ? 'col-span-full shadow-[0_20px_60px_rgba(0,0,0,0.5)]'
       : 'hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)] group'"
     :id="`${project.id}-header`"
-    :style="clickableCard && !isOpen ? 'cursor: pointer' : ''"
-    @click="clickableCard && !isOpen && emit('toggle', project)"
+    :style="clickableCard ? 'cursor: pointer' : ''"
+    @click="clickableCard && emit('toggle', project)"
   >
 
     <!-- ── COLLAPSED STATE ── -->
@@ -69,7 +69,15 @@ const hasLeftMedia = computed(() =>
 
     <!-- ── EXPANDED STATE ── -->
     <template v-else>
-      <div class="grid min-h-[520px]" :class="hasLeftMedia ? 'grid-cols-2 max-[900px]:grid-cols-1' : 'grid-cols-1'">
+      <div class="grid min-h-[520px] relative" :class="hasLeftMedia ? 'grid-cols-2 max-[900px]:grid-cols-1' : 'grid-cols-1'">
+        <button
+          class="absolute top-4 right-4 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-[rgba(13,26,44,0.7)] border border-[rgba(216,235,255,0.15)] text-[rgba(216,235,255,0.6)] cursor-pointer transition-[background,color,border-color] duration-200 hover:bg-[rgba(66,158,200,0.2)] hover:text-[#D8EBFF] hover:border-[rgba(66,158,200,0.4)]"
+          @click.stop="emit('toggle', project)"
+          aria-label="Schließen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
 
         <!-- Left: gallery + video -->
         <div v-if="hasLeftMedia" class="grid grid-cols-2 gap-[3px] bg-[#0a1420] content-start max-[900px]:max-h-[320px] max-[900px]:overflow-hidden">
@@ -78,8 +86,9 @@ const hasLeftMedia = computed(() =>
             :key="`img-${i}`"
             :src="img"
             :alt="`${project.title} – Bild ${i + 1}`"
-            class="w-full h-[260px] object-cover block [&:first-child:last-child]:col-span-full [&:first-child:last-child]:h-[360px] [&:nth-child(odd):last-child]:col-span-full [&:nth-child(odd):last-child]:h-[360px]" />
-          <div v-for="(vid, i) in project.video" :key="`vid-${i}`" class="w-full bg-[#0a1420]">
+            class="w-full h-[260px] object-cover block [&:first-child:last-child]:col-span-full [&:first-child:last-child]:h-[360px] [&:nth-child(odd):last-child]:col-span-full [&:nth-child(odd):last-child]:h-[360px]"
+            @click.stop />
+          <div v-for="(vid, i) in project.video" :key="`vid-${i}`" class="w-full bg-[#0a1420]" @click.stop>
             <p v-if="vid.title" class="text-[0.875rem] font-semibold text-[rgba(216,235,255,0.7)] m-0 px-3 pt-[10px] pb-[6px] uppercase tracking-[0.06em]">{{ vid.title }}</p>
             <video controls :src="vid.link" :poster="vid.poster" class="w-full block max-h-[360px] object-cover"></video>
           </div>
@@ -126,7 +135,7 @@ const hasLeftMedia = computed(() =>
           </div>
 
           <div v-if="project.audio?.length" class="flex flex-col gap-3">
-            <div v-for="(track, i) in project.audio" :key="i" class="flex flex-col gap-[6px]">
+            <div v-for="(track, i) in project.audio" :key="i" class="flex flex-col gap-[6px]" @click.stop>
               <p v-if="track.title" class="text-[0.875rem] font-semibold text-[rgba(216,235,255,0.7)] m-0 uppercase tracking-[0.06em]">{{ track.title }}</p>
               <audio controls :src="track.link" class="w-full accent-[#429EC8]"></audio>
             </div>
@@ -145,14 +154,6 @@ const hasLeftMedia = computed(() =>
             </a>
           </div>
 
-          <button
-            class="inline-flex items-center gap-2 bg-transparent border-none text-[rgba(216,235,255,0.5)] text-[0.9375rem] font-medium [font-family:inherit] cursor-pointer py-1 px-0 transition-colors duration-200 hover:text-[#D8EBFF] mt-auto pt-2 border-t border-[rgba(216,235,255,0.07)] self-start"
-            @click="emit('toggle', project)">
-            <span>Schließen</span>
-            <svg class="transition-transform duration-[350ms] ease-[cubic-bezier(0.4,0,0.2,1)] flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
         </div>
       </div>
     </template>
