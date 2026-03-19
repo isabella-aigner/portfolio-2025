@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead, useSeoMeta } from "@unhead/vue";
 import { computed, onMounted, onUnmounted, nextTick } from "vue";
 import { useI18n } from "vue-i18n";
 import gsap from "gsap";
@@ -16,6 +17,21 @@ import { getSkillPanels, getSoftSkillCards } from "../data/shared.data";
 import { getExperienceEntries, getEducationEntries, getLanguages, toolLevels } from "../data/career.data";
 
 const { t, tm } = useI18n();
+
+useHead({ title: "Lebenslauf & Karriere – Isabella Aigner" });
+useSeoMeta({
+  description: "Beruflicher Werdegang, Ausbildung, Soft Skills und Kompetenzen von Isabella Aigner – Frontend-Entwicklerin und UI/UX-Designerin mit Erfahrung bei Redlink GmbH.",
+  ogTitle: "Lebenslauf & Karriere – Isabella Aigner",
+  ogDescription: "Beruflicher Werdegang, Ausbildung und Kompetenzen von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin.",
+  ogUrl: "https://isabellaaigner.at/career",
+  ogImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+  ogType: "website",
+  ogLocale: "de_AT",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Lebenslauf & Karriere – Isabella Aigner",
+  twitterDescription: "Beruflicher Werdegang, Ausbildung und Kompetenzen von Isabella Aigner – Frontend-Entwicklerin und UI/UX-Designerin.",
+  twitterImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+});
 
 const skillPanels = computed(() => getSkillPanels(tm));
 const softSkillCards = computed(() => getSoftSkillCards(tm));

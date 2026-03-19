@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead, useSeoMeta } from "@unhead/vue";
 import { computed, onMounted, onUnmounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -27,6 +28,21 @@ const softSkillCards = computed(() => getSoftSkillCards(tm));
 const featuredProjects = computed(() => getFeaturedProjects(tm));
 const cvRows = computed(() => getCvRows(tm));
 const stats = computed(() => tm('home.stats') as Array<{ num: string; label: string }>);
+
+useHead({ title: "Isabella Aigner – Frontend Developer & UI/UX Designer" });
+useSeoMeta({
+  description: "Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg mit 7+ Jahren Erfahrung in Web, Design und Branding.",
+  ogTitle: "Isabella Aigner – Frontend Developer & UI/UX Designer",
+  ogDescription: "Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg mit 7+ Jahren Erfahrung in Web, Design und Branding.",
+  ogUrl: "https://isabellaaigner.at/",
+  ogImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+  ogType: "website",
+  ogLocale: "de_AT",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Isabella Aigner – Frontend Developer & UI/UX Designer",
+  twitterDescription: "Portfolio von Isabella Aigner – Frontend-Entwicklerin, UI/UX-Designerin und Grafikdesignerin aus Salzburg.",
+  twitterImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+});
 
 let ctx: gsap.Context;
 

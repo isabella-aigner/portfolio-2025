@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createHead } from '@unhead/vue/client';
 import { createRouter, createWebHistory } from 'vue-router';
 import PrimeVue from 'primevue/config';
 import Button from 'primevue/button';
@@ -34,7 +35,9 @@ const router = createRouter({
 gsap.registerPlugin(ScrollTrigger);
 
 const app = createApp(App);
+const head = createHead();
 
+app.use(head);
 app.use(PrimeVue);
 app.use(router);
 app.use(i18n);

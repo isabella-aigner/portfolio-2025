@@ -1,7 +1,24 @@
 <script setup lang="ts">
+import { useHead, useSeoMeta } from "@unhead/vue";
 import { ref, computed, onMounted, ComputedRef } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
+
+useHead({ title: "Persönliche Projekte – Isabella Aigner" });
+
+useSeoMeta({
+  description: "Persönliche Projekte und kreative Experimente von Isabella Aigner – Illustration, Generative Art, Schmuckdesign, 3D Sculpting und mehr.",
+  ogTitle: "Persönliche Projekte – Isabella Aigner",
+  ogDescription: "Persönliche Projekte und kreative Experimente von Isabella Aigner – Illustration, Generative Art, Schmuckdesign und mehr.",
+  ogUrl: "https://isabellaaigner.at/personal-projects",
+  ogImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+  ogType: "website",
+  ogLocale: "de_AT",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Persönliche Projekte – Isabella Aigner",
+  twitterDescription: "Persönliche Projekte und kreative Experimente von Isabella Aigner.",
+  twitterImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+});
 import { FilterItem } from "../models/FilterItem";
 import { ProjectItem } from "../models/ProjectItem";
 import SubpageHeader from "../components/SubpageHeader.vue";

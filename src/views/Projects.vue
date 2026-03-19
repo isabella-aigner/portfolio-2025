@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead, useSeoMeta } from "@unhead/vue";
 import { ref, computed, ComputedRef, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
@@ -10,6 +11,21 @@ import { filterItems as rawFilterItems, getProjects } from "../data/projects.dat
 
 const { t } = useI18n();
 const router = useRouter();
+
+useHead({ title: "Projekte – Isabella Aigner" });
+useSeoMeta({
+  description: "Ausgewählte Kundenprojekte von Isabella Aigner im Bereich Frontend-Entwicklung, UI/UX-Design und Grafikdesign.",
+  ogTitle: "Projekte – Isabella Aigner",
+  ogDescription: "Ausgewählte Kundenprojekte von Isabella Aigner im Bereich Frontend-Entwicklung, UI/UX-Design und Grafikdesign.",
+  ogUrl: "https://isabellaaigner.at/projects",
+  ogImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+  ogType: "website",
+  ogLocale: "de_AT",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Projekte – Isabella Aigner",
+  twitterDescription: "Ausgewählte Kundenprojekte von Isabella Aigner im Bereich Frontend-Entwicklung, UI/UX-Design und Grafikdesign.",
+  twitterImage: "https://isabellaaigner.at/assets/images/og-image.jpg",
+});
 const route = useRoute();
 
 const selectedProject = ref<ProjectItem | null>(null);
